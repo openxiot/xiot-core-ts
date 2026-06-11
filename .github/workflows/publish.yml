@@ -27,8 +27,11 @@ jobs:
         with:
           version: 8.x
 
-      - name: Install dependencies (only packages/*)
-        run: pnpm --filter "./packages/*" install --frozen-lockfile
+      - name: PNPM Install
+        run: pnpm install
+
+      - name: Check Version
+        run: pnpm version:check
 
       - name: Build packages
         run: pnpm build
