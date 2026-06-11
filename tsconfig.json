@@ -13,7 +13,11 @@
     "emitDeclarationOnly": false,
     "sourceMap": false,
     "lib": ["ES2020", "DOM"],
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "paths": {
+      "@openxiot/xiot-core-spec-ts": ["./packages/xiot-core-spec-ts/src/index"],
+      "@openxiot/xiot-core-spec-ts/*": ["./packages/xiot-core-spec-ts/src/*"]
+    }
   },
   "exclude": [
     "node_modules",

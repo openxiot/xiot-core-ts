@@ -12,7 +12,7 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "samples/*"
+      "samples/node/*"
     ]
   },
   "engines": {
@@ -21,10 +21,10 @@
   },
   "scripts": {
     "clean": "pnpm -r clean",
-    "build": "tsc --build packages/xiot-core-spec-ts packages/xiot-core-xcp-ts",
+    "build": "pnpm --filter @openxiot/xiot-core-spec-ts build && pnpm --filter @openxiot/xiot-core-xcp-ts build && pnpm --filter @openxiot/xiot-core-xcps-ts build",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
-    "prebuild": "pnpm install --frozen-lockfile",
+    "prebuild": "pnpm --filter \"./packages/**\" install",
     "prepublish": "pnpm build",
     "version:check": "node -e \"const fs=require('fs');const v=JSON.parse(fs.readFileSync('package.json')).version;['packages/xiot-core-spec-ts','packages/xiot-core-xcp-ts','packages/xiot-core-xcps-ts'].forEach(p=>{const pv=JSON.parse(fs.readFileSync(p+'/package.json')).version;if(pv!==v)throw new Error(p+' version mismatch: '+pv+' vs '+v);});console.log('All versions match:',v)\"",
     "version:sync": "sync-version packages/*/package.json",

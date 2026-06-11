@@ -9,8 +9,8 @@
     "start": "npm run build & node dist/main.js"
   },
   "dependencies": {
-    "@openxiot/xiot-core-spec-ts": "0.0.1",
-    "@openxiot/xiot-core-xcp-ts": "0.0.1",
+    "@openxiot/xiot-core-spec-ts": "workspace:*",
+    "@openxiot/xiot-core-xcp-ts": "workspace:*",
     "@types/ws": "^6.0.1",
     "qrcode-terminal": "^0.12.0",
     "ts-md5": "^1.2.6",
