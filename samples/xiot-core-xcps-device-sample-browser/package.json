@@ -1,6 +1,6 @@
 {
   "name": "xiot-core-xcps-device-sample-browser",
-  "version": "0.52.0",
+  "version": "0.0.1",
   "description": "XCP Sample",
   "private": true,
   "scripts": {
@@ -19,8 +19,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "@gkct/xiot-core-spec-ts": "3.3.9",
-    "@gkct/xiot-core-xcps-ts": "3.3.9",
+    "@openxiot/xiot-core-spec-ts": "0.0.1",
+    "@openxiot/xiot-core-xcp-ts": "0.0.1",
     "core-js": "^2.5.4",
     "ng-zorro-antd": "^7.3.3",
     "rxjs": "~6.3.3",

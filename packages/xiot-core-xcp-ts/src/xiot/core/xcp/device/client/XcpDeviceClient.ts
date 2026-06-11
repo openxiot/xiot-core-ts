@@ -1,4 +1,4 @@
-import { DeviceNotice } from '@gkct/xiot-core-spec-ts';
+import { DeviceNotice } from '@openxiot/xiot-core-spec-ts';
 import {IQQuery} from "../../../stanza/typedef/iq/IQQuery";
 import {IQResult} from "../../../stanza/typedef/iq/IQResult";
 import {IQError} from "../../../stanza/typedef/iq/IQError";

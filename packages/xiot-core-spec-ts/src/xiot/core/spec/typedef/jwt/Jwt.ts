@@ -6,7 +6,7 @@ export abstract class Jwt {
 
   algorithm: string = DEFAULT_SECRETS_SIGNATURE_ALGORITHM;
 
-  expiresInSeconds: Number = 0;
+  expiresInSeconds: number = 0;
 
   protected constructor(type: JwtType) {
     this.type = type;

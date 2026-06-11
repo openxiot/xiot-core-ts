@@ -1,4 +1,4 @@
-import {Notice, NoticeCodec} from "@gkct/xiot-core-spec-ts";
+import {Notice, NoticeCodec} from "@openxiot/xiot-core-spec-ts";
 
 export class XcpEventHandler {
 

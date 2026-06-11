@@ -1,4 +1,4 @@
-import { DeviceNotice, DeviceNoticeCodec, DeviceNoticeTypeFromString } from '@gkct/xiot-core-spec-ts';
+import { DeviceNotice, DeviceNoticeCodec, DeviceNoticeTypeFromString } from '@openxiot/xiot-core-spec-ts';
 import { MessageCodec } from '../../MessageCodec';
 import { Message } from '../../../typedef/message/Message';
 import { DeviceMessage } from '../../../typedef/message/device/DeviceMessage';

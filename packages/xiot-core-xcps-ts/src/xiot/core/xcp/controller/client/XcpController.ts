@@ -1,4 +1,4 @@
-import { DeviceNotice } from '@gkct/xiot-core-spec-ts'
+import { DeviceNotice } from '@openxiot/xiot-core-spec-ts'
 import { IQ, IQQuery, Message } from '../../../../../index'
 
 export interface XcpController {

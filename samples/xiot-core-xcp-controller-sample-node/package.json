@@ -1,29 +1,8 @@
 {
-  "name": "xiot-core-xcp-controller-sample-node",
-  "version": "1.0.0",
-  "description": "XCP Sample",
+  "name": "xiot-core-xcp-device-sample-node",
+  "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -fr dist"
-  },
   "dependencies": {
-    "@loach/xiot-core-xcp-ts": "1.1.4",
-    "@loach/xiot-core-spec-ts": "1.1.0",
-    "@types/ws": "^6.0.1",
-    "qrcode-terminal": "^0.12.0",
-    "ts-md5": "^1.2.6",
-    "ws": "^7.0.0"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/mocha": "^2.2.48",
-    "@types/qrcode-terminal": "^0.12.0",
-    "async-file": "^2.0.2",
-    "chai": "^4.1.2",
-    "mocha": "^5.0.1",
-    "ts-node": "^4.1.0",
-    "typescript": "^3.1.6",
-    "typings": "^2.1.1"
+    "@openxiot/xiot-core-xcp-ts": "0.0.1"
   }
 }

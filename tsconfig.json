@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "module": "NodeNext",
+    "target": "ES2020",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,9 +11,15 @@
     "resolveJsonModule": true,
     "declaration": true,
     "declarationDir": "dist",
+    "emitDeclarationOnly": false,
     "outDir": "dist",
     "rootDir": "src",
-    "sourceMap": false
+    "sourceMap": false,
+    "lib": ["ES2020", "DOM"],
+    "verbatimModuleSyntax": false,
+    "paths": {
+      "@openxiot/*": ["./packages/*/src"]
+    }
   },
   "exclude": [
     "node_modules",

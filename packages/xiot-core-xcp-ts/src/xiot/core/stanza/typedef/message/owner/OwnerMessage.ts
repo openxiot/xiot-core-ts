@@ -1,4 +1,4 @@
-import { OwnerNotice, OwnerNoticeType, OwnerNoticeTypeFromString } from '@gkct/xiot-core-spec-ts';
+import { OwnerNotice, OwnerNoticeType, OwnerNoticeTypeFromString } from '@openxiot/xiot-core-spec-ts';
 import { Message } from '../Message';
 
 export const TOPIC_OWNER = 'urn:xiot:owner';

@@ -1,4 +1,4 @@
-import { ActionOperation } from '@gkct/xiot-core-spec-ts';
+import { ActionOperation } from '@openxiot/xiot-core-spec-ts';
 import { IQQuery } from '../../IQQuery';
 import { IQResult } from '../../IQResult';
 

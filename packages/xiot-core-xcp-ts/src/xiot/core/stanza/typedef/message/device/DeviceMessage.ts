@@ -1,4 +1,4 @@
-import { DeviceNotice, DeviceNoticeType, DeviceNoticeTypeFromString } from '@gkct/xiot-core-spec-ts';
+import { DeviceNotice, DeviceNoticeType, DeviceNoticeTypeFromString } from '@openxiot/xiot-core-spec-ts';
 import { Message } from '../Message';
 
 export const TOPIC_DEVICE = 'urn:xiot:device';

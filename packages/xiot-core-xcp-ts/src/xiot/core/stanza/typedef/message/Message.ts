@@ -1,4 +1,4 @@
-import { Notice } from '@gkct/xiot-core-spec-ts';
+import { Notice } from '@openxiot/xiot-core-spec-ts';
 import { Stanza } from '../Stanza';
 import { StanzaType } from '../StanzaType';
 

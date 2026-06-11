@@ -1,4 +1,4 @@
-import {Device, DeviceShadow} from '@gkct/xiot-core-spec-ts';
+import {Device, DeviceShadow} from '@openxiot/xiot-core-spec-ts';
 import { IQQuery } from '../../IQQuery';
 import { IQResult } from '../../IQResult';
 

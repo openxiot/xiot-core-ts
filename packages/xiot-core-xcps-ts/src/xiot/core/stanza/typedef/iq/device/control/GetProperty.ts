@@ -1,4 +1,4 @@
-import { PropertyOperation } from '@gkct/xiot-core-spec-ts';
+import { PropertyOperation } from '@openxiot/xiot-core-spec-ts';
 import { IQQuery } from '../../IQQuery';
 import { IQResult } from '../../IQResult';
 

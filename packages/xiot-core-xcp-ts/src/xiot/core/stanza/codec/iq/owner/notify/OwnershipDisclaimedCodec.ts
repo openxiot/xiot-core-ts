@@ -2,7 +2,7 @@ import {IQCodec} from '../../../IQCodec';
 import {IQQuery} from '../../../../typedef/iq/IQQuery';
 import {IQResult} from '../../../../typedef/iq/IQResult';
 import {QueryOwnershipDisclaimed, ResultOwnershipDisclaimed} from '../../../../typedef/iq/owner/notify/OwnershipDisclaimed';
-import {DeviceOwnerCodec} from "@gkct/xiot-core-spec-ts";
+import {DeviceOwnerCodec} from "@openxiot/xiot-core-spec-ts";
 
 export class OwnershipDisclaimedCodec implements IQCodec {
     encodeQueryContent(query: IQQuery): any | null {

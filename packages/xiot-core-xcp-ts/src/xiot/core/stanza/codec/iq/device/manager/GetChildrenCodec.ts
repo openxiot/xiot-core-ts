@@ -1,4 +1,4 @@
-import { DeviceCodec } from '@gkct/xiot-core-spec-ts';
+import { DeviceCodec } from '@openxiot/xiot-core-spec-ts';
 import { IQCodec } from '../../../IQCodec';
 import { IQQuery } from '../../../../typedef/iq/IQQuery';
 import { IQResult } from '../../../../typedef/iq/IQResult';

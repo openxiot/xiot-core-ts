@@ -1,4 +1,4 @@
-import {ActionOperation, Notice, PropertyOperation} from '@gkct/xiot-core-spec-ts'
+import {ActionOperation, Notice, PropertyOperation} from '@openxiot/xiot-core-spec-ts'
 import { IQ, IQQuery, Message } from '../../../../../index'
 
 export interface XcpController {

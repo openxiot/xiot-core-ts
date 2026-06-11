@@ -1,4 +1,4 @@
-import { NoticeCodec, Notice } from "@gkct/xiot-core-spec-ts";
+import { NoticeCodec, Notice } from "@openxiot/xiot-core-spec-ts";
 import {XcpEventClient} from "../XcpEventClient";
 import {XcpEventHandler} from "./XcpEventHandler";
 

@@ -22,8 +22,9 @@ export class ArgumentOperationCodec {
     Object.keys(o).forEach(key => {
       if (key.startsWith('#')) {
         const iid = key.substring(1);
-        if (o[key] instanceof Array) {
-          list.push(ArgumentOperationCodec.decodeArgument1(iid, o[key]));
+        const k = o[key];
+        if (k instanceof Array) {
+          list.push(ArgumentOperationCodec.decodeArgument1(iid, k));
         }
       }
     });
@@ -31,11 +32,11 @@ export class ArgumentOperationCodec {
     return list;
   }
 
-  private static decodeArgument1(piid: string, values: []): ArgumentOperation {
+  private static decodeArgument1(piid: string, values: any[]): ArgumentOperation {
     return ArgumentOperationCodec.decodeArgument2(Number.parseInt(piid), values);
   }
 
-  private static  decodeArgument2(piid: number, values: []): ArgumentOperation {
+  private static  decodeArgument2(piid: number, values: any[]): ArgumentOperation {
     return new ArgumentOperation(piid, values);
   }
 

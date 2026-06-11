@@ -1,6 +1,6 @@
 {
   "name": "xiot-core-ts",
-  "version": "3.8.4",
+  "version": "0.0.1",
   "private": true,
   "description": "Openxiot Core TypeScript",
   "author": "gkcity",
@@ -21,12 +21,17 @@
   },
   "scripts": {
     "clean": "pnpm -r clean",
-    "build": "pnpm -r build",
+    "build": "tsc --build packages/xiot-core-spec-ts packages/xiot-core-xcps-ts",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
-    "prepublish": "pnpm build"
+    "prebuild": "pnpm install --frozen-lockfile",
+    "prepublish": "pnpm build",
+    "version:check": "node -e \"const fs=require('fs');const v=JSON.parse(fs.readFileSync('package.json')).version;['packages/xiot-core-spec-ts','packages/xiot-core-xcp-ts','packages/xiot-core-xcps-ts'].forEach(p=>{const pv=JSON.parse(fs.readFileSync(p+'/package.json')).version;if(pv!==v)throw new Error(p+' version mismatch: '+pv+' vs '+v);});console.log('All versions match:',v)\"",
+    "version:sync": "sync-version packages/*/package.json",
+    "version:list": "sync-version --list packages/*/package.json"
   },
   "devDependencies": {
-    "typescript": "4.8.2"
+    "typescript": "^5.7.0 || ^5.8.0",
+    "sync-version": "^1.1.0"
   }
 }

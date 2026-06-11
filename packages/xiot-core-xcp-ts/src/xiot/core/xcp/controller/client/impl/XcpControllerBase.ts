@@ -1,4 +1,4 @@
-import {ActionOperation, DeviceNotice, Notice, PropertyOperation, Status} from '@gkct/xiot-core-spec-ts'
+import {ActionOperation, DeviceNotice, Notice, PropertyOperation, Status} from '@openxiot/xiot-core-spec-ts'
 import {XcpController} from '../XcpController'
 import {Message} from '../../../../stanza/typedef/message/Message'
 import {IQQuery} from '../../../../stanza/typedef/iq/IQQuery'

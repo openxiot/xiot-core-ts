@@ -1,4 +1,4 @@
-import { DeviceNotice, Status } from '@gkct/xiot-core-spec-ts';
+import { DeviceNotice, Status } from '@openxiot/xiot-core-spec-ts';
 import { XcpDeviceClient } from '../XcpDeviceClient';
 import { XcpDeviceClientVerifier } from '../XcpDeviceClientVerifier';
 import { XcpDeviceClientVerifierImpl } from './XcpDeviceClientVerifierImpl';

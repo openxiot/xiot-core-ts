@@ -1,6 +1,6 @@
 import {IQQuery} from '../../IQQuery';
 import {IQResult} from '../../IQResult';
-import {DeviceOwner} from "@gkct/xiot-core-spec-ts";
+import {DeviceOwner} from "@openxiot/xiot-core-spec-ts";
 
 export const REMOVE_OWNER_METHOD = 'urn:xiot:remove-owner';
 

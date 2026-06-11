@@ -1,4 +1,4 @@
-import { OwnerNotice, OwnerNoticeCodec, OwnerNoticeTypeFromString } from '@gkct/xiot-core-spec-ts';
+import { OwnerNotice, OwnerNoticeCodec, OwnerNoticeTypeFromString } from '@openxiot/xiot-core-spec-ts';
 import { MessageCodec } from '../../MessageCodec';
 import { Message } from '../../../typedef/message/Message';
 import { OwnerMessage } from '../../../typedef/message/owner/OwnerMessage';
