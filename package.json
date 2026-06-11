@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "pnpm -r clean",
-    "build": "pnpm --filter @openxiot/xiot-core-spec-ts build && pnpm --filter @openxiot/xiot-core-xcp-ts build && pnpm --filter @openxiot/xiot-core-xcps-ts build",
+    "build": "pnpm --filter @openxiot/xiot-core-spec-ts build",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "prebuild": "pnpm --filter \"./packages/**\" install",
