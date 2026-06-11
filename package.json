@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "pnpm -r clean",
-    "build": "tsc --build packages/xiot-core-spec-ts packages/xiot-core-xcps-ts",
+    "build": "tsc --build packages/xiot-core-spec-ts packages/xiot-core-xcp-ts",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "prebuild": "pnpm install --frozen-lockfile",

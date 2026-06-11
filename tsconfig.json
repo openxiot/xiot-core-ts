@@ -10,16 +10,10 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "declaration": true,
-    "declarationDir": "dist",
     "emitDeclarationOnly": false,
-    "outDir": "dist",
-    "rootDir": "src",
     "sourceMap": false,
     "lib": ["ES2020", "DOM"],
-    "verbatimModuleSyntax": false,
-    "paths": {
-      "@openxiot/*": ["./packages/*/src"]
-    }
+    "verbatimModuleSyntax": false
   },
   "exclude": [
     "node_modules",
