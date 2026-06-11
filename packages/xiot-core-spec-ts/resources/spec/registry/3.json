@@ -1,0 +1,18 @@
+{
+    "did": "xxx",
+    "summary": {
+        "type": "urn:homekit-spec:device:other:00000001:applefans:fakebulb:1",
+        "online": false,
+        "cloudId": "xxx",
+        "members": [
+            "abc"
+        ]
+    },
+    "accessKey": "xxx",
+    "accessPoint": {
+        "type": "eventbus",
+        "eventbus": {
+            "address": "xxxxx"
+        }
+    }
+}

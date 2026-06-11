@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:dryer:00000027",
+  "description" : "Dryer",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

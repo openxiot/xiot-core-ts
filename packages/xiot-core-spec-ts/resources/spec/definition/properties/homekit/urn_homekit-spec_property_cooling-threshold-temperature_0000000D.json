@@ -1,0 +1,8 @@
+{
+    "type": "urn:homekit-spec:property:cooling-threshold-temperature:0000000d",
+    "description": "Cooling Threshold Temperature",
+    "format": "float",
+    "access": ["read", "write", "notify"],
+    "value-range": [0.0, 35.0, 1.0],
+    "unit": "celsius"
+}

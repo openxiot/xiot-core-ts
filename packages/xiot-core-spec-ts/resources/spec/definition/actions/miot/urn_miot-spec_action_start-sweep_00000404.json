@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:start-sweep:00000404",
+    "description": "Start Sweep"
+}

@@ -1,0 +1,109 @@
+{
+  "type" : "urn:xiot-spec:device:stb:0000a011:tuya:tystb01:1",
+  "description" : "Set Top Box",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:tuya:tystb01:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:tuya:tystb01:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:tuya:tystb01:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:tuya:tystb01:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:tuya:tystb01:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:ir-stb-control:00007820:tuya:tystb01:1",
+    "description" : "IR STB Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:channel-name:00000046:tuya:tystb01:1",
+      "description" : "Channel Name",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:channel-number:00000045:tuya:tystb01:1",
+      "description" : "Channel Number",
+      "format" : "uint16",
+      "access" : [ ],
+      "value-range" : [ 1, 999, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:tuya:tystb01:1",
+      "description" : "Channel Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:tuya:tystb01:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:tuya:tystb01:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:tuya:tystb01:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:set-channel-name:00002818:tuya:tystb01:1",
+      "description" : "Set Channel Name",
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:set-channel-number:00002817:tuya:tystb01:1",
+      "description" : "Set Channel Number",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:tuya:tystb01:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:tuya:tystb01:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:tuya:tystb01:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 10,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:tuya:tystb01:1",
+      "description" : "Volume Up"
+    } ]
+  } ]
+}

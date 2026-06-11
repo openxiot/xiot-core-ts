@@ -1,0 +1,7 @@
+{
+  "lifecycle": "preview",
+  "definition": {
+    "type": "urn:xiot-spec:event:low-battery:00005003",
+    "description": "Low Battery"
+  }
+}

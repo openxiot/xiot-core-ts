@@ -1,0 +1,141 @@
+{
+  "type" : "urn:xiot-spec:device:stb:0000a011:ave:ha2wadb1201:1",
+  "description" : "Set Top Box",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:ave:ha2wadb1201:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:ave:ha2wadb1201:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:ave:ha2wadb1201:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:ave:ha2wadb1201:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:ave:ha2wadb1201:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:ir-stb-control:00007820:ave:ha2wadb1201:1",
+    "description" : "IR STB Control",
+    "properties" : [ {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:channel-number:00000045:ave:ha2wadb1201:1",
+      "description" : "Channel Number",
+      "format" : "uint16",
+      "access" : [ ],
+      "value-range" : [ 1, 999, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:ave:ha2wadb1201:1",
+      "description" : "Channel Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:ave:ha2wadb1201:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:ave:ha2wadb1201:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:ave:ha2wadb1201:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:ave:ha2wadb1201:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:ave:ha2wadb1201:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:ave:ha2wadb1201:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 10,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:ave:ha2wadb1201:1",
+      "description" : "Volume Up"
+    }, {
+      "iid" : 12,
+      "type" : "urn:xiot-spec:action:set-channel-number:00002817:ave:ha2wadb1201:1",
+      "description" : "Set Channel Number",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:fan-control:00007809:ave:ha2wadb1201:1",
+    "description" : "Fan Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:ave:ha2wadb1201:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Level1"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:horizontal-angle:00000019:ave:ha2wadb1201:1",
+      "description" : "Horizontal Angle",
+      "format" : "uint16",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 360, 1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:horizontal-swing:00000017:ave:ha2wadb1201:1",
+      "description" : "Horizontal Swing",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:on:00000006:ave:ha2wadb1201:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:vertical-angle:0000001a:ave:ha2wadb1201:1",
+      "description" : "Vertical Angle",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 90, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:vertical-swing:00000018:ave:ha2wadb1201:1",
+      "description" : "Vertical Swing",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

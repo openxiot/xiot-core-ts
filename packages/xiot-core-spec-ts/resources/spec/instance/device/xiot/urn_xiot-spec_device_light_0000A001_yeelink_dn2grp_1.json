@@ -1,0 +1,87 @@
+{
+  "type" : "urn:xiot-spec:device:light:0000a001:yeelink:dn2grp:1",
+  "description" : "Lightctl Light",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:yeelink:dn2grp:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:yeelink:dn2grp:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:yeelink:dn2grp:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:yeelink:dn2grp:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:yeelink:dn2grp:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:light:00007802:yeelink:dn2grp:1",
+    "description" : "Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:yeelink:dn2grp:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:yeelink:dn2grp:1",
+      "description" : "Brightness",
+      "format" : "uint16",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 65535, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:color-temperature:0000000f:yeelink:dn2grp:1",
+      "description" : "Color Temperature",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 2700, 6500, 1 ],
+      "unit" : "kelvin"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:yeelight-scene:00000001:yeelink:dn2grp:1",
+    "description" : "Scene",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:bright-scene:00000002:yeelink:dn2grp:1",
+      "description" : "Bright scene",
+      "format" : "int32",
+      "access" : [ "write" ],
+      "value-range" : [ -2147483600, 2147483600, 1 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:ct-scene:00000003:yeelink:dn2grp:1",
+      "description" : "Ct scene",
+      "format" : "int32",
+      "access" : [ "write" ],
+      "value-range" : [ -2147483600, 2147483600, 1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:delay-off:00000004:yeelink:dn2grp:1",
+      "description" : "Delay off",
+      "format" : "int32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 60, 1 ]
+    } ]
+  } ]
+}

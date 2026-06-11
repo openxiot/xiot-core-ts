@@ -1,0 +1,16 @@
+{
+    "shadows": [
+        {
+            "siid": 1,
+            "piid": 2,
+            "status": 1,
+            "value": "aaa"
+        },
+        {
+            "siid": 1,
+            "piid": 7,
+            "status": 1,
+            "value": true
+        }
+    ]
+}

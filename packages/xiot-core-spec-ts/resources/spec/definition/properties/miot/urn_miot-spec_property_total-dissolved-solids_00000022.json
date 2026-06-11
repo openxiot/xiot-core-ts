@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:total-dissolved-solids:00000022",
+    "description": "Total Dissolved solids (TDS)",
+    "format": "uint16",
+    "access": ["read", "notify"]
+}

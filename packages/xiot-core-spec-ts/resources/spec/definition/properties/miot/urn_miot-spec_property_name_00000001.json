@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:name:00000001",
+    "description": "Name",
+    "format": "string",
+    "access": ["read"]
+}

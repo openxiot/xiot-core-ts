@@ -1,0 +1,91 @@
+{
+  "type": "urn:xiot-spec:device:light:0000a001:uiot:light3:1",
+  "description": "Light",
+  "services": [
+    {
+      "iid": 138,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:light3:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 215,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:light3:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 219,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:light3:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 108,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:light3:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 173,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:light3:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 284,
+          "type": "urn:xiot-spec:action:identify:00002801:uiot:light3:1",
+          "description": "Identify"
+        }
+      ]
+    },
+    {
+      "iid": 377,
+      "type": "urn:xiot-spec:service:light:00007802:uiot:light3:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 625,
+          "type": "urn:xiot-spec:property:brightness:0000000d:uiot:light3:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 835,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:light3:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    }
+  ]
+}

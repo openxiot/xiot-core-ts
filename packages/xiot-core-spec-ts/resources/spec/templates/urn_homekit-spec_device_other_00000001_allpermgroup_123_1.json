@@ -1,0 +1,748 @@
+{
+  "type": "urn:homekit-spec:device:other:00000001:allpermgroup:123:1",
+  "description": {
+    "en-US": "test123",
+    "zh-TW": "test123",
+    "zh-CN": "test123"
+  },
+  "services": [
+    {
+      "x-required": false,
+      "iid": 1,
+      "x-event-addable": true,
+      "description": {
+        "en-US": "Accessory-Information1",
+        "zh-TW": "配件信息1",
+        "zh-CN": "配件信息1"
+      },
+      "x-property-addable": true,
+      "type": "urn:homekit-spec:service:accessory-information:0000003e",
+      "x-action-addable": true,
+      "properties": [
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 1,
+          "format": "bool",
+          "description": {
+            "en-US": "Identify",
+            "zh-TW": "辨認",
+            "zh-CN": "辨认"
+          },
+          "type": "urn:homekit-spec:property:identify:00000014"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "制造商",
+            "zh-CN": "制造商"
+          },
+          "type": "urn:homekit-spec:property:manufacturer:00000020"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "type": "urn:homekit-spec:property:model:00000021"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 4,
+          "format": "string",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "type": "urn:homekit-spec:property:name:00000023"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 5,
+          "format": "string",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "type": "urn:homekit-spec:property:serial-number:00000030"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 6,
+          "format": "string",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "type": "urn:homekit-spec:property:firmware-revision:00000052"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 7,
+          "format": "string",
+          "description": {
+            "en-US": "Product Data",
+            "zh-TW": "產品數據",
+            "zh-CN": "产品数据"
+          },
+          "type": "urn:homekit-spec:property:product-data:00000220"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 8,
+          "format": "string",
+          "description": {
+            "en-US": "Hardware Revision",
+            "zh-TW": "硬件版本",
+            "zh-CN": "硬件版本"
+          },
+          "type": "urn:homekit-spec:property:hardware-revision:00000053"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 9,
+          "format": "uint32",
+          "description": {
+            "en-US": "Accessory Flags",
+            "zh-TW": "配件屬性",
+            "zh-CN": "配件属性"
+          },
+          "value-range": [
+            0,
+            65535,
+            1
+          ],
+          "type": "urn:homekit-spec:property:accessory-flags:000000a6"
+        }
+      ]
+    },
+    {
+      "x-required": true,
+      "iid": 2,
+      "x-event-addable": true,
+      "description": {
+        "en-US": "Garage Door Opener",
+        "zh-TW": "車庫門開啟器",
+        "zh-CN": "车库门开启器"
+      },
+      "x-property-addable": true,
+      "type": "urn:homekit-spec:service:garage-door-opener:00000041",
+      "x-action-addable": true,
+      "properties": [
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "notify"
+          ],
+          "iid": 2,
+          "format": "uint8",
+          "description": {
+            "en-US": "Current Door State",
+            "zh-TW": "當前門狀態",
+            "zh-CN": "当前门状态"
+          },
+          "type": "urn:homekit-spec:property:current-door-state:0000000e",
+          "value-list": [
+            {
+              "description": "Open. The door is fully open.",
+              "value": 0
+            },
+            {
+              "description": "Closed. The door is fully closed.",
+              "value": 1
+            },
+            {
+              "description": "Opening. The door is actively opening.",
+              "value": 2
+            },
+            {
+              "description": "Closing. The door is actively closing.",
+              "value": 3
+            },
+            {
+              "description": "Stopped. The door is not moving, and it is not fully open nor fully closed.",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "notify"
+          ],
+          "iid": 3,
+          "format": "bool",
+          "description": {
+            "en-US": "Obstruction Detected",
+            "zh-TW": "檢測到障礙物",
+            "zh-CN": "检测到障碍物"
+          },
+          "type": "urn:homekit-spec:property:obstruction-detected:00000024"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 4,
+          "format": "uint8",
+          "description": {
+            "en-US": "Target Door State",
+            "zh-TW": "目標門狀態",
+            "zh-CN": "目标门状态"
+          },
+          "type": "urn:homekit-spec:property:target-door-state:00000032",
+          "value-list": [
+            {
+              "description": "Open",
+              "value": 0
+            },
+            {
+              "description": "Closed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "notify"
+          ],
+          "iid": 5,
+          "format": "uint8",
+          "description": {
+            "en-US": "Lock Current State",
+            "zh-TW": "鎖定當前狀態",
+            "zh-CN": "锁定当前状态"
+          },
+          "type": "urn:homekit-spec:property:lock-current-state:0000001d",
+          "value-list": [
+            {
+              "description": "Unsecured",
+              "value": 0
+            },
+            {
+              "description": "Secured",
+              "value": 1
+            },
+            {
+              "description": "Jammed",
+              "value": 2
+            },
+            {
+              "description": "Unknown",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 6,
+          "format": "uint8",
+          "description": {
+            "en-US": "Lock Target State",
+            "zh-TW": "物理安全機制的目標狀態",
+            "zh-CN": "物理安全机制的目标状态"
+          },
+          "type": "urn:homekit-spec:property:lock-target-state:0000001e",
+          "value-list": [
+            {
+              "description": "Unsecured",
+              "value": 0
+            },
+            {
+              "description": "Secured",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 7,
+          "format": "string",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "type": "urn:homekit-spec:property:name:00000023"
+        }
+      ]
+    },
+    {
+      "x-required": true,
+      "iid": 3,
+      "x-event-addable": true,
+      "description": {
+        "en-US": "Light Bulb",
+        "zh-TW": "燈泡",
+        "zh-CN": "灯泡"
+      },
+      "x-property-addable": true,
+      "type": "urn:homekit-spec:service:lightbulb:00000043",
+      "x-action-addable": true,
+      "properties": [
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 3,
+          "format": "bool",
+          "description": {
+            "en-US": "On",
+            "zh-TW": "開關",
+            "zh-CN": "开关"
+          },
+          "type": "urn:homekit-spec:property:on:00000025"
+        },
+        {
+          "x-required": true,
+          "unit": "percentage",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 4,
+          "format": "int32",
+          "description": {
+            "en-US": "Brightness",
+            "zh-TW": "亮度",
+            "zh-CN": "亮度"
+          },
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "type": "urn:homekit-spec:property:brightness:00000008"
+        },
+        {
+          "x-required": true,
+          "unit": "arcdegrees",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 5,
+          "format": "float",
+          "description": {
+            "en-US": "Hue",
+            "zh-TW": "色度",
+            "zh-CN": "色度"
+          },
+          "value-range": [
+            0,
+            360,
+            1
+          ],
+          "type": "urn:homekit-spec:property:hue:00000013"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 6,
+          "format": "string",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "type": "urn:homekit-spec:property:name:00000023"
+        },
+        {
+          "x-required": true,
+          "unit": "percentage",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 7,
+          "format": "float",
+          "description": {
+            "en-US": "Saturation",
+            "zh-TW": "飽和度",
+            "zh-CN": "饱和度"
+          },
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "type": "urn:homekit-spec:property:saturation:0000002f"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 8,
+          "format": "uint32",
+          "description": {
+            "en-US": "Color Temperature",
+            "zh-TW": "色溫",
+            "zh-CN": "色温"
+          },
+          "value-range": [
+            50,
+            400,
+            1
+          ],
+          "type": "urn:homekit-spec:property:color-temperature:000000ce"
+        }
+      ]
+    },
+    {
+      "x-required": true,
+      "iid": 4,
+      "x-event-addable": true,
+      "description": {
+        "en-US": "Accessory-Information",
+        "zh-TW": "配件信息",
+        "zh-CN": "配件信息"
+      },
+      "x-property-addable": true,
+      "type": "urn:homekit-spec:service:accessory-information:0000003e",
+      "x-action-addable": true,
+      "properties": [
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 1,
+          "format": "bool",
+          "description": {
+            "en-US": "Identify",
+            "zh-TW": "辨認",
+            "zh-CN": "辨认"
+          },
+          "type": "urn:homekit-spec:property:identify:00000014"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "制造商",
+            "zh-CN": "制造商"
+          },
+          "type": "urn:homekit-spec:property:manufacturer:00000020"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "type": "urn:homekit-spec:property:model:00000021"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 4,
+          "format": "string",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "type": "urn:homekit-spec:property:name:00000023"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 5,
+          "format": "string",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "type": "urn:homekit-spec:property:serial-number:00000030"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 6,
+          "format": "string",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "type": "urn:homekit-spec:property:firmware-revision:00000052"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 7,
+          "format": "string",
+          "description": {
+            "en-US": "Product Data",
+            "zh-TW": "產品數據",
+            "zh-CN": "产品数据"
+          },
+          "type": "urn:homekit-spec:property:product-data:00000220"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 8,
+          "format": "string",
+          "description": {
+            "en-US": "Hardware Revision",
+            "zh-TW": "硬件版本",
+            "zh-CN": "硬件版本"
+          },
+          "type": "urn:homekit-spec:property:hardware-revision:00000053"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "notify"
+          ],
+          "iid": 9,
+          "format": "uint32",
+          "description": {
+            "en-US": "Accessory Flags",
+            "zh-TW": "配件屬性",
+            "zh-CN": "配件属性"
+          },
+          "value-range": [
+            0,
+            65535,
+            1
+          ],
+          "type": "urn:homekit-spec:property:accessory-flags:000000a6"
+        }
+      ]
+    },
+    {
+      "x-required": false,
+      "iid": 5,
+      "x-event-addable": true,
+      "description": {
+        "en-US": "Accessory-Information",
+        "zh-TW": "配件信息",
+        "zh-CN": "配件信息"
+      },
+      "x-property-addable": true,
+      "type": "urn:homekit-spec:service:accessory-information:0000003e",
+      "x-action-addable": true,
+      "properties": [
+        {
+          "x-required": true,
+          "access": [
+            "write"
+          ],
+          "iid": 1,
+          "format": "bool",
+          "description": {
+            "en-US": "Identify",
+            "zh-TW": "辨認",
+            "zh-CN": "辨认"
+          },
+          "type": "urn:homekit-spec:property:identify:00000014"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "制造商",
+            "zh-CN": "制造商"
+          },
+          "type": "urn:homekit-spec:property:manufacturer:00000020"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "type": "urn:homekit-spec:property:model:00000021"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 4,
+          "format": "string",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "type": "urn:homekit-spec:property:name:00000023"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 5,
+          "format": "string",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "type": "urn:homekit-spec:property:serial-number:00000030"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 6,
+          "format": "string",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "type": "urn:homekit-spec:property:firmware-revision:00000052"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 7,
+          "format": "string",
+          "description": {
+            "en-US": "Product Data",
+            "zh-TW": "產品數據",
+            "zh-CN": "产品数据"
+          },
+          "type": "urn:homekit-spec:property:product-data:00000220"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read"
+          ],
+          "iid": 8,
+          "format": "string",
+          "description": {
+            "en-US": "Hardware Revision",
+            "zh-TW": "硬件版本",
+            "zh-CN": "硬件版本"
+          },
+          "type": "urn:homekit-spec:property:hardware-revision:00000053"
+        },
+        {
+          "x-required": true,
+          "access": [
+            "read",
+            "notify"
+          ],
+          "iid": 9,
+          "format": "uint32",
+          "description": {
+            "en-US": "Accessory Flags",
+            "zh-TW": "配件屬性",
+            "zh-CN": "配件属性"
+          },
+          "value-range": [
+            0,
+            65535,
+            1
+          ],
+          "type": "urn:homekit-spec:property:accessory-flags:000000a6"
+        }
+      ]
+    }
+  ]
+}

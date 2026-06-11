@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:wash-time:0000006d",
+  "description" : "Wash Time",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 120, 1 ]
+}

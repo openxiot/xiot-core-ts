@@ -1,0 +1,20 @@
+{
+    "devices": [
+        {
+            "did": "a",
+            "token": "xxx"
+        },
+        {
+            "did": "b",
+            "token": "xxx"
+        },
+        {
+            "did": "c",
+            "token": "xxx"
+        },
+        {
+            "did": "d",
+            "token": "xxx"
+        }
+    ]
+}

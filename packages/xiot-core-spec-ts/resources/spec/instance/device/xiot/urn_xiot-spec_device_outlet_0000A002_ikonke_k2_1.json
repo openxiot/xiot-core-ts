@@ -1,0 +1,45 @@
+{
+  "type" : "urn:xiot-spec:device:outlet:0000a002:ikonke:k2:1",
+  "description" : "Outlet",
+  "services" : [ {
+    "iid" : 276,
+    "type" : "urn:xiot-spec:service:device-information:00007801:ikonke:k2:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 294,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:ikonke:k2:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 376,
+      "type" : "urn:xiot-spec:property:model:00000002:ikonke:k2:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 333,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:ikonke:k2:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 207,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:ikonke:k2:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 341,
+    "type" : "urn:xiot-spec:service:switch:0000780c:ikonke:k2:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 829,
+      "type" : "urn:xiot-spec:property:on:00000006:ikonke:k2:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

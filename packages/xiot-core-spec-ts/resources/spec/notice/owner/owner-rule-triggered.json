@@ -1,0 +1,9 @@
+{
+  "type": "rule-triggered",
+  "payload": {
+    "appId": "xxxx",
+    "ownerId": "xxxx",
+    "ruleId": "xxx",
+    "timestamp": 133
+  }
+}

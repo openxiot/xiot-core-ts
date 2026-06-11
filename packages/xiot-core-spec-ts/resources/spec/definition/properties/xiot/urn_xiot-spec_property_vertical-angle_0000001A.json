@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:vertical-angle:0000001a",
+  "description" : "Vertical Angle",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 90, 1 ]
+}

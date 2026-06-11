@@ -1,0 +1,26 @@
+{
+  "type": "urn:xiot-spec:property:channel-control:0000003f",
+  "description": "Channel Control",
+  "format": "uint16",
+  "access": [
+    "write"
+  ],
+  "value-list": [
+    {
+      "value": 1,
+      "description": {
+        "en-US": "Channel up",
+        "cn-ZH": "通道开",
+        "cn-TW": "通道開"
+      }
+    },
+    {
+      "value": 2,
+      "description": {
+        "en-US": "Channel down",
+        "cn-ZH": "通道关",
+        "cn-TW": "通道關"
+      }
+    }
+  ]
+}

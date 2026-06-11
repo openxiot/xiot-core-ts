@@ -1,0 +1,16 @@
+{
+  "type" : "urn:xiot-spec:property:motor-control:00000038",
+  "description" : "Motor Control",
+  "format" : "uint8",
+  "access" : [ "write" ],
+  "value-list" : [ {
+    "value" : 0,
+    "description" : "Pause"
+  }, {
+    "value" : 1,
+    "description" : "Open"
+  }, {
+    "value" : 2,
+    "description" : "Close"
+  } ]
+}

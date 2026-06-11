@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:off-delay:00000053",
+  "description" : "Power Off Delay",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

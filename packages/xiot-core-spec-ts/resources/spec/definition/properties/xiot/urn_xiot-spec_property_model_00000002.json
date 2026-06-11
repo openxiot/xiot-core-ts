@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:model:00000002",
+  "description" : "Device Model",
+  "format" : "string",
+  "access" : [ "read" ]
+}

@@ -1,0 +1,654 @@
+{
+    "type": "urn:ke-spec:device:gateway:00000001:ke:homepad:1",
+    "description": {
+        "en-US": "Homepad",
+        "zh-TW": "贝壳中控屏",
+        "zh-CN": "贝壳中控屏"
+    },
+    "services": [
+        {
+            "iid": 1,
+            "type": "urn:ke-spec:service:device-information:00000001:ke:homepad:1",
+            "description": {
+                "en-US": "Device Information",
+                "zh-TW": "設備信息",
+                "zh-CN": "设备信息"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:firmware-revision:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Firmware Revision",
+                        "zh-TW": "固件版本",
+                        "zh-CN": "固件版本"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:property:manufacturer:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "Manufacturer",
+                        "zh-TW": "製造商",
+                        "zh-CN": "制造商"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:property:model:00000004:ke:homepad:1",
+                    "description": {
+                        "en-US": "Model",
+                        "zh-TW": "型號",
+                        "zh-CN": "型号"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:ke-spec:property:serial-number:00000005:ke:homepad:1",
+                    "description": {
+                        "en-US": "Serial Number",
+                        "zh-TW": "序列號",
+                        "zh-CN": "序列号"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:ke-spec:property:software-revision:0000001f:ke:homepad:1",
+                    "description": {
+                        "en-US": "Software revision",
+                        "zh-TW": "軟件版本",
+                        "zh-CN": "软件版本"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 2,
+            "type": "urn:ke-spec:service:zigbee-information:00000002:ke:homepad:1",
+            "description": {
+                "en-US": "Zigbee Information",
+                "zh-TW": "Zigbee設備信息",
+                "zh-CN": "Zigbee设备信息"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:sdk-provider:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "SDK Provider",
+                        "zh-TW": "SDK提供方",
+                        "zh-CN": "SDK提供方"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:property:sdk-version:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "SDK Version",
+                        "zh-TW": "SDK版本",
+                        "zh-CN": "SDK版本"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 3,
+            "type": "urn:ke-spec:service:tuya-zigbee:00000003:ke:homepad:1",
+            "description": {
+                "en-US": "Zigbee Gateway",
+                "zh-TW": "Zigbee网关",
+                "zh-CN": "Zigbee网关"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:device-id:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Device ID",
+                        "zh-TW": "设备ID",
+                        "zh-CN": "设备ID"
+                    },
+                    "format": "string",
+                    "access": []
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:property:device-type:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Device Type",
+                        "zh-TW": "设备Type",
+                        "zh-CN": "设备Type"
+                    },
+                    "format": "string",
+                    "access": []
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:property:timeout:00000007:ke:homepad:1",
+                    "description": {
+                        "en-US": "Timeout",
+                        "zh-TW": "超时时长",
+                        "zh-CN": "超时时长"
+                    },
+                    "format": "uint32",
+                    "access": [],
+                    "value-range": [
+                        1,
+                        600,
+                        1
+                    ],
+                    "unit": "second"
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:ke-spec:property:stop-discovery-reason:00000008:ke:homepad:1",
+                    "description": {
+                        "en-US": "Stop Discovery Reason",
+                        "zh-TW": "停止扫描设备原因",
+                        "zh-CN": "停止扫描设备原因"
+                    },
+                    "format": "uint8",
+                    "access": [],
+                    "value-list": [
+                        {
+                            "value": 0,
+                            "description": "Normal Stop"
+                        },
+                        {
+                            "value": 1,
+                            "description": "Manual Stop"
+                        },
+                        {
+                            "value": 2,
+                            "description": "Error"
+                        },
+                        {
+                            "value": 3,
+                            "description": "Confirm Stop"
+                        }
+                    ]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:ke-spec:property:discovery-status:00000007:ke:homepad:1",
+                    "description": {
+                        "en-US": "Discovery Status",
+                        "zh-TW": "配网状态",
+                        "zh-CN": "配网状态"
+                    },
+                    "format": "bool",
+                    "access": [
+                        "read"
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:action:discover:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Discover",
+                        "zh-TW": "扫描设备",
+                        "zh-CN": "扫描设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        },
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:action:stop-discovery:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "Stop Discover",
+                        "zh-TW": "停止扫描设备",
+                        "zh-CN": "停止扫描设备"
+                    }
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:action:get-children:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "Stop Discover",
+                        "zh-TW": "获取子设备",
+                        "zh-CN": "获取子设备"
+                    },
+                    "out": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:ke-spec:action:remove-device:00000004:ke:homepad:1",
+                    "description": {
+                        "en-US": "Remove Device",
+                        "zh-TW": "删除设备",
+                        "zh-CN": "删除设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                254
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:ke-spec:action:confirm-add-discovered-devices:00000004:ke:homepad:1",
+                    "description": {
+                        "en-US": "Confirm Add Discovered Devices",
+                        "zh-TW": "确定添加发现的设备",
+                        "zh-CN": "确定添加发现的设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "events": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:event:device-found:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "Device Found",
+                        "zh-TW": "发现设备",
+                        "zh-CN": "发现设备"
+                    },
+                    "arguments": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:event:device-lost:00000003:ke:homepad:1",
+                    "description": {
+                        "en-US": "Device Lost",
+                        "zh-TW": "丢失设备",
+                        "zh-CN": "丢失设备"
+                    },
+                    "arguments": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:event:discovery-stopped:00000004:ke:homepad:1",
+                    "description": {
+                        "en-US": "stop discovery",
+                        "zh-TW": "停止扫描设备",
+                        "zh-CN": "停止扫描设备"
+                    },
+                    "arguments": [
+                        {
+                            "piid": 4,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 4,
+            "type": "urn:ke-spec:service:group-management:00000004:ke:homepad:1",
+            "description": {
+                "en-US": "Group Management",
+                "zh-TW": "设备组管理",
+                "zh-CN": "设备组管理"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:device-id:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Device ID",
+                        "zh-TW": "设备ID",
+                        "zh-CN": "设备ID"
+                    },
+                    "format": "string",
+                    "access": []
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:property:result:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Action Result",
+                        "zh-TW": "操作结果",
+                        "zh-CN": "操作结果"
+                    },
+                    "format": "uint8",
+                    "access": [],
+                    "value-list": [
+                        {
+                            "value": 0,
+                            "description": "ok"
+                        },
+                        {
+                            "value": 1,
+                            "description": "error"
+                        },
+                        {
+                            "value": 2,
+                            "description": "xxxx"
+                        }
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:property:group-id:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Group ID",
+                        "zh-TW": "设备组ID",
+                        "zh-CN": "设备组ID"
+                    },
+                    "format": "string",
+                    "access": []
+                }
+            ],
+            "actions": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:action:create-group:00000006:ke:homepad:1",
+                    "description": {
+                        "en-US": "Create Device Group",
+                        "zh-TW": "创建设备组",
+                        "zh-CN": "创建设备组"
+                    },
+                    "in": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                254
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                0,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:ke-spec:action:delete-group:00000007:ke:homepad:1",
+                    "description": {
+                        "en-US": "Delete Device Group",
+                        "zh-TW": "删除设备组",
+                        "zh-CN": "删除设备组"
+                    },
+                    "in": [
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:ke-spec:action:add-devices-to-group:00000008:ke:homepad:1",
+                    "description": {
+                        "en-US": "Add Devices To Group",
+                        "zh-TW": "给设备组添加设备",
+                        "zh-CN": "给设备组添加设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                254
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:ke-spec:action:remove-devices-from-group:00000009:ke:homepad:1",
+                    "description": {
+                        "en-US": "Remove Devices From Group",
+                        "zh-TW": "从设备组中删除设备",
+                        "zh-CN": "从设备组中删除设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                1,
+                                254
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 2,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:ke-spec:action:get-devices-from-group:00000010:ke:homepad:1",
+                    "description": {
+                        "en-US": "Get Devices From Group",
+                        "zh-TW": "获取设备组的子设备",
+                        "zh-CN": "获取设备组的子设备"
+                    },
+                    "in": [
+                        {
+                            "piid": 3,
+                            "repeat": [
+                                1,
+                                1
+                            ]
+                        }
+                    ],
+                    "out": [
+                        {
+                            "piid": 1,
+                            "repeat": [
+                                0,
+                                254
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 5,
+            "type": "urn:ke-spec:service:switch:00000001:ke:homepad:1",
+            "description": {
+                "en-US": "HomePad Switch 1",
+                "zh-TW": "HomePad开关1",
+                "zh-CN": "HomePad开关1"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:on:00000001:ke:homepad:1",
+                    "description": {
+                        "en-US": "on",
+                        "zh-TW": "開關",
+                        "zh-CN": "开关"
+                    },
+                    "format": "bool",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 6,
+            "type": "urn:ke-spec:service:switch:00000001:ke:homepad:1",
+            "description": {
+                "en-US": "HomePad Switch 2",
+                "zh-TW": "HomePad开关2",
+                "zh-CN": "HomePad开关2"
+            },
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:ke-spec:property:on:00000001:ke:homepad:1",
+                    "description": {
+                        "en-US": "on",
+                        "zh-TW": "開關",
+                        "zh-CN": "开关"
+                    },
+                    "format": "bool",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ]
+                }
+            ]
+        }
+    ]
+}

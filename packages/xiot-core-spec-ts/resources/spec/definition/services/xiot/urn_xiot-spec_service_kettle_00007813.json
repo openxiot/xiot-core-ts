@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:kettle:00007813",
+  "description" : "Kettle",
+  "required-properties" : [ "urn:xiot-spec:property:status:00000007" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:fault:00000009", "urn:xiot-spec:property:target-temperature:00000021", "urn:xiot-spec:property:temperature:00000020", "urn:xiot-spec:property:auto-keep-warm:0000002b", "urn:xiot-spec:property:keep-warm-temperature:0000002e" ]
+}

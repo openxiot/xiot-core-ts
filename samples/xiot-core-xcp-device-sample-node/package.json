@@ -1,0 +1,30 @@
+{
+  "name": "xiot-core-xcp-device-sample-node",
+  "version": "0.52.0",
+  "description": "XCP Sample",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -fr dist",
+    "start": "npm run build & node dist/main.js"
+  },
+  "dependencies": {
+    "@gkct/xiot-core-spec-ts": "3.4.3",
+    "@gkct/xiot-core-xcp-ts": "3.4.3",
+    "@types/ws": "^6.0.1",
+    "qrcode-terminal": "^0.12.0",
+    "ts-md5": "^1.2.6",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/qrcode-terminal": "^0.12.0",
+    "async-file": "^2.0.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
+    "ts-node": "^4.1.0",
+    "typescript": "^3.1.6",
+    "typings": "^2.1.1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:fridge:00007819",
+  "description" : "Fridge",
+  "required-properties" : [ "urn:xiot-spec:property:fault:00000009" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:eco:00000024" ]
+}

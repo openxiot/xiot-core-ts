@@ -1,0 +1,86 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:ave:mt07ssw:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:air-monitor:00007812:ave:mt07ssw:1",
+    "description" : "Air Monitor",
+    "properties" : [ {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:on:00000006:ave:mt07ssw:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:status:00000007:ave:mt07ssw:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Busy"
+      } ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:device-information:00007801:ave:mt07ssw:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:ave:mt07ssw:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:ave:mt07ssw:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:ave:mt07ssw:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:ave:mt07ssw:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:ave:mt07ssw:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:ave:mt07ssw:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 1000.0, 1.0 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:ave:mt07ssw:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:temperature:00000020:ave:mt07ssw:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 1.0 ],
+      "unit" : "celsius"
+    } ]
+  } ]
+}

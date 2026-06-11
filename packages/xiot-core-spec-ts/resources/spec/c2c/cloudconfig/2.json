@@ -1,0 +1,20 @@
+{
+  "id": "abc",
+  "name": "米家",
+  "icon": "https://img.ljcdn.com/beike//iot/woo/1637664739267.png",
+  "introduction": "米家",
+  "url":"http://xiot-service-c2c-translator-xiaomi.ke.com",
+  "eventUrl":"http://xiot-service-c2c-translator-xiaomi.ke.com/v1/event/abc",
+  "createBy": "test-01",
+  "createAt": 1609466400000,
+  "oauth2Config": {
+    "clientId": "123456",
+    "clientSecret": "12345678",
+    "authorizeUrl": "https://account.xiaomi.com/oauth2/authorize",
+    "accessTokenUrl": "https://account.xiaomi.com/oauth2/token",
+    "refreshTokenUrl": "https://account.xiaomi.com/oauth2/token",
+    "callbackUrl": "http://xiot-service-c2c-account.iot-platform-dev.ttb.test.ke.com/v1/oauth2/callback/xiaomi/abc",
+    "grantType": "authorization_code",
+    "scope": "1,6000"
+  }
+}

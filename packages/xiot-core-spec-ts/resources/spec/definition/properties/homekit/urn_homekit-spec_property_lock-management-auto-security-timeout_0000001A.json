@@ -1,0 +1,8 @@
+{
+    "type": "urn:homekit-spec:property:lock-management-auto-security-timeout:0000001a",
+    "description": "Lock Management Auto Security Timeout",
+    "format": "uint32",
+    "access": ["read", "write", "notify"],
+    "value-range": [0, 86400, 1],
+    "unit": "seconds"
+}

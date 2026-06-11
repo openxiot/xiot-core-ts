@@ -1,0 +1,4 @@
+IF (123.3.7 == {#1 = 100, 200, #2 = "aaa", "bbb"}) THEN
+    SLEEP => 2000;
+    aaa.3.4 => true;
+ENDIF

@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:firmware-revision:0000002D",
+    "description": "Firmware Revision",
+    "format": "string",
+    "access": ["read"]
+}

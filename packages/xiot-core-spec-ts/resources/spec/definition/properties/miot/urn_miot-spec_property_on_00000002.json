@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:on:00000002",
+    "description": "Switch Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

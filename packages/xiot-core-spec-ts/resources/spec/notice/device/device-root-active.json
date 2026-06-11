@@ -1,0 +1,27 @@
+{
+    "type": "root-active",
+    "payload": {
+        "did": "xxx",
+        "children": [
+            {
+                "did": "08:00:27:87:53:C5@25",
+                "summary": {
+                    "type": "urn:homekit-spec:device:lightbulb:00000002:yingtuo:hhh:1",
+                    "online": false,
+                    "parentId": "abc",
+                    "protocol": "zigbee"
+                }
+            },
+            {
+                "did": "08:00:27:87:53:C5@25",
+                "summary": {
+                    "type": "urn:homekit-spec:device:gateway:00000002:yingtuo:hhh:1",
+                    "online": false,
+                    "parentId": "abc",
+                    "protocol": "zigbee"
+                }
+            }
+        ],
+        "timestamp": 1640164172915
+    }
+}

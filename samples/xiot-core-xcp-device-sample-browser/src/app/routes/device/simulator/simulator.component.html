@@ -1,0 +1,182 @@
+<!--<page-header-wrapper [title]="'调试'" [phContent]="deviceContent">-->
+
+<!--  <ng-template #deviceContent>-->
+<!--    <sv-container size="small" col="1">-->
+<!--      <sv label="名称">{{name}}</sv>-->
+<!--      <sv label="设备ID">{{did}}</sv>-->
+<!--      <sv label="设备类型">{{type.toString()}}</sv>-->
+<!--    </sv-container>-->
+<!--  </ng-template>-->
+
+<nz-card nzTitle="设备模拟器" [nzExtra]="actionConnection">
+  <ng-template #actionConnection>
+    <div [ngSwitch]="simulator.status">
+      <nz-spin nzSimple [nzSize]="'small'" *ngSwitchCase="'disconnecting'"></nz-spin>
+      <nz-spin nzSimple [nzSize]="'small'" *ngSwitchCase="'connecting'"></nz-spin>
+      <nz-spin nzSimple [nzSize]="'small'" *ngSwitchCase="'initializing'"></nz-spin>
+      <a *ngSwitchCase="'uninitialized'">未初始化</a>
+      <a *ngSwitchCase="'initialized'">已经初始化</a>
+      <a *ngSwitchCase="'initialize_failed'">初始化失败</a>
+      <a *ngSwitchCase="'disconnected'" (click)="connect()">开始连接</a>
+      <a *ngSwitchCase="'connected'" (click)="disconnect()">断开连接</a>
+    </div>
+  </ng-template>
+  {{ simulator.status }}
+</nz-card>
+
+<nz-list [nzDataSource]="simulator.device.getServices()" [nzRenderItem]="s" nzSplit="false" *ngIf="simulator.device">
+  <ng-template #s let-service>
+    <nz-list-item>
+      <nz-card [nzTitle]="serviceTitle" style="width: 100%" [nzExtra]="operations">
+        <ng-template #serviceTitle>
+          <nz-tag [nzColor]="'blue'">{{ service.iid }}</nz-tag>
+          {{ service.type.description.get('en-US') }}
+        </ng-template>
+
+        <ng-template #operations>
+          <button nz-button nzType="dashed" (click)="notifyAllProperties(service)">上报所有属性值</button>
+        </ng-template>
+
+        <nz-table
+          #propertyTable
+          *ngIf="service.properties.size > 0"
+          [nzTitle]="'属性'"
+          [nzData]="service.getProperties()"
+          [nzSize]="'middle'"
+          nzBordered="true"
+          nzPageSize="30"
+          [nzHideOnSinglePage]="true"
+          [nzWidthConfig]="['400px', '300px', '50PX', '100px', '100px']"
+        >
+          <thead></thead>
+          <tbody>
+            <ng-template ngFor let-p [ngForOf]="propertyTable.data">
+              <tr>
+                <td>
+                  <nz-tag [nzColor]="p.value.isChanged ? 'red' : 'blue'">{{ p.iid }}</nz-tag>
+                  {{ p.type.description.get('en-US') }}
+                </td>
+                <td><app-simulator-property-value [p]="p" [showTitle]="false"></app-simulator-property-value></td>
+                <td>
+                  {{ p.format.toString() }}
+                </td>
+                <td>
+                  <button *ngIf="p.access.isReadable" nz-button nzType="dashed" (click)="notifyProperty(service, p)">
+                    上报
+                  </button>
+                </td>
+                <td>
+                  <div
+                    *ngIf="p.status != 0"
+                    style="color: red"
+                    nz-popover
+                    nzTitle="描述"
+                    nzContent="{{ p.description }}"
+                  >
+                    错误：{{ p.status }}
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </nz-table>
+
+        <br *ngIf="service.properties.size > 0 && service.actions.size > 0" />
+
+        <nz-table
+          #actionTable
+          nzTitle="方法"
+          *ngIf="service.actions.size > 0"
+          [nzData]="service.getActions()"
+          [nzSize]="'middle'"
+          nzBordered
+          nzPageSize="30"
+          [nzHideOnSinglePage]="true"
+          [nzWidthConfig]="['400px', '450px', '100px']"
+        >
+          <thead></thead>
+          <tbody>
+            <ng-template ngFor let-a [ngForOf]="actionTable.data">
+              <tr>
+                <td>
+                  <nz-tag [nzColor]="'blue'">{{ a.iid }}</nz-tag>
+                  {{ a.type.description.get('en-US') }}
+                </td>
+                <td>
+                  <app-simulator-arguments
+                    *ngIf="a.in.length > 0"
+                    [title]="'参数'"
+                    [service]="service"
+                    [arguments]="a.in"
+                  ></app-simulator-arguments>
+                  <app-simulator-arguments
+                    *ngIf="a.out.length > 0"
+                    [title]="'结果'"
+                    [service]="service"
+                    [arguments]="a.out"
+                  ></app-simulator-arguments>
+                </td>
+                <!--                <td>-->
+                <!--                  <button nz-button nzType="dashed" (click)="invokeAction(service, a)">执行</button>-->
+                <!--                </td>-->
+                <td>
+                  <div>已执行</div>
+                </td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </nz-table>
+
+        <br *ngIf="service.properties.size > 0 && service.actions.size > 0 && service.events.size > 0" />
+
+        <nz-table
+          #eventTable
+          nzTitle="事件"
+          *ngIf="service.events.size > 0"
+          [nzData]="service.getEvents()"
+          [nzSize]="'middle'"
+          nzBordered
+          nzPageSize="30"
+          [nzHideOnSinglePage]="true"
+          [nzWidthConfig]="['400px', '350px', '100px', '100px']"
+        >
+          <thead></thead>
+          <tbody>
+            <ng-template ngFor let-e [ngForOf]="eventTable.data">
+              <tr>
+                <td>
+                  <nz-tag [nzColor]="'blue'">{{ e.iid }}</nz-tag>
+                  {{ e.type.description.get('en-US') }}
+                </td>
+                <td>
+                  <app-simulator-arguments
+                    *ngIf="e.arguments.length > 0"
+                    [title]="'参数'"
+                    [service]="service"
+                    [arguments]="e.arguments"
+                  ></app-simulator-arguments>
+                </td>
+                <td>
+                  <button nz-button nzType="dashed" (click)="notifyEvent(service, e)">上报事件</button>
+                </td>
+                <td>
+                  <div
+                    *ngIf="e.status != 0"
+                    style="color: red"
+                    nz-popover
+                    nzTitle="描述"
+                    nzContent="{{ e.description }}"
+                  >
+                    错误：{{ e.status }}
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </nz-table>
+      </nz-card>
+    </nz-list-item>
+  </ng-template>
+</nz-list>
+
+<!--</page-header-wrapper>-->

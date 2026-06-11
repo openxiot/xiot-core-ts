@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:serial-number:00000026",
+    "description": "Device Serial Number",
+    "format": "string",
+    "access": ["read"]
+}

@@ -1,0 +1,10 @@
+{
+    "iq": {
+        "type": "query",
+        "method": "urn:xiot:get-shadow",
+        "id": "5010",
+        "content": {
+            "did": "ppp"
+        }
+    }
+}

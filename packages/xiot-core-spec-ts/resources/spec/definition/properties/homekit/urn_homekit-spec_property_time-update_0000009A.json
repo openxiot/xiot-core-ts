@@ -1,0 +1,6 @@
+{
+    "type": "urn:homekit-spec:property:time-update:0000009a",
+    "description": "Time Update",
+    "format": "bool",
+    "access": ["read", "notify"]
+}

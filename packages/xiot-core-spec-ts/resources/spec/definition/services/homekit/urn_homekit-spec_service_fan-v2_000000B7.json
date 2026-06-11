@@ -1,0 +1,16 @@
+{
+    "type": "urn:homekit-spec:service:fan-v2:000000b7",
+    "description": "Fan v2",
+    "required-properties": [
+        "urn:homekit-spec:property:active:000000b0"
+    ],
+    "optional-properties": [
+        "urn:homekit-spec:property:current-fan-state:000000af",
+        "urn:homekit-spec:property:target-fan-state:000000bf",
+        "urn:homekit-spec:property:lock-physical-controls:000000a7",
+        "urn:homekit-spec:property:name:00000023",
+        "urn:homekit-spec:property:rotation-direction:00000028",
+        "urn:homekit-spec:property:rotation-speed:00000029",
+        "urn:homekit-spec:property:swing-mode:000000b6"
+    ]
+}

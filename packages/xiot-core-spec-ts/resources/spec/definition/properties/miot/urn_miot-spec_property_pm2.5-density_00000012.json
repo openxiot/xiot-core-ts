@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:pm2.5-density:00000012",
+    "description": "PM2.5 Density",
+    "format": "float",
+    "access": ["read", "notify"],
+    "value-range": [0.0, 1000.0]
+}

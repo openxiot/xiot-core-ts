@@ -1,0 +1,103 @@
+{
+  "type" : "urn:xiot-spec:device:air-conditioner:0000a004:uiot:airc6:1",
+  "description" : "Air Conditioner",
+  "services" : [ {
+    "iid" : 217,
+    "type" : "urn:xiot-spec:service:fan-control:00007809:uiot:airc6:1",
+    "description" : "Fan Control",
+    "properties" : [ {
+      "iid" : 485,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:uiot:airc6:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 9,
+        "description" : "High"
+      }, {
+        "value" : 7,
+        "description" : "Low"
+      }, {
+        "value" : 8,
+        "description" : "Midium"
+      } ]
+    } ]
+  }, {
+    "iid" : 413,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:airc6:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 400,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:airc6:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 342,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:airc6:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 154,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:airc6:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 414,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:airc6:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 605,
+    "type" : "urn:xiot-spec:service:air-conditioner:0000780f:uiot:airc6:1",
+    "description" : "Air Conditioner",
+    "properties" : [ {
+      "iid" : 160,
+      "type" : "urn:xiot-spec:property:fault:00000009:uiot:airc6:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "normal"
+      } ]
+    }, {
+      "iid" : 325,
+      "type" : "urn:xiot-spec:property:target-temperature:00000021:uiot:airc6:1",
+      "description" : "Target Temperature",
+      "format" : "float",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 16.0, 32.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 301,
+      "type" : "urn:xiot-spec:property:on:00000006:uiot:airc6:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 110,
+      "type" : "urn:xiot-spec:property:mode:00000008:uiot:airc6:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 6,
+        "description" : "Fan"
+      }, {
+        "value" : 2,
+        "description" : "Cool"
+      }, {
+        "value" : 3,
+        "description" : "Heat"
+      }, {
+        "value" : 4,
+        "description" : "Dry"
+      } ]
+    } ]
+  } ]
+}

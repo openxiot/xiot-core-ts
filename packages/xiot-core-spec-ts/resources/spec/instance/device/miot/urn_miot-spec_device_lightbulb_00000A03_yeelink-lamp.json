@@ -1,0 +1,118 @@
+{
+  "type": "urn:miot-spec:device:lightbulb:00000A03:yeelink-lamp",
+  "description": "Lightbulb",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:lightbulb:00000803",
+      "description": "Lightbulb",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:brightness:00000007",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:color-temperature:00000011:yeelink",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            2700,
+            6500
+          ],
+          "unit": "kelvin"
+        }
+      ]
+    }
+  ]
+}

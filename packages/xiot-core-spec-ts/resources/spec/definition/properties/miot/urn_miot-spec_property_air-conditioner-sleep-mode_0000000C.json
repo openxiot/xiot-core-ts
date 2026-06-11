@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-sleep-mode:0000000C",
+    "description": "Air Condition Sleep Mode Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

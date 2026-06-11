@@ -1,0 +1,164 @@
+{
+  "type" : "urn:xiot-spec:device:air-conditioner:0000a004:xiaomi:ma1:1",
+  "description" : "Air Conditioner",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:xiaomi:ma1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:xiaomi:ma1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:xiaomi:ma1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:xiaomi:ma1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:xiaomi:ma1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:air-conditioner:0000780f:xiaomi:ma1:1",
+    "description" : "Air Conditioner",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:xiaomi:ma1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:mode:00000008:xiaomi:ma1:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Cool"
+      }, {
+        "value" : 2,
+        "description" : "Dry"
+      }, {
+        "value" : 3,
+        "description" : "Heat"
+      }, {
+        "value" : 4,
+        "description" : "Fan"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:target-temperature:00000021:xiaomi:ma1:1",
+      "description" : "Target Temperature",
+      "format" : "float",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 16.0, 31.0, 0.5 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:eco:00000024:xiaomi:ma1:1",
+      "description" : "ECO",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:heater:00000026:xiaomi:ma1:1",
+      "description" : "Heater",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:fan-control:00007809:xiaomi:ma1:1",
+    "description" : "Fan Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:xiaomi:ma1:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Level1"
+      }, {
+        "value" : 2,
+        "description" : "Level2"
+      }, {
+        "value" : 3,
+        "description" : "Level3"
+      }, {
+        "value" : 4,
+        "description" : "Level4"
+      }, {
+        "value" : 5,
+        "description" : "Level5"
+      }, {
+        "value" : 6,
+        "description" : "Level6"
+      }, {
+        "value" : 7,
+        "description" : "Level7"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:vertical-swing:00000018:xiaomi:ma1:1",
+      "description" : "Vertical Swing",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:environment:0000780a:xiaomi:ma1:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:temperature:00000020:xiaomi:ma1:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -20.0, 80.0, 0.5 ],
+      "unit" : "celsius"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:alarm:00007804:xiaomi:ma1:1",
+    "description" : "Alarm",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:alarm:00000012:xiaomi:ma1:1",
+      "description" : "Alarm",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:indicator-light:00007803:xiaomi:ma1:1",
+    "description" : "Indicator Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:xiaomi:ma1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

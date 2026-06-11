@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:cancel-cooking:00000402",
+    "description": "Cancel Cooking"
+}

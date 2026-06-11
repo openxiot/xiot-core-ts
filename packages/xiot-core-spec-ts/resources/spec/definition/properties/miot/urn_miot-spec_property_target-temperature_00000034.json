@@ -1,0 +1,16 @@
+{
+  "type": "urn:miot-spec:property:target-temperature:00000034",
+  "description": "Target temperature",
+  "format": "float",
+  "access": [
+    "read",
+    "write",
+    "notify"
+  ],
+  "value-range": [
+    0.0,
+    100.0,
+    0.1
+  ],
+  "unit": "celsius"
+}

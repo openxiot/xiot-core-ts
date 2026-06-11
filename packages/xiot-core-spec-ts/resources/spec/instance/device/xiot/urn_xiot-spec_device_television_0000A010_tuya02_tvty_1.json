@@ -1,0 +1,2246 @@
+{
+  "type": "urn:xiot-spec:device:television:0000a010:tuya02:tvty:1",
+  "description": "Television",
+  "services": [
+    {
+      "iid": 112,
+      "type": "urn:xiot-spec:service:fan:00007808:tuya02:tvty:1",
+      "description": "Fan",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 289,
+          "type": "urn:xiot-spec:property:vertical-angle:0000001a:tuya02:tvty:1",
+          "description": "Vertical Angle",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            90,
+            1
+          ]
+        },
+        {
+          "iid": 218,
+          "type": "urn:xiot-spec:property:fan-level:00000016:tuya02:tvty:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 140,
+          "type": "urn:xiot-spec:property:horizontal-angle:00000019:tuya02:tvty:1",
+          "description": "Horizontal Angle",
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            360,
+            1
+          ]
+        },
+        {
+          "iid": 126,
+          "type": "urn:xiot-spec:property:horizontal-swing:00000017:tuya02:tvty:1",
+          "description": "Horizontal Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 238,
+          "type": "urn:xiot-spec:property:vertical-swing:00000018:tuya02:tvty:1",
+          "description": "Vertical Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 113,
+      "type": "urn:xiot-spec:service:fan:00007808:tuya02:tvty:1",
+      "description": "Fan",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 289,
+          "type": "urn:xiot-spec:property:vertical-angle:0000001a:tuya02:tvty:1",
+          "description": "Vertical Angle",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            90,
+            1
+          ]
+        },
+        {
+          "iid": 218,
+          "type": "urn:xiot-spec:property:fan-level:00000016:tuya02:tvty:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 140,
+          "type": "urn:xiot-spec:property:horizontal-angle:00000019:tuya02:tvty:1",
+          "description": "Horizontal Angle",
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            360,
+            1
+          ]
+        },
+        {
+          "iid": 126,
+          "type": "urn:xiot-spec:property:horizontal-swing:00000017:tuya02:tvty:1",
+          "description": "Horizontal Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 238,
+          "type": "urn:xiot-spec:property:vertical-swing:00000018:tuya02:tvty:1",
+          "description": "Vertical Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 249,
+      "type": "urn:xiot-spec:service:power-consumption:0000780e:tuya02:tvty:1",
+      "description": "Power Consumption",
+      "properties": [
+        {
+          "iid": 375,
+          "type": "urn:xiot-spec:property:leakage-current:00000032:tuya02:tvty:1",
+          "description": "Leakage Current",
+          "format": "uint16",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0,
+            65535,
+            1
+          ]
+        },
+        {
+          "iid": 407,
+          "type": "urn:xiot-spec:property:surge-power:00000033:tuya02:tvty:1",
+          "description": "Surge power",
+          "format": "uint16",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0,
+            65535,
+            1
+          ]
+        },
+        {
+          "iid": 552,
+          "type": "urn:xiot-spec:property:power-consumption:0000002f:tuya02:tvty:1",
+          "description": "Power Consumption",
+          "format": "uint16",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0,
+            65535,
+            1
+          ]
+        },
+        {
+          "iid": 461,
+          "type": "urn:xiot-spec:property:electric-current:00000030:tuya02:tvty:1",
+          "description": "Electric Current",
+          "format": "uint16",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0,
+            65535,
+            1
+          ]
+        },
+        {
+          "iid": 190,
+          "type": "urn:xiot-spec:property:voltage:00000031:tuya02:tvty:1",
+          "description": "Voltage",
+          "format": "uint16",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0,
+            65535,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 270,
+      "type": "urn:xiot-spec:service:play-control:0000781d:tuya02:tvty:1",
+      "description": "Play Control",
+      "properties": [
+        {
+          "iid": 419,
+          "type": "urn:xiot-spec:property:playing-state:00000041:tuya02:tvty:1",
+          "description": "Playing State",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Playing"
+            }
+          ]
+        },
+        {
+          "iid": 275,
+          "type": "urn:xiot-spec:property:seek-time:00000042:tuya02:tvty:1",
+          "description": "Seek Time",
+          "format": "int16",
+          "access": [],
+          "value-range": [
+            -30000,
+            30000,
+            10
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 256,
+          "type": "urn:xiot-spec:action:previous:0000280e:tuya02:tvty:1",
+          "description": "Previous"
+        },
+        {
+          "iid": 149,
+          "type": "urn:xiot-spec:action:play:0000280b:tuya02:tvty:1",
+          "description": "Play"
+        },
+        {
+          "iid": 567,
+          "type": "urn:xiot-spec:action:pause:0000280c:tuya02:tvty:1",
+          "description": "Pause"
+        },
+        {
+          "iid": 203,
+          "type": "urn:xiot-spec:action:seek:0000280a:tuya02:tvty:1",
+          "description": "Seek",
+          "in": [
+            {
+              "piid": 275,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "out": [
+            {
+              "piid": 275,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 158,
+          "type": "urn:xiot-spec:action:stop:0000280d:tuya02:tvty:1",
+          "description": "Stop"
+        },
+        {
+          "iid": 319,
+          "type": "urn:xiot-spec:action:next:0000280f:tuya02:tvty:1",
+          "description": "Next"
+        }
+      ]
+    },
+    {
+      "iid": 279,
+      "type": "urn:xiot-spec:service:device-information:00007801:tuya02:tvty:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 195,
+          "type": "urn:xiot-spec:property:serial-number:00000003:tuya02:tvty:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 199,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:tuya02:tvty:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 247,
+          "type": "urn:xiot-spec:property:model:00000002:tuya02:tvty:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 303,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:tuya02:tvty:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:action:identify:00002801:tuya02:tvty:1",
+          "description": "Identify"
+        }
+      ]
+    },
+    {
+      "iid": 297,
+      "type": "urn:xiot-spec:service:television:0000781b:tuya02:tvty:1",
+      "description": "Television",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 210,
+          "type": "urn:xiot-spec:property:channel-control:0000003f:tuya02:tvty:1",
+          "description": "Channel Control",
+          "format": "uint16",
+          "access": [
+            "write"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Channel up"
+            },
+            {
+              "value": 2,
+              "description": "Channel down"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 415,
+          "type": "urn:xiot-spec:property:input-control:0000003e:tuya02:tvty:1",
+          "description": "TV Input Control",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "HDMI 1"
+            },
+            {
+              "value": 2,
+              "description": "HDMI 2"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 480,
+          "type": "urn:xiot-spec:action:turn-off:00002809:tuya02:tvty:1",
+          "description": "Turn Off"
+        },
+        {
+          "iid": 117,
+          "type": "urn:xiot-spec:action:turn-on:00002808:tuya02:tvty:1",
+          "description": "Turn On"
+        }
+      ]
+    },
+    {
+      "iid": 312,
+      "type": "urn:xiot-spec:service:test:00000001:tuya02:tvty:1",
+      "description": "cameraa",
+      "properties": [
+        {
+          "iid": 404,
+          "type": "urn:xiot-spec:property:test1:00000002:tuya02:tvty:1",
+          "description": "cameraaa",
+          "format": "bool",
+          "access": [
+            "read",
+            "write"
+          ]
+        },
+        {
+          "iid": 102,
+          "type": "urn:xiot-spec:property:test:00000003:tuya02:tvty:1",
+          "description": "test1",
+          "format": "int32",
+          "access": [],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "on"
+            },
+            {
+              "value": 2,
+              "description": "off"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 318,
+      "type": "urn:xiot-spec:service:environment:0000780a:tuya02:tvty:1",
+      "description": "Environment",
+      "properties": [
+        {
+          "iid": 464,
+          "type": "urn:xiot-spec:property:atmospheric-pressure:00000036:tuya02:tvty:1",
+          "description": "Atmospheric Pressure",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            100000.0,
+            1.0
+          ],
+          "unit": "pascal"
+        },
+        {
+          "iid": 263,
+          "type": "urn:xiot-spec:property:air-quality:0000001c:tuya02:tvty:1",
+          "description": "Air Quality",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Excellent"
+            },
+            {
+              "value": 2,
+              "description": "Fine"
+            }
+          ]
+        },
+        {
+          "iid": 119,
+          "type": "urn:xiot-spec:property:pm2.5-density:00000034:tuya02:tvty:1",
+          "description": "PM2.5 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 361,
+          "type": "urn:xiot-spec:property:co2-density:0000004b:tuya02:tvty:1",
+          "description": "CO2 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 281,
+          "type": "urn:xiot-spec:property:pm10-density:00000035:tuya02:tvty:1",
+          "description": "PM10 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 107,
+          "type": "urn:xiot-spec:property:air-quality-index:0000001b:tuya02:tvty:1",
+          "description": "Air Quality Index",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            500,
+            1
+          ]
+        },
+        {
+          "iid": 363,
+          "type": "urn:xiot-spec:property:relative-humidity:0000000c:tuya02:tvty:1",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 396,
+          "type": "urn:xiot-spec:property:temperature:00000020:tuya02:tvty:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        }
+      ]
+    },
+    {
+      "iid": 350,
+      "type": "urn:xiot-spec:service:air-conditioner:0000780f:tuya02:tvty:1",
+      "description": "Air Conditioner",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 146,
+          "type": "urn:xiot-spec:property:anion:00000025:tuya02:tvty:1",
+          "description": "Anion",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 242,
+          "type": "urn:xiot-spec:property:dryer:00000027:tuya02:tvty:1",
+          "description": "Dryer",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 306,
+          "type": "urn:xiot-spec:property:heater:00000026:tuya02:tvty:1",
+          "description": "Heater",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 262,
+          "type": "urn:xiot-spec:property:target-temperature:00000021:tuya02:tvty:1",
+          "description": "Target Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            16.0,
+            32.0,
+            1.0
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 343,
+          "type": "urn:xiot-spec:property:target-humidity:00000022:tuya02:tvty:1",
+          "description": "Target Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 280,
+          "type": "urn:xiot-spec:property:sleep-mode:00000028:tuya02:tvty:1",
+          "description": "Sleep Mode",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 350,
+          "type": "urn:xiot-spec:property:eco:00000024:tuya02:tvty:1",
+          "description": "ECO",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 355,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 356,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 357,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 358,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 359,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 360,
+      "type": "urn:xiot-spec:service:light:00007802:tuya02:tvty:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 706,
+          "type": "urn:xiot-spec:property:color:0000000e:tuya02:tvty:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:tuya02:tvty:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:flow:00000010:tuya02:tvty:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 235,
+          "type": "urn:xiot-spec:property:saturability:00000011:tuya02:tvty:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:brightness:0000000d:tuya02:tvty:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 366,
+      "type": "urn:xiot-spec:service:alarm:00007804:tuya02:tvty:1",
+      "description": "Alarm",
+      "properties": [
+        {
+          "iid": 203,
+          "type": "urn:xiot-spec:property:alarm:00000012:tuya02:tvty:1",
+          "description": "Alarm",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 174,
+          "type": "urn:xiot-spec:property:volume:00000013:tuya02:tvty:1",
+          "description": "Volume",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 394,
+      "type": "urn:xiot-spec:service:humidifier:00007818:tuya02:tvty:1",
+      "description": "Humidifier",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 343,
+          "type": "urn:xiot-spec:property:target-humidity:00000022:tuya02:tvty:1",
+          "description": "Target Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 218,
+          "type": "urn:xiot-spec:property:fan-level:00000016:tuya02:tvty:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 143,
+          "type": "urn:xiot-spec:property:water-level:0000003d:tuya02:tvty:1",
+          "description": "Water Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 395,
+      "type": "urn:xiot-spec:service:humidifier:00007818:tuya02:tvty:1",
+      "description": "Humidifier",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 343,
+          "type": "urn:xiot-spec:property:target-humidity:00000022:tuya02:tvty:1",
+          "description": "Target Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 218,
+          "type": "urn:xiot-spec:property:fan-level:00000016:tuya02:tvty:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 143,
+          "type": "urn:xiot-spec:property:water-level:0000003d:tuya02:tvty:1",
+          "description": "Water Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 562,
+      "type": "urn:xiot-spec:service:switch:0000780c:tuya02:tvty:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 364,
+          "type": "urn:xiot-spec:property:name:00000004:tuya02:tvty:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 396,
+          "type": "urn:xiot-spec:property:temperature:00000020:tuya02:tvty:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        }
+      ]
+    },
+    {
+      "iid": 563,
+      "type": "urn:xiot-spec:service:switch:0000780c:tuya02:tvty:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 273,
+          "type": "urn:xiot-spec:property:status:00000007:tuya02:tvty:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 426,
+          "type": "urn:xiot-spec:property:mode:00000008:tuya02:tvty:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 331,
+          "type": "urn:xiot-spec:property:on:00000006:tuya02:tvty:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:tuya02:tvty:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 364,
+          "type": "urn:xiot-spec:property:name:00000004:tuya02:tvty:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 396,
+          "type": "urn:xiot-spec:property:temperature:00000020:tuya02:tvty:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        }
+      ]
+    },
+    {
+      "iid": 828,
+      "type": "urn:xiot-spec:service:speaker:0000781c:tuya02:tvty:1",
+      "description": "Speaker",
+      "properties": [
+        {
+          "iid": 370,
+          "type": "urn:xiot-spec:property:mute:00000040:tuya02:tvty:1",
+          "description": "Mute",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 174,
+          "type": "urn:xiot-spec:property:volume:00000013:tuya02:tvty:1",
+          "description": "Volume",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 881,
+      "type": "urn:xiot-spec:service:message-router:0000781e:tuya02:tvty:1",
+      "description": "Message Router",
+      "properties": [
+        {
+          "iid": 466,
+          "type": "urn:xiot-spec:property:request:00000043:tuya02:tvty:1",
+          "description": "Request",
+          "format": "string",
+          "access": []
+        },
+        {
+          "iid": 175,
+          "type": "urn:xiot-spec:property:response:00000044:tuya02:tvty:1",
+          "description": "Response",
+          "format": "string",
+          "access": []
+        }
+      ],
+      "actions": [
+        {
+          "iid": 874,
+          "type": "urn:xiot-spec:action:post:00002810:tuya02:tvty:1",
+          "description": "Post",
+          "in": [
+            {
+              "piid": 466,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "out": [
+            {
+              "piid": 466,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

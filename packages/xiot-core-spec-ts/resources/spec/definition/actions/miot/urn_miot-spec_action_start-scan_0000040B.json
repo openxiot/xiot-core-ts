@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:start-scan:0000040B",
+    "description": "Start Scan"
+}

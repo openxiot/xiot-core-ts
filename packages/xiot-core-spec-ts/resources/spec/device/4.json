@@ -1,0 +1,9 @@
+{
+    "did": "08:00:27:87:53:C5@25",
+    "token": "xxx",
+    "somewhere": {
+        "where": "local",
+        "spaceId": "aaa",
+        "index": 1
+    }
+}

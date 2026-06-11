@@ -1,0 +1,292 @@
+{
+  "type" : "urn:xiot-spec:device:light:0000a001:miot:test01:1",
+  "description" : "Light",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:miot:test01:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:miot:test01:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:miot:test01:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:miot:test01:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:miot:test01:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:light:00007802:miot:test01:1",
+    "description" : "Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:test01:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:miot:test01:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:color-temperature:0000000f:miot:test01:1",
+      "description" : "Color Temperature",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1000, 10000, 1 ],
+      "unit" : "kelvin"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:color:0000000e:miot:test01:1",
+      "description" : "Color",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 16777215, 1 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:flow:00000010:miot:test01:1",
+      "description" : "Flow",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:mode:00000008:miot:test01:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:saturability:00000011:miot:test01:1",
+      "description" : "Saturability",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:miot:test01:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:miot:test01:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:charging-state:00000015:miot:test01:1",
+      "description" : "Charging State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Charging"
+      }, {
+        "value" : 2,
+        "description" : "Not charging"
+      }, {
+        "value" : 3,
+        "description" : "Not chargeable"
+      } ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-charge:00002802:miot:test01:1",
+      "description" : "Start Charge"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:low-battery:00005003:miot:test01:1",
+      "description" : "Low Battery"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:airer:00007817:miot:test01:1",
+    "description" : "Airer",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fault:00000009:miot:test01:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:motor-control:00000038:miot:test01:1",
+      "description" : "Motor Control",
+      "format" : "uint8",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Pause"
+      }, {
+        "value" : 1,
+        "description" : "Open"
+      }, {
+        "value" : 2,
+        "description" : "Close"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:current-position:00000039:miot:test01:1",
+      "description" : "Current Position",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:dryer:00000027:miot:test01:1",
+      "description" : "Dryer",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:drying-level:0000003b:miot:test01:1",
+      "description" : "Drying Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Level1"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:left-time:0000003c:miot:test01:1",
+      "description" : "Left Time",
+      "format" : "uint16",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 1440, 1 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:mode:00000008:miot:test01:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:test01:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:property:status:00000007:miot:test01:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Busy"
+      } ]
+    }, {
+      "iid" : 10,
+      "type" : "urn:xiot-spec:property:target-position:0000003a:miot:test01:1",
+      "description" : "Target Position",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:switch:0000780c:miot:test01:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:test01:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:fault:00000009:miot:test01:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:mode:00000008:miot:test01:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:name:00000004:miot:test01:1",
+      "description" : "Service Name",
+      "format" : "string",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:status:00000007:miot:test01:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Busy"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:temperature:00000020:miot:test01:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 1.0 ],
+      "unit" : "celsius"
+    } ]
+  } ]
+}

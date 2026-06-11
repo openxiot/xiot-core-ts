@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "xxxx",
+      "name": "窗帘",
+      "icon": "",
+      "model": "v1",
+      "template": "urn:homekit-spec:device:window-covering:0000000e:ks:windowcovering:1",
+      "organization": "knowin12dd4",
+      "key": "SFNCWWlWQmN3bEZScWJCUWU=",
+      "cert": "SFNCWWlWQmN3bEZScWJCUWU=",
+      "createBy": "4",
+      "createAt": 1595826235,
+      "updateBy": "4",
+      "updateAt": 1595826235,
+      "protocol": "xxx,xxz",
+      "versions": [
+        {
+          "version": 1,
+          "lifecycle": "released"
+        },
+        {
+          "version": 2,
+          "lifecycle": "development"
+        }
+      ]
+    }
+  ]
+}

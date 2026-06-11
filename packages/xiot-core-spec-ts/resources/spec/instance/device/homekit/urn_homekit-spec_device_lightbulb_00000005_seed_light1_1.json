@@ -1,0 +1,121 @@
+{
+    "type": "urn:homekit-spec:device:lightbulb:00000005:seed:light1:1",
+    "description": "普通灯泡_TS",
+    "services": [
+        {
+            "iid": 1,
+            "type": "urn:homekit-spec:service:accessory-information:0000003e:seed:light1:1",
+            "description": {
+                "en_US": "Accessory Information",
+                "zh_CN": "配件信息",
+                "zh_TW": "配件信息"
+            },
+            "properties": [
+                {
+                    "iid": 2,
+                    "type": "urn:homekit-spec:property:identify:00000014:seed:light1:1",
+                    "description": {
+                        "en_US": "Identify",
+                        "zh_CN": "認證",
+                        "zh_TW": "Identify"
+                    },
+                    "format": "bool",
+                    "access": [
+                        "write"
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:homekit-spec:property:manufacturer:00000020:seed:light1:1",
+                    "description": {
+                        "en_US": "Manufacturer",
+                        "zh_CN": "生产商",
+                        "zh_TW": "生產商"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:homekit-spec:property:model:00000021:seed:light1:1",
+                    "description": {
+                        "en_US": "Model",
+                        "zh_CN": "模型",
+                        "zh_TW": "模型"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:homekit-spec:property:name:00000023:seed:light1:1",
+                    "description": {
+                        "en_US": "Name",
+                        "zh_CN": "名称",
+                        "zh_TW": "名稱"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 6,
+                    "type": "urn:homekit-spec:property:serial-number:00000030:seed:light1:1",
+                    "description": {
+                        "en_US": "Serial Number",
+                        "zh_CN": "序列号",
+                        "zh_TW": "序列號"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                },
+                {
+                    "iid": 7,
+                    "type": "urn:homekit-spec:property:firmware-revision:00000052:seed:light1:1",
+                    "description": {
+                        "en_US": "Firmware Revision",
+                        "zh_CN": "固件版本",
+                        "zh_TW": "固件版本"
+                    },
+                    "format": "string",
+                    "access": [
+                        "read"
+                    ]
+                }
+            ]
+        },
+        {
+            "iid": 10,
+            "type": "urn:homekit-spec:service:lightbulb:00000043:seed:light1:1",
+            "description": {
+                "en_US": "Lightbulb",
+                "zh_CN": "灯泡",
+                "zh_TW": "燈泡"
+            },
+            "properties": [
+                {
+                    "iid": 11,
+                    "type": "urn:homekit-spec:property:on:00000025:seed:light1:1",
+                    "description": {
+                        "en_US": "On",
+                        "zh_CN": "开关",
+                        "zh_TW": "開"
+                    },
+                    "format": "bool",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ]
+                }
+            ]
+        }
+    ]
+}

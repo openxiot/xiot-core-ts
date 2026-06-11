@@ -1,0 +1,148 @@
+{
+  "type": "urn:miot-spec:device:cooker:00000A08:chunmi",
+  "description": "Chunmi Cooker",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:cooker:0000080A:chunmi",
+      "description": "Cooker",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:cooker-status:00000020:chunmi",
+          "description": "Cooker Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "IDLE"
+            },
+            {
+              "value": 2,
+              "description": "RUNNING"
+            },
+            {
+              "value": 3,
+              "description": "KEEP_WARM"
+            },
+            {
+              "value": 4,
+              "description": "BUSY"
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:cooker-cook:00000021:chunmi",
+          "description": "Cooker Cook",
+          "format": "uint8",
+          "access": [],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "FINE_COOK"
+            },
+            {
+              "value": 2,
+              "description": "QUICK_COOK"
+            },
+            {
+              "value": 3,
+              "description": "COOK_CONGEE"
+            },
+            {
+              "value": 4,
+              "description": "KEEP_WARM"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:start-cook:00000401:chunmi",
+          "description": "Start Cook",
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:action:cancel-cooking:00000402",
+          "description": "Cancel Cooking"
+        }
+      ]
+    }
+  ]
+}

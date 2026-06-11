@@ -1,0 +1,25 @@
+{
+    "application": {
+        "appId": "xxxx",
+        "name": "hello",
+        "organization": "test",
+        "authorization": {
+            "type": "jwt",
+            "jwt": {
+                "type": "secrets",
+                "secrets": {
+                    "key": "this is a test key"
+                }
+            }
+        },
+        "event": {
+            "type": "http",
+            "http": {
+                "url": "xxxxx"
+            }
+        },
+        "createBy": "55",
+        "createAt": "xxxxx"
+    },
+    "lifecycle": "preview"
+}

@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:device:motion-sensor:00000A11",
+    "description": "door"
+}

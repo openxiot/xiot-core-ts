@@ -1,0 +1,91 @@
+{
+  "type" : "urn:xiot-spec:device:airer:0000a00d:mrbond:m1pro:1",
+  "description" : "Airer",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:mrbond:m1pro:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:mrbond:m1pro:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:mrbond:m1pro:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:mrbond:m1pro:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:mrbond:m1pro:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:airer:00007817:mrbond:m1pro:1",
+    "description" : "Airer",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:motor-control:00000038:mrbond:m1pro:1",
+      "description" : "Motor Control",
+      "format" : "uint8",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Pause"
+      }, {
+        "value" : 1,
+        "description" : "Up"
+      }, {
+        "value" : 2,
+        "description" : "Down"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:dryer:00000027:mrbond:m1pro:1",
+      "description" : "Dryer",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:drying-level:0000003b:mrbond:m1pro:1",
+      "description" : "Drying Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Level1"
+      }, {
+        "value" : 2,
+        "description" : "Level2"
+      }, {
+        "value" : 3,
+        "description" : "Level3"
+      }, {
+        "value" : 4,
+        "description" : "Level4"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:light:00007802:mrbond:m1pro:1",
+    "description" : "Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:mrbond:m1pro:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

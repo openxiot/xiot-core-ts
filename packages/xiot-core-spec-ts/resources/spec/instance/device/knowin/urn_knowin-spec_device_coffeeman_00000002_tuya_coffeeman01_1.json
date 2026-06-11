@@ -1,0 +1,131 @@
+{
+  "type": "urn:knowin-spec:device:coffeeman:00000002:tuya:coffeeman01:1",
+  "description": {
+    "en-US": "Tuya Cofeeman",
+    "zh-TW": "塗鴉咖啡機",
+    "zh-CN": "涂鸦咖啡机"
+  },
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:knowin-spec:service:device-information:00000002:tuya:coffeeman01:1",
+      "description": {
+        "en-US": "Device Information",
+        "zh-TW": "設備信息",
+        "zh-CN": "设备信息"
+      },
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:knowin-spec:property:manufacturer:00000003:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "製造商",
+            "zh-CN": "制造商"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:knowin-spec:property:model:00000004:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:knowin-spec:property:serial-number:00000005:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:knowin-spec:property:firmware-revision:00000006:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:knowin-spec:property:name:00000017:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名稱",
+            "zh-CN": "名称"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:knowin-spec:service:coffee:00000001:tuya:coffeeman01:1",
+      "description": {
+        "en-US": "Coffee",
+        "zh-TW": "咖啡機",
+        "zh-CN": "咖啡机"
+      },
+      "properties": [
+        {
+          "iid": 2,
+          "type": "urn:knowin-spec:property:started:00000034:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Started",
+            "zh-TW": "已經啓動",
+            "zh-CN": "已经启动"
+          },
+          "format": "bool",
+          "access": [
+            "read",
+            "notify"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:knowin-spec:action:start:00000012:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Start",
+            "zh-TW": "啓動",
+            "zh-CN": "启动"
+          }
+        },
+        {
+          "iid": 2,
+          "type": "urn:knowin-spec:action:stop:00000013:tuya:coffeeman01:1",
+          "description": {
+            "en-US": "Stop",
+            "zh-TW": "停止",
+            "zh-CN": "停止"
+          }
+        }
+      ]
+    }
+  ]
+}

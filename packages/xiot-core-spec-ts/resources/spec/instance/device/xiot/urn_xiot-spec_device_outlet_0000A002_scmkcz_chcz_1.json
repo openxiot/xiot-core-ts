@@ -1,0 +1,107 @@
+{
+  "type" : "urn:xiot-spec:device:outlet:0000a002:scmkcz:chcz:1",
+  "description" : "Outlet",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:scmkcz:chcz:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:scmkcz:chcz:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:scmkcz:chcz:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:scmkcz:chcz:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:scmkcz:chcz:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:switch:0000780c:scmkcz:chcz:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:scmkcz:chcz:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:indicator-light:00007803:scmkcz:chcz:1",
+    "description" : "Indicator Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:scmkcz:chcz:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:color-temperature:0000000f:scmkcz:chcz:1",
+      "description" : "Color Temperature",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1000, 10000, 1 ],
+      "unit" : "kelvin"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:color:0000000e:scmkcz:chcz:1",
+      "description" : "Color",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 16777215, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:flow:00000010:scmkcz:chcz:1",
+      "description" : "Flow",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:mode:00000008:scmkcz:chcz:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:on:00000006:scmkcz:chcz:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:saturability:00000011:scmkcz:chcz:1",
+      "description" : "Saturability",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  } ]
+}

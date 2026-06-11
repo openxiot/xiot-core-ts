@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:action:seek:0000280a",
+  "description" : "Seek",
+  "in" : [ {
+    "property" : "urn:xiot-spec:property:seek-time:00000042",
+    "repeat" : [ 1, 1 ]
+  } ]
+}

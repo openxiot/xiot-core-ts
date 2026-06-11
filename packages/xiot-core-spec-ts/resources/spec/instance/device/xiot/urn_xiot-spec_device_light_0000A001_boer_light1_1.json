@@ -1,0 +1,236 @@
+{
+  "type": "urn:xiot-spec:device:light:0000a001:boer:light1:1",
+  "description": "Light",
+  "services": [
+    {
+      "iid": 110,
+      "type": "urn:xiot-spec:service:light:00007802:boer:light1:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 224,
+          "type": "urn:xiot-spec:property:brightness:0000000d:boer:light1:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 243,
+          "type": "urn:xiot-spec:property:on:00000006:boer:light1:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 323,
+          "type": "urn:xiot-spec:property:flow:00000010:boer:light1:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 276,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:boer:light1:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 212,
+          "type": "urn:xiot-spec:property:color:0000000e:boer:light1:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        },
+        {
+          "iid": 363,
+          "type": "urn:xiot-spec:property:saturability:00000011:boer:light1:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 286,
+          "type": "urn:xiot-spec:property:mode:00000008:boer:light1:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 394,
+      "type": "urn:xiot-spec:service:battery:00007805:boer:light1:1",
+      "description": "Battery",
+      "properties": [
+        {
+          "iid": 193,
+          "type": "urn:xiot-spec:property:charging-state:00000015:boer:light1:1",
+          "description": "Charging State",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Charging"
+            },
+            {
+              "value": 2,
+              "description": "Not charging"
+            },
+            {
+              "value": 3,
+              "description": "Not chargeable"
+            }
+          ]
+        },
+        {
+          "iid": 194,
+          "type": "urn:xiot-spec:property:battery-level:00000014:boer:light1:1",
+          "description": "Battery Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ],
+      "actions": [
+        {
+          "iid": 318,
+          "type": "urn:xiot-spec:action:start-charge:00002802:boer:light1:1",
+          "description": "Start Charge"
+        }
+      ],
+      "events": [
+        {
+          "iid": 168,
+          "type": "urn:xiot-spec:event:low-battery:00005003:boer:light1:1",
+          "description": "Low Battery"
+        }
+      ]
+    },
+    {
+      "iid": 406,
+      "type": "urn:xiot-spec:service:device-information:00007801:boer:light1:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 375,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:boer:light1:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 572,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:boer:light1:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 334,
+          "type": "urn:xiot-spec:property:model:00000002:boer:light1:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 542,
+          "type": "urn:xiot-spec:property:serial-number:00000003:boer:light1:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 162,
+          "type": "urn:xiot-spec:action:identify:00002801:boer:light1:1",
+          "description": "Identify"
+        }
+      ]
+    }
+  ]
+}

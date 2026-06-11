@@ -1,0 +1,8 @@
+{
+    "type": "urn:homekit-spec:property:target-position:0000007c",
+    "description": "Target Position",
+    "format": "uint8",
+    "access": ["read", "write", "notify"],
+    "value-range": [0, 100, 1],
+    "unit": "percentage"
+}

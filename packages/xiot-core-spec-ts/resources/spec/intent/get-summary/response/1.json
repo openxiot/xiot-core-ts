@@ -1,0 +1,46 @@
+{
+    "devices": [
+        {
+            "did": "aaa",
+            "status": 0,
+            "summary": {
+                "type": "urn:homekit-spec:device:lightbulb:00000001:aaa:bbb:1",
+                "online": true,
+                "parentId": "aaa"
+            }
+        },
+        {
+            "did": "bbb",
+            "status": 0,
+            "summary": {
+                "type": "urn:homekit-spec:device:lightbulb:00000001:aaa:bbb:1",
+                "online": true,
+                "parentId": "bbb"
+            }
+        },
+        {
+            "did": "ccc",
+            "status": 0,
+            "summary": {
+                "type": "urn:homekit-spec:device:lightbulb:00000001:aaa:bbb:1",
+                "online": true,
+                "parentId": "ccc",
+                "protocol": "virtual"
+            }
+        },
+        {
+            "did": "ddd",
+            "status": 0,
+            "summary": {
+                "type": "urn:homekit-spec:group:lightbulb:00000001:aaa:bbb:1",
+                "online": true,
+                "protocol": "zigbee"
+            }
+        },
+        {
+            "did": "ddd",
+            "status": -1,
+            "description": "xxx--axx"
+        }
+    ]
+}

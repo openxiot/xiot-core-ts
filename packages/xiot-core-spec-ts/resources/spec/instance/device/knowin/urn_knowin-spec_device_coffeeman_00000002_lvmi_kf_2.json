@@ -1,0 +1,152 @@
+{
+  "type" : "urn:knowin-spec:device:coffeeman:00000002:lvmi:kf:2",
+  "description" : {
+    "en-US" : "Coffee Machine",
+    "zh-TW" : "咖啡機",
+    "zh-CN" : "咖啡机"
+  },
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:knowin-spec:service:coffee:00000001:lvmi:kf:1",
+    "description" : {
+      "en-US" : "Coffee",
+      "zh-TW" : "咖啡機",
+      "zh-CN" : "咖啡机"
+    },
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:knowin-spec:property:content:00000001:lvmi:kf:1",
+      "description" : {
+        "en-US" : "Content",
+        "zh-TW" : "內容",
+        "zh-CN" : "内容"
+      },
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:knowin-spec:property:context:00000002:lvmi:kf:1",
+      "description" : {
+        "en-US" : "Context",
+        "zh-TW" : "上下文",
+        "zh-CN" : "上下文"
+      },
+      "format" : "string",
+      "access" : [ ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:knowin-spec:action:make:00000001:lvmi:kf:1",
+      "description" : {
+        "en-US" : "Make",
+        "zh-TW" : "製作",
+        "zh-CN" : "制作"
+      },
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:knowin-spec:event:notify:00000001:lvmi:kf:1",
+      "description" : {
+        "en-US" : "Notify",
+        "zh-TW" : "通知",
+        "zh-CN" : "通知"
+      },
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:knowin-spec:service:lightbulb:00000009:lvmi:kf:2",
+    "description" : {
+      "en-US" : "Lightbulb",
+      "zh-TW" : "燈泡",
+      "zh-CN" : "灯泡"
+    },
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:knowin-spec:property:on:00000014:lvmi:kf:2",
+      "description" : {
+        "en-US" : "On",
+        "zh-TW" : "開關",
+        "zh-CN" : "开关"
+      },
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:knowin-spec:property:brightness:00000015:lvmi:kf:2",
+      "description" : {
+        "en-US" : "Brightness",
+        "zh-TW" : "亮度",
+        "zh-CN" : "亮度"
+      },
+      "format" : "int32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 3,
+      "type" : "urn:knowin-spec:property:hue:00000016:lvmi:kf:2",
+      "description" : {
+        "en-US" : "Hue",
+        "zh-TW" : "色度",
+        "zh-CN" : "色度"
+      },
+      "format" : "float",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0.0, 360.0, 1.0 ],
+      "unit" : "arcdegrees"
+    }, {
+      "iid" : 4,
+      "type" : "urn:knowin-spec:property:name:00000017:lvmi:kf:2",
+      "description" : {
+        "en-US" : "Name",
+        "zh-TW" : "名稱",
+        "zh-CN" : "名称"
+      },
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:knowin-spec:property:saturation:00000018:lvmi:kf:2",
+      "description" : {
+        "en-US" : "Saturation",
+        "zh-TW" : "飽和度",
+        "zh-CN" : "饱和度"
+      },
+      "format" : "float",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0.0, 100.0, 1.0 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:knowin-spec:property:color-temperature:00000019:lvmi:kf:2",
+      "description" : {
+        "en-US" : "Color Temperature",
+        "zh-TW" : "色溫",
+        "zh-CN" : "色温"
+      },
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 2500, 20000, 1 ]
+    } ]
+  } ]
+}

@@ -1,0 +1,21 @@
+<nz-layout class="layout">
+  <nz-header>
+    <!--    <a [routerLink]="['/']" class="logo">-->
+    <!--      <img src="assets/image/logo.svg" />-->
+    <!--    </a>-->
+    <!--    <div class="logo">-->
+    <!--      <img src="assets/image/logo.png">-->
+    <!--      &lt;!&ndash;<img src="assets/image/logo.svg" style="max-height:31px;">&ndash;&gt;-->
+    <!--    </div>-->
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px">
+      <li nz-menu-item routerLink="/home" i18n>首页</li>
+      <li nz-menu-item routerLink="/device" i18n>设备</li>
+      <li nz-menu-item routerLink="/about" i18n>关于</li>
+    </ul>
+  </nz-header>
+  <nz-content style="padding: 20px 50px 0px 50px">
+    <!--<nz-content>-->
+    <router-outlet></router-outlet>
+  </nz-content>
+  <nz-footer style="text-align: center">{{ version }}</nz-footer>
+</nz-layout>

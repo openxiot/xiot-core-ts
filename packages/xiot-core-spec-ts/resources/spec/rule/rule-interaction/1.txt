@@ -1,0 +1,3 @@
+IF (aaa.9.7 == ANY) THEN
+    xxx.3.4 => ANY;
+ENDIF

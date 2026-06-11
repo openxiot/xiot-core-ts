@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:pm10-density:00000035",
+  "description" : "PM10 Density",
+  "format" : "float",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0.0, 1000.0, 1.0 ]
+}

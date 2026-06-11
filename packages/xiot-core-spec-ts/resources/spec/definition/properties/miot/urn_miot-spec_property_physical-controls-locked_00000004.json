@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:physical-controls-locked:00000004",
+    "description": "Physical Controls Lock Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

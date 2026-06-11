@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:property:outdoor-temperature:0000000b",
+  "description" : "Outdoor Temperature",
+  "format" : "float",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ -50.0, 50.0, 1.0 ],
+  "unit" : "celsius"
+}

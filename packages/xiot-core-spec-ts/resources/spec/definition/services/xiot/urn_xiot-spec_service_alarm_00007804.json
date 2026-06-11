@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:alarm:00007804",
+  "description" : "Alarm",
+  "required-properties" : [ "urn:xiot-spec:property:alarm:00000012" ],
+  "optional-properties" : [ "urn:xiot-spec:property:volume:00000013" ]
+}

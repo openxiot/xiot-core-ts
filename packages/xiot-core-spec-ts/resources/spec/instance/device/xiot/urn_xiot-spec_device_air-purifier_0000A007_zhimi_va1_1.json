@@ -1,0 +1,656 @@
+{
+  "type" : "urn:xiot-spec:device:air-purifier:0000a007:zhimi:va1:1",
+  "description" : "Air Purifier",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:zhimi:va1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:zhimi:va1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:zhimi:va1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:zhimi:va1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:zhimi:va1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:air-purifier:00007811:zhimi:va1:1",
+    "description" : "Air Purifier",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fault:00000009:zhimi:va1:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      }, {
+        "value" : 1,
+        "description" : "m1_run"
+      }, {
+        "value" : 2,
+        "description" : "m1_stuck"
+      }, {
+        "value" : 3,
+        "description" : "no_sensor"
+      }, {
+        "value" : 4,
+        "description" : "error_hum"
+      }, {
+        "value" : 5,
+        "description" : "error_temp"
+      }, {
+        "value" : 6,
+        "description" : "timer_error1"
+      }, {
+        "value" : 7,
+        "description" : "timer_error2"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:va1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:zhimi:va1:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 14, 1 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:mode:00000008:zhimi:va1:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "auto"
+      }, {
+        "value" : 1,
+        "description" : "silent"
+      }, {
+        "value" : 2,
+        "description" : "favorite"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:zhimi:va1:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:zhimi:va1:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 600.0, 1.0 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:zhimi:va1:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:temperature:00000020:zhimi:va1:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -400.0, 1250.0, 1.0 ],
+      "unit" : "celsius"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:filter:0000780b:zhimi:va1:1",
+    "description" : "Filter",
+    "properties" : [ {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:filter-life-level:0000001e:zhimi:va1:1",
+      "description" : "Filter Life Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:filter-used-time:00000048:zhimi:va1:1",
+      "description" : "Filter Used Time",
+      "format" : "uint16",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 6000, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:reset-filter-life:00002803:zhimi:va1:1",
+      "description" : "Reset Filter Life"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:alarm:00007804:zhimi:va1:1",
+    "description" : "Alarm",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:alarm:00000012:zhimi:va1:1",
+      "description" : "Alarm",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:volume:00000013:zhimi:va1:1",
+      "description" : "Volume",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:indicator-light:00007803:zhimi:va1:1",
+    "description" : "Indicator Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:zhimi:va1:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "brightest"
+      }, {
+        "value" : 1,
+        "description" : "glimmer"
+      }, {
+        "value" : 2,
+        "description" : "not bright"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:va1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 7,
+    "type" : "urn:xiot-spec:service:physical-controls-locked:00007807:zhimi:va1:1",
+    "description" : "Physical Control Locked",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:physical-controls-locked:0000001d:zhimi:va1:1",
+      "description" : "Physical Control Locked",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 8,
+    "type" : "urn:xiot-spec:service:button:00000001:zhimi:va1:1",
+    "description" : "button",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:button-pressed:00000002:zhimi:va1:1",
+      "description" : "button_pressed",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:toggle:00000028:zhimi:va1:1",
+      "description" : "toggle"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:toggle-mode:00000029:zhimi:va1:1",
+      "description" : "toggle-mode"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:child-lock-trigger:00000031:zhimi:va1:1",
+      "description" : "child-lock-trigger",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 9,
+    "type" : "urn:xiot-spec:service:filter-time:00000003:zhimi:va1:1",
+    "description" : "filter-time",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:filter-max-time:00000004:zhimi:va1:1",
+      "description" : "filter-max-time",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 2000, 6000, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:reset-filter1:00000027:zhimi:va1:1",
+      "description" : "reset-filter1"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:filter1-eof:0000002c:zhimi:va1:1",
+      "description" : "filter1-eof",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:filter-door-opened:0000002d:zhimi:va1:1",
+      "description" : "filter-door-opened",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:event:reset-filter-life:0000002e:zhimi:va1:1",
+      "description" : "reset-filter-life",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 10,
+    "type" : "urn:xiot-spec:service:motor-speed:00000005:zhimi:va1:1",
+    "description" : "motor-speed",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:m1-strong:00000006:zhimi:va1:1",
+      "description" : "m1-strong",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:m1-high:00000007:zhimi:va1:1",
+      "description" : "m1-high",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:m1-med:00000008:zhimi:va1:1",
+      "description" : "m1-med",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:m1-med-l:00000009:zhimi:va1:1",
+      "description" : "m1-med-l",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:m1-low:0000000a:zhimi:va1:1",
+      "description" : "m1-low",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:m1-silent:0000000b:zhimi:va1:1",
+      "description" : "m1-silent",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:m1-favorite:0000000c:zhimi:va1:1",
+      "description" : "m1-favorite",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 300, 2300, 10 ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:motor1-speed:0000000d:zhimi:va1:1",
+      "description" : "motor1-speed",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 10000, 1 ]
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:property:motor1-set-speed:00000041:zhimi:va1:1",
+      "description" : "motor1-set-speed",
+      "format" : "int32",
+      "access" : [ ],
+      "value-range" : [ 0, 10000, 1 ]
+    } ],
+    "events" : [ {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:speed-change:00000032:zhimi:va1:1",
+      "description" : "speed-change",
+      "arguments" : [ {
+        "piid" : 8,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 11,
+    "type" : "urn:xiot-spec:service:sleep:0000000e:zhimi:va1:1",
+    "description" : "sleep",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:act-sleep:0000000f:zhimi:va1:1",
+      "description" : "act_sleep",
+      "format" : "bool",
+      "access" : [ "read", "write" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:sleep-mode:00000010:zhimi:va1:1",
+      "description" : "is-sleep-mode",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "poweroff"
+      }, {
+        "value" : 1,
+        "description" : "silent"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:sleep-time:00000011:zhimi:va1:1",
+      "description" : "sleep-time",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 86399, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:sleep-data-num:00000012:zhimi:va1:1",
+      "description" : "sleep-data-num",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 30, 1 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:sleep-dt-state:00000038:zhimi:va1:1",
+      "description" : "sleep-dt-state",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 65535, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:sleep-data-0:00000039:zhimi:va1:1",
+      "description" : "sleep-data-0",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 65535, 1 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:sleep-data-1:0000003a:zhimi:va1:1",
+      "description" : "sleep-data-1",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 65535, 1 ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:sleep-data-2:0000003b:zhimi:va1:1",
+      "description" : "sleep-data-2",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 65535, 1 ]
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:property:act-morn:0000003c:zhimi:va1:1",
+      "description" : "act-morn",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 10,
+      "type" : "urn:xiot-spec:property:morn-mode:0000003d:zhimi:va1:1",
+      "description" : "morn-mode",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 11,
+      "type" : "urn:xiot-spec:property:morn-time:0000003e:zhimi:va1:1",
+      "description" : "morn-time",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 86399, 1 ]
+    }, {
+      "iid" : 12,
+      "type" : "urn:xiot-spec:property:morn-data-num:0000003f:zhimi:va1:1",
+      "description" : "morn-data-num",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 30, 1 ]
+    }, {
+      "iid" : 13,
+      "type" : "urn:xiot-spec:property:morn-dt-state:00000040:zhimi:va1:1",
+      "description" : "morn-dt-state",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 65535, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:reset-act-sleep:00000026:zhimi:va1:1",
+      "description" : "reset-act-sleep"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:auto-sleep-notify:0000002f:zhimi:va1:1",
+      "description" : "auto-sleep-notify",
+      "arguments" : [ {
+        "piid" : 3,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:auto-morn-notify:00000030:zhimi:va1:1",
+      "description" : "auto-morn-notify",
+      "arguments" : [ {
+        "piid" : 3,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 12,
+    "type" : "urn:xiot-spec:service:use-time:00000013:zhimi:va1:1",
+    "description" : "use-time",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:use-time:00000014:zhimi:va1:1",
+      "description" : "use-time",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    } ]
+  }, {
+    "iid" : 13,
+    "type" : "urn:xiot-spec:service:aqi:00000015:zhimi:va1:1",
+    "description" : "aqi",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:purify-volume:00000016:zhimi:va1:1",
+      "description" : "purify-volume",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:average-aqi:00000017:zhimi:va1:1",
+      "description" : "average-aqi",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 600, 1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:average-aqi-cnt:00000018:zhimi:va1:1",
+      "description" : "average_aqi read times",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:aqi-zone:00000019:zhimi:va1:1",
+      "description" : "aqi-zone",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:sensor-state:00000020:zhimi:va1:1",
+      "description" : "sensor-state",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "waiting"
+      }, {
+        "value" : 1,
+        "description" : "ready"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:aqi-goodh:00000034:zhimi:va1:1",
+      "description" : "aqi-goodh",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 0, 255, 1 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:aqi-runstate:00000035:zhimi:va1:1",
+      "description" : "runstate",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "continue"
+      }, {
+        "value" : 1,
+        "description" : "hold"
+      }, {
+        "value" : 2,
+        "description" : "sleep"
+      } ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:aqi-state:00000036:zhimi:va1:1",
+      "description" : "aqi-state",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "AQI_GOOD_L"
+      }, {
+        "value" : 1,
+        "description" : "AQI_GOOD_H"
+      }, {
+        "value" : 2,
+        "description" : "AQI_MID_L"
+      }, {
+        "value" : 3,
+        "description" : "AQI_MID_H"
+      }, {
+        "value" : 4,
+        "description" : "AQI_BAD_L"
+      }, {
+        "value" : 5,
+        "description" : "AQI_BAD_H"
+      } ]
+    } ]
+  }, {
+    "iid" : 14,
+    "type" : "urn:xiot-spec:service:rfid:0000001a:zhimi:va1:1",
+    "description" : "rfid",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:rfid-tag:0000001b:zhimi:va1:1",
+      "description" : "rfid-tag",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:rfid-factory-id:0000001c:zhimi:va1:1",
+      "description" : "rfid-factory-id",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:rfid-product-id:0000001d:zhimi:va1:1",
+      "description" : "rfid-product-id",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:rfid-time:0000001e:zhimi:va1:1",
+      "description" : "rfid-time",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:rfid-serial-num:0000001f:zhimi:va1:1",
+      "description" : "rfid-serial-num",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 15,
+    "type" : "urn:xiot-spec:service:others:00000021:zhimi:va1:1",
+    "description" : "others",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:app-extra:00000022:zhimi:va1:1",
+      "description" : "app-extra",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:main-channel:00000023:zhimi:va1:1",
+      "description" : "main-channel",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:slave-channel:00000024:zhimi:va1:1",
+      "description" : "slave-channel",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:cola:00000025:zhimi:va1:1",
+      "description" : "cola",
+      "format" : "string",
+      "access" : [ "read", "write" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:buttom-door:00000037:zhimi:va1:1",
+      "description" : "buttom-door",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  } ]
+}

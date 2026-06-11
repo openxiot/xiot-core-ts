@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:on:00000006",
+  "description" : "Switch Status",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

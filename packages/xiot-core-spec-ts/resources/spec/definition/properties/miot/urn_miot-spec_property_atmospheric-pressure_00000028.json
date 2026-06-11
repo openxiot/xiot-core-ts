@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:atmospheric-pressure:00000028",
+    "description": "Atmospheric Pressure",
+    "format": "uint32",
+    "access": ["read", "notify"],
+    "unit": "pascal"
+}

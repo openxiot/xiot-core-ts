@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:physical-controls-locked:0000001d",
+  "description" : "Physical Control Locked",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

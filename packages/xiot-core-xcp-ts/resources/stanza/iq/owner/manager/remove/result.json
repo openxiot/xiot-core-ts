@@ -1,0 +1,7 @@
+{
+    "iq": {
+        "type": "result",
+        "method": "urn:xiot:remove-owner",
+        "id": "5013"
+    }
+}

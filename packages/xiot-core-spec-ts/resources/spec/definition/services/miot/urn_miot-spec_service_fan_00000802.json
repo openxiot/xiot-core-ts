@@ -1,0 +1,14 @@
+{
+    "type": "urn:miot-spec:service:fan:00000802",
+    "description": "Fan",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002",
+        "urn:miot-spec:property:speed-level:00000003"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:swing:00000005",
+        "urn:miot-spec:property:swing-angle:00000006",
+        "urn:miot-spec:property:physical-controls-locked:00000004"
+    ]
+}

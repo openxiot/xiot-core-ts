@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:status-error:0000001C",
+    "description": "Status Error",
+    "format": "string",
+    "access": ["read", "notify"]
+}

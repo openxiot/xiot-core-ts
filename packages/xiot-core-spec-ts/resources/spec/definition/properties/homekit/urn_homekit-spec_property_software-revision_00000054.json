@@ -1,0 +1,6 @@
+{
+    "type": "urn:homekit-spec:property:software-revision:00000054",
+    "description": "Software Revision",
+    "format": "string",
+    "access": ["read"]
+}

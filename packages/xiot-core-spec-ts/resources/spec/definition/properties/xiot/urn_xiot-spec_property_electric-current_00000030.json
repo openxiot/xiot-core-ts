@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:electric-current:00000030",
+  "description" : "Electric Current",
+  "format" : "uint16",
+  "access" : [ "read" ],
+  "value-range" : [ 0, 65535, 1 ]
+}

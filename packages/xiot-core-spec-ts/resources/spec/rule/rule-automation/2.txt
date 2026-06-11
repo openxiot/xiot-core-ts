@@ -1,0 +1,7 @@
+IF (((aaa.1.1 == true && bbb.2.1 > 19) && ccc.3.1 == "fox") || ((ddd.9.7 <= 30 && eee.3.5 == 12345) || fff.3.1 >= 100)) THEN
+    aaa.3.4 => true;
+    SLEEP => 2000;
+    bbb.3.4 =>
+        #1 = 100, 200, 300,
+        #2 = "aaa", "bbb", "ccc";
+ENDIF

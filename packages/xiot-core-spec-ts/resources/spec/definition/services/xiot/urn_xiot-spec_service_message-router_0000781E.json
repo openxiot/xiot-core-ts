@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:message-router:0000781e",
+  "description" : "Message Router",
+  "required-properties" : [ "urn:xiot-spec:property:request:00000043", "urn:xiot-spec:property:response:00000044" ],
+  "required-actions" : [ "urn:xiot-spec:action:post:00002810" ]
+}

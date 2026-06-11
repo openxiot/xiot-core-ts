@@ -1,0 +1,87 @@
+{
+  "type": "urn:xiot-spec:device:switch:0000a003:zinguo:k2:1",
+  "description": "Switch",
+  "services": [
+    {
+      "iid": 156,
+      "type": "urn:xiot-spec:service:device-information:00007801:zinguo:k2:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 146,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:zinguo:k2:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 105,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:zinguo:k2:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 412,
+          "type": "urn:xiot-spec:property:model:00000002:zinguo:k2:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 220,
+          "type": "urn:xiot-spec:property:serial-number:00000003:zinguo:k2:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 864,
+      "type": "urn:xiot-spec:service:switch:0000780c:zinguo:k2:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 337,
+          "type": "urn:xiot-spec:property:on:00000006:zinguo:k2:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 425,
+          "type": "urn:xiot-spec:property:status:00000007:zinguo:k2:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

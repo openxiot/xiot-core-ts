@@ -1,0 +1,213 @@
+{
+  "type": "urn:miot-spec:device:internet-speaker:00000A0C:jiqid",
+  "description": "Internet Speaker",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:speaker:0000080F",
+      "description": "Speaker",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:volume:00000029",
+          "description": "Volume",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:playing-state:0000002A",
+          "description": "Playing State",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "PLAYING"
+            },
+            {
+              "value": 2,
+              "description": "PAUSED"
+            }
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:physical-controls-locked:00000004",
+          "description": "Physical Controls Lock Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:resume:00000407",
+          "description": "Resume"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:action:pause:00000408",
+          "description": "Pause"
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:action:next:00000409",
+          "description": "Next"
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:action:previous:0000040A",
+          "description": "Previous"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:indicator-light:00000810",
+      "description": "Indicator Light",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:brightness:00000007:jiqid",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            33
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "type": "urn:miot-spec:service:battery:00000809",
+      "description": "Battery service",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:battery-level:00000013",
+          "description": "Battery Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    }
+  ]
+}

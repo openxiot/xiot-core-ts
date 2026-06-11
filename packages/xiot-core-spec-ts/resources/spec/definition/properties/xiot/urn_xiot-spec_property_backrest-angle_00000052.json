@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:backrest-angle:00000052",
+  "description" : "Backrest Angle",
+  "format" : "uint16",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 90, 1 ]
+}

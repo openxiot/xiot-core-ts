@@ -1,0 +1,126 @@
+{
+  "type": "urn:xiot-spec:device:air-monitor:0000a008:uiot:airm6:1",
+  "description": "Air Monitor",
+  "services": [
+    {
+      "iid": 212,
+      "type": "urn:xiot-spec:service:environment:0000780a:uiot:airm6:1",
+      "description": "Environment",
+      "properties": [
+        {
+          "iid": 298,
+          "type": "urn:xiot-spec:property:temperature:00000020:uiot:airm6:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            0.1
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 395,
+          "type": "urn:xiot-spec:property:relative-humidity:0000000c:uiot:airm6:1",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 350,
+          "type": "urn:xiot-spec:property:co2-density:0000004b:uiot:airm6:1",
+          "description": "CO2 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 352,
+      "type": "urn:xiot-spec:service:air-monitor:00007812:uiot:airm6:1",
+      "description": "Air Monitor",
+      "properties": [
+        {
+          "iid": 230,
+          "type": "urn:xiot-spec:property:fault:00000009:uiot:airm6:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 541,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:airm6:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 946,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:airm6:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 451,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:airm6:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 233,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:airm6:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 537,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:airm6:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "iq": {
+        "type": "query",
+        "method": "urn:xiot:remove-owner",
+        "id": "5013",
+        "content": {
+            "owner": {
+                "appId": "xxxx",
+                "ownerId": "zzz"
+            }
+        }
+    }
+}

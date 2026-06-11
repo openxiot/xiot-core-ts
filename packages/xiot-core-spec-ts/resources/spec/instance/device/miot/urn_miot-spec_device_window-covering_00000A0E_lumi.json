@@ -1,0 +1,131 @@
+{
+  "type": "urn:miot-spec:device:window-covering:00000A0E:lumi",
+  "description": "Switch",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:window-covering:00000812",
+      "description": "Window Covering",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:current-position:0000002F",
+          "description": "Current Position",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:target-position:00000030",
+          "description": "Target Position",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:position-state:00000031",
+          "description": "Position State",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "DECREASING"
+            },
+            {
+              "value": 2,
+              "description": "INCREASING"
+            },
+            {
+              "value": 3,
+              "description": "STOPPED"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

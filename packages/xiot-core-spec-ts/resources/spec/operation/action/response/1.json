@@ -1,0 +1,23 @@
+{
+  "actions": [
+    {
+      "aid": "111.2.1",
+      "status": 0,
+      "oid": "abcdefg",
+      "out": [
+        {
+          "piid": 1,
+          "values": ["a"]
+        },
+        {
+          "piid": 5,
+          "values": ["a", "b", "c"]
+        },
+        {
+          "piid": 7,
+          "values": [10, 20, 30, 40, 50, 60, 70]
+        }
+      ]
+    }
+  ]
+}

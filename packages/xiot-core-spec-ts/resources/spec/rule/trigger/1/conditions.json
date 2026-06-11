@@ -1,0 +1,22 @@
+{
+    "conditions": [
+        {
+            "result": true,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "result": false,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

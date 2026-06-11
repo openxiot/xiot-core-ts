@@ -1,0 +1,12 @@
+{
+    "type": "urn:homekit-spec:service:time-information:00000099",
+    "description": "Time Information",
+    "required-properties": [
+        "urn:homekit-spec:property:current-time:0000009b",
+        "urn:homekit-spec:property:day-of-the-week:00000098",
+        "urn:homekit-spec:property:time-update:0000009a"
+    ],
+    "optional-properties": [
+        "urn:homekit-spec:property:name:00000023"
+    ]
+}

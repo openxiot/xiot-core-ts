@@ -1,0 +1,394 @@
+{
+  "type": "urn:xiot-spec:device:air-fresh:0000a012:uiot:airf1:1",
+  "description": "Fresh Air System",
+  "services": [
+    {
+      "iid": 241,
+      "type": "urn:xiot-spec:service:environment:0000780a:uiot:airf1:1",
+      "description": "Environment",
+      "properties": [
+        {
+          "iid": 113,
+          "type": "urn:xiot-spec:property:temperature:00000020:uiot:airf1:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 450,
+          "type": "urn:xiot-spec:property:relative-humidity:0000000c:uiot:airf1:1",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 118,
+          "type": "urn:xiot-spec:property:air-quality:0000001c:uiot:airf1:1",
+          "description": "Air Quality",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Excellent"
+            },
+            {
+              "value": 2,
+              "description": "Fine"
+            }
+          ]
+        },
+        {
+          "iid": 475,
+          "type": "urn:xiot-spec:property:air-quality-index:0000001b:uiot:airf1:1",
+          "description": "Air Quality Index",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            500,
+            1
+          ]
+        },
+        {
+          "iid": 204,
+          "type": "urn:xiot-spec:property:atmospheric-pressure:00000036:uiot:airf1:1",
+          "description": "Atmospheric Pressure",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            100000.0,
+            1.0
+          ],
+          "unit": "pascal"
+        },
+        {
+          "iid": 541,
+          "type": "urn:xiot-spec:property:co2-density:0000004b:uiot:airf1:1",
+          "description": "CO2 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 125,
+          "type": "urn:xiot-spec:property:pm10-density:00000035:uiot:airf1:1",
+          "description": "PM10 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 734,
+          "type": "urn:xiot-spec:property:pm2.5-density:00000034:uiot:airf1:1",
+          "description": "PM2.5 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 350,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:airf1:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 337,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:airf1:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 395,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:airf1:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 207,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:airf1:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 351,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:airf1:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 426,
+      "type": "urn:xiot-spec:service:filter:0000780b:uiot:airf1:1",
+      "description": "Filter",
+      "properties": [
+        {
+          "iid": 225,
+          "type": "urn:xiot-spec:property:filter-used-flow:0000004a:uiot:airf1:1",
+          "description": "Filter Used Flow",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            1000,
+            1
+          ]
+        },
+        {
+          "iid": 947,
+          "type": "urn:xiot-spec:property:filter-left-flow:00000049:uiot:airf1:1",
+          "description": "Filter Left FLow",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            1000,
+            1
+          ]
+        },
+        {
+          "iid": 133,
+          "type": "urn:xiot-spec:property:filter-used-time:00000048:uiot:airf1:1",
+          "description": "Filter Used Time",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            10000,
+            1
+          ]
+        },
+        {
+          "iid": 215,
+          "type": "urn:xiot-spec:property:filter-life-level:0000001e:uiot:airf1:1",
+          "description": "Filter Life Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 395,
+          "type": "urn:xiot-spec:property:filter-left-time:0000001f:uiot:airf1:1",
+          "description": "Filter Left Time",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            1000,
+            1
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 860,
+          "type": "urn:xiot-spec:action:reset-filter-life:00002803:uiot:airf1:1",
+          "description": "Reset Filter Life"
+        }
+      ]
+    },
+    {
+      "iid": 880,
+      "type": "urn:xiot-spec:service:air-fresh:00007822:uiot:airf1:1",
+      "description": "Air Fresh",
+      "properties": [
+        {
+          "iid": 997,
+          "type": "urn:xiot-spec:property:fan-level:00000016:uiot:airf1:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 248,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:airf1:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 201,
+          "type": "urn:xiot-spec:property:fault:00000009:uiot:airf1:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 283,
+          "type": "urn:xiot-spec:property:heat-level:00000047:uiot:airf1:1",
+          "description": "Heat Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 171,
+          "type": "urn:xiot-spec:property:mode:00000008:uiot:airf1:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 861,
+          "type": "urn:xiot-spec:property:heater:00000026:uiot:airf1:1",
+          "description": "Heater",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 223,
+          "type": "urn:xiot-spec:property:status:00000007:uiot:airf1:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

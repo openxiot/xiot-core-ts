@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:service:humidity-sensor:00000808",
+    "description": "Humidity Sensor",
+    "required-properties": [
+        "urn:miot-spec:property:relative-humidity:0000000F"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:on:00000002"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "firmware",
+  "productId": "xxx",
+  "description": "固件",
+  "extra": {
+    "f1": "a",
+    "f2": "b",
+    "f3": "c"
+  },
+  "versions": [
+    {
+      "version": "1.0.1",
+      "description": "xxxxxx",
+      "url": "http://oss-aliyun.com/aaa/aaa.zip",
+      "size": 65535,
+      "md5": "2f10a57b942afee3db",
+      "lifecycle": "development",
+      "createBy": "17",
+      "updateBy": "18",
+      "createAt": 112133434,
+      "updateAt": 11121298989
+    }
+  ]
+}

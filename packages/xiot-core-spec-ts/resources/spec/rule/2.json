@@ -1,0 +1,13 @@
+{
+  "id": "rule2",
+  "name": "自动化",
+  "description": "automation",
+  "format": "rdl",
+  "content": "IF (aaa.1.1 == true) THEN\n    aaa.3.4 => true;\nENDIF",
+  "actuator": "aaa",
+  "createAt": 12345678,
+  "updateAt": 123456789,
+  "enabled": true,
+  "appId": "xxx",
+  "ownerId": "yyy"
+}

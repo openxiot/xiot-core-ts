@@ -1,0 +1,87 @@
+{
+  "type" : "urn:xiot-spec:device:remote-control:0000a021:lumi:b286acn01:1",
+  "description" : "Remote Control",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:lumi:b286acn01:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:lumi:b286acn01:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:lumi:b286acn01:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:lumi:b286acn01:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:lumi:b286acn01:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:switch-sensor:00007828:lumi:b286acn01:1",
+    "description" : "Left Switch Sensor",
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:click:00005007:lumi:b286acn01:1",
+      "description" : "Click"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:double-click:00005008:lumi:b286acn01:1",
+      "description" : "Double Click"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:switch-sensor:00007828:lumi:b286acn01:1",
+    "description" : "Right Switch Sensor",
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:click:00005007:lumi:b286acn01:1",
+      "description" : "Click"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:double-click:00005008:lumi:b286acn01:1",
+      "description" : "Double Click"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:switch-sensor:00007828:lumi:b286acn01:1",
+    "description" : "Both Switch Sensor",
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:click:00005007:lumi:b286acn01:1",
+      "description" : "Click"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:battery:00007805:lumi:b286acn01:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:lumi:b286acn01:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:low-battery:00005003:lumi:b286acn01:1",
+      "description" : "Low Battery"
+    } ]
+  } ]
+}

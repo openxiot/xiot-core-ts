@@ -1,0 +1,32 @@
+{
+    "iq": {
+        "type": "result",
+        "method": "urn:xiot:get-shadow",
+        "id": "5009",
+        "content": {
+            "device": {
+                "did": "aaa",
+                "shadows": [
+                    {
+                        "siid": 1,
+                        "piid": 1,
+                        "status": 0,
+                        "value": 10
+                    },
+                    {
+                        "siid": 1,
+                        "piid": 2,
+                        "status": 0,
+                        "value": true
+                    },
+                    {
+                        "siid": 1,
+                        "piid": 3,
+                        "status": -425,
+                        "description": "error description"
+                    }
+                ]
+            }
+        }
+    }
+}

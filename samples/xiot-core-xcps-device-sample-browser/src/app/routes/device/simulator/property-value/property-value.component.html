@@ -1,0 +1,125 @@
+<div *ngIf="showTitle">
+  <nz-tag [nzColor]="'blue'">{{ p.iid }}</nz-tag>
+  {{ p.description.get('en-US') }}
+</div>
+
+<div *ngIf="p.hasConstraintValue(); else noConstraintValue">
+  <div *ngIf="p.hasValueList()">
+    <nz-select
+      style="width: 100%"
+      [(ngModel)]="p.value._currentStringValue"
+      nzPlaceHolder="请选择"
+      (ngModelChange)="setStringValue($event)"
+    >
+      <div *ngFor="let v of p.valueList().values">
+        <nz-option
+          nzValue="{{ v.value.getObjectValue() }}"
+          nzLabel="{{ v.value.getObjectValue() }} {{ v.description }} "
+        ></nz-option>
+      </div>
+    </nz-select>
+  </div>
+  <div *ngIf="p.hasValueRange()">
+    <nz-row *ngIf="p.formatNumber(); else hexValueRange">
+      <nz-col nzSpan="12">
+        <nz-slider
+          [nzMin]="p.valueRange().minValue.getObjectValue()"
+          [nzMax]="p.valueRange().maxValue.getObjectValue()"
+          [nzStep]="p.valueRange().stepValue.getObjectValue()"
+          [(ngModel)]="p.value._currentNumberValue"
+          (ngModelChange)="setValue($event)"
+        ></nz-slider>
+      </nz-col>
+      <nz-col nzSpan="4">
+        <nz-input-number
+          [nzMin]="p.valueRange().minValue.getObjectValue()"
+          [nzMax]="p.valueRange().maxValue.getObjectValue()"
+          [nzStep]="p.valueRange().stepValue.getObjectValue()"
+          [ngStyle]="{ marginLeft: '16px' }"
+          [(ngModel)]="p.value._currentNumberValue"
+          (ngModelChange)="setValue($event)"
+        ></nz-input-number>
+      </nz-col>
+    </nz-row>
+  </div>
+</div>
+
+<ng-template #noConstraintValue>
+  <div *ngIf="p.formatBoolean()">
+    <nz-switch [(ngModel)]="p.value._currentBooleanValue" (ngModelChange)="setValue($event)"></nz-switch>
+  </div>
+  <div *ngIf="p.formatNumber()" [ngSwitch]="p.format">
+    <nz-input-number
+      *ngSwitchCase="'uint8'"
+      [nzMin]="0"
+      [nzMax]="255"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'uint16'"
+      [nzMin]="0"
+      [nzMax]="65535"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'uint32'"
+      [nzMin]="0"
+      [nzMax]="4294967295"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'int8'"
+      [nzMin]="-127"
+      [nzMax]="127"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'int16'"
+      [nzMin]="-32767"
+      [nzMax]="32767"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'int32'"
+      [nzMin]="-2147483647"
+      [nzMax]="2147483647"
+      [nzStep]="1"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'int64'"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+
+    <nz-input-number
+      *ngSwitchCase="'float'"
+      [(ngModel)]="p.value._currentNumberValue"
+      (ngModelChange)="setValue($event)"
+    ></nz-input-number>
+  </div>
+  <div *ngIf="p.formatString()">
+    <input nz-input [(ngModel)]="p.value._currentStringValue" (ngModelChange)="setValue($event)" />
+  </div>
+</ng-template>
+
+<ng-template #hexValueRange>
+  <input nz-input [(ngModel)]="p.value._currentStringValue" (ngModelChange)="setValue($event)" />
+</ng-template>

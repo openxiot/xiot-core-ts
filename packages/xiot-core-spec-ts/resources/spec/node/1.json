@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        {
+            "serialNumber": "abc",
+            "productId": 1,
+            "productVersion": 2
+        },
+        {
+            "serialNumber": "aaaaaaaaaaaaaaa",
+            "productId": 3,
+            "productVersion": 4
+        },
+        {
+            "serialNumber": "xx",
+            "productId": 5,
+            "productVersion": 6
+        }
+    ]
+}

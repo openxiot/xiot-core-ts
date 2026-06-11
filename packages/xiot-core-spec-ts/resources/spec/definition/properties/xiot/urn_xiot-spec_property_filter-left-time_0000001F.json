@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:filter-left-time:0000001f",
+  "description" : "Filter Left Time",
+  "format" : "uint16",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0, 1000, 1 ]
+}

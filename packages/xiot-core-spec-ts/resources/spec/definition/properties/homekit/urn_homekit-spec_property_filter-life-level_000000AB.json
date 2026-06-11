@@ -1,0 +1,7 @@
+{
+    "type": "urn:homekit-spec:property:filter-life-level:000000ab",
+    "description": "Filter Life Level",
+    "format": "float",
+    "access": ["read", "notify"],
+    "value-range": [0.0, 100.0, 0.0]
+}

@@ -1,0 +1,55 @@
+{
+  "properties": [
+    {
+      "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.1.1",
+      "value": [
+        {
+          "piid": 2,
+          "value": 20
+        },
+        {
+          "piid": 3,
+          "value": 10
+        },
+        {
+          "piid": 4,
+          "value": true
+        }
+      ]
+    },
+    {
+      "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.2.1",
+      "value": [
+        {
+          "piid": 2,
+          "value": true
+        },
+        {
+          "piid": 3,
+          "value": false
+        },
+        {
+          "piid": 4,
+          "value": true
+        }
+      ]
+    },
+    {
+      "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.3.1",
+      "value": [
+        {
+          "piid": 2,
+          "value": 10.7
+        },
+        {
+          "piid": 3,
+          "value": 200
+        },
+        {
+          "piid": 4,
+          "value": "aaa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "type" : "urn:xiot-spec:device:air-fresh:0000a012:zhimi:va3:1",
+  "description" : "Fresh Air System",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:zhimi:va3:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:zhimi:va3:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:zhimi:va3:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:zhimi:va3:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:zhimi:va3:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:air-fresh:00007822:zhimi:va3:1",
+    "description" : "Air Fresh",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fault:00000009:zhimi:va3:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      }, {
+        "value" : 1,
+        "description" : "motor stuck"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:va3:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:zhimi:va3:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 3,
+        "description" : "interval"
+      }, {
+        "value" : 1,
+        "description" : "low"
+      }, {
+        "value" : 2,
+        "description" : "strong"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:zhimi:va3:1",
+    "description" : "Environment"
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:filter:0000780b:zhimi:va3:1",
+    "description" : "Filter",
+    "properties" : [ {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:filter-used-time:00000048:zhimi:va3:1",
+      "description" : "Filter Used Time",
+      "format" : "uint16",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 10000, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:reset-filter-life:00002803:zhimi:va3:1",
+      "description" : "Reset Filter Life",
+      "in" : [ {
+        "piid" : 5,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 5,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:alarm:00007804:zhimi:va3:1",
+    "description" : "Alarm",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:alarm:00000012:zhimi:va3:1",
+      "description" : "Alarm",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:indicator-light:00007803:zhimi:va3:1",
+    "description" : "Indicator Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:zhimi:va3:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 7,
+    "type" : "urn:xiot-spec:service:physical-controls-locked:00007807:zhimi:va3:1",
+    "description" : "Physical Control Locked",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:physical-controls-locked:0000001d:zhimi:va3:1",
+      "description" : "Physical Control Locked",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 8,
+    "type" : "urn:xiot-spec:service:custom-service:00000001:zhimi:va3:1",
+    "description" : "custom-service",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:filter-door-closed:00000002:zhimi:va3:1",
+      "description" : "filter door status",
+      "format" : "bool",
+      "access" : [ "read", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:fan-low:00000004:zhimi:va3:1",
+      "description" : "motor speed low",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 200, 2000, 1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:fan-strong:00000005:zhimi:va3:1",
+      "description" : "motor speed strong",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 200, 2000, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:fan-interval:00000006:zhimi:va3:1",
+      "description" : "motor interval speed",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 200, 2000, 1 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:fan-speed:00000007:zhimi:va3:1",
+      "description" : "motor speed realtime",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 3000, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:interval-time:00000008:zhimi:va3:1",
+      "description" : "interval time",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 50, 9999, 1 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:total-use-time:00000009:zhimi:va3:1",
+      "description" : "total use time",
+      "format" : "int32",
+      "access" : [ "read" ],
+      "value-range" : [ 0, 2147483600, 1 ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:toggle-power:0000000a:zhimi:va3:1",
+      "description" : "toggle power on/off",
+      "format" : "int32",
+      "access" : [ "write" ],
+      "value-range" : [ 0, 9, 1 ]
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:property:toggle-fan-level:0000000b:zhimi:va3:1",
+      "description" : "toggle fan level",
+      "format" : "int32",
+      "access" : [ "write" ],
+      "value-range" : [ 0, 9, 1 ]
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:event-filter-door-closed:00000003:zhimi:va3:1",
+      "description" : "event of filter door",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  } ]
+}

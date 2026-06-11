@@ -1,0 +1,19 @@
+{
+  "iq": {
+    "type": "result",
+    "method": "urn:xiot:invoke-action",
+    "id": "5006",
+    "content": {
+      "action": {
+        "aid": "2.1.9",
+        "status": 0,
+        "out": [
+          {
+            "piid": 5,
+            "values": [2700]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "ownerships": [
+        {
+            "appId": "xxx",
+            "ownerId": "xx",
+            "did": "abc",
+            "token": "xxxxxxxxxxxxx",
+            "cloudId": "x",
+            "createAt": 2216571358,
+            "updateAt": 2216571358
+        },
+        {
+            "appId": "xxx",
+            "ownerId": "xx",
+            "did": "abc",
+            "token": "xxxxxxxxxxxxx",
+            "rootId": "x"
+        },
+        {
+            "appId": "xxx",
+            "ownerId": "xx",
+            "did": "abc",
+            "token": "xxxxxxxxxxxxx",
+            "createAt": 2216571358
+        }
+    ]
+}

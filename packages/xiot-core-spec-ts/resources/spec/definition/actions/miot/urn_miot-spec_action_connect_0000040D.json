@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:action:connect:0000040D",
+    "description": "Connect",
+    "in": [
+        {
+            "property": "urn:miot-spec:property:device-mac:00000039",
+            "repeat": [1, 1]
+        }
+    ]
+}

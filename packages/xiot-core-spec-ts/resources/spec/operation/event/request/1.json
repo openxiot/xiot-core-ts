@@ -1,0 +1,22 @@
+{
+    "eid": "eee.1.1",
+    "oid": "xxx",
+    "arguments": [
+        {
+            "piid": 1,
+            "values": ["hello"]
+        },
+        {
+            "piid": 2,
+            "values": [1]
+        },
+        {
+            "piid": 3,
+            "values": [100, 200, 300]
+        },
+        {
+            "piid": 4,
+            "values": [10.7, 10.9]
+        }
+    ]
+}

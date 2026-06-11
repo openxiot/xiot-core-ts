@@ -1,0 +1,17 @@
+{
+  "type": "rule-added",
+  "payload": {
+    "appId": "xxxx",
+    "ownerId": "xxxx",
+    "rule": {
+      "id": "xxx",
+      "name": "xxx",
+      "description": "xxx",
+      "content": "aaa.3.4 => true;",
+      "actuator": "aaa",
+      "createAt": 164016417,
+      "updateAt": 1640164171
+    },
+    "timestamp": 1640164172915
+  }
+}

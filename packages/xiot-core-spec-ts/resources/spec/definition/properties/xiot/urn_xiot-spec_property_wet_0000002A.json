@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:wet:0000002a",
+  "description" : "Wet",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

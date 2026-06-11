@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:voc-density:00000019",
+    "description": "VOC Density",
+    "format": "float",
+    "access": ["read", "notify"],
+    "value-range": [0.0, 1000.0, 0.01]
+}

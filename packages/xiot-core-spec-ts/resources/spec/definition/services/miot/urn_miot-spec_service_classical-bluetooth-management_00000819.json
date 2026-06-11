@@ -1,0 +1,18 @@
+{
+    "type": "urn:miot-spec:service:classical-bluetooth-management:00000819",
+    "description": "Classical Bluetooth Management",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:status:00000023",
+        "urn:miot-spec:property:device-mac:00000039",
+        "urn:miot-spec:property:device-list:0000003A"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:start-scan:0000040B",
+        "urn:miot-spec:action:stop-scan:0000040C",
+        "urn:miot-spec:action:connect:0000040D",
+        "urn:miot-spec:action:disconnect:0000040E"
+    ]
+}

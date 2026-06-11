@@ -1,0 +1,6 @@
+{
+    "type": "urn:homekit-spec:property:app-matching-identifier:000000a4",
+    "description": "App Matching Identifier",
+    "format": "tlv8",
+    "access": ["read"]
+}

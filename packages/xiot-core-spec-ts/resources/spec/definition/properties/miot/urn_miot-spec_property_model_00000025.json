@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:model:00000025",
+    "description": "Device Model",
+    "format": "string",
+    "access": ["read"]
+}

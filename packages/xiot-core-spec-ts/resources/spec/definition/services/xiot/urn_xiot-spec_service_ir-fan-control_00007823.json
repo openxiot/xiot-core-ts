@@ -1,0 +1,10 @@
+{
+    "type": "urn:xiot-spec:service:ir-fan-control:00007823",
+    "description": "IR Fan Control",
+    "optional-actions": [
+        "urn:xiot-spec:action:turn-on:00002808",
+        "urn:xiot-spec:action:turn-off:00002809",
+        "urn:xiot-spec:action:fan-speed-up:0000281b",
+        "urn:xiot-spec:action:fan-speed-down:0000281c"
+    ]
+}

@@ -1,0 +1,5 @@
+{
+  "type" : "urn:xiot-spec:service:device-information:00007801",
+  "description" : "Device Information",
+  "required-properties" : [ "urn:xiot-spec:property:manufacturer:00000001", "urn:xiot-spec:property:model:00000002", "urn:xiot-spec:property:serial-number:00000003", "urn:xiot-spec:property:firmware-revision:00000005" ]
+}

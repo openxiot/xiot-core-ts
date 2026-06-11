@@ -1,0 +1,69 @@
+{
+  "type" : "urn:xiot-spec:device:magnet-sensor:0000a016:lumi:aq2:1",
+  "description" : "Magnet Sensor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:lumi:aq2:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:lumi:aq2:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:lumi:aq2:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:lumi:aq2:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:lumi:aq2:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:magnet-sensor:00007827:lumi:aq2:1",
+    "description" : "Magnet Sensor",
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:open:00005004:lumi:aq2:1",
+      "description" : "Open"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:event:close:00005005:lumi:aq2:1",
+      "description" : "Close"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:event:door-not-closed:00005006:lumi:aq2:1",
+      "description" : "Door Not Closed"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:lumi:aq2:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:lumi:aq2:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:low-battery:00005003:lumi:aq2:1",
+      "description" : "Low Battery"
+    } ]
+  } ]
+}

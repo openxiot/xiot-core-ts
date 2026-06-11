@@ -1,0 +1,7 @@
+{
+    "type": "urn:homekit-spec:property:relative-humidity-humidifier-threshold:000000ca",
+    "description": "Relative Humidity Humidifier Threshold",
+    "format": "float",
+    "access": ["read", "write", "notify"],
+    "value-range": [0.0, 100.0, 1.0]
+}

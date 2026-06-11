@@ -1,0 +1,9 @@
+{
+    "type": "home-removed",
+    "payload": {
+        "appId": "xxxx",
+        "ownerId": "xxxx",
+        "homeId": "xxx",
+        "timestamp": 1640164172915
+    }
+}

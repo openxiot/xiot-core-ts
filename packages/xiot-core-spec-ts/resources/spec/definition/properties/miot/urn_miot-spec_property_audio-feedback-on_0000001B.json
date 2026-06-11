@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:audio-feedback-on:0000001B",
+    "description": "Audio Feedback State ON",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

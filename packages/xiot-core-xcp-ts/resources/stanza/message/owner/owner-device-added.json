@@ -1,0 +1,22 @@
+{
+  "message": {
+    "id": "1",
+    "topic": "urn:xiot:owner",
+    "type": "device-added",
+    "payload": {
+      "timestamp": 1640164172915,
+      "appId": "xxxx",
+      "ownerId": "xxxx",
+      "did": "xxx",
+      "summary": {
+        "type": "urn:homekit-spec:device:other:00000001:yingtuo:fakebulb:1",
+        "online": false,
+        "parentId": "CC:22:3D:E3:CE:01@25",
+        "members": ["aaa", "bbb"]
+      },
+      "somewhere": {
+        "spaceId": "x"
+      }
+    }
+  }
+}

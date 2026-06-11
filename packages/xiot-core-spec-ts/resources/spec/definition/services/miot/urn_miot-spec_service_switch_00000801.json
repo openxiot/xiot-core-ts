@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:switch:00000801",
+    "description": "Switch",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "urn:xiot-spec:service:massage:00007829",
+    "description": "Massage",
+    "required-properties": [
+        "urn:xiot-spec:property:on:00000006",
+        "urn:xiot-spec:property:mode:00000008",
+        "urn:xiot-spec:property:status:00000007",
+        "urn:xiot-spec:property:fault:00000009"
+    ],
+    "optional-properties": [
+        "urn:xiot-spec:property:massage-strength:00000051",
+        "urn:xiot-spec:property:massage-part:00000050",
+        "urn:xiot-spec:property:massage-manipulation:0000004f",
+        "urn:xiot-spec:property:left-time:0000003c"
+    ],
+    "required-actions": [
+        "urn:xiot-spec:action:stop-massage:0000281f"
+    ]
+}

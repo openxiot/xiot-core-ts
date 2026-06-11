@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:channel-number:00000045",
+  "description" : "Channel Number",
+  "format" : "uint16",
+  "access" : [ ],
+  "value-range" : [ 1, 999, 1 ]
+}

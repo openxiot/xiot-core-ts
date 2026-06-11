@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:fan:00007808",
+  "description" : "Fan",
+  "required-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:fan-level:00000016" ],
+  "optional-properties" : [ "urn:xiot-spec:property:horizontal-swing:00000017", "urn:xiot-spec:property:vertical-swing:00000018", "urn:xiot-spec:property:horizontal-angle:00000019", "urn:xiot-spec:property:vertical-angle:0000001a", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:fault:00000009" ]
+}

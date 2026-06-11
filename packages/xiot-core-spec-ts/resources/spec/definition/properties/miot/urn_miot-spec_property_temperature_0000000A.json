@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:temperature:0000000A",
+    "description": "Temperature",
+    "format": "float",
+    "access": ["read", "notify"],
+    "value-range": [-40.0, 125.0, 0.1],
+    "unit": "celsius"
+}

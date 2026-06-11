@@ -1,0 +1,26 @@
+{
+    "devices": [
+        {
+            "did": "xxx",
+            "token": "xxx",
+            "status": 0
+        },
+        {
+            "did": "xxx",
+            "token": "xxx",
+            "status": 0
+        },
+        {
+            "did": "xxx",
+            "token": "xxx",
+            "status": -1,
+            "description": "xxx"
+        },
+        {
+            "did": "xxx",
+            "token": "xxx",
+            "status": -2,
+            "description": "xxx--axx"
+        }
+    ]
+}

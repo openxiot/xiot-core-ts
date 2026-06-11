@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:device-mac:00000039",
+    "description": "MAC of Device",
+    "format": "string",
+    "access": ["read"]
+}

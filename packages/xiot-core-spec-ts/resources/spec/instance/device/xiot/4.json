@@ -1,0 +1,533 @@
+{
+  "type": "urn:xiot-spec:device:gateway:00000004:ouyang:homepad:1",
+  "description": {
+    "en-US": "Homepad",
+    "zh-TW": "中控屏",
+    "zh-CN": "中控屏"
+  },
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:xiot-spec:service:device-information:00000002:ouyang:homepad:1",
+      "description": {
+        "en-US": "Device Information",
+        "zh-TW": "設備信息",
+        "zh-CN": "设备信息"
+      },
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:property:firmware-revision:00000006:ouyang:homepad:1",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:property:manufacturer:00000003:ouyang:homepad:1",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "製造商",
+            "zh-CN": "制造商"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:property:model:00000004:ouyang:homepad:1",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:xiot-spec:property:serial-number:00000005:ouyang:homepad:1",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:xiot-spec:property:software-revision:0000001f:ouyang:homepad:1",
+          "description": {
+            "en-US": "Software revision",
+            "zh-TW": "軟件版本",
+            "zh-CN": "软件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:xiot-spec:property:name:00000020:ouyang:homepad:1",
+          "description": {
+            "en-US": "Name",
+            "zh-TW": "名称",
+            "zh-CN": "名称"
+          },
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:xiot-spec:service:can:00000005:ouyang:homepad:1",
+      "description": {
+        "en-US": "CAN",
+        "zh-TW": "CAN",
+        "zh-CN": "CAN"
+      },
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:property:count:0000000b:ouyang:homepad:1",
+          "description": {
+            "en-US": "count",
+            "zh-TW": "数量",
+            "zh-CN": "数量"
+          },
+          "format": "uint32",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            255,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:xiot-spec:service:knx:00000020:ouyang:homepad:1",
+      "description": {
+        "en-US": "KNX",
+        "zh-TW": "KNX",
+        "zh-CN": "KNX"
+      },
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:property:count:00000035:ouyang:homepad:1",
+          "description": {
+            "en-US": "count",
+            "zh-TW": "数量",
+            "zh-CN": "数量"
+          },
+          "format": "uint32",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            255,
+            1
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:property:device-id:00000036:ouyang:homepad:1",
+          "description": {
+            "en-US": "did",
+            "zh-TW": "设备ID",
+            "zh-CN": "设备ID"
+          },
+          "format": "string",
+          "access": []
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:property:device-type:00000037:ouyang:homepad:1",
+          "description": {
+            "en-US": "device type",
+            "zh-TW": "设备类型",
+            "zh-CN": "设备类型"
+          },
+          "format": "string",
+          "access": []
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:action:add-device:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "add device",
+            "zh-TW": "添加设备",
+            "zh-CN": "添加设备"
+          }
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:action:remove-device:00000026:ouyang:homepad:1",
+          "description": {
+            "en-US": "remove device",
+            "zh-TW": "删除设备",
+            "zh-CN": "删除设备"
+          },
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [1, 255]
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:action:turn-on-all:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "turn on all device",
+            "zh-TW": "全开",
+            "zh-CN": "全开"
+          }
+        },
+        {
+          "iid": 4,
+          "type": "urn:xiot-spec:action:turn-off-all:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "turn off all device",
+            "zh-TW": "全关",
+            "zh-CN": "全关"
+          }
+        }
+      ],
+      "events": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:event:device-added:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "device added",
+            "zh-TW": "设备被添加",
+            "zh-CN": "设备被添加"
+          },
+          "arguments": [
+            {
+              "piid": 2,
+              "repeat": [1, 255]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:event:device-removed:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "device removed",
+            "zh-TW": "设备被删除",
+            "zh-CN": "设备被删除"
+          },
+          "arguments": [
+            {
+              "piid": 2,
+              "repeat": [1, 255]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "type": "urn:xiot-spec:service:rule-engine:00000020:ouyang:homepad:1",
+      "description": {
+        "en-US": "Rule Engine",
+        "zh-TW": "规则引擎",
+        "zh-CN": "規則引擎"
+      },
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:property:count:00000035:ouyang:homepad:1",
+          "description": {
+            "en-US": "count for rules",
+            "zh-TW": "规则数量",
+            "zh-CN": "規則數量"
+          },
+          "format": "uint32",
+          "access": ["read", "notify"],
+          "value-range": [0, 255, 1]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:property:rule-id:00000036:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule id",
+            "zh-TW": "规则ID",
+            "zh-CN": "規則ID"
+          },
+          "format": "string",
+          "access": []
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:property:rule-definition:00000036:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule definition",
+            "zh-TW": "规则定义",
+            "zh-CN": "規則定義"
+          },
+          "format": "string",
+          "access": []
+        },
+        {
+          "iid": 4,
+          "type": "urn:xiot-spec:property:status:00000036:ouyang:homepad:1",
+          "description": {
+            "en-US": "status",
+            "zh-TW": "规则运行状态",
+            "zh-CN": "規則運行狀態"
+          },
+          "format": "int32",
+          "access": []
+        },
+        {
+          "iid": 5,
+          "type": "urn:xiot-spec:property:description:00000036:ouyang:homepad:1",
+          "description": {
+            "en-US": "description",
+            "zh-TW": "状态描述",
+            "zh-CN": "狀態描述"
+          },
+          "format": "string",
+          "access": []
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:action:add-rule:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "add rule",
+            "zh-TW": "添加规则",
+            "zh-CN": "添加規則"
+          },
+          "in": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:action:remove-rule:00000026:ouyang:homepad:1",
+          "description": {
+            "en-US": "remove rule",
+            "zh-TW": "删除规则",
+            "zh-CN": "刪除規則"
+          },
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:action:clean-rules:00000026:ouyang:homepad:1",
+          "description": {
+            "en-US": "clean rules",
+            "zh-TW": "清除所有规则",
+            "zh-CN": "清除所有規則"
+          }
+        },
+        {
+          "iid": 4,
+          "type": "urn:xiot-spec:action:update-rule:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "update rule",
+            "zh-TW": "更新规则",
+            "zh-CN": "更新規則"
+          },
+          "in": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:xiot-spec:action:get-rule:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "get rule",
+            "zh-TW": "读取规则",
+            "zh-CN": "讀取規則"
+          },
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            }
+          ],
+          "out": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:xiot-spec:action:get-rules:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "get rules",
+            "zh-TW": "读取所有规则",
+            "zh-CN": "讀取所有規則"
+          },
+          "out": [
+            {
+              "piid": 3,
+              "repeat": [0, 255]
+            }
+          ]
+        },
+        {
+          "iid": 7,
+          "type": "urn:xiot-spec:action:execute-rule:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "execute rule",
+            "zh-TW": "执行规则",
+            "zh-CN": "執行規則"
+          },
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "iid": 1,
+          "type": "urn:xiot-spec:event:rule-added:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule added",
+            "zh-TW": "规则被添加",
+            "zh-CN": "規則被添加"
+          },
+          "arguments": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:xiot-spec:event:rule-removed:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule removed",
+            "zh-TW": "规则被删除",
+            "zh-CN": "規則被刪除"
+          },
+          "arguments": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:xiot-spec:event:rule-updated:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule updated",
+            "zh-TW": "规则被更新",
+            "zh-CN": "規則被更新"
+          },
+          "arguments": [
+            {
+              "piid": 3,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:xiot-spec:event:rule-triggered:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule triggered",
+            "zh-TW": "被触发",
+            "zh-CN": "被觸發"
+          },
+          "arguments": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:xiot-spec:event:rule-executing:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule executing",
+            "zh-TW": "运行中",
+            "zh-CN": "運行中"
+          },
+          "arguments": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            }
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:xiot-spec:event:rule-executed:00000023:ouyang:homepad:1",
+          "description": {
+            "en-US": "rule executed",
+            "zh-TW": "运行完毕",
+            "zh-CN": "運行完畢"
+          },
+          "arguments": [
+            {
+              "piid": 2,
+              "repeat": [1, 1]
+            },
+            {
+              "piid": 4,
+              "repeat": [1, 1]
+            },
+            {
+              "piid": 5,
+              "repeat": [1, 1]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

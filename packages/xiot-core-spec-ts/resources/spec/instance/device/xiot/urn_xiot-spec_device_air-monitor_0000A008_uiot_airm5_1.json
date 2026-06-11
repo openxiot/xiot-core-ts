@@ -1,0 +1,115 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:uiot:airm5:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 154,
+    "type" : "urn:xiot-spec:service:air-monitor:00007812:uiot:airm5:1",
+    "description" : "Air Monitor",
+    "properties" : [ {
+      "iid" : 397,
+      "type" : "urn:xiot-spec:property:on:00000006:uiot:airm5:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 284,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:airm5:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 246,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:airm5:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 521,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:airm5:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 297,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:airm5:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 285,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:airm5:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 414,
+    "type" : "urn:xiot-spec:service:environment:0000780a:uiot:airm5:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 164,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:uiot:airm5:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 100,
+      "type" : "urn:xiot-spec:property:temperature:00000020:uiot:airm5:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 1.0 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 149,
+      "type" : "urn:xiot-spec:property:co2-density:0000004b:uiot:airm5:1",
+      "description" : "CO2 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 1000.0, 1.0 ]
+    }, {
+      "iid" : 214,
+      "type" : "urn:xiot-spec:property:pm10-density:00000035:uiot:airm5:1",
+      "description" : "PM10 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 1000.0, 1.0 ]
+    }, {
+      "iid" : 104,
+      "type" : "urn:xiot-spec:property:air-quality:0000001c:uiot:airm5:1",
+      "description" : "Air Quality",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Excellent"
+      }, {
+        "value" : 2,
+        "description" : "Fine"
+      } ]
+    }, {
+      "iid" : 169,
+      "type" : "urn:xiot-spec:property:air-quality-index:0000001b:uiot:airm5:1",
+      "description" : "Air Quality Index",
+      "format" : "uint16",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 500, 1 ]
+    }, {
+      "iid" : 139,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:uiot:airm5:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 1000.0, 1.0 ]
+    }, {
+      "iid" : 430,
+      "type" : "urn:xiot-spec:property:atmospheric-pressure:00000036:uiot:airm5:1",
+      "description" : "Atmospheric Pressure",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 100000.0, 1.0 ],
+      "unit" : "pascal"
+    } ]
+  } ]
+}

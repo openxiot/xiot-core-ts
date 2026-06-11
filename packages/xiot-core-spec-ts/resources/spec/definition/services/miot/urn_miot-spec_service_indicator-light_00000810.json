@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:service:indicator-light:00000810",
+    "description": "Indicator Light",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:brightness:00000007"
+    ]
+}

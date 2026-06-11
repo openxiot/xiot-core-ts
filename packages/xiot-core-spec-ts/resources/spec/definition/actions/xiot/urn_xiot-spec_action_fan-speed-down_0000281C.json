@@ -1,0 +1,4 @@
+{
+  "type" : "urn:xiot-spec:action:fan-speed-down:0000281c",
+  "description" : "Fan Speed Down"
+}

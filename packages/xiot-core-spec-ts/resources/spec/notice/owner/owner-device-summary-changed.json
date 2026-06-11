@@ -1,0 +1,15 @@
+{
+    "type": "device-summary-changed",
+    "payload": {
+        "appId": "xxxx",
+        "ownerId": "xxxx",
+        "did": "xxx",
+        "summary": {
+            "type": "urn:homekit-spec:device:other:00000001:yingtuo:fakebulb:1",
+            "online": false,
+            "parentId": "CC:22:3D:E3:CE:01@25",
+            "members": ["aaa", "bbb"]
+        },
+        "timestamp": 1640164172915
+    }
+}

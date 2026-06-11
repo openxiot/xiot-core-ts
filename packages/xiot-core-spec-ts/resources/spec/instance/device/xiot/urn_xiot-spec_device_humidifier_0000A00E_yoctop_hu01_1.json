@@ -1,0 +1,189 @@
+{
+  "type": "urn:xiot-spec:device:humidifier:0000a00e:yoctop:hu01:1",
+  "description": "Humidifier",
+  "services": [
+    {
+      "iid": 106,
+      "type": "urn:xiot-spec:service:device-information:00007801:yoctop:hu01:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 401,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:yoctop:hu01:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 756,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:yoctop:hu01:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 173,
+          "type": "urn:xiot-spec:property:model:00000002:yoctop:hu01:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 398,
+          "type": "urn:xiot-spec:property:serial-number:00000003:yoctop:hu01:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 192,
+      "type": "urn:xiot-spec:service:humidifier:00007818:yoctop:hu01:1",
+      "description": "Humidifier",
+      "properties": [
+        {
+          "iid": 464,
+          "type": "urn:xiot-spec:property:fan-level:00000016:yoctop:hu01:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 342,
+          "type": "urn:xiot-spec:property:water-level:0000003d:yoctop:hu01:1",
+          "description": "Water Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 330,
+          "type": "urn:xiot-spec:property:fault:00000009:yoctop:hu01:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            },
+            {
+              "value": 1,
+              "description": "Low water"
+            }
+          ]
+        },
+        {
+          "iid": 154,
+          "type": "urn:xiot-spec:property:on:00000006:yoctop:hu01:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 236,
+      "type": "urn:xiot-spec:service:light:00007802:yoctop:hu01:1",
+      "description": "Light",
+      "properties": [
+        {
+          "iid": 121,
+          "type": "urn:xiot-spec:property:brightness:0000000d:yoctop:hu01:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 154,
+          "type": "urn:xiot-spec:property:on:00000006:yoctop:hu01:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 364,
+          "type": "urn:xiot-spec:property:saturability:00000011:yoctop:hu01:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 301,
+          "type": "urn:xiot-spec:property:color:0000000e:yoctop:hu01:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

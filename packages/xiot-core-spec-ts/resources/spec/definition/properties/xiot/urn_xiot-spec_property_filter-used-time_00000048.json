@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:filter-used-time:00000048",
+  "description" : "Filter Used Time",
+  "format" : "uint16",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0, 10000, 1 ]
+}

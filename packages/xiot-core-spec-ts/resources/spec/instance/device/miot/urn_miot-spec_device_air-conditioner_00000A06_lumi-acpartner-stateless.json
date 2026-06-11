@@ -1,0 +1,129 @@
+{
+  "type": "urn:miot-spec:device:air-conditioner:00000A06:lumi-acpartner-stateless",
+  "description": "Lumi Air Conditioner Partner",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:air-conditioner:00000805",
+      "description": "Air Conditioner",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:increase-temperature:0000040F",
+          "description": "Increase temperature"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:action:decrease-temperature:00000410",
+          "description": "Decrease Temperature"
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:action:next-mode:00000411",
+          "description": "Next Mode"
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:action:next-fan-speed-level:00000412",
+          "description": "Next Fan Speed Level"
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:action:toggle-swing:00000413",
+          "description": "Toggle Swing"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:bridge:00000813",
+      "description": "Bridge for sub devices",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:discovering:00000032",
+          "description": "Discovering",
+          "format": "bool",
+          "access": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    }
+  ]
+}

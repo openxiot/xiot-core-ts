@@ -1,0 +1,107 @@
+{
+  "type" : "urn:xiot-spec:device:curtain:0000a00c:maxway:mx201:1",
+  "description" : "Curtain",
+  "services" : [ {
+    "iid" : 203,
+    "type" : "urn:xiot-spec:service:device-information:00007801:maxway:mx201:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 176,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:maxway:mx201:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 292,
+      "type" : "urn:xiot-spec:property:model:00000002:maxway:mx201:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 357,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:maxway:mx201:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 395,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:maxway:mx201:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 332,
+    "type" : "urn:xiot-spec:service:curtain:00007816:maxway:mx201:1",
+    "description" : "Curtain",
+    "properties" : [ {
+      "iid" : 914,
+      "type" : "urn:xiot-spec:property:fault:00000009:maxway:mx201:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      }, {
+        "value" : 1,
+        "description" : "fault"
+      } ]
+    }, {
+      "iid" : 247,
+      "type" : "urn:xiot-spec:property:motor-control:00000038:maxway:mx201:1",
+      "description" : "Motor Control",
+      "format" : "uint8",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 2,
+        "description" : "Pause"
+      }, {
+        "value" : 1,
+        "description" : "Open"
+      }, {
+        "value" : 0,
+        "description" : "Close"
+      } ]
+    } ]
+  }, {
+    "iid" : 333,
+    "type" : "urn:xiot-spec:service:battery:00007805:maxway:mx201:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:maxway:mx201:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:charging-state:00000015:maxway:mx201:1",
+      "description" : "Charging State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Charging"
+      }, {
+        "value" : 2,
+        "description" : "Not charging"
+      }, {
+        "value" : 3,
+        "description" : "Not chargeable"
+      } ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-charge:00002802:maxway:mx201:1",
+      "description" : "Start Charge"
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:low-battery:00005003:maxway:mx201:1",
+      "description" : "Low Battery"
+    } ]
+  } ]
+}

@@ -1,0 +1,838 @@
+{
+  "did": "x",
+  "instance": {
+    "type": "urn:knowin-spec:device:gateway:00000001:know:insight:3",
+    "description": {
+      "en-US": "Insight",
+      "zh-TW": "如影中控屏",
+      "zh-CN": "如影中控屏"
+    },
+    "services": [
+      {
+        "iid": 1,
+        "type": "urn:knowin-spec:service:device-information:00000002:know:insight:1",
+        "description": {
+          "en-US": "Device Information",
+          "zh-TW": "設備信息",
+          "zh-CN": "设备信息"
+        },
+        "properties": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:property:firmware-revision:00000006:know:insight:1",
+            "description": {
+              "en-US": "Firmware Revision",
+              "zh-TW": "固件版本",
+              "zh-CN": "固件版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:property:manufacturer:00000003:know:insight:1",
+            "description": {
+              "en-US": "Manufacturer",
+              "zh-TW": "製造商",
+              "zh-CN": "制造商"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 3,
+            "type": "urn:knowin-spec:property:model:00000004:know:insight:1",
+            "description": {
+              "en-US": "Model",
+              "zh-TW": "型號",
+              "zh-CN": "型号"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:knowin-spec:property:serial-number:00000005:know:insight:1",
+            "description": {
+              "en-US": "Serial Number",
+              "zh-TW": "序列號",
+              "zh-CN": "序列号"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:knowin-spec:property:software-revision:0000001f:know:insight:1",
+            "description": {
+              "en-US": "Software revision",
+              "zh-TW": "軟件版本",
+              "zh-CN": "软件版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          }
+        ]
+      },
+      {
+        "iid": 2,
+        "type": "urn:knowin-spec:service:media-player:00000005:know:insight:1",
+        "description": {
+          "en-US": "Media Player",
+          "zh-TW": "媒體播放器",
+          "zh-CN": "媒体播放器"
+        },
+        "properties": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:property:duration:0000000b:know:insight:1",
+            "description": {
+              "en-US": "Duration",
+              "zh-TW": "長度",
+              "zh-CN": "长度"
+            },
+            "format": "uint32",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "value-range": [
+              0,
+              36000,
+              1
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:property:position:0000000a:know:insight:1",
+            "description": {
+              "en-US": "Position",
+              "zh-TW": "位置",
+              "zh-CN": "位置"
+            },
+            "format": "uint32",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "value-range": [
+              0,
+              100,
+              1
+            ],
+            "unit": "percentage"
+          },
+          {
+            "iid": 3,
+            "type": "urn:knowin-spec:property:state:0000000d:know:insight:1",
+            "description": {
+              "en-US": "State",
+              "zh-TW": "狀態",
+              "zh-CN": "状态"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "value-list": [
+              {
+                "value": 0,
+                "description": "停止"
+              },
+              {
+                "value": 1,
+                "description": "播放"
+              },
+              {
+                "value": 2,
+                "description": "暂停"
+              }
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:knowin-spec:property:uri:0000000c:know:insight:1",
+            "description": {
+              "en-US": "URI",
+              "zh-TW": "統一資源定位符",
+              "zh-CN": "统一资源定位符"
+            },
+            "format": "string",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:knowin-spec:property:volume:00000009:know:insight:1",
+            "description": {
+              "en-US": "Volume",
+              "zh-TW": "音量",
+              "zh-CN": "音量"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "value-range": [
+              0,
+              100,
+              1
+            ],
+            "unit": "percentage"
+          }
+        ]
+      },
+      {
+        "iid": 3,
+        "type": "urn:knowin-spec:service:zigbee-gateway-information:00000020:know:insight:2",
+        "description": {
+          "en-US": "Zigbee Gateway Information",
+          "zh-TW": "Zigbee網關信息",
+          "zh-CN": "Zigbee网关信息"
+        },
+        "properties": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:property:channel:00000035:know:insight:2",
+            "description": {
+              "en-US": "Channel",
+              "zh-TW": "信道",
+              "zh-CN": "信道"
+            },
+            "format": "uint8",
+            "access": [
+              "read"
+            ],
+            "value-range": [
+              11,
+              26,
+              1
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:property:pan-id:00000036:know:insight:2",
+            "description": {
+              "en-US": "private area network identifier",
+              "zh-TW": "域網標識符",
+              "zh-CN": "域网标识符"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 3,
+            "type": "urn:knowin-spec:property:signal-transmit-power:00000037:know:insight:2",
+            "description": {
+              "en-US": "Signal Transmit Power",
+              "zh-TW": "信號發射功率",
+              "zh-CN": "信号发射功率"
+            },
+            "format": "uint8",
+            "access": [
+              "read"
+            ],
+            "value-range": [
+              0,
+              20,
+              1
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:knowin-spec:property:z3gatewayhost-version:0000003a:know:insight:2",
+            "description": {
+              "en-US": "z3 gatewayhost version",
+              "zh-TW": "Zigbee網關版本",
+              "zh-CN": "Zigbee网关版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:knowin-spec:property:mosquitto-version:0000003b:know:insight:2",
+            "description": {
+              "en-US": "mosquitto version",
+              "zh-TW": "mosquitto版本",
+              "zh-CN": "mosquitto版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 6,
+            "type": "urn:knowin-spec:property:z3guard-version:0000003c:know:insight:2",
+            "description": {
+              "en-US": "z3 guard version",
+              "zh-TW": "zigbee看門狗版本",
+              "zh-CN": "zigbee看门狗版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 7,
+            "type": "urn:knowin-spec:property:ncp-version:0000003f:know:insight:2",
+            "description": {
+              "en-US": "Zigbee NCP version",
+              "zh-TW": "Zigbee NCP版本",
+              "zh-CN": "Zigbee NCP版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:action:reboot-z3gatewayhost:00000023:know:insight:2",
+            "description": {
+              "en-US": "reboot Z3gatewayhost",
+              "zh-TW": "重啟Z3gatewayHost",
+              "zh-CN": "重启Z3gatewayHost"
+            }
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:action:reboot:00000026:know:insight:3",
+            "description": {
+              "en-US": "reboot",
+              "zh-TW": "重啟",
+              "zh-CN": "重启"
+            }
+          }
+        ]
+      },
+      {
+        "iid": 4,
+        "type": "urn:knowin-spec:service:ssh-agent:0000002a:know:insight:3",
+        "description": {
+          "en-US": "SSH Remote Access",
+          "zh-TW": "SSH遠程訪問",
+          "zh-CN": "SSH远程访问"
+        },
+        "properties": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:property:status-agent:00000047:know:insight:3",
+            "description": {
+              "en-US": "status of agent",
+              "zh-TW": "代理狀態",
+              "zh-CN": "代理状态"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:property:agent-server-host:00000048:know:insight:3",
+            "description": {
+              "en-US": "agent server host",
+              "zh-TW": "代理服務器地址",
+              "zh-CN": "代理服务器地址"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 3,
+            "type": "urn:knowin-spec:property:agent-server-port:00000049:know:insight:3",
+            "description": {
+              "en-US": "agent server port",
+              "zh-TW": "代理服務器端口",
+              "zh-CN": "代理服务器端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:knowin-spec:property:username:0000004a:know:insight:3",
+            "description": {
+              "en-US": "user",
+              "zh-TW": "用戶名",
+              "zh-CN": "用户名"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:knowin-spec:property:password:0000004b:know:insight:3",
+            "description": {
+              "en-US": "password",
+              "zh-TW": "密码",
+              "zh-CN": "密码"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 6,
+            "type": "urn:knowin-spec:property:remote-port:0000004c:know:insight:3",
+            "description": {
+              "en-US": "remote port",
+              "zh-TW": "遠程端口",
+              "zh-CN": "远程端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 7,
+            "type": "urn:knowin-spec:property:local-port:0000004d:know:insight:3",
+            "description": {
+              "en-US": "local port",
+              "zh-TW": "本地端口",
+              "zh-CN": "本地端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 8,
+            "type": "urn:knowin-spec:property:authorization-type:0000004e:know:insight:3",
+            "description": {
+              "en-US": "Authorization Type",
+              "zh-TW": "認證方式",
+              "zh-CN": "认证方式"
+            },
+            "format": "uint8",
+            "access": [
+
+            ],
+            "value-list": [
+              {
+                "value": 0,
+                "description": "No Authorize"
+              },
+              {
+                "value": 1,
+                "description": "Password"
+              },
+              {
+                "value": 2,
+                "description": "Privite Key"
+              }
+            ]
+          },
+          {
+            "iid": 9,
+            "type": "urn:knowin-spec:property:private-key:0000004f:know:insight:3",
+            "description": {
+              "en-US": "private key",
+              "zh-TW": "私鑰",
+              "zh-CN": "私钥"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:action:start-ssh-agent:00000024:know:insight:3",
+            "description": {
+              "en-US": "start ssh agent",
+              "zh-TW": "啟動ssh代理",
+              "zh-CN": "启动ssh代理"
+            },
+            "in": [
+              {
+                "piid": 2,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 3,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 4,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 5,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 6,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 7,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 8,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 9,
+                "repeat": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "out": [
+              {
+                "piid": 4,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 5,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 8,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 9,
+                "repeat": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:action:stop-ssh-agent:00000025:know:insight:3",
+            "description": {
+              "en-US": "stop ssh agent",
+              "zh-TW": "停止ssh代理",
+              "zh-CN": "停止ssh代理"
+            }
+          }
+        ]
+      },
+      {
+        "iid": 5,
+        "type": "urn:knowin-spec:service:ssh-agent:0000002a:know:insight:3",
+        "description": {
+          "en-US": "MQTT Remote Access",
+          "zh-TW": "MQTT遠程訪問",
+          "zh-CN": "MQTT远程访问"
+        },
+        "properties": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:property:status-agent:00000047:know:insight:3",
+            "description": {
+              "en-US": "status of agent",
+              "zh-TW": "代理狀態",
+              "zh-CN": "代理状态"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:property:agent-server-host:00000048:know:insight:3",
+            "description": {
+              "en-US": "agent server host",
+              "zh-TW": "代理服務器地址",
+              "zh-CN": "代理服务器地址"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 3,
+            "type": "urn:knowin-spec:property:agent-server-port:00000049:know:insight:3",
+            "description": {
+              "en-US": "agent server port",
+              "zh-TW": "代理服務器端口",
+              "zh-CN": "代理服务器端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:knowin-spec:property:username:0000004a:know:insight:3",
+            "description": {
+              "en-US": "user",
+              "zh-TW": "用戶名",
+              "zh-CN": "用户名"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:knowin-spec:property:password:0000004b:know:insight:3",
+            "description": {
+              "en-US": "password",
+              "zh-TW": "密码",
+              "zh-CN": "密码"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 6,
+            "type": "urn:knowin-spec:property:remote-port:0000004c:know:insight:3",
+            "description": {
+              "en-US": "remote port",
+              "zh-TW": "遠程端口",
+              "zh-CN": "远程端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 7,
+            "type": "urn:knowin-spec:property:local-port:0000004d:know:insight:3",
+            "description": {
+              "en-US": "local port",
+              "zh-TW": "本地端口",
+              "zh-CN": "本地端口"
+            },
+            "format": "uint16",
+            "access": [
+
+            ]
+          },
+          {
+            "iid": 8,
+            "type": "urn:knowin-spec:property:authorization-type:0000004e:know:insight:3",
+            "description": {
+              "en-US": "Authorization Type",
+              "zh-TW": "認證方式",
+              "zh-CN": "认证方式"
+            },
+            "format": "uint8",
+            "access": [
+
+            ],
+            "value-list": [
+              {
+                "value": 0,
+                "description": "No Authorize"
+              },
+              {
+                "value": 1,
+                "description": "Password"
+              },
+              {
+                "value": 2,
+                "description": "Privite Key"
+              }
+            ]
+          },
+          {
+            "iid": 9,
+            "type": "urn:knowin-spec:property:private-key:0000004f:know:insight:3",
+            "description": {
+              "en-US": "private key",
+              "zh-TW": "私鑰",
+              "zh-CN": "私钥"
+            },
+            "format": "string",
+            "access": [
+
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "iid": 1,
+            "type": "urn:knowin-spec:action:start-ssh-agent:00000024:know:insight:3",
+            "description": {
+              "en-US": "start mqtt agent",
+              "zh-TW": "啟動mqtt代理",
+              "zh-CN": "启动mqtt代理"
+            },
+            "in": [
+              {
+                "piid": 2,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 3,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 4,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 5,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 6,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 7,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 8,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 9,
+                "repeat": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "out": [
+              {
+                "piid": 4,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 5,
+                "repeat": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "piid": 8,
+                "repeat": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "piid": 9,
+                "repeat": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "iid": 2,
+            "type": "urn:knowin-spec:action:stop-ssh-agent:00000025:know:insight:3",
+            "description": {
+              "en-US": "stop mqtt agent",
+              "zh-TW": "停止mqtt代理",
+              "zh-CN": "停止mqtt代理"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

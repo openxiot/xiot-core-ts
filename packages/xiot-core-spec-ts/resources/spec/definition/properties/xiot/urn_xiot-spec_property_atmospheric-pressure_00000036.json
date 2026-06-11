@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:property:atmospheric-pressure:00000036",
+  "description" : "Atmospheric Pressure",
+  "format" : "float",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0.0, 100000.0, 1.0 ],
+  "unit" : "pascal"
+}

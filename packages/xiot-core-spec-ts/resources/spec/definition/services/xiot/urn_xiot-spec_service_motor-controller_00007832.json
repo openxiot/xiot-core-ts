@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:motor-controller:00007832",
+  "description" : "Motor Controller",
+  "required-properties" : [ "urn:xiot-spec:property:motor-control:00000038", "urn:xiot-spec:property:fault:00000009" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:target-position:0000003a", "urn:xiot-spec:property:current-position:00000039" ]
+}

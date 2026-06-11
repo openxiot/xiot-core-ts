@@ -1,0 +1,111 @@
+{
+  "type" : "urn:xiot-spec:device:switch:0000a003:cnest:mobius:1",
+  "description" : "Switch",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:cnest:mobius:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:cnest:mobius:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:cnest:mobius:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:cnest:mobius:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:cnest:mobius:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:switch:0000780c:cnest:mobius:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:cnest:mobius:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:name:00000004:cnest:mobius:1",
+      "description" : "Service Name",
+      "format" : "string",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:search-device:00000001:cnest:mobius:1",
+    "description" : "find device detail",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:lock:00000002:cnest:mobius:1",
+      "description" : "lock",
+      "format" : "int32",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "close"
+      }, {
+        "value" : 1,
+        "description" : "open"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:device-name:00000006:cnest:mobius:1",
+      "description" : "deviceName",
+      "format" : "string",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:light:00000007:cnest:mobius:1",
+      "description" : "light",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:openlamp:00000004:cnest:mobius:1",
+      "description" : "openlamp",
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:hahha:00000005:cnest:mobius:1",
+      "description" : "laugh",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:open:00000003:cnest:mobius:1",
+      "description" : "open"
+    } ]
+  } ]
+}

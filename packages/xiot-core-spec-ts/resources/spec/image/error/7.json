@@ -1,0 +1,21 @@
+{
+  "input": [
+    {
+      "did": "a",
+      "parentId": "d"
+    },
+    {
+      "did": "b",
+      "parentId": "x"
+    },
+    {
+      "did": "c",
+      "parentId": "a"
+    },
+    {
+      "did": "d",
+      "parentId": "a"
+    }
+  ],
+  "output": []
+}

@@ -1,0 +1,1026 @@
+{
+  "type": "urn:ke-spec:device:gateway:00000004:tuya:xh-p4:1",
+  "description": {
+    "en-US": "HomePad Gateway",
+    "zh-TW": "HomePad網關",
+    "zh-CN": "HomePad网关"
+  },
+  "services": [
+    {
+      "iid": 1,
+      "description": {
+        "en-US": "Device Information",
+        "zh-TW": "設備信息",
+        "zh-CN": "设备信息"
+      },
+      "type": "urn:ke-spec:service:device-information:00000005:tuya:xh-p4:1",
+      "properties": [
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "type": "urn:ke-spec:property:firmware-revision:00000003:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "制造商",
+            "zh-CN": "制造商"
+          },
+          "type": "urn:ke-spec:property:manufacturer:00000005:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "en-US": "型号",
+            "zh-TW": "型號",
+            "zh-CN": "Model"
+          },
+          "type": "urn:ke-spec:property:model:00000012:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 4,
+          "format": "string",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "type": "urn:ke-spec:property:serial-number:00000013:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 5,
+          "format": "string",
+          "description": {
+            "en-US": "Software Revision",
+            "zh-TW": "軟件版本",
+            "zh-CN": "软件版本"
+          },
+          "type": "urn:ke-spec:property:software-revision:00000014:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "description": {
+        "en-US": "Zigbee Information",
+        "zh-TW": "Zigbee設備信息",
+        "zh-CN": "Zigbee设备信息"
+      },
+      "type": "urn:ke-spec:service:zigbee-information:00000006:tuya:xh-p4:1",
+      "properties": [
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "SDK Provider",
+            "zh-TW": "SDK提供方",
+            "zh-CN": "SDK提供方"
+          },
+          "type": "urn:ke-spec:property:sdk-provider:00000015:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "SDK Version",
+            "zh-TW": "SDK版本",
+            "zh-CN": "SDK版本"
+          },
+          "type": "urn:ke-spec:property:sdk-version:00000016:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "description": {
+        "en-US": "Tuya Zigbee",
+        "zh-TW": "Tuya Zigbee",
+        "zh-CN": "Tuya Zigbee"
+      },
+      "type": "urn:ke-spec:service:tuya-zigbee:00000007:tuya:xh-p4:1",
+      "actions": [
+        {
+          "iid": 1,
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [
+                0,
+                254
+              ]
+            },
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Discover",
+            "zh-TW": "掃描設備",
+            "zh-CN": "扫描设备"
+          },
+          "type": "urn:ke-spec:action:discover:00000002:tuya:xh-p4:1"
+        },
+        {
+          "iid": 2,
+          "description": {
+            "en-US": "Stop Discover",
+            "zh-TW": "停止掃描設備",
+            "zh-CN": "停止扫描设备"
+          },
+          "type": "urn:ke-spec:action:stop-discovery:00000003:tuya:xh-p4:1"
+        },
+        {
+          "iid": 3,
+          "description": {
+            "en-US": "Get Children",
+            "zh-TW": "獲取子設備",
+            "zh-CN": "获取子设备"
+          },
+          "type": "urn:ke-spec:action:get-children:00000004:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 1,
+              "repeat": [
+                0,
+                254
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 4,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                254
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Remove Devices",
+            "zh-TW": "刪除設備",
+            "zh-CN": "删除设备"
+          },
+          "type": "urn:ke-spec:action:remove-devices:00000005:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 1,
+              "repeat": [
+                0,
+                254
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 5,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                0,
+                254
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Confirm Add Discovered Devices",
+            "zh-TW": "確定添加發現的設備",
+            "zh-CN": "确定添加发现的设备"
+          },
+          "type": "urn:ke-spec:action:confirm-add-discovered-devices:00000006:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 1,
+              "repeat": [
+                0,
+                254
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "unit": "",
+          "access": [],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "Device ID",
+            "zh-TW": "設備ID",
+            "zh-CN": "设备ID"
+          },
+          "type": "urn:ke-spec:property:device-id:00000017:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Device Type",
+            "zh-TW": "設備Type",
+            "zh-CN": "设备Type"
+          },
+          "type": "urn:ke-spec:property:device-type:00000018:tuya:xh-p4:1"
+        },
+        {
+          "unit": "seconds",
+          "access": [],
+          "iid": 3,
+          "format": "uint32",
+          "description": {
+            "en-US": "Timeout",
+            "zh-TW": "超時時長",
+            "zh-CN": "超时时长"
+          },
+          "value-range": [
+            0,
+            600,
+            1
+          ],
+          "type": "urn:ke-spec:property:timeout:00000019:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [],
+          "iid": 4,
+          "format": "uint8",
+          "description": {
+            "en-US": "Stop Discovery Reason",
+            "zh-TW": "停止掃描設備原因",
+            "zh-CN": "停止扫描设备原因"
+          },
+          "type": "urn:ke-spec:property:stop-discovery-reason:00000020:tuya:xh-p4:1",
+          "value-list": [
+            {
+              "description": "Normal Stop",
+              "value": 0
+            },
+            {
+              "description": "Manual Stop",
+              "value": 1
+            },
+            {
+              "description": "Error",
+              "value": 2
+            },
+            {
+              "description": "Confirm Stop",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 5,
+          "format": "bool",
+          "description": {
+            "en-US": "Discovery Status",
+            "zh-TW": "配網狀態",
+            "zh-CN": "配网状态"
+          },
+          "type": "urn:ke-spec:property:discovery-status:00000021:tuya:xh-p4:1"
+        }
+      ],
+      "events": [
+        {
+          "iid": 1,
+          "description": {
+            "en-US": "Device Found",
+            "zh-TW": "發現設備",
+            "zh-CN": "发现设备"
+          },
+          "arguments": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "type": "urn:ke-spec:event:device-found:00000001:tuya:xh-p4:1"
+        },
+        {
+          "iid": 2,
+          "description": {
+            "en-US": "Device Lost",
+            "zh-TW": "丟失設備",
+            "zh-CN": "丢失设备"
+          },
+          "arguments": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "type": "urn:ke-spec:event:device-lost:00000002:tuya:xh-p4:1"
+        },
+        {
+          "iid": 3,
+          "description": {
+            "en-US": "Discoery Stopped",
+            "zh-TW": "停止掃描設備",
+            "zh-CN": "停止扫描设备"
+          },
+          "arguments": [
+            {
+              "piid": 4,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "type": "urn:ke-spec:event:discovery-stopped:00000003:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "description": {
+        "en-US": "Group Management",
+        "zh-TW": "設備組管理",
+        "zh-CN": "设备组管理"
+      },
+      "type": "urn:ke-spec:service:group-management:00000008:tuya:xh-p4:1",
+      "actions": [
+        {
+          "iid": 1,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                254
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Create Device Group",
+            "zh-TW": "創建設備組",
+            "zh-CN": "创建设备组"
+          },
+          "type": "urn:ke-spec:action:create-group:00000007:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 2,
+              "repeat": [
+                0,
+                1
+              ]
+            },
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Delete Device Group",
+            "zh-TW": "刪除設備組",
+            "zh-CN": "删除设备组"
+          },
+          "type": "urn:ke-spec:action:delete-group:00000008:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                254
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Add Devices to Group",
+            "zh-TW": "設備組添加設備",
+            "zh-CN": "设备组添加设备"
+          },
+          "type": "urn:ke-spec:action:add-devices-to-group:00000009:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 4,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                254
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Remove Devices From Group",
+            "zh-TW": "從設備組中刪除設備",
+            "zh-CN": "从设备组中删除设备"
+          },
+          "type": "urn:ke-spec:action:remove-devices-from-group:00000010:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 5,
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Get Devices From Group",
+            "zh-TW": "獲取設備組的子設備",
+            "zh-CN": "获取设备组的子设备"
+          },
+          "type": "urn:ke-spec:action:get-devices-from-group:00000011:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 1,
+              "repeat": [
+                0,
+                254
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "unit": "",
+          "access": [],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "Device ID",
+            "zh-TW": "設備ID",
+            "zh-CN": "设备ID"
+          },
+          "type": "urn:ke-spec:property:device-id:00000017:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "Group ID",
+            "zh-TW": "設備組ID",
+            "zh-CN": "设备组ID"
+          },
+          "type": "urn:ke-spec:property:group-id:00000022:tuya:xh-p4:1"
+        },
+        {
+          "unit": "",
+          "access": [],
+          "iid": 3,
+          "format": "uint32",
+          "description": {
+            "en-US": "Action Result",
+            "zh-TW": "操作結果",
+            "zh-CN": "操作结果"
+          },
+          "type": "urn:ke-spec:property:result:00000023:tuya:xh-p4:1",
+          "value-list": [
+            {
+              "description": "ok",
+              "value": 0
+            },
+            {
+              "description": "error",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 5,
+      "description": {
+        "en-US": "Switch1",
+        "zh-TW": "開關1",
+        "zh-CN": "开关1"
+      },
+      "type": "urn:ke-spec:service:switch:00000001:tuya:xh-p4:1",
+      "properties": [
+        {
+          "unit": "",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 1,
+          "format": "bool",
+          "description": {
+            "en-US": "on",
+            "zh-TW": "開關",
+            "zh-CN": "开关"
+          },
+          "type": "urn:ke-spec:property:on:00000001:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 6,
+      "description": {
+        "en-US": "Switch2",
+        "zh-TW": "開關2",
+        "zh-CN": "开关2"
+      },
+      "type": "urn:ke-spec:service:switch:00000001:tuya:xh-p4:1",
+      "properties": [
+        {
+          "unit": "",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 1,
+          "format": "bool",
+          "description": {
+            "en-US": "on",
+            "zh-TW": "開關",
+            "zh-CN": "开关"
+          },
+          "type": "urn:ke-spec:property:on:00000001:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 7,
+      "description": {
+        "en-US": "news controller",
+        "zh-TW": "新闻播放器控制",
+        "zh-CN": "新闻播放器控制"
+      },
+      "type": "urn:ke-spec:service:news:00000007:tuya:xh-p4:1",
+      "actions": [
+        {
+          "iid": 1,
+          "description": {
+            "en-US": "Play News",
+            "zh-TW": "播放新闻",
+            "zh-CN": "播放新闻"
+          },
+          "type": "urn:ke-spec:action:play:00000012:tuya:xh-p4:1"
+        },
+        {
+          "iid": 2,
+          "description": {
+            "en-US": "Pause News",
+            "zh-TW": "暂停新闻",
+            "zh-CN": "暂停新闻"
+          },
+          "type": "urn:ke-spec:action:pause:00000013:tuya:xh-p4:1"
+        },
+        {
+          "iid": 3,
+          "description": {
+            "en-US": "TogglePlayAndPause News",
+            "zh-TW": "播放或者暂停新闻",
+            "zh-CN": "播放或者暂停新闻"
+          },
+          "type": "urn:ke-spec:action:toggleplayandpause:00000014:tuya:xh-p4:1"
+        },
+        {
+          "iid": 4,
+          "description": {
+            "en-US": "Stop News",
+            "zh-TW": "停止新闻",
+            "zh-CN": "停止新闻"
+          },
+          "type": "urn:ke-spec:action:stop:00000015:tuya:xh-p4:1"
+        },
+        {
+          "iid": 5,
+          "description": {
+            "en-US": "Play Next News",
+            "zh-TW": "播放下一首新闻",
+            "zh-CN": "播放下一首新闻"
+          },
+          "type": "urn:ke-spec:action:next:00000016:tuya:xh-p4:1"
+        },
+        {
+          "iid": 6,
+          "description": {
+            "en-US": "Play Previous News",
+            "zh-TW": "播放前一首新闻",
+            "zh-CN": "播放前一首新闻"
+          },
+          "type": "urn:ke-spec:action:previous:00000016:tuya:xh-p4:1"
+        },
+        {
+          "iid": 7,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "Play Search News",
+            "zh-TW": "播放搜索的新闻",
+            "zh-CN": "播放搜索的新闻"
+          },
+          "type": "urn:ke-spec:action:play1:00000018:tuya:xh-p4:1"
+        }
+      ],
+      "properties": [
+        {
+          "access": [],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "Search News Info",
+            "zh-TW": "搜索的新闻信息",
+            "zh-CN": "搜索的新闻信息"
+          },
+          "type": "urn:ke-spec:property:newsinfo:00000024:tuya:xh-p4:1"
+        }
+      ]
+    },
+    {
+      "iid": 8,
+      "description": {
+        "en-US": "RemoteDevice Controller",
+        "zh-TW": "远程设备调试控制",
+        "zh-CN": "远程设备调试控制"
+      },
+      "type": "urn:ke-spec:service:ssh:00000008:tuya:xh-p4:1",
+      "actions": [
+        {
+          "iid": 1,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 4,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 5,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 6,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "start remotedevice controller",
+            "zh-TW": "开启远程设备控制调试",
+            "zh-CN": "开启远程设备控制调试"
+          },
+          "type": "urn:ke-spec:action:start:00000019:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 7,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 8,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 9,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 3,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 4,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 5,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 6,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "description": {
+            "en-US": "close remotedevice controller",
+            "zh-TW": "关闭远程设备调试控制",
+            "zh-CN": "关闭远程设备调试控制"
+          },
+          "type": "urn:ke-spec:action:stop:00000020:tuya:xh-p4:1",
+          "out": [
+            {
+              "piid": 7,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 8,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 9,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "access": [],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "en-US": "remotedevice host address",
+            "zh-TW": "远端设备的网络地址",
+            "zh-CN": "远端设备的网络地址"
+          },
+          "type": "urn:ke-spec:property:devicehost:00000025:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "en-US": "remotedevice port",
+            "zh-TW": "远端设备的端口号",
+            "zh-CN": "远端设备的端口号"
+          },
+          "type": "urn:ke-spec:property:deviceport:00000026:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "en-US": "proxyserver host address",
+            "zh-TW": "代理服务器网络地址",
+            "zh-CN": "代理服务器网络地址"
+          },
+          "type": "urn:ke-spec:property:serverhost:00000027:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 4,
+          "format": "string",
+          "description": {
+            "en-US": "proxyserver port",
+            "zh-TW": "代理服务器端口号",
+            "zh-CN": "代理服务器端口号"
+          },
+          "type": "urn:ke-spec:property:serverport:00000028:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 5,
+          "format": "string",
+          "description": {
+            "en-US": "proxyserver username",
+            "zh-TW": "代理服务器用户名",
+            "zh-CN": "代理服务器用户名"
+          },
+          "type": "urn:ke-spec:property:username:00000029:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 6,
+          "format": "string",
+          "description": {
+            "en-US": "proxy message port",
+            "zh-TW": "代理消息转发端口",
+            "zh-CN": "代理消息转发端口"
+          },
+          "type": "urn:ke-spec:property:proxyport:00000029:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 7,
+          "format": "string",
+          "description": {
+            "en-US": "status code",
+            "zh-TW": "状态码",
+            "zh-CN": "状态码"
+          },
+          "type": "urn:ke-spec:property:code:00000030:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 8,
+          "format": "string",
+          "description": {
+            "en-US": "notice message",
+            "zh-TW": "提示消息",
+            "zh-CN": "提示消息"
+          },
+          "type": "urn:ke-spec:property:message:00000031:tuya:xh-p4:1"
+        },
+        {
+          "access": [],
+          "iid": 9,
+          "format": "string",
+          "description": {
+            "en-US": "data",
+            "zh-TW": "结果数据",
+            "zh-CN": "结果数据"
+          },
+          "type": "urn:ke-spec:property:data:00000032:tuya:xh-p4:1"
+        }
+      ]
+    }
+  ]
+}

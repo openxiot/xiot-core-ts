@@ -1,0 +1,15 @@
+{
+    "type": "urn:miot-spec:service:battery:00000809",
+    "description": "Battery service",
+    "required-properties": [
+        "urn:miot-spec:property:battery-level:00000013"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:charging-state:0000001F",
+        "urn:miot-spec:property:status-low-battery:0000001E"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:start-charge:00000406"
+    ]
+}

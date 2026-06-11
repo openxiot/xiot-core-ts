@@ -1,0 +1,24 @@
+{
+    "type": "urn:miot-spec:property:air-purifier-fan-speed:00000014",
+    "description": "Air Purifier Fan Speed",
+    "format": "uint8",
+    "access": ["read", "write", "notify"],
+    "value-list": [
+        {
+            "value": 1,
+            "description": "Auto"
+        },
+        {
+            "value": 2,
+            "description": "Low"
+        },
+        {
+            "value": 3,
+            "description": "Medium"
+        },
+        {
+            "value": 4,
+            "description": "High"
+        }
+    ]
+}

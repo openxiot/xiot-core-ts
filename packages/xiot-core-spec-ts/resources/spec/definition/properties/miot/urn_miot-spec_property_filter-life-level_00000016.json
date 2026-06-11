@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:filter-life-level:00000016",
+    "description": "Filter Life Level",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-range": [0, 100, 1],
+    "unit": "percentage"
+}

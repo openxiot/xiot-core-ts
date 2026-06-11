@@ -1,0 +1,54 @@
+{
+    "devices": [
+        {
+            "did": "aaa",
+            "token": "abc",
+            "status": 0,
+            "children": [
+                {
+                    "did": "a",
+                    "token": "xxx"
+                },
+                {
+                    "did": "b",
+                    "token": "xxx"
+                }
+            ]
+        },
+        {
+            "did": "bbb",
+            "token": "abc",
+            "status": 0,
+            "children": [
+                {
+                    "did": "xx",
+                    "token": "xxx"
+                },
+                {
+                    "did": "yy",
+                    "token": "xxx"
+                }
+            ]
+        },
+        {
+            "did": "ccc",
+            "status": 0,
+            "children": [
+                {
+                    "did": "aa",
+                    "token": "xxx"
+                },
+                {
+                    "did": "bb",
+                    "token": "xxx"
+                }
+            ]
+        },
+        {
+            "did": "ddd",
+            "token": "abc",
+            "status": -1,
+            "description": "xxx--axx"
+        }
+    ]
+}

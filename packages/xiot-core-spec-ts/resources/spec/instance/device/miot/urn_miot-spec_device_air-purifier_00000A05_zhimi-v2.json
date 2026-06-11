@@ -1,0 +1,252 @@
+{
+  "type": "urn:miot-spec:device:air-purifier:00000A05:zhimi-v2",
+  "description": "Zhimi Air Purifier V2",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:air-purifier:00000804",
+      "description": "Air Purifier",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:air-purifier-fan-speed:00000014",
+          "description": "Air Purifier Fan Speed",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Auto"
+            },
+            {
+              "value": 2,
+              "description": "Low"
+            },
+            {
+              "value": 3,
+              "description": "Medium"
+            },
+            {
+              "value": 4,
+              "description": "High"
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:filter-life-level:00000016",
+          "description": "Filter Life Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:filter-max-life-expectancy:00000017",
+          "description": "Filter Max Life Expectancy",
+          "format": "uint32",
+          "access": [
+            "read"
+          ],
+          "unit": "HOURS"
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:led-indicator-on:0000001A",
+          "description": "LED Indicator Light ON",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:audio-feedback-on:0000001B",
+          "description": "Audio Feedback State ON",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 7,
+          "type": "urn:miot-spec:property:physical-controls-locked:00000004",
+          "description": "Physical Controls Lock Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:reset-filter-life:00000400",
+          "description": "Reset Filter Life"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:air-quality-sensor:00000806",
+      "description": "Air Quality Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:air-quality:0000001D",
+          "description": "Air Quality",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "UNKNOWN"
+            },
+            {
+              "value": 1,
+              "description": "EXCELLENT"
+            },
+            {
+              "value": 2,
+              "description": "GOOD"
+            },
+            {
+              "value": 3,
+              "description": "LIGHTLY_POLLUTED"
+            },
+            {
+              "value": 4,
+              "description": "MODERATELY_POLLUTED"
+            },
+            {
+              "value": 5,
+              "description": "HEAVILY_POLLUTED"
+            },
+            {
+              "value": 6,
+              "description": "SEVERELY_POLLUTED"
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:pm2.5-density:00000012",
+          "description": "PM2.5 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0
+          ]
+        }
+      ]
+    }
+  ]
+}

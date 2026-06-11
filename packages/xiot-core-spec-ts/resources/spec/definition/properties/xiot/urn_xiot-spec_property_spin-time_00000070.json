@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:spin-time:00000070",
+  "description" : "Spin Time",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 120, 1 ]
+}

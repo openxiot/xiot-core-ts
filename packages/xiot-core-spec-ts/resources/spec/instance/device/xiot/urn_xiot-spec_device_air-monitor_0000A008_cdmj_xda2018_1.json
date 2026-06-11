@@ -1,0 +1,105 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:cdmj:xda2018:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:air-monitor:00007812:cdmj:xda2018:1",
+    "description" : "Air Monitor",
+    "properties" : [ {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:cdmj:xda2018:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:device-information:00007801:cdmj:xda2018:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:cdmj:xda2018:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:cdmj:xda2018:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:cdmj:xda2018:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:cdmj:xda2018:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:cdmj:xda2018:1",
+    "description" : "Environment"
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:air-quality:00000001:cdmj:xda2018:1",
+    "description" : "air quality",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:temp:00000002:cdmj:xda2018:1",
+      "description" : "temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:humi:00000003:cdmj:xda2018:1",
+      "description" : "relative humility",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 100.0, 0.1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:pm25:00000004:cdmj:xda2018:1",
+      "description" : "PM2.5",
+      "format" : "int32",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 5000, 1 ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:pm10:00000005:cdmj:xda2018:1",
+      "description" : "PM10",
+      "format" : "int32",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 5000, 1 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:co2:00000006:cdmj:xda2018:1",
+      "description" : "CO2",
+      "format" : "int32",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 5000, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:hcho:00000007:cdmj:xda2018:1",
+      "description" : "HCHO",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 2.0, 0.001 ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:fan:00000008:cdmj:xda2018:1",
+      "description" : "Fan Speed",
+      "format" : "int32",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 6, 1 ]
+    } ]
+  } ]
+}

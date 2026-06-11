@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:reset-filter-life:00000400",
+    "description": "Reset Filter Life"
+}

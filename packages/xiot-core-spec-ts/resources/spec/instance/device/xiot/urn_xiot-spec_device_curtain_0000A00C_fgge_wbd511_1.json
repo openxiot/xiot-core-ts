@@ -1,0 +1,115 @@
+{
+  "type": "urn:xiot-spec:device:curtain:0000a00c:fgge:wbd511:1",
+  "description": "Curtain",
+  "services": [
+    {
+      "iid": 198,
+      "type": "urn:xiot-spec:service:device-information:00007801:fgge:wbd511:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 368,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:fgge:wbd511:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 105,
+          "type": "urn:xiot-spec:property:model:00000002:fgge:wbd511:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 365,
+          "type": "urn:xiot-spec:property:serial-number:00000003:fgge:wbd511:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 430,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:fgge:wbd511:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 356,
+      "type": "urn:xiot-spec:service:curtain:00007816:fgge:wbd511:1",
+      "description": "Curtain",
+      "properties": [
+        {
+          "iid": 403,
+          "type": "urn:xiot-spec:property:fault:00000009:fgge:wbd511:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 205,
+          "type": "urn:xiot-spec:property:motor-control:00000038:fgge:wbd511:1",
+          "description": "Motor Control",
+          "format": "uint8",
+          "access": [
+            "write"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Pause"
+            },
+            {
+              "value": 1,
+              "description": "Open"
+            },
+            {
+              "value": 2,
+              "description": "Close"
+            }
+          ]
+        },
+        {
+          "iid": 317,
+          "type": "urn:xiot-spec:property:status:00000007:fgge:wbd511:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Broken line"
+            },
+            {
+              "value": 1,
+              "description": "Connection"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

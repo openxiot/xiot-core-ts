@@ -1,0 +1,16 @@
+{
+    "type": "urn:xiot-spec:service:ir-aircondition-control:00007824",
+    "description": "IR Aircondition Control",
+    "optional-properties": [
+        "urn:xiot-spec:property:ir-mode:0000004c",
+        "urn:xiot-spec:property:ir-temperature:0000004d"
+    ],
+    "optional-actions": [
+        "urn:xiot-spec:action:turn-on:00002808",
+        "urn:xiot-spec:action:turn-off:00002809",
+        "urn:xiot-spec:action:fan-speed-up:0000281b",
+        "urn:xiot-spec:action:fan-speed-down:0000281c",
+        "urn:xiot-spec:action:temperature-up:0000281d",
+        "urn:xiot-spec:action:temperature-down:0000281e"
+    ]
+}

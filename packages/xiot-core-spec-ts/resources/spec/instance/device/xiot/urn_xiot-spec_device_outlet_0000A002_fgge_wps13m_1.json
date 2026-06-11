@@ -1,0 +1,81 @@
+{
+  "type" : "urn:xiot-spec:device:outlet:0000a002:fgge:wps13m:1",
+  "description" : "Outlet",
+  "services" : [ {
+    "iid" : 195,
+    "type" : "urn:xiot-spec:service:device-information:00007801:fgge:wps13m:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 276,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:fgge:wps13m:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 279,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:fgge:wps13m:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 172,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:fgge:wps13m:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 110,
+      "type" : "urn:xiot-spec:property:model:00000002:fgge:wps13m:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ],
+    "actions" : [ {
+      "iid" : 240,
+      "type" : "urn:xiot-spec:action:identify:00002801:fgge:wps13m:1",
+      "description" : "Identify"
+    } ]
+  }, {
+    "iid" : 351,
+    "type" : "urn:xiot-spec:service:switch:0000780c:fgge:wps13m:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 402,
+      "type" : "urn:xiot-spec:property:on:00000006:fgge:wps13m:1",
+      "description" : "Switch １",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 403,
+      "type" : "urn:xiot-spec:property:on:00000006:fgge:wps13m:1",
+      "description" : "Switch ２",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 404,
+      "type" : "urn:xiot-spec:property:on:00000006:fgge:wps13m:1",
+      "description" : "Switch ３",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 326,
+      "type" : "urn:xiot-spec:property:status:00000007:fgge:wps13m:1",
+      "description" : "Connection status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Broken line"
+      }, {
+        "value" : 1,
+        "description" : "Connecting"
+      } ]
+    }, {
+      "iid" : 187,
+      "type" : "urn:xiot-spec:property:name:00000004:fgge:wps13m:1",
+      "description" : "Service Name",
+      "format" : "string",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

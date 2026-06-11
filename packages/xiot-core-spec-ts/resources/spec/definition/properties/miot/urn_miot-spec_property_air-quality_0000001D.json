@@ -1,0 +1,15 @@
+{
+    "type": "urn:miot-spec:property:air-quality:0000001D",
+    "description": "Air Quality",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-list": [
+        {"value": 0, "description": "UNKNOWN"},
+        {"value": 1, "description": "EXCELLENT"},
+        {"value": 2, "description": "GOOD"},
+        {"value": 3, "description": "LIGHTLY_POLLUTED"},
+        {"value": 4, "description": "MODERATELY_POLLUTED"},
+        {"value": 5, "description": "HEAVILY_POLLUTED"},
+        {"value": 6, "description": "SEVERELY_POLLUTED"}
+    ]
+}

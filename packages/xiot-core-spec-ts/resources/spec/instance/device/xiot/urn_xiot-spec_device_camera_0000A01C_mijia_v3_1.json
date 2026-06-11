@@ -1,0 +1,265 @@
+{
+  "type" : "urn:xiot-spec:device:camera:0000a01c:mijia:v3:1",
+  "description" : "Camera",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:mijia:v3:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:mijia:v3:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:mijia:v3:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:mijia:v3:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:mijia:v3:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:camera-control:0000782f:mijia:v3:1",
+    "description" : "Camera Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:mijia:v3:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:image-rollover:00000058:mijia:v3:1",
+      "description" : "Image Rollover",
+      "format" : "uint16",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 180, 180 ],
+      "unit" : "arcdegrees"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:night-shot:00000057:mijia:v3:1",
+      "description" : "Night Shot",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Off"
+      }, {
+        "value" : 2,
+        "description" : "On"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:motion-detection:00000056:mijia:v3:1",
+      "description" : "Motion Detection",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:camera-stream-for-amazon-alexa:00007830:mijia:v3:1",
+    "description" : "Camera Stream Management for Amazon Alexa",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:stream-status:00000059:mijia:v3:1",
+      "description" : "Stream Status",
+      "format" : "uint8",
+      "access" : [ "read" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Available"
+      }, {
+        "value" : 2,
+        "description" : "In use"
+      }, {
+        "value" : 3,
+        "description" : "Unavailable"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:video-codec-type:0000005a:mijia:v3:1",
+      "description" : "Video Codec Type",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "H264"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:video-attribute:0000005b:mijia:v3:1",
+      "description" : "Video Attribute",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "1920_1080_20"
+      }, {
+        "value" : 2,
+        "description" : "640_360_20"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:audio-codec-type:0000005c:mijia:v3:1",
+      "description" : "Audio Codec Type",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "G711"
+      } ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:audio-attribute:0000005d:mijia:v3:1",
+      "description" : "Audio Attribute",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "8000_1_8_CONSTANT"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:authorization-type:00000062:mijia:v3:1",
+      "description" : "Authorization Type",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "DIGEST"
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:stream-address:0000005e:mijia:v3:1",
+      "description" : "Stream URL",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:image-snapshot:00000064:mijia:v3:1",
+      "description" : "Image Snapshot URL",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:property:expiration-time:00000063:mijia:v3:1",
+      "description" : "Expiration Time",
+      "format" : "string",
+      "access" : [ ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-rtsp-stream:00002820:mijia:v3:1",
+      "description" : "Start Camera Stream for Alexa",
+      "in" : [ {
+        "piid" : 3,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 3,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:stop-stream:00002822:mijia:v3:1",
+      "description" : "Stop Camera Stream"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:get-stream-configuration:00002823:mijia:v3:1",
+      "description" : "Get Stream Configuration of Camera"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:camera-stream-for-google-home:00007831:mijia:v3:1",
+    "description" : "Camera Stream Management for Google Home",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:video-codec-type:0000005a:mijia:v3:1",
+      "description" : "Video Codec Type",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "HLS"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:video-attribute:0000005a:mijia:v3:1",
+      "description" : "Video Attribute",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "1920_1080_20"
+      }, {
+        "value" : 2,
+        "description" : "640_360_20"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:audio-codec-type:0000005c:mijia:v3:1",
+      "description" : "Audio Codec Type",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "G711"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:audio-attribute:0000005d:mijia:v3:1",
+      "description" : "Audio Attribute",
+      "format" : "uint8",
+      "access" : [ ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "8000_1_8_CONSTANT"
+      } ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:stream-address:0000005e:mijia:v3:1",
+      "description" : "Stream URL",
+      "format" : "string",
+      "access" : [ ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-hls-stream:00002821:mijia:v3:1",
+      "description" : "Start Camera Stream for Google",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:stop-stream:00002822:mijia:v3:1",
+      "description" : "Stop Camera Stream"
+    } ]
+  } ]
+}

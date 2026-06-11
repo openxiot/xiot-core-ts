@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:led-indicator-on:0000001A",
+    "description": "LED Indicator Light ON",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

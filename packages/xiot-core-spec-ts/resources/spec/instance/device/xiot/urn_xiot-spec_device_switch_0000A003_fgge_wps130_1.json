@@ -1,0 +1,137 @@
+{
+  "type": "urn:xiot-spec:device:switch:0000a003:fgge:wps130:1",
+  "description": "Switch",
+  "services": [
+    {
+
+      "iid": 172,
+      "type": "urn:xiot-spec:service:device-information:00007801:fgge:wps130:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 307,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:fgge:wps130:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 196,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:fgge:wps130:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 137,
+          "type": "urn:xiot-spec:property:model:00000002:fgge:wps130:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 303,
+          "type": "urn:xiot-spec:property:serial-number:00000003:fgge:wps130:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 326,
+      "type": "urn:xiot-spec:service:switch:0000780c:fgge:wps130:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 739,
+          "type": "urn:xiot-spec:property:on:00000006:fgge:wps130:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 414,
+          "type": "urn:xiot-spec:property:name:00000004:fgge:wps130:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 327,
+      "type": "urn:xiot-spec:service:switch:0000780c:fgge:wps130:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 739,
+          "type": "urn:xiot-spec:property:on:00000006:fgge:wps130:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 414,
+          "type": "urn:xiot-spec:property:name:00000004:fgge:wps130:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 328,
+      "type": "urn:xiot-spec:service:switch:0000780c:fgge:wps130:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 739,
+          "type": "urn:xiot-spec:property:on:00000006:fgge:wps130:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 414,
+          "type": "urn:xiot-spec:property:name:00000004:fgge:wps130:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    }
+  ]
+}

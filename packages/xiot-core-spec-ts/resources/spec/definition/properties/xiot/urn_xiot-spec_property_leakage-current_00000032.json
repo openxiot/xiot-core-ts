@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:leakage-current:00000032",
+  "description" : "Leakage Current",
+  "format" : "uint16",
+  "access" : [ "read" ],
+  "value-range" : [ 0, 65535, 1 ]
+}

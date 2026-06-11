@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:serial-number:00000003",
+  "description" : "Device Serial Number",
+  "format" : "string",
+  "access" : [ "read" ]
+}

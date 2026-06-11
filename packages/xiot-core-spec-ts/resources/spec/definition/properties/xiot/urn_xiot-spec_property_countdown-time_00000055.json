@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:countdown-time:00000055",
+  "description" : "Countdown Time",
+  "format" : "uint32",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 24, 1 ]
+}

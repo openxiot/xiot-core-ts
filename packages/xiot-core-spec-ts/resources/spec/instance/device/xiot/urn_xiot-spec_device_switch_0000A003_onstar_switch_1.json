@@ -1,0 +1,311 @@
+{
+  "type": "urn:xiot-spec:device:switch:0000a003:onstar:switch:1",
+  "description": "Switch",
+  "services": [
+    {
+      "iid": 117,
+      "type": "urn:xiot-spec:service:vehicle:00000001:onstar:switch:1",
+      "description": "vehicle",
+      "properties": [
+        {
+          "iid": 226,
+          "type": "urn:xiot-spec:property:result:00000005:onstar:switch:1",
+          "description": "command result",
+          "format": "string",
+          "access": [
+            "notify"
+          ]
+        },
+        {
+          "iid": 387,
+          "type": "urn:xiot-spec:property:vin:00000004:onstar:switch:1",
+          "description": "vin",
+          "format": "string",
+          "access": [
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 804,
+          "type": "urn:xiot-spec:property:requeststatus:00000006:onstar:switch:1",
+          "description": "request status",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 270,
+          "type": "urn:xiot-spec:property:pin:00000008:onstar:switch:1",
+          "description": "pin",
+          "format": "string",
+          "access": [
+            "write"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 401,
+          "type": "urn:xiot-spec:action:unlock:00000009:onstar:switch:1",
+          "description": "unlock",
+          "in": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "out": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 340,
+          "type": "urn:xiot-spec:action:lock:00000002:onstar:switch:1",
+          "description": "lock",
+          "in": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "out": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "iid": 336,
+          "type": "urn:xiot-spec:event:lock:00000007:onstar:switch:1",
+          "description": "lock door",
+          "arguments": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "iid": 112,
+          "type": "urn:xiot-spec:event:unlock:0000000a:onstar:switch:1",
+          "description": "unlock",
+          "arguments": [
+            {
+              "piid": 387,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 270,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 409,
+      "type": "urn:xiot-spec:service:device-information:00007801:onstar:switch:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 256,
+          "type": "urn:xiot-spec:property:serial-number:00000003:onstar:switch:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 338,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:onstar:switch:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 341,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:onstar:switch:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 271,
+          "type": "urn:xiot-spec:property:model:00000002:onstar:switch:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 898,
+      "type": "urn:xiot-spec:service:switch:0000780c:onstar:switch:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 120,
+          "type": "urn:xiot-spec:property:fault:00000009:onstar:switch:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 264,
+          "type": "urn:xiot-spec:property:mode:00000008:onstar:switch:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 425,
+          "type": "urn:xiot-spec:property:temperature:00000020:onstar:switch:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 284,
+          "type": "urn:xiot-spec:property:on:00000006:onstar:switch:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 364,
+          "type": "urn:xiot-spec:property:name:00000004:onstar:switch:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 108,
+          "type": "urn:xiot-spec:property:status:00000007:onstar:switch:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

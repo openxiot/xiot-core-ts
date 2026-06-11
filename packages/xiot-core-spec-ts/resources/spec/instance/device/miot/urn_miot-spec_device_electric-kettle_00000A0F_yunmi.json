@@ -1,0 +1,120 @@
+{
+  "type": "urn:miot-spec:device:electric-kettle:00000A0F:yunmi",
+  "description": "Yunmi Electric Kettle",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:electric-kettle:00000814",
+      "description": "electric kettle service",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:target-temperature:00000034",
+          "description": "Target temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            100.0,
+            0.1
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:water-out-delay:00000033",
+          "description": "water out delay",
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "unit": "minutes"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:total-dissolved-solids-sensor:0000080B",
+      "description": "Total Dissolved solids (TDS) Sensor for output water",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:total-dissolved-solids:00000022",
+          "description": "Total Dissolved solids (TDS)",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ]
+        }
+      ]
+    }
+  ]
+}

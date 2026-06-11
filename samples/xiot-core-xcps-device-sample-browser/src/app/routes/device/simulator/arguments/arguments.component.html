@@ -1,0 +1,18 @@
+<nz-list
+  nzSize="small"
+  [nzBordered]="false"
+  [nzSplit]="false"
+  [nzHeader]="title"
+  [nzDataSource]="arguments"
+  [nzRenderItem]="item"
+>
+  <ng-template #item let-argument>
+    <nz-list-item>
+      <app-simulator-property-value
+        style="width: 100%"
+        [p]="service.properties.get(argument.piid)"
+        [showTitle]="true"
+      ></app-simulator-property-value>
+    </nz-list-item>
+  </ng-template>
+</nz-list>

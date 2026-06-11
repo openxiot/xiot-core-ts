@@ -1,0 +1,11 @@
+{
+    "type": "urn:xiot-spec:service:power-consumption:0000780e",
+    "description": "Power Consumption",
+    "optional-properties": [
+        "urn:xiot-spec:property:power-consumption:0000002f",
+        "urn:xiot-spec:property:electric-current:00000030",
+        "urn:xiot-spec:property:voltage:00000031",
+        "urn:xiot-spec:property:leakage-current:00000032",
+        "urn:xiot-spec:property:surge-power:00000033"
+    ]
+}

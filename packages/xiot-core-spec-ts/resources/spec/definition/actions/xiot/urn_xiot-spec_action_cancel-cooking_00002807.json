@@ -1,0 +1,4 @@
+{
+  "type" : "urn:xiot-spec:action:cancel-cooking:00002807",
+  "description" : "Cancel Cooking"
+}

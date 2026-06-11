@@ -1,0 +1,308 @@
+{
+  "type": "urn:miot-spec-v2:device:light:0000A001:ks:light:1",
+  "description": {
+    "en-US": "Light",
+    "zh-TW": "燈",
+    "zh-CN": "灯"
+  },
+  "services": [
+    {
+      "x-required": true,
+      "iid": 1,
+      "type": "urn:miot-spec-v2:service:device-information:00007801",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": true,
+      "description": {
+        "en-US": "Device Information",
+        "zh-TW": "設備信息",
+        "zh-CN": "设备信息"
+      },
+      "properties": [
+        {
+          "type": "urn:miot-spec-v2:property:firmware-revision:00000005",
+          "description": {
+            "en-US": "Current Firmware Version",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": false,
+          "iid": 1
+        },
+        {
+          "type": "urn:miot-spec-v2:property:manufacturer:00000001",
+          "description": {
+            "en-US": "Device Manufacturer",
+            "zh-TW": "設備制造商",
+            "zh-CN": "设备制造商"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": false,
+          "iid": 2
+        },
+        {
+          "type": "urn:miot-spec-v2:property:model:00000002",
+          "description": {
+            "en-US": "Device Model",
+            "zh-TW": "設備型號",
+            "zh-CN": "设备型号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": false,
+          "iid": 3
+        },
+        {
+          "type": "urn:miot-spec-v2:property:serial-number:00000003",
+          "description": {
+            "en-US": "Device ID",
+            "zh-TW": "設備編號",
+            "zh-CN": "设备编号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": false,
+          "iid": 4
+        },
+        {
+          "type": "urn:miot-spec-v2:property:serial-no:000000FF",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "format": "string",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "x-required": false,
+          "iid": 5
+        }
+      ]
+    },
+    {
+      "x-required": true,
+      "iid": 2,
+      "type": "urn:miot-spec-v2:service:light:00007802",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": true,
+      "description": {
+        "en-US": "Light",
+        "zh-TW": "燈",
+        "zh-CN": "灯"
+      },
+      "properties": [
+        {
+          "type": "urn:miot-spec-v2:property:on:00000006",
+          "description": {
+            "en-US": "Switch Status",
+            "zh-TW": "開關狀態",
+            "zh-CN": "开关状态"
+          },
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "x-required": true,
+          "iid": 1
+        },
+        {
+          "type": "urn:miot-spec-v2:property:brightness:0000000D",
+          "description": {
+            "en-US": "Brightness",
+            "zh-TW": "亮度",
+            "zh-CN": "亮度"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage",
+          "x-required": false,
+          "iid": 2
+        },
+        {
+          "type": "urn:miot-spec-v2:property:color:0000000E",
+          "description": {
+            "en-US": "Color",
+            "zh-TW": "顏色",
+            "zh-CN": "颜色"
+          },
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ],
+          "x-required": false,
+          "iid": 3
+        },
+        {
+          "type": "urn:miot-spec-v2:property:color-temperature:0000000F",
+          "description": {
+            "en-US": "Color Temperature",
+            "zh-TW": "色溫",
+            "zh-CN": "色温"
+          },
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin",
+          "x-required": false,
+          "iid": 4
+        },
+        {
+          "type": "urn:miot-spec-v2:property:default-power-on-state:00000105",
+          "description": {
+            "en-US": "Default Power On State",
+            "zh-TW": "默認開機狀態",
+            "zh-CN": "默认开机状态"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Off"
+            }
+          ],
+          "x-required": false,
+          "iid": 5
+        },
+        {
+          "type": "urn:miot-spec-v2:property:flex-switch:000000EC",
+          "description": {
+            "en-US": "Flex Switch",
+            "zh-TW": "彈性開關",
+            "zh-CN": "弹性开关"
+          },
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "x-required": false,
+          "iid": 6
+        },
+        {
+          "type": "urn:miot-spec-v2:property:flow:00000010",
+          "description": {
+            "en-US": "Flow",
+            "zh-TW": "流量",
+            "zh-CN": "流量"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ],
+          "x-required": false,
+          "iid": 7
+        },
+        {
+          "type": "urn:miot-spec-v2:property:mode:00000008",
+          "description": {
+            "en-US": "Mode",
+            "zh-TW": "模式",
+            "zh-CN": "模式"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ],
+          "x-required": false,
+          "iid": 8
+        },
+        {
+          "type": "urn:miot-spec-v2:property:saturability:00000011",
+          "description": {
+            "en-US": "Saturability",
+            "zh-TW": "飽和度",
+            "zh-CN": "饱和度"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage",
+          "x-required": false,
+          "iid": 9
+        }
+      ],
+      "actions": [
+        {
+          "x-required": false,
+          "iid": 1,
+          "type": "urn:miot-spec-v2:action:toggle:00002811",
+          "description": {
+            "en-US": "Toggle",
+            "zh-TW": "切換",
+            "zh-CN": "切换"
+          }
+        }
+      ]
+    }
+  ]
+}

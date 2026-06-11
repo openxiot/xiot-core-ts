@@ -1,0 +1,96 @@
+{
+  "type": "urn:xiot-spec:device:stb:0000a011:ayzn:irstb:1",
+  "description": "Set Top Box",
+  "services": [
+    {
+      "iid": 183,
+      "type": "urn:xiot-spec:service:device-information:00007801:ayzn:irstb:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 147,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:ayzn:irstb:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 197,
+          "type": "urn:xiot-spec:property:serial-number:00000003:ayzn:irstb:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 182,
+          "type": "urn:xiot-spec:property:model:00000002:ayzn:irstb:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 335,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:ayzn:irstb:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 198,
+      "type": "urn:xiot-spec:service:ir-stb-control:00007820:ayzn:irstb:1",
+      "description": "IR STB Control",
+      "actions": [
+        {
+          "iid": 117,
+          "type": "urn:xiot-spec:action:turn-off:00002809:ayzn:irstb:1",
+          "description": "Turn Off"
+        },
+        {
+          "iid": 165,
+          "type": "urn:xiot-spec:action:volume-up:00002812:ayzn:irstb:1",
+          "description": "Volume Up"
+        },
+        {
+          "iid": 166,
+          "type": "urn:xiot-spec:action:turn-on:00002808:ayzn:irstb:1",
+          "description": "Turn On"
+        },
+        {
+          "iid": 937,
+          "type": "urn:xiot-spec:action:mute-on:00002819:ayzn:irstb:1",
+          "description": "Mute On"
+        },
+        {
+          "iid": 201,
+          "type": "urn:xiot-spec:action:volume-down:00002813:ayzn:irstb:1",
+          "description": "Volume Down"
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:action:channel-down:00002816:ayzn:irstb:1",
+          "description": "Channel Down"
+        },
+        {
+          "iid": 220,
+          "type": "urn:xiot-spec:action:mute-off:0000281a:ayzn:irstb:1",
+          "description": "Mute Off"
+        },
+        {
+          "iid": 943,
+          "type": "urn:xiot-spec:action:channel-up:00002815:ayzn:irstb:1",
+          "description": "Channel Up"
+        }
+      ]
+    }
+  ]
+}

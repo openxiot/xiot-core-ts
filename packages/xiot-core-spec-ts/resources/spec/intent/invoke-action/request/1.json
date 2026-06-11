@@ -1,0 +1,62 @@
+{
+    "devices": [
+        {
+            "did": "aaa",
+            "token": "abc",
+            "actions": [
+                {
+                    "aid": "aaa.1.1",
+                    "oid": "xxx",
+                    "in": [
+                        {
+                            "piid": 8,
+                            "values": [277, 10]
+                        }
+                    ]
+                },
+                {
+                    "aid": "aaa.1.7",
+                    "oid": "xxx",
+                    "in": [
+                        {
+                            "piid": 18,
+                            "values": [1.7, 10.8]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "did": "bbb",
+            "token": "abc",
+            "actions": [
+                {
+                    "aid": "bbb.1.1",
+                    "oid": "xxx",
+                    "in": [
+                        {
+                            "piid": 28,
+                            "values": ["fox", "abc"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "did": "ccc",
+            "token": "abc",
+            "actions": [
+                {
+                    "aid": "ccc.1.1",
+                    "oid": "xxx",
+                    "in": [
+                        {
+                            "piid": 38,
+                            "values": [100, 200, 300]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

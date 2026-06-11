@@ -1,0 +1,64 @@
+{
+    "summaries": [
+        {
+            "type": "urn:homekit-spec:device:bridge:00000002:yingtuo:hhh:1",
+            "online": false,
+            "parentId": "fff",
+            "cloudId": "xxx",
+            "lastOnline": 123,
+            "lastOffline": 1
+        },
+        {
+            "type": "urn:homekit-spec:device:other:00000001:yingtuo:fakebulb:1",
+            "online": false,
+            "lastOnline": 12345,
+            "lastOffline": 2
+        },
+        {
+            "type": "urn:homekit-spec:device:other:00000001:applefans:fakebulb:1",
+            "online": false,
+            "cloudId": "xxx",
+            "lastOnline": 123456,
+            "lastOffline": 3
+        },
+        {
+            "type": "urn:homekit-spec:device:other:00000001:applefans:fakebulb:1",
+            "online": false,
+            "cloudId": "xxx",
+            "lastOnline": 1234567,
+            "lastOffline": 4
+        },
+        {
+            "type": "urn:homekit-spec:device:other:00000001:yingtuo:fakebulb:1",
+            "online": false,
+            "parentId": "CC:22:3D:E3:CE:01@25",
+            "cloudId": "xxx",
+            "members": [
+                "aaa",
+                "bbb"
+            ]
+        },
+        {
+            "type": "urn:homekit-spec:device:other:00000001:applefans:fakebulb:1",
+            "online": false,
+            "cloudId": "xxx",
+            "members": [
+                "abc"
+            ]
+        },
+        {
+            "type": "urn:homekit-spec:device:lightbulb:00000005:yingtuo:zzz:1",
+            "online": false,
+            "parentId": "CC:22:3D:E3:CE:01@25",
+            "cloudId": "xxx",
+            "protocol": "virtual"
+        },
+        {
+            "type": "urn:homekit-spec:group:lightbulb:00000005:yingtuo:zzz:1",
+            "online": false,
+            "parentId": "aaa",
+            "cloudId": "xxx",
+            "protocol": "zigbee"
+        }
+    ]
+}

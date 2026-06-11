@@ -1,0 +1,614 @@
+{
+  "type": "urn:xiot-spec:device:air-conditioner:0000a004:uiot:ai10:1",
+  "description": "Air Conditioner",
+  "services": [
+    {
+      "iid": 161,
+      "type": "urn:xiot-spec:service:air-conditioner:0000780f:uiot:ai10:1",
+      "description": "Air Conditioner",
+      "properties": [
+        {
+          "iid": 241,
+          "type": "urn:xiot-spec:property:mode:00000008:uiot:ai10:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 130,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:ai10:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 149,
+          "type": "urn:xiot-spec:property:target-temperature:00000021:uiot:ai10:1",
+          "description": "Target Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            16.0,
+            32.0,
+            1.0
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 185,
+          "type": "urn:xiot-spec:property:dryer:00000027:uiot:ai10:1",
+          "description": "Dryer",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 393,
+          "type": "urn:xiot-spec:property:heater:00000026:uiot:ai10:1",
+          "description": "Heater",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:fault:00000009:uiot:ai10:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 381,
+          "type": "urn:xiot-spec:property:eco:00000024:uiot:ai10:1",
+          "description": "ECO",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 382,
+          "type": "urn:xiot-spec:property:sleep-mode:00000028:uiot:ai10:1",
+          "description": "Sleep Mode",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 206,
+          "type": "urn:xiot-spec:property:status:00000007:uiot:ai10:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 158,
+          "type": "urn:xiot-spec:property:target-humidity:00000022:uiot:ai10:1",
+          "description": "Target Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 959,
+          "type": "urn:xiot-spec:property:anion:00000025:uiot:ai10:1",
+          "description": "Anion",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 193,
+      "type": "urn:xiot-spec:service:environment:0000780a:uiot:ai10:1",
+      "description": "Environment",
+      "properties": [
+        {
+          "iid": 292,
+          "type": "urn:xiot-spec:property:co2-density:0000004b:uiot:ai10:1",
+          "description": "CO2 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 422,
+          "type": "urn:xiot-spec:property:atmospheric-pressure:00000036:uiot:ai10:1",
+          "description": "Atmospheric Pressure",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            100000.0,
+            1.0
+          ],
+          "unit": "pascal"
+        },
+        {
+          "iid": 327,
+          "type": "urn:xiot-spec:property:air-quality-index:0000001b:uiot:ai10:1",
+          "description": "Air Quality Index",
+          "format": "uint16",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            500,
+            1
+          ]
+        },
+        {
+          "iid": 247,
+          "type": "urn:xiot-spec:property:pm2.5-density:00000034:uiot:ai10:1",
+          "description": "PM2.5 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 120,
+          "type": "urn:xiot-spec:property:relative-humidity:0000000c:uiot:ai10:1",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 154,
+          "type": "urn:xiot-spec:property:pm10-density:00000035:uiot:ai10:1",
+          "description": "PM10 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 299,
+          "type": "urn:xiot-spec:property:temperature:00000020:uiot:ai10:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 221,
+          "type": "urn:xiot-spec:property:air-quality:0000001c:uiot:ai10:1",
+          "description": "Air Quality",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Excellent"
+            },
+            {
+              "value": 2,
+              "description": "Fine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 278,
+      "type": "urn:xiot-spec:service:countdown:0000782d:uiot:ai10:1",
+      "description": "Countdown",
+      "properties": [
+        {
+          "iid": 408,
+          "type": "urn:xiot-spec:property:countdown-time:00000055:uiot:ai10:1",
+          "description": "Countdown Time",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            24,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 308,
+      "type": "urn:xiot-spec:service:fan-control:00007809:uiot:ai10:1",
+      "description": "Fan Control",
+      "properties": [
+        {
+          "iid": 289,
+          "type": "urn:xiot-spec:property:vertical-angle:0000001a:uiot:ai10:1",
+          "description": "Vertical Angle",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            90,
+            1
+          ]
+        },
+        {
+          "iid": 130,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:ai10:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 259,
+          "type": "urn:xiot-spec:property:fan-level:00000016:uiot:ai10:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            },
+            {
+              "value": 1,
+              "description": "Level1"
+            }
+          ]
+        },
+        {
+          "iid": 357,
+          "type": "urn:xiot-spec:property:horizontal-angle:00000019:uiot:ai10:1",
+          "description": "Horizontal Angle",
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            360,
+            1
+          ]
+        },
+        {
+          "iid": 165,
+          "type": "urn:xiot-spec:property:vertical-swing:00000018:uiot:ai10:1",
+          "description": "Vertical Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 237,
+          "type": "urn:xiot-spec:property:horizontal-swing:00000017:uiot:ai10:1",
+          "description": "Horizontal Swing",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 366,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:ai10:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 801,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:ai10:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 311,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:ai10:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 268,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:ai10:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 349,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:ai10:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 381,
+      "type": "urn:xiot-spec:service:indicator-light:00007803:uiot:ai10:1",
+      "description": "Indicator Light",
+      "properties": [
+        {
+          "iid": 241,
+          "type": "urn:xiot-spec:property:mode:00000008:uiot:ai10:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 130,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:ai10:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 419,
+          "type": "urn:xiot-spec:property:flow:00000010:uiot:ai10:1",
+          "description": "Flow",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 308,
+          "type": "urn:xiot-spec:property:color-temperature:0000000f:uiot:ai10:1",
+          "description": "Color Temperature",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1000,
+            10000,
+            1
+          ],
+          "unit": "kelvin"
+        },
+        {
+          "iid": 199,
+          "type": "urn:xiot-spec:property:saturability:00000011:uiot:ai10:1",
+          "description": "Saturability",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 120,
+          "type": "urn:xiot-spec:property:brightness:0000000d:uiot:ai10:1",
+          "description": "Brightness",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 280,
+          "type": "urn:xiot-spec:property:color:0000000e:uiot:ai10:1",
+          "description": "Color",
+          "format": "uint32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            16777215,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 748,
+      "type": "urn:xiot-spec:service:alarm:00007804:uiot:ai10:1",
+      "description": "Alarm",
+      "properties": [
+        {
+          "iid": 263,
+          "type": "urn:xiot-spec:property:alarm:00000012:uiot:ai10:1",
+          "description": "Alarm",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 395,
+          "type": "urn:xiot-spec:property:volume:00000013:uiot:ai10:1",
+          "description": "Volume",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    }
+  ]
+}

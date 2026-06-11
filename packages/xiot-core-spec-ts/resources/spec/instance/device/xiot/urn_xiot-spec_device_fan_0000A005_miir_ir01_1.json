@@ -1,0 +1,55 @@
+{
+  "type" : "urn:xiot-spec:device:fan:0000a005:miir:ir01:1",
+  "description" : "Fan",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:miir:ir01:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:miir:ir01:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:miir:ir01:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:miir:ir01:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:miir:ir01:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:ir-fan-control:00007823:miir:ir01:1",
+    "description" : "IR Fan Control",
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:fan-speed-down:0000281c:miir:ir01:1",
+      "description" : "Fan Speed Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:fan-speed-up:0000281b:miir:ir01:1",
+      "description" : "Fan Speed Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:miir:ir01:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:miir:ir01:1",
+      "description" : "Turn On"
+    } ]
+  } ]
+}

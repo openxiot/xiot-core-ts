@@ -1,0 +1,8 @@
+{
+  "cloudId": "abc",
+  "oauth2Authorization": {
+    "userId": "abcd-123",
+    "userName": "abcd-456",
+    "state": "authorized"
+  }
+}

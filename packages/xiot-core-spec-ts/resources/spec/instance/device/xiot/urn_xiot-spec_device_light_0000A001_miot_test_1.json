@@ -1,0 +1,136 @@
+{
+  "type" : "urn:xiot-spec:device:light:0000a001:miot:test:1",
+  "description" : "Light",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:miot:test:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:miot:test:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:miot:test:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:miot:test:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:miot:test:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:light:00007802:miot:test:1",
+    "description" : "Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:test:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:miot:test:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:color-temperature:0000000f:miot:test:1",
+      "description" : "Color Temperature",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1000, 10000, 1 ],
+      "unit" : "kelvin"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:color:0000000e:miot:test:1",
+      "description" : "Color",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 16777215, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:mode:00000008:miot:test:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:saturability:00000011:miot:test:1",
+      "description" : "Saturability",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:lighting:00000001:miot:test:1",
+    "description" : "custom light service",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:color-level:00000002:miot:test:1",
+      "description" : "level of color",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 1, 10, 1 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:brightness:00000003:miot:test:1",
+      "description" : "brightness",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 0, 100, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:set-light:00000005:miot:test:1",
+      "description" : "set light",
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ],
+    "events" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:event:light-changed:00000004:miot:test:1",
+      "description" : "light changed",
+      "arguments" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      }, {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  } ]
+}

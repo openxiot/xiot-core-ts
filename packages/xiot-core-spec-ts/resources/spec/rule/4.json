@@ -1,0 +1,12 @@
+{
+  "id": "rule3",
+  "name": "定时",
+  "description": "timer",
+  "format": "rdl",
+  "content": "IF (@cron == \"* 23 12 * * ?\") AND (@between == \"00:00 - 23:59\") THEN\n    aaa.3.4 => true;\nENDIF",
+  "createAt": 12345678,
+  "updateAt": 123456789,
+  "enabled": true,
+  "appId": "xxx",
+  "ownerId": "yyy"
+}

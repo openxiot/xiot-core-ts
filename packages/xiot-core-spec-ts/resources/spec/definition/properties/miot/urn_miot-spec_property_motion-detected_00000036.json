@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:motion-detected:00000036",
+    "description": "motion detected",
+    "format": "bool",
+    "access": ["read", "notify"]
+}

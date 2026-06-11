@@ -1,0 +1,5 @@
+IF (aaa.9.7 == ANY) AND (bbb.3.1 >= 100) THEN
+    xxx.3.4 => ANY;
+    SLEEP => 2000;
+    yyy.3.4 => ANY;
+ENDIF

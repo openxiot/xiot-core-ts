@@ -1,0 +1,14 @@
+{
+    "type": "urn:miot-spec:service:filter:0000080C",
+    "description": "Filter service",
+    "required-properties": [
+        "urn:miot-spec:property:filter-life-level:00000016",
+        "urn:miot-spec:property:filter-max-life-expectancy:00000017"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:reset-filter-life:00000400"
+    ]
+}

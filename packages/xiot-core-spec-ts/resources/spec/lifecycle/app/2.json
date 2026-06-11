@@ -1,0 +1,23 @@
+{
+    "application": {
+        "appId": "xxxx",
+        "name": "hello",
+        "organization": "test",
+        "authorization": {
+            "type": "http",
+            "http": {
+                "url": "http://account.geekcity.cn/verify"
+            }
+        },
+        "event": {
+            "type": "kafka",
+            "kafka": {
+                "topic": "xxxxx",
+                "bootstrapServers": "xxxx.xxxx.xxxx"
+            }
+        },
+        "createBy": "55",
+        "createAt": "xxxxx"
+    },
+    "lifecycle": "released"
+}

@@ -1,0 +1,19 @@
+{
+  "organizations": [
+    {
+      "id": "aa",
+      "description": "xxx",
+      "roles": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "id": "bb",
+      "description": "xxx",
+      "roles": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "id": "cc",
+      "description": "xxx",
+      "roles": [1, 2, 3, 4, 5, 6, 7]
+    }
+  ]
+}

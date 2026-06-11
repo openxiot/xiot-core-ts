@@ -1,0 +1,34 @@
+{
+  "accounts": [
+    {
+      "id": 0,
+      "nickname": "nickname",
+      "avatar": "avatar",
+      "email": "email",
+      "username": null,
+      "password": null,
+      "platformId": "p0-addOne",
+      "platformAccountId": "aaa"
+    },
+    {
+      "id": 1,
+      "nickname": "nickname",
+      "avatar": "avatar",
+      "email": "email",
+      "username": null,
+      "password": null,
+      "platformId": "p0-addOne",
+      "platformAccountId": "aaa"
+    },
+    {
+      "id": 2,
+      "nickname": "nickname",
+      "avatar": "avatar",
+      "email": "email",
+      "username": null,
+      "password": null,
+      "platformId": "p0-addOne",
+      "platformAccountId": "aaa"
+    }
+  ]
+}

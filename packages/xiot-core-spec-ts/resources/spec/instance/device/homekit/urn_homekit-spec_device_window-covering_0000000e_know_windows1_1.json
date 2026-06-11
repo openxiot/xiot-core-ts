@@ -1,0 +1,218 @@
+{
+    "type": "urn:homekit-spec:device:window-covering:0000000e:know:windows1:1",
+    "description": {
+      "en-US": "window-covering",
+      "zh-TW": "窗簾",
+      "zh-CN": "窗帘"
+    },
+    "services": [
+      {
+        "iid": 1,
+        "type": "urn:homekit-spec:service:accessory-information:0000003e:know:windows1:1",
+        "description": {
+          "en-US": "Accessory-Information",
+          "zh-TW": "配件信息",
+          "zh-CN": "配件信息"
+        },
+        "properties": [
+          {
+            "iid": 2,
+            "type": "urn:homekit-spec:property:firmware-revision:00000052:know:windows1:1",
+            "description": {
+              "en-US": "Firmware Revision",
+              "zh-TW": "固件版本",
+              "zh-CN": "固件版本"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 3,
+            "type": "urn:homekit-spec:property:identify:00000014:know:windows1:1",
+            "description": {
+              "en-US": "Identify",
+              "zh-TW": "辨認",
+              "zh-CN": "辨认"
+            },
+            "format": "bool",
+            "access": [
+              "write"
+            ]
+          },
+          {
+            "iid": 4,
+            "type": "urn:homekit-spec:property:manufacturer:00000020:know:windows1:1",
+            "description": {
+              "en-US": "Manufacturer",
+              "zh-TW": "制造商",
+              "zh-CN": "制造商"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 5,
+            "type": "urn:homekit-spec:property:model:00000021:know:windows1:1",
+            "description": {
+              "en-US": "Model",
+              "zh-TW": "型號",
+              "zh-CN": "型号"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 6,
+            "type": "urn:homekit-spec:property:name:00000023:know:windows1:1",
+            "description": {
+              "en-US": "name",
+              "zh-TW": "名稱",
+              "zh-CN": "名称"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          },
+          {
+            "iid": 7,
+            "type": "urn:homekit-spec:property:serial-number:00000030:know:windows1:1",
+            "description": {
+              "en-US": "Serial Number",
+              "zh-TW": "序列號",
+              "zh-CN": "序列号"
+            },
+            "format": "string",
+            "access": [
+              "read"
+            ]
+          }
+        ]
+      },
+      {
+        "iid": 10,
+        "type": "urn:homekit-spec:service:window-covering:0000008c:know:windows1:1",
+        "description": {
+          "en-US": "Window Covering",
+          "zh-TW": "窗簾",
+          "zh-CN": "窗帘"
+        },
+        "properties": [
+          {
+            "iid": 11,
+            "type": "urn:homekit-spec:property:current-position:0000006d:know:windows1:1",
+            "description": {
+              "en-US": "Current Position",
+              "zh-TW": "当前位置",
+              "zh-CN": "当前位置"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "notify"
+            ],
+            "value-range": [
+              0,
+              100,
+              1
+            ],
+            "unit": "percentage"
+          },
+          {
+            "iid": 12,
+            "type": "urn:homekit-spec:property:position-state:00000072:know:windows1:1",
+            "description": {
+              "en-US": "Position State",
+              "zh-TW": "位置狀態",
+              "zh-CN": "位置状态"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "notify"
+            ],
+            "value-list": [
+              {
+                "value": 0,
+                "description": "朝最小值方向运动"
+              },
+              {
+                "value": 1,
+                "description": "朝最大值方向运动"
+              },
+              {
+                "value": 2,
+                "description": "停止"
+              }
+            ]
+          },
+          {
+            "iid": 13,
+            "type": "urn:homekit-spec:property:target-position:0000007c:know:windows1:1",
+            "description": {
+              "en-US": "Target Position",
+              "zh-TW": "目標位置",
+              "zh-CN": "目标位置"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "value-range": [
+              0,
+              100,
+              1
+            ],
+            "unit": "percentage"
+          }
+        ]
+      },
+      {
+        "iid": 14,
+        "type": "urn:know:service:settings:00000001:know:windows1:1",
+        "description": {
+          "en-US": "Settings",
+          "zh-TW": "設置",
+          "zh-CN": "设置"
+        },
+        "properties": [
+          {
+            "iid": 15,
+            "type": "urn:know:property:program-mode:000000d1:know:windows1:1",
+            "description": {
+              "en-US": "Program Mode",
+              "zh-TW": "電機程序模式",
+              "zh-CN": "电机程序模式"
+            },
+            "format": "uint8",
+            "access": [
+              "read",
+              "write"
+            ],
+            "value-list": [
+              {
+                "value": 0,
+                "description": "Undefined"
+              },
+              {
+                "value": 1,
+                "description": "No Revert"
+              },
+              {
+                "value": 2,
+                "description": "Revert"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,20 @@
+{
+    "type": "urn:miot-spec:service:speaker:0000080F",
+    "description": "Speaker",
+    "required-properties": [
+        "urn:miot-spec:property:volume:00000029",
+        "urn:miot-spec:property:playing-state:0000002A"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:on:00000002",
+        "urn:miot-spec:property:mute:0000003B",
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:physical-controls-locked:00000004"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:resume:00000407",
+        "urn:miot-spec:action:pause:00000408",
+        "urn:miot-spec:action:next:00000409",
+        "urn:miot-spec:action:previous:0000040A"
+    ]
+}

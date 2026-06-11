@@ -1,0 +1,11 @@
+{
+  "lifecycle": "development",
+  "definition": {
+    "type": "urn:xiot-spec:unit:percentage:00001004",
+    "description": {
+      "zh-CN": "x",
+      "zh-TW": "x",
+      "en-US": "x"
+    }
+  }
+}

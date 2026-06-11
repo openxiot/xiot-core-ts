@@ -1,0 +1,5 @@
+{
+  "type" : "urn:xiot-spec:service:physical-controls-locked:00007807",
+  "description" : "Physical Control Locked",
+  "required-properties" : [ "urn:xiot-spec:property:physical-controls-locked:0000001d" ]
+}

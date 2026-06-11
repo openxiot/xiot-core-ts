@@ -1,0 +1,76 @@
+{
+  "type": "urn:xiot-spec:device:fan:0000a005:ykk:ykk1011:1",
+  "description": "Fan",
+  "services": [
+    {
+      "iid": 254,
+      "type": "urn:xiot-spec:service:device-information:00007801:ykk:ykk1011:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 224,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:ykk:ykk1011:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 272,
+          "type": "urn:xiot-spec:property:model:00000002:ykk:ykk1011:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 116,
+          "type": "urn:xiot-spec:property:serial-number:00000003:ykk:ykk1011:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 120,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:ykk:ykk1011:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 322,
+      "type": "urn:xiot-spec:service:ir-fan-control:00007823:ykk:ykk1011:1",
+      "description": "IR Fan Control",
+      "actions": [
+        {
+          "iid": 322,
+          "type": "urn:xiot-spec:action:fan-speed-down:0000281c:ykk:ykk1011:1",
+          "description": "Fan Speed Down"
+        },
+        {
+          "iid": 199,
+          "type": "urn:xiot-spec:action:turn-on:00002808:ykk:ykk1011:1",
+          "description": "Turn On"
+        },
+        {
+          "iid": 124,
+          "type": "urn:xiot-spec:action:fan-speed-up:0000281b:ykk:ykk1011:1",
+          "description": "Fan Speed Up"
+        },
+        {
+          "iid": 766,
+          "type": "urn:xiot-spec:action:turn-off:00002809:ykk:ykk1011:1",
+          "description": "Turn Off"
+        }
+      ]
+    }
+  ]
+}

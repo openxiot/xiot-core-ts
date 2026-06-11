@@ -1,0 +1,13 @@
+{
+  "iq": {
+    "type": "query",
+    "method": "urn:xiot:set-property",
+    "id": "5005",
+    "content": {
+      "property": {
+        "pid": "1.2.3",
+        "value": 37
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:service:temperature-sensor:00000807",
+    "description": "Temperature Sensor",
+    "required-properties": [
+        "urn:miot-spec:property:temperature:0000000A"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:on:00000002"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "type": "urn:homekit-spec:property:slat-type:000000c0",
+    "description": "Slat Type",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-list": [
+        {"value": 0, "description": "HORIZONTAL"},
+        {"value": 1, "description": "VERTICAL"}
+    ]
+}

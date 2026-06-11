@@ -1,0 +1,15 @@
+{
+    "lifecycle": "preview",
+    "firmware": {
+        "id": "aaa",
+        "version": "1.0.1",
+        "description": "xxx",
+        "productId": 194,
+        "type": "urn:homekit-spec:device:switch:00000001:a:b:1",
+        "url": "http://oss-aliyun.com/aaa/aaa.zip",
+        "md5": "2f10a57b942afee3db",
+        "size": 65535,
+        "createBy": 17,
+        "createAt": "2020-07-22 15:45:49"
+    }
+}

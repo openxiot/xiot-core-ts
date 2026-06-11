@@ -1,0 +1,132 @@
+{
+  "type" : "urn:xiot-spec:device:outlet:0000a002:miot:plugv1:1",
+  "description" : "Outlet",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:miot:plugv1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:miot:plugv1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:miot:plugv1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:miot:plugv1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:miot:plugv1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:switch:0000780c:miot:plugv1:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:plugv1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:snowintest1:00000001:miot:plugv1:1",
+    "description" : "snowintest1",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:p1:00000002:miot:plugv1:1",
+      "description" : "p1",
+      "format" : "int32",
+      "access" : [ "read", "write" ],
+      "value-range" : [ 1, 10, 2 ]
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:air-purifier:00007811:miot:plugv1:1",
+    "description" : "Air Purifier",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fault:00000009:miot:plugv1:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:miot:plugv1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:anion:00000025:miot:plugv1:1",
+      "description" : "Anion",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:miot:plugv1:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Level1"
+      } ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:mode:00000008:miot:plugv1:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:status:00000007:miot:plugv1:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Busy"
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:property:uv:00000029:miot:plugv1:1",
+      "description" : "UV",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:property:wet:0000002a:miot:plugv1:1",
+      "description" : "Wet",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

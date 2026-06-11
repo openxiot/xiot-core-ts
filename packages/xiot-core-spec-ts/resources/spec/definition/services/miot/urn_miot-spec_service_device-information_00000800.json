@@ -1,0 +1,16 @@
+{
+    "type": "urn:miot-spec:service:device-information:00000800",
+    "description": "Device Information",
+    "required-properties": [
+        "urn:miot-spec:property:manufacturer:00000024",
+        "urn:miot-spec:property:model:00000025",
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:serial-number:00000026"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:firmware-revision:0000002D"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:identify:00000403"
+    ]
+}

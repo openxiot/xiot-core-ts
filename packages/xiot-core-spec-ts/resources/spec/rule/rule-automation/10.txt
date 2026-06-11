@@ -1,0 +1,8 @@
+IF (((aaa.1.1 == {} && bbb.2.1 > 19) && ccc.3.1 == "fox") || ((@humidity <= 30 && eee.3.5 == 12345) || fff.3.1 == {#1 = "a"})) THEN
+    aaa.3.4 => true;
+    SLEEP => 2000;
+    bbb.3.4 =>
+        #1 = 100, 200, 300,
+        #2 = "aaa", "bbb", "ccc",
+        #3 = true;
+ENDIF

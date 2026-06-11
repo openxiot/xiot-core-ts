@@ -1,0 +1,68 @@
+{
+  "type" : "urn:xiot-spec:device:temperature-humidity-sensor:0000a00a:lfsmt:ls063wh:1",
+  "description" : "Temperature Humidity Sensor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:lfsmt:ls063wh:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:lfsmt:ls063wh:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:lfsmt:ls063wh:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:lfsmt:ls063wh:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:lfsmt:ls063wh:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:temperature-humidity-sensor:00007814:lfsmt:ls063wh:1",
+    "description" : "Temperature Humidity Sensor",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:temperature:00000020:lfsmt:ls063wh:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 1.0 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:lfsmt:ls063wh:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:lfsmt:ls063wh:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:lfsmt:ls063wh:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  } ]
+}

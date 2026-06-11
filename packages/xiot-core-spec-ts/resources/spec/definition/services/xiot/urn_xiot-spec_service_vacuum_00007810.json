@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:service:vacuum:00007810",
+  "description" : "Robot Cleaner",
+  "required-properties" : [ "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:fault:00000009" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:speed-level:00000023", "urn:xiot-spec:property:uv:00000029", "urn:xiot-spec:property:fan-level:00000016" ],
+  "required-actions" : [ "urn:xiot-spec:action:start-sweep:00002804", "urn:xiot-spec:action:stop-sweeping:00002805" ]
+}

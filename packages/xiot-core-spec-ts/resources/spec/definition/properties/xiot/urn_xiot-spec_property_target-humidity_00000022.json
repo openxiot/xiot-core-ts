@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:property:target-humidity:00000022",
+  "description" : "Target Humidity",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0, 100, 1 ],
+  "unit" : "percentage"
+}

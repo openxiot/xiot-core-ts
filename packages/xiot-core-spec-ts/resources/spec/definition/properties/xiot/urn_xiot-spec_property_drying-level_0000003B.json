@@ -1,0 +1,10 @@
+{
+  "type" : "urn:xiot-spec:property:drying-level:0000003b",
+  "description" : "Drying Level",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-list" : [ {
+    "value" : 1,
+    "description" : "Level1"
+  } ]
+}

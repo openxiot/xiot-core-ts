@@ -1,0 +1,319 @@
+{
+  "type": "urn:knowin-spec:device:gateway:00000001:ks:insight:1",
+  "description": {
+    "en-US": "Insight",
+    "zh-TW": "如影中控屏",
+    "zh-CN": "如影中控屏"
+  },
+  "services": [
+    {
+      "x-required": true,
+      "iid": 1,
+      "type": "urn:knowin-spec:service:device-information:00000002",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": true,
+      "description": {
+        "en-US": "Device Information",
+        "zh-TW": "設備信息",
+        "zh-CN": "设备信息"
+      },
+      "properties": [
+        {
+          "type": "urn:knowin-spec:property:firmware-revision:00000006",
+          "description": {
+            "en-US": "Firmware Revision",
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": true,
+          "iid": 1
+        },
+        {
+          "type": "urn:knowin-spec:property:manufacturer:00000003",
+          "description": {
+            "en-US": "Manufacturer",
+            "zh-TW": "製造商",
+            "zh-CN": "制造商"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": true,
+          "iid": 2
+        },
+        {
+          "type": "urn:knowin-spec:property:model:00000004",
+          "description": {
+            "en-US": "Model",
+            "zh-TW": "型號",
+            "zh-CN": "型号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": true,
+          "iid": 3
+        },
+        {
+          "type": "urn:knowin-spec:property:serial-number:00000005",
+          "description": {
+            "en-US": "Serial Number",
+            "zh-TW": "序列號",
+            "zh-CN": "序列号"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": true,
+          "iid": 4
+        },
+        {
+          "type": "urn:knowin-spec:property:software-revision:0000001f",
+          "description": {
+            "en-US": "Software revision",
+            "zh-TW": "軟件版本",
+            "zh-CN": "软件版本"
+          },
+          "format": "string",
+          "access": [
+            "read"
+          ],
+          "x-required": true,
+          "iid": 5
+        }
+      ]
+    },
+    {
+      "x-required": true,
+      "iid": 2,
+      "type": "urn:knowin-spec:service:media-player:00000005",
+      "x-action-addable": true,
+      "x-event-addable": true,
+      "x-property-addable": false,
+      "description": {
+        "en-US": "Media Player",
+        "zh-TW": "媒體播放器",
+        "zh-CN": "媒体播放器"
+      },
+      "properties": [
+        {
+          "type": "urn:knowin-spec:property:duration:0000000b",
+          "description": {
+            "en-US": "Duration",
+            "zh-TW": "長度",
+            "zh-CN": "长度"
+          },
+          "format": "uint16",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            36000,
+            1
+          ],
+          "x-required": true,
+          "iid": 1
+        },
+        {
+          "type": "urn:knowin-spec:property:position:0000000a",
+          "description": {
+            "en-US": "Position",
+            "zh-TW": "位置",
+            "zh-CN": "位置"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage",
+          "x-required": true,
+          "iid": 2
+        },
+        {
+          "type": "urn:knowin-spec:property:state:0000000d",
+          "description": {
+            "en-US": "State",
+            "zh-TW": "狀態",
+            "zh-CN": "状态"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "停止"
+            },
+            {
+              "value": 1,
+              "description": "播放"
+            },
+            {
+              "value": 2,
+              "description": "暂停"
+            }
+          ],
+          "x-required": true,
+          "iid": 3
+        },
+        {
+          "type": "urn:knowin-spec:property:uri:0000000c",
+          "description": {
+            "en-US": "URI",
+            "zh-TW": "統一資源定位符",
+            "zh-CN": "统一资源定位符"
+          },
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "x-required": true,
+          "iid": 4
+        },
+        {
+          "type": "urn:knowin-spec:property:volume:00000009",
+          "description": {
+            "en-US": "Volume",
+            "zh-TW": "音量",
+            "zh-CN": "音量"
+          },
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage",
+          "x-required": true,
+          "iid": 5
+        }
+      ],
+      "actions": [
+        {
+          "x-required": true,
+          "iid": 1,
+          "type": "urn:knowin-spec:action:play-media:00000002:ks:insight:1",
+          "description": {
+            "en-US": "Play Media",
+            "zh-TW": "播放媒體",
+            "zh-CN": "播放媒体"
+          },
+          "in": [
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 4,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "x-required": false,
+      "iid": 3,
+      "type": "urn:knowin-spec:service:humidity-sensor:00000004",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": false,
+      "description": {
+        "en-US": "Humidity Sensor",
+        "zh-TW": "濕度傳感器",
+        "zh-CN": "湿度传感器"
+      },
+      "properties": [
+        {
+          "type": "urn:knowin-spec:property:current-relative-humidity:00000007",
+          "description": {
+            "en-US": "Current Relative Humidity",
+            "zh-TW": "當前相對濕度",
+            "zh-CN": "当前相对湿度"
+          },
+          "format": "float",
+          "access": [
+            "read"
+          ],
+          "value-range": [
+            0.0,
+            100.0,
+            0.1
+          ],
+          "x-required": false,
+          "iid": 1
+        }
+      ]
+    },
+    {
+      "x-required": false,
+      "iid": 4,
+      "type": "urn:knowin-spec:service:temperature-sensor:00000003",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": false,
+      "description": {
+        "en-US": "Temperature Sensor",
+        "zh-TW": "溫度傳感器",
+        "zh-CN": "温度传感器"
+      },
+      "properties": [
+        {
+          "type": "urn:knowin-spec:property:current-temperature:00000008",
+          "description": {
+            "en-US": "Current Temperature",
+            "zh-TW": "當前溫度",
+            "zh-CN": "当前温度"
+          },
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            100.0,
+            0.1
+          ],
+          "unit": "celsius",
+          "x-required": false,
+          "iid": 1
+        }
+      ]
+    }
+  ]
+}

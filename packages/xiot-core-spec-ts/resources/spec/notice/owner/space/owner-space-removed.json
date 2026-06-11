@@ -1,0 +1,9 @@
+{
+    "type": "space-removed",
+    "payload": {
+        "appId": "xxxx",
+        "ownerId": "xxxx",
+        "spaceId": "xxx",
+        "timestamp": 1640164172915
+    }
+}

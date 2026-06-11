@@ -1,0 +1,14 @@
+{
+    "type": "urn:xiot-spec:service:filter:0000780b",
+    "description": "Filter",
+    "optional-properties": [
+        "urn:xiot-spec:property:filter-life-level:0000001e",
+        "urn:xiot-spec:property:filter-left-time:0000001f",
+        "urn:xiot-spec:property:filter-used-time:00000048",
+        "urn:xiot-spec:property:filter-used-flow:0000004a",
+        "urn:xiot-spec:property:filter-left-flow:00000049"
+    ],
+    "optional-actions": [
+        "urn:xiot-spec:action:reset-filter-life:00002803"
+    ]
+}

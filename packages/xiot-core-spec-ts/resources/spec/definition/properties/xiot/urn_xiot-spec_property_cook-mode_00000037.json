@@ -1,0 +1,13 @@
+{
+  "type" : "urn:xiot-spec:property:cook-mode:00000037",
+  "description" : "Cook Mode",
+  "format" : "uint8",
+  "access" : [ ],
+  "value-list" : [ {
+    "value" : 1,
+    "description" : "Fine Cook"
+  }, {
+    "value" : 2,
+    "description" : "Quick Cook"
+  } ]
+}

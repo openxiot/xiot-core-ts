@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:color-temperature:00000011",
+    "description": "Color Temperature",
+    "format": "uint32",
+    "access": ["read", "write", "notify"],
+    "value-range": [1700, 6500],
+    "unit": "kelvin"
+}

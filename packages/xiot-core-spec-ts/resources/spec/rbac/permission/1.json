@@ -1,0 +1,88 @@
+{
+  "permissions": [
+    {
+      "id": 1,
+      "parent_id": 0,
+      "text": "超级权限",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 2,
+      "parent_id": 0,
+      "text": "系统",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 3,
+      "parent_id": 2,
+      "text": "员工",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 4,
+      "parent_id": 2,
+      "text": "菜单",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 5,
+      "parent_id": 2,
+      "text": "权限",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 6,
+      "parent_id": 0,
+      "text": "订单",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 7,
+      "parent_id": 6,
+      "text": "列表",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 8,
+      "parent_id": 6,
+      "text": "导入订单",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 9,
+      "parent_id": 6,
+      "text": "打印快递单",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 10,
+      "parent_id": 9,
+      "text": "批量打印",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 11,
+      "parent_id": 6,
+      "text": "发货",
+      "code": "root",
+      "remark": "xxx"
+    },
+    {
+      "id": 12,
+      "parent_id": 11,
+      "text": "批量发货",
+      "code": "root",
+      "remark": "xxx"
+    }
+  ]
+}

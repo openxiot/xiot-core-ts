@@ -1,0 +1,16 @@
+{
+    "type": "urn:xiot-spec:service:air-purifier:00007811",
+    "description": "Air Purifier",
+    "required-properties": [
+        "urn:xiot-spec:property:on:00000006",
+        "urn:xiot-spec:property:fault:00000009"
+    ],
+    "optional-properties": [
+        "urn:xiot-spec:property:status:00000007",
+        "urn:xiot-spec:property:mode:00000008",
+        "urn:xiot-spec:property:fan-level:00000016",
+        "urn:xiot-spec:property:anion:00000025",
+        "urn:xiot-spec:property:uv:00000029",
+        "urn:xiot-spec:property:wet:0000002a"
+    ]
+}

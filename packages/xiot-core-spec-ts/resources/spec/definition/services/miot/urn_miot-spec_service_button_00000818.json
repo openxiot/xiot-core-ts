@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:button:00000818",
+    "description": "button",
+    "required-properties": [
+        "urn:miot-spec:property:button:00000038"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

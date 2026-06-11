@@ -1,0 +1,45 @@
+{
+  "type" : "urn:xiot-spec:device:outlet:0000a002:uiot:plug1:1",
+  "description" : "Outlet",
+  "services" : [ {
+    "iid" : 266,
+    "type" : "urn:xiot-spec:service:switch:0000780c:uiot:plug1:1",
+    "description" : "Switch",
+    "properties" : [ {
+      "iid" : 191,
+      "type" : "urn:xiot-spec:property:on:00000006:uiot:plug1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 926,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:plug1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 930,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:plug1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 227,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:plug1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 789,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:plug1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 264,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:plug1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  } ]
+}

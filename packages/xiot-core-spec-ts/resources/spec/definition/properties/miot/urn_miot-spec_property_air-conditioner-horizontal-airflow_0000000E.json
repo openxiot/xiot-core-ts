@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-horizontal-airflow:0000000E",
+    "description": "Air Condition Horizontal Airflow Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

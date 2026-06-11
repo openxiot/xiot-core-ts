@@ -1,0 +1,11 @@
+{
+  "type" : "urn:xiot-spec:property:hsv:00000040",
+  "description" : "HSV",
+  "format" : "combination",
+  "access" : [ "read", "write", "notify" ],
+  "members" : [
+    "urn:xiot-spec:property:hue:00000041",
+    "urn:xiot-spec:property:saturation:00000042",
+    "urn:xiot-spec:property:brightness:00000043"
+  ]
+}

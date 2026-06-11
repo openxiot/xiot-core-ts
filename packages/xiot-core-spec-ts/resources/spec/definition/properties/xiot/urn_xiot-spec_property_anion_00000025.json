@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:anion:00000025",
+  "description" : "Anion",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

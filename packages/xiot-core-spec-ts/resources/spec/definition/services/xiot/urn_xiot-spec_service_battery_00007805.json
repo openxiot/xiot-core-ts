@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:service:battery:00007805",
+  "description" : "Battery",
+  "required-properties" : [ "urn:xiot-spec:property:battery-level:00000014" ],
+  "optional-properties" : [ "urn:xiot-spec:property:charging-state:00000015" ],
+  "optional-actions" : [ "urn:xiot-spec:action:start-charge:00002802" ],
+  "optional-events" : [ "urn:xiot-spec:event:low-battery:00005003" ]
+}

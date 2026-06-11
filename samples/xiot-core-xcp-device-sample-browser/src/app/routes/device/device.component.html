@@ -1,0 +1,10 @@
+<nz-layout style="padding: 24px 0; background: #fff">
+  <nz-content style="padding: 0 24px">
+    <nz-button-group>
+      <button nz-button (click)="doConnect()">Connect</button>
+      <button nz-button (click)="doDisconnect()">Disconnect</button>
+    </nz-button-group>
+
+    <button nz-button routerLink="simulator/{{ serialNumber }}/{{ productId }}/{{ productVersion }}">模拟器</button>
+  </nz-content>
+</nz-layout>

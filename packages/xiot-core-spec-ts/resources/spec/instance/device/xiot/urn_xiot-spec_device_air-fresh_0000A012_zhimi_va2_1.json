@@ -1,0 +1,139 @@
+{
+  "type" : "urn:xiot-spec:device:air-fresh:0000a012:zhimi:va2:1",
+  "description" : "Fresh Air System",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:zhimi:va2:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:zhimi:va2:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:zhimi:va2:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:zhimi:va2:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:zhimi:va2:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:air-fresh:00007822:zhimi:va2:1",
+    "description" : "Air Fresh",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:va2:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:zhimi:va2:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Sleep"
+      }, {
+        "value" : 2,
+        "description" : "Interval"
+      }, {
+        "value" : 3,
+        "description" : "Level1"
+      }, {
+        "value" : 4,
+        "description" : "Level2"
+      }, {
+        "value" : 5,
+        "description" : "Level3"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:zhimi:va2:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:zhimi:va2:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:zhimi:va2:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 600.0, 1.0 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:temperature:00000020:zhimi:va2:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -40.0, 125.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:co2-density:0000004b:zhimi:va2:1",
+      "description" : "CO2 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 5000.0, 1.0 ]
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:filter:0000780b:zhimi:va2:1",
+    "description" : "Filter",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:filter-used-time:00000048:zhimi:va2:1",
+      "description" : "Filter Used Time",
+      "format" : "uint16",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 10000, 1 ]
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:physical-controls-locked:00007807:zhimi:va2:1",
+    "description" : "Physical Control Locked",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:physical-controls-locked:0000001d:zhimi:va2:1",
+      "description" : "Physical Control Locked",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:alarm:00007804:zhimi:va2:1",
+    "description" : "Alarm",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:alarm:00000012:zhimi:va2:1",
+      "description" : "Alarm",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

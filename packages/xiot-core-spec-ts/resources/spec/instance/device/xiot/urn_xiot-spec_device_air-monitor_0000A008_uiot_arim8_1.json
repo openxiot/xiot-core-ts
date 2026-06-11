@@ -1,0 +1,70 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:uiot:arim8:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 305,
+    "type" : "urn:xiot-spec:service:environment:0000780a:uiot:arim8:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 205,
+      "type" : "urn:xiot-spec:property:temperature:00000020:uiot:arim8:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 590,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:uiot:arim8:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  }, {
+    "iid" : 390,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:arim8:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 353,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:arim8:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 404,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:arim8:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 390,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:arim8:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 111,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:arim8:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 446,
+    "type" : "urn:xiot-spec:service:air-monitor:00007812:uiot:arim8:1",
+    "description" : "Air Monitor",
+    "properties" : [ {
+      "iid" : 110,
+      "type" : "urn:xiot-spec:property:fault:00000009:uiot:arim8:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    } ]
+  } ]
+}

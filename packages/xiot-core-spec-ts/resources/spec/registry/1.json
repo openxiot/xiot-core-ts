@@ -1,0 +1,16 @@
+{
+    "did": "xxx",
+    "summary": {
+        "type": "urn:homekit-spec:device:bridge:00000002:yingtuo:hhh:1",
+        "online": false,
+        "parentId": "fff",
+        "cloudId": "xxx"
+    },
+    "accessKey": "xxx",
+    "accessPoint": {
+        "type": "eventbus",
+        "eventbus": {
+            "address": "xxxxx"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "urn:miot-spec:service:cooker:0000080A",
+    "description": "Cooker",
+    "required-properties": [
+        "urn:miot-spec:property:cooker-status:00000020",
+        "urn:miot-spec:property:cooker-cook:00000021"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ],
+    "required-actions": [
+        "urn:miot-spec:action:start-cook:00000401",
+        "urn:miot-spec:action:cancel-cooking:00000402"
+    ]
+}

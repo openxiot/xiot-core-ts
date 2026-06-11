@@ -1,0 +1,4 @@
+{
+  "type" : "urn:xiot-spec:action:reset-filter-life:00002803",
+  "description" : "Reset Filter Life"
+}

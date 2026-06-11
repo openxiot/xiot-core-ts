@@ -1,0 +1,7 @@
+{
+  "iq": {
+    "type": "result",
+    "method": "urn:xiot:remove-child",
+    "id": "5009"
+  }
+}

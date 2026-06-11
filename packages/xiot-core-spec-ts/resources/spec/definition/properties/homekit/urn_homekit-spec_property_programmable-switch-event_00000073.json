@@ -1,0 +1,7 @@
+{
+    "type": "urn:homekit-spec:property:programmable-switch-event:00000073",
+    "description": "Programmable Switch Event",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-range": [0, 1, 1]
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:service:diffuser:00007833",
+  "description" : "Diffuser",
+  "required-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:fault:00000009" ],
+  "optional-properties" : [ "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:fan-level:00000016", "urn:xiot-spec:property:target-humidity:00000022", "urn:xiot-spec:property:anion:00000025", "urn:xiot-spec:property:water-level:0000003d" ],
+  "optional-events" : [ "urn:xiot-spec:event:low-water-level:0000500a" ]
+}

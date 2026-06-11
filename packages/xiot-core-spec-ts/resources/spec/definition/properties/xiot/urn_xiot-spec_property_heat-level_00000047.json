@@ -1,0 +1,14 @@
+{
+  "type" : "urn:xiot-spec:property:heat-level:00000047",
+  "description" : "Heat Level",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-list" : [ {
+    "value" : 1,
+    "description" : {
+      "en-US": "Level1",
+      "cn-ZH": "等级1",
+      "cn-TW": "等級1"
+    }
+  } ]
+}

@@ -1,0 +1,149 @@
+{
+  "type": "urn:ke-spec:device:curtain:00000002:tuya:25a11802:1",
+  "description": {
+    "zh-TW": "窗簾",
+    "zh-CN": "窗帘",
+    "en-US": "Curtain"
+  },
+  "services": [
+    {
+      "iid": 1,
+      "description": {
+        "zh-TW": "窗簾控制",
+        "zh-CN": "窗帘控制",
+        "en-US": "Curtain Control"
+      },
+      "type": "urn:ke-spec:service:curtain-control:00000009:tuya:25a11802:1",
+      "properties": [
+        {
+          "unit": "percentage",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 1,
+          "format": "uint16",
+          "description": {
+            "zh-TW": "百分比狀態",
+            "zh-CN": "百分比状态",
+            "en-US": "Percent State"
+          },
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "type": "urn:ke-spec:property:percent-state:00000024:tuya:25a11802:1"
+        },
+        {
+          "access": [
+            "read",
+            "write"
+          ],
+          "iid": 2,
+          "format": "uint8",
+          "description": {
+            "zh-TW": "窗簾控制",
+            "zh-CN": "窗帘控制",
+            "en-US": "Curtain Control"
+          },
+          "type": "urn:ke-spec:property:curtain-control:00000028:tuya:25a11802:1",
+          "value-list": [
+            {
+              "description": "stop",
+              "value": 0
+            },
+            {
+              "description": "open",
+              "value": 1
+            },
+            {
+              "description": "close",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "unit": "",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "iid": 4,
+          "format": "uint8",
+          "description": {
+            "zh-TW": "電機反轉",
+            "zh-CN": "电机反转",
+            "en-US": "Motor Reversal"
+          },
+          "type": "urn:ke-spec:property:motor-reversal:00000026:tuya:25a11802:1",
+          "value-list": [
+            {
+              "description": "forward",
+              "value": 0
+            },
+            {
+              "description": "back",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "description": {
+        "zh-TW": "配件信息",
+        "zh-CN": "配件信息",
+        "en-US": "Accessory Information"
+      },
+      "type": "urn:ke-spec:service:accessory-information:00000003:tuya:25a11802:1",
+      "properties": [
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 1,
+          "format": "string",
+          "description": {
+            "zh-TW": "固件版本",
+            "zh-CN": "固件版本",
+            "en-US": "Firmware Revision"
+          },
+          "type": "urn:ke-spec:property:firmware-revision:00000003:tuya:25a11802:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 2,
+          "format": "string",
+          "description": {
+            "zh-TW": "硬件版本",
+            "zh-CN": "硬件版本",
+            "en-US": "Hardware Revision"
+          },
+          "type": "urn:ke-spec:property:hardware-revision:00000004:tuya:25a11802:1"
+        },
+        {
+          "unit": "",
+          "access": [
+            "read"
+          ],
+          "iid": 3,
+          "format": "string",
+          "description": {
+            "zh-TW": "制造商",
+            "zh-CN": "制造商",
+            "en-US": "Manufacturer"
+          },
+          "type": "urn:ke-spec:property:manufacturer:00000005:tuya:25a11802:1"
+        }
+      ]
+    }
+  ]
+}

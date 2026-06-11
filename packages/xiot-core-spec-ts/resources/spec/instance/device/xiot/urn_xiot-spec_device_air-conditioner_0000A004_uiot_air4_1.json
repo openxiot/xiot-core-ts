@@ -1,0 +1,86 @@
+{
+  "type" : "urn:xiot-spec:device:air-conditioner:0000a004:uiot:air4:1",
+  "description" : "Air Conditioner",
+  "services" : [ {
+    "iid" : 129,
+    "type" : "urn:xiot-spec:service:ir-aircondition-control:00007824:uiot:air4:1",
+    "description" : "IR Aircondition Control",
+    "properties" : [ {
+      "iid" : 247,
+      "type" : "urn:xiot-spec:property:ir-mode:0000004c:uiot:air4:1",
+      "description" : "Mode for IR",
+      "format" : "uint8",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 5,
+        "description" : "Auto"
+      }, {
+        "value" : 2,
+        "description" : "Cool"
+      }, {
+        "value" : 3,
+        "description" : "Heat"
+      }, {
+        "value" : 4,
+        "description" : "Dry"
+      }, {
+        "value" : 6,
+        "description" : "Fan"
+      } ]
+    }, {
+      "iid" : 189,
+      "type" : "urn:xiot-spec:property:ir-temperature:0000004d:uiot:air4:1",
+      "description" : "Temperature for IR",
+      "format" : "float",
+      "access" : [ "write" ],
+      "value-range" : [ 16.0, 30.0, 1.0 ],
+      "unit" : "celsius"
+    } ],
+    "actions" : [ {
+      "iid" : 337,
+      "type" : "urn:xiot-spec:action:temperature-up:0000281d:uiot:air4:1",
+      "description" : "Temperature Up"
+    }, {
+      "iid" : 149,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:uiot:air4:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 827,
+      "type" : "urn:xiot-spec:action:temperature-down:0000281e:uiot:air4:1",
+      "description" : "Temperature Down"
+    }, {
+      "iid" : 284,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:uiot:air4:1",
+      "description" : "Turn On"
+    } ]
+  }, {
+    "iid" : 425,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:air4:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 592,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:air4:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 309,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:air4:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 265,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:air4:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 415,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:air4:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  } ]
+}

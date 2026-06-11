@@ -1,0 +1,131 @@
+{
+  "type": "urn:miot-spec:device:temperature-humidity-sensor:00000A0B:lumi-aqara",
+  "description": "Aqara Temperature Humidity Barometer Sensor",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:temperature-sensor:00000807",
+      "description": "Temperature Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:temperature:0000000A",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -40.0,
+            125.0,
+            0.1
+          ],
+          "unit": "celsius"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:humidity-sensor:00000808",
+      "description": "Humidity Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:relative-humidity:0000000F",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "type": "urn:miot-spec:service:atmospheric-pressure-sensor:0000080E",
+      "description": "Atmospheric Pressure Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:atmospheric-pressure:00000028",
+          "description": "Atmospheric Pressure",
+          "format": "uint32",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "unit": "pascal"
+        }
+      ]
+    }
+  ]
+}

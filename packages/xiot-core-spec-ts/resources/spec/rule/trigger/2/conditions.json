@@ -1,0 +1,120 @@
+{
+    "conditions": [
+        {
+            "result": true,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": true
+                },
+                {
+                    "pid": "bbb.2.1",
+                    "value": 20
+                },
+                {
+                    "pid": "ccc.3.1",
+                    "value": "fox"
+                },
+                {
+                    "pid": "ddd.9.7",
+                    "value": 30
+                },
+                {
+                    "pid": "eee.3.5",
+                    "value": 12345
+                },
+                {
+                    "pid": "fff.3.1",
+                    "value": 100
+                }
+            ]
+        },
+        {
+            "result": true,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": true
+                },
+                {
+                    "pid": "bbb.2.1",
+                    "value": 20
+                },
+                {
+                    "pid": "ccc.3.1",
+                    "value": "fox"
+                },
+                {
+                    "pid": "ddd.9.7",
+                    "value": 30
+                },
+                {
+                    "pid": "eee.3.5",
+                    "value": 12345
+                },
+                {
+                    "pid": "fff.3.1",
+                    "value": 200
+                }
+            ]
+        },
+        {
+            "result": true,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": true
+                },
+                {
+                    "pid": "bbb.2.1",
+                    "value": 20
+                },
+                {
+                    "pid": "ccc.3.1",
+                    "value": "golf"
+                },
+                {
+                    "pid": "ddd.9.7",
+                    "value": 29
+                },
+                {
+                    "pid": "eee.3.5",
+                    "value": 12345
+                },
+                {
+                    "pid": "fff.3.1",
+                    "value": 99
+                }
+            ]
+        },
+        {
+            "result": false,
+            "properties": [
+                {
+                    "pid": "aaa.1.1",
+                    "value": true
+                },
+                {
+                    "pid": "bbb.2.1",
+                    "value": 20
+                },
+                {
+                    "pid": "ccc.3.1",
+                    "value": "golf"
+                },
+                {
+                    "pid": "ddd.9.7",
+                    "value": 100
+                },
+                {
+                    "pid": "eee.3.5",
+                    "value": 12345
+                },
+                {
+                    "pid": "fff.3.1",
+                    "value": 99
+                }
+            ]
+        }
+    ]
+}

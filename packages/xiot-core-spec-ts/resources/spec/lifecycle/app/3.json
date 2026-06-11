@@ -1,0 +1,22 @@
+{
+    "application": {
+        "appId": "xxxx",
+        "name": "hello",
+        "organization": "test",
+        "authorization": {
+            "type": "eventbus",
+            "eventbus": {
+                "address": "aaa"
+            }
+        },
+        "event": {
+            "type": "eventbus",
+            "eventbus": {
+                "address": "bbb"
+            }
+        },
+        "createBy": "55",
+        "createAt": "xxxxx"
+    },
+    "lifecycle": "released"
+}

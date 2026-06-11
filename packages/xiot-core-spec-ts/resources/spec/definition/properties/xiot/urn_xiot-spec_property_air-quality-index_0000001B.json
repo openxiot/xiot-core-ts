@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:air-quality-index:0000001b",
+  "description" : "Air Quality Index",
+  "format" : "uint16",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0, 500, 1 ]
+}

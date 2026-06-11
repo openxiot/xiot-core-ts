@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:cube-motion-sensor:00000817",
+    "description": "Cube Motion Sensor",
+    "required-properties": [
+        "urn:miot-spec:property:cube-motion:00000037"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

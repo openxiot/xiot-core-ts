@@ -1,0 +1,32 @@
+{
+  "name": "xiot-core-ts",
+  "version": "3.8.4",
+  "private": true,
+  "description": "Openxiot Core TypeScript",
+  "author": "gkcity",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openxiot/xiot-core-ts"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "samples/*"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "clean": "pnpm -r clean",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "prepublish": "pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "4.8.2"
+  }
+}

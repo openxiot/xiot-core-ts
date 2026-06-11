@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:property:cooker-cook:00000021",
+    "description": "Cooker Cook",
+    "format": "uint8",
+    "access": [],
+    "value-list": [
+        {"value": 1, "description": "FINE_COOK"},
+        {"value": 2, "description": "QUICK_COOK"}
+    ]
+}

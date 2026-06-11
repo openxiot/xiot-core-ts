@@ -1,0 +1,7 @@
+{
+    "type": "urn:homekit-spec:property:programmable-switch-output-state:00000074",
+    "description": "Programmable Switch Output State",
+    "format": "uint8",
+    "access": ["read", "write", "notify"],
+    "value-range": [0, 1, 1]
+}

@@ -1,0 +1,5 @@
+{
+    "category": "xxx",
+    "type": "urn:homekit-spec:device:fan:00000000",
+    "description": "Fan"
+}

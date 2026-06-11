@@ -1,0 +1,17 @@
+{
+    "rules": [
+        {
+            "ruleId": "aaa",
+            "status": 0
+        },
+        {
+            "ruleId": "bbb",
+            "status": 0
+        },
+        {
+            "ruleId": "ccc",
+            "status": -425,
+            "description": "ruleId invalid !"
+        }
+    ]
+}

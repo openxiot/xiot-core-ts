@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:property:keep-warm-temperature:0000002e",
+  "description" : "Keep Warm Temperature",
+  "format" : "float",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 0.0, 100.0, 1.0 ],
+  "unit" : "celsius"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "urn:xiot-spec:service:heater:0000782e",
+    "description": "Heater",
+    "required-properties": [
+        "urn:xiot-spec:property:on:00000006",
+        "urn:xiot-spec:property:fault:00000009"
+    ],
+    "optional-properties": [
+        "urn:xiot-spec:property:status:00000007",
+        "urn:xiot-spec:property:mode:00000008",
+        "urn:xiot-spec:property:target-temperature:00000021",
+        "urn:xiot-spec:property:temperature:00000020",
+        "urn:xiot-spec:property:heat-level:00000047"
+    ]
+}

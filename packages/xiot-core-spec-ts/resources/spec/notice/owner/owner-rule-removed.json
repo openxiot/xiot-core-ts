@@ -1,0 +1,9 @@
+{
+    "type": "rule-removed",
+    "payload": {
+        "appId": "xxxx",
+        "ownerId": "xxxx",
+        "ruleId": "xxx",
+        "timestamp": 1640164172915
+    }
+}

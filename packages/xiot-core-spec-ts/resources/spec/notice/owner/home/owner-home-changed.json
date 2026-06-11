@@ -1,0 +1,14 @@
+{
+  "type": "home-changed",
+  "payload": {
+    "appId": "xxxx",
+    "ownerId": "xxxx",
+    "home": {
+      "id": "a1",
+      "name": "aaz",
+      "rootId": "aaz",
+      "index": 0
+    },
+    "timestamp": 1640164172915
+  }
+}

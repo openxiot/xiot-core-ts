@@ -1,0 +1,19 @@
+{
+    "iq": {
+        "type": "result",
+        "method": "urn:xiot:get-owners",
+        "id": "5013",
+        "content": {
+            "owners": [
+                {
+                    "appId": "a",
+                    "ownerId": "b"
+                },
+                {
+                    "appId": "a",
+                    "ownerId": "x"
+                }
+            ]
+        }
+    }
+}

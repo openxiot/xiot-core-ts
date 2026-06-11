@@ -1,0 +1,6 @@
+{
+    "type": "urn:homekit-spec:property:mute:0000001a",
+    "description": "Mute",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

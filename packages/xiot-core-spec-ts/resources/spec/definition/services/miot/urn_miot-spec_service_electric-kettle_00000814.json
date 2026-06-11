@@ -1,0 +1,12 @@
+{
+    "type": "urn:miot-spec:service:electric-kettle:00000814",
+    "description": "Electric kettle",
+    "required-properties": [
+        "urn:miot-spec:property:target-temperature:00000034"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:on:00000002",
+        "urn:miot-spec:property:water-out-delay:00000033",
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

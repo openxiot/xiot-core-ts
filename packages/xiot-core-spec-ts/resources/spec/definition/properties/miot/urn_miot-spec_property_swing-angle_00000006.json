@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:swing-angle:00000006",
+    "description": "Swing Angle",
+    "format": "int32",
+    "access": ["read", "write", "notify"],
+    "value-range": [30, 120, 1]
+}

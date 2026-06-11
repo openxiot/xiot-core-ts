@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:service:total-dissolved-solids-sensor:0000080B",
+    "description": "Total Dissolved solids (TDS) Sensor",
+    "required-properties": [
+        "urn:miot-spec:property:total-dissolved-solids:00000022"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:on:00000002"
+    ]
+}

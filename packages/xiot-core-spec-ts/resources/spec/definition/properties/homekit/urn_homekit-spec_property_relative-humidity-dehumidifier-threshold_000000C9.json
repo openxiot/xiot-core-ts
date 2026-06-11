@@ -1,0 +1,7 @@
+{
+    "type": "urn:homekit-spec:property:relative-humidity-dehumidifier-threshold:000000c9",
+    "description": "Relative Humidity Dehumidifier Threshold",
+    "format": "float",
+    "access": ["read", "write", "notify"],
+    "value-range": [0.0, 100.0, 1.0]
+}

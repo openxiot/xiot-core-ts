@@ -1,0 +1,13 @@
+{
+  "type" : "urn:xiot-spec:property:input-control:0000003e",
+  "description" : "TV Input Control",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-list" : [ {
+    "value" : 1,
+    "description" : "HDMI 1"
+  }, {
+    "value" : 2,
+    "description" : "HDMI 2"
+  } ]
+}

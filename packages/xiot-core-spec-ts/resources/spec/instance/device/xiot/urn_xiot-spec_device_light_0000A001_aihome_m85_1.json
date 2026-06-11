@@ -1,0 +1,131 @@
+{
+  "type" : "urn:xiot-spec:device:light:0000a001:aihome:m85:1",
+  "description" : "Light",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:aihome:m85:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:aihome:m85:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:aihome:m85:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:aihome:m85:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:aihome:m85:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:light:00007802:aihome:m85:1",
+    "description" : "Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:aihome:m85:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:aihome:m85:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:color:0000000e:aihome:m85:1",
+      "description" : "Color",
+      "format" : "uint32",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 16777215, 1 ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:mode:00000008:aihome:m85:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "yellow"
+      }, {
+        "value" : 2,
+        "description" : "white"
+      }, {
+        "value" : 3,
+        "description" : "blue"
+      }, {
+        "value" : 4,
+        "description" : "red"
+      }, {
+        "value" : 5,
+        "description" : "purple"
+      }, {
+        "value" : 6,
+        "description" : "cyan"
+      }, {
+        "value" : 7,
+        "description" : "orange"
+      }, {
+        "value" : 8,
+        "description" : "green"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:fan:00007808:aihome:m85:1",
+    "description" : "Fan",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:aihome:m85:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Level1"
+      }, {
+        "value" : 2,
+        "description" : "Level2"
+      }, {
+        "value" : 3,
+        "description" : "Level3"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:aihome:m85:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:mode:00000008:aihome:m85:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    } ]
+  } ]
+}

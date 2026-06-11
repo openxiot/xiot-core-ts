@@ -1,0 +1,124 @@
+{
+    "did": "x",
+    "instance": {
+        "type": "urn:homekit-spec:device:lightbulb:00000005:test-product1:1243:1",
+        "description": {
+            "en-US": "Ordinary bulb",
+            "zh-TW": "普通燈泡",
+            "zh-CN": "普通灯泡"
+        },
+        "services": [
+            {
+                "iid": 1,
+                "type": "urn:homekit-spec:service:accessory-information:0000003e:test-product1:1243:1",
+                "description": {
+                    "en-US": "Accessory-Information",
+                    "zh-TW": "配件信息",
+                    "zh-CN": "配件信息"
+                },
+                "properties": [
+                    {
+                        "iid": 2,
+                        "type": "urn:homekit-spec:property:firmware-revision:00000052:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 3,
+                        "type": "urn:homekit-spec:property:identify:00000014:test-product1:1243:1",
+                        "description": "english",
+                        "format": "bool",
+                        "access": [
+                            "write"
+                        ]
+                    },
+                    {
+                        "iid": 4,
+                        "type": "urn:homekit-spec:property:manufacturer:00000020:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 5,
+                        "type": "urn:homekit-spec:property:model:00000021:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 6,
+                        "type": "urn:homekit-spec:property:name:00000023:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 7,
+                        "type": "urn:homekit-spec:property:serial-number:00000030:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 8,
+                        "type": "urn:homekit-spec:property:accessory-properties:000000a6:test-product1:1243:1",
+                        "description": "english",
+                        "format": "uint32",
+                        "access": [
+                            "read",
+                            "notify"
+                        ],
+                        "value-range": [
+                            0,
+                            65535,
+                            1
+                        ]
+                    },
+                    {
+                        "iid": 9,
+                        "type": "urn:homekit-spec:property:hardware-revision:00000053:test-product1:1243:1",
+                        "description": "english",
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    }
+                ]
+            },
+            {
+                "iid": 10,
+                "type": "urn:homekit-spec:service:lightbulb:00000043:test-product1:1243:1",
+                "description": {
+                    "en-US": "Light Bulb",
+                    "zh-TW": "燈泡",
+                    "zh-CN": "灯泡"
+                },
+                "properties": [
+                    {
+                        "iid": 11,
+                        "type": "urn:homekit-spec:property:on:00000025:test-product1:1243:1",
+                        "description": "english",
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

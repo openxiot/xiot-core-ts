@@ -1,0 +1,12 @@
+{
+    "type": "summary-changed",
+    "payload": {
+        "did": "xxx",
+        "summary": {
+            "type": "urn:homekit-spec:group:lightbulb:00000005:yingtuo:zzz:1",
+            "online": true,
+            "parentId": "aaa"
+        },
+        "timestamp": 1640164172915
+    }
+}

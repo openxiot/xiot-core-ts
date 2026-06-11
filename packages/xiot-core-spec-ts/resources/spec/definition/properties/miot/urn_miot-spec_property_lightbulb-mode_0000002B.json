@@ -1,0 +1,28 @@
+{
+    "type": "urn:miot-spec:property:lightbulb-mode:0000002B",
+    "description": "Lightbulb Mode Status",
+    "format": "uint8",
+    "access": [
+        "read",
+        "write",
+        "notify"
+    ],
+    "value-list": [
+        {
+            "value": 1,
+            "description": {
+                "en-US": "Day",
+                "cn-ZH": "白天",
+                "cn-TW": "白天"
+            }
+        },
+        {
+            "value": 2,
+            "description": {
+                "en-US": "Night",
+                "cn-ZH": "晚上",
+                "cn-TW": "晚上"
+            }
+        }
+    ]
+}

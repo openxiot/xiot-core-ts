@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:service:atmospheric-pressure-sensor:0000080E",
+    "description": "Atmospheric PressureSensor",
+    "required-properties": [
+        "urn:miot-spec:property:atmospheric-pressure:00000028"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:on:00000002"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "type": "urn:miot-spec:service:air-purifier:00000804",
+    "description": "Air Purifier",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002",
+        "urn:miot-spec:property:air-purifier-fan-speed:00000014",
+        "urn:miot-spec:property:filter-life-level:00000016",
+        "urn:miot-spec:property:filter-max-life-expectancy:00000017"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:physical-controls-locked:00000004",
+        "urn:miot-spec:property:led-indicator-on:0000001A",
+        "urn:miot-spec:property:audio-feedback-on:0000001B",
+        "urn:miot-spec:property:status-error:0000001C"
+    ],
+    "required-actions": [
+        "urn:miot-spec:action:reset-filter-life:00000400"
+    ]
+}

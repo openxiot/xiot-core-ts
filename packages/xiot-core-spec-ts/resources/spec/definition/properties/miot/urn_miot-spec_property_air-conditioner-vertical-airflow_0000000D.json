@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-vertical-airflow:0000000D",
+    "description": "Air Condition Vertical Airflow Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

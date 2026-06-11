@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:spin-speed:00000071",
+  "description" : "Spin Speed",
+  "format" : "uint16",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 200, 1400, 100 ]
+}

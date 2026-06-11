@@ -1,0 +1,93 @@
+{
+  "type": "urn:xiot-spec:device:air-fresh:0000a012:dmaker:dm120v1:1",
+  "description": "Fresh Air System",
+  "services": [
+    {
+      "iid": 143,
+      "type": "urn:xiot-spec:service:filter:0000780b:dmaker:dm120v1:1",
+      "description": "Filter"
+    },
+    {
+      "iid": 299,
+      "type": "urn:xiot-spec:service:air-fresh:00007822:dmaker:dm120v1:1",
+      "description": "Air Fresh",
+      "properties": [
+        {
+          "iid": 165,
+          "type": "urn:xiot-spec:property:on:00000006:dmaker:dm120v1:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 123,
+          "type": "urn:xiot-spec:property:fault:00000009:dmaker:dm120v1:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 857,
+      "type": "urn:xiot-spec:service:device-information:00007801:dmaker:dm120v1:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 321,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:dmaker:dm120v1:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 114,
+          "type": "urn:xiot-spec:property:serial-number:00000003:dmaker:dm120v1:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 531,
+          "type": "urn:xiot-spec:property:model:00000002:dmaker:dm120v1:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 139,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:dmaker:dm120v1:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 963,
+      "type": "urn:xiot-spec:service:environment:0000780a:dmaker:dm120v1:1",
+      "description": "Environment"
+    }
+  ]
+}

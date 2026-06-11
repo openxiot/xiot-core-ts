@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-target-temperature:00000009",
+    "description": "Air Conditioner Target Temperature",
+    "format": "float",
+    "access": ["read", "write", "notify"],
+    "value-range": [16.0, 32.0, 0.5],
+    "unit": "celsius"
+}

@@ -1,0 +1,69 @@
+{
+    "type": "urn:homekit-spec:device:lightbulb:00010001:arrizo-v1",
+    "description": "Lightbulb",
+    "services": [
+        {
+            "iid": 1,
+            "type": "urn:homekit-spec:service:accessory-information:0000003e",
+            "description": "Accessory Information",
+            "properties": [
+                {
+                    "iid": 2,
+                    "type": "urn:homekit-spec:property:identify:00000014",
+                    "description": "identify",
+                    "format": "bool",
+                    "access": ["write"]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:homekit-spec:property:manufacturer:00000020",
+                    "description": "manufacturer",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:homekit-spec:property:model:00000021",
+                    "description": "model",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:homekit-spec:property:name:00000023",
+                    "description": "name",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 6,
+                    "type": "urn:homekit-spec:property:serial-number:00000030",
+                    "description": "serial-number",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 7,
+                    "type": "urn:homekit-spec:property:firmware-revision:00000052",
+                    "description": "firmware-revision",
+                    "format": "string",
+                    "access": ["read"]
+                }
+            ]
+        },
+        {
+            "iid": 8,
+            "type": "urn:homekit-spec:service:lightbulb:00000043",
+            "description": "Power Switch Service",
+            "properties": [
+                {
+                    "iid": 9,
+                    "type": "urn:homekit-spec:property:on:00000025",
+                    "description": "on",
+                    "format": "bool",
+                    "access": ["read", "write", "notify"]
+                }
+            ]
+        }
+    ]
+}

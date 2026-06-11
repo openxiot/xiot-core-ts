@@ -1,0 +1,65 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:zhimi:v1:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:zhimi:v1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:zhimi:v1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:zhimi:v1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:zhimi:v1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:name:00000004:zhimi:v1:1",
+      "description" : "Device Name",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:zhimi:v1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:environment:0000780a:zhimi:v1:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:zhimi:v1:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 600.0, 1.0 ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:zhimi:v1:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:zhimi:v1:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  } ]
+}

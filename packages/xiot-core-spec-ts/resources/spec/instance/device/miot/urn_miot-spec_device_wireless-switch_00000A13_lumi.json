@@ -1,0 +1,97 @@
+{
+  "type": "urn:miot-spec:device:wireless-switch:00000A13:lumi",
+  "description": "Lumi wireless switch",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:button:00000818:lumi",
+      "description": "button",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:button:00000038:lumi",
+          "description": "Button",
+          "format": "uint8",
+          "access": [
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Click"
+            },
+            {
+              "value": 2,
+              "description": "Double Click"
+            },
+            {
+              "value": 3,
+              "description": "Long Click"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

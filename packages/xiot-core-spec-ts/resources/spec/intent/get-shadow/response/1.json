@@ -1,0 +1,81 @@
+{
+    "devices": [
+        {
+            "did": "aaa",
+            "status": 0,
+            "shadow": [
+                {
+                    "siid": 1,
+                    "piid": 1,
+                    "status": 0,
+                    "value": 100
+                },
+                {
+                    "siid": 1,
+                    "piid": 2,
+                    "status": 0,
+                    "value": 10.7
+                },
+                {
+                    "siid": 8,
+                    "piid": 7,
+                    "status": 0,
+                    "value": "1.1"
+                }
+            ]
+        },
+        {
+            "did": "bbb",
+            "status": 0,
+            "shadow": [
+                {
+                    "siid": 10,
+                    "piid": 11,
+                    "status": 0,
+                    "value": 100
+                },
+                {
+                    "siid": 21,
+                    "piid": 29,
+                    "status": 0,
+                    "value": 10.7
+                },
+                {
+                    "siid": 89,
+                    "piid": 71,
+                    "status": 0,
+                    "value": "1.1"
+                }
+            ]
+        },
+        {
+            "did": "ccc",
+            "status": 0,
+            "shadow": [
+                {
+                    "siid": 7,
+                    "piid": 1,
+                    "status": 0,
+                    "value": 100
+                },
+                {
+                    "siid": 6,
+                    "piid": 2,
+                    "status": 0,
+                    "value": 10.7
+                },
+                {
+                    "siid": 5,
+                    "piid": 7,
+                    "status": -425,
+                    "description": "error description"
+                }
+            ]
+        },
+        {
+            "did": "ddd",
+            "status": -1,
+            "description": "xxx--axx"
+        }
+    ]
+}

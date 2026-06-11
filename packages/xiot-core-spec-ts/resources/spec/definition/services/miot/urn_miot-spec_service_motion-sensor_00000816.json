@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:motion-sensor:00000816",
+    "description": "motion sensor",
+    "required-properties": [
+        "urn:miot-spec:property:motion-detected:00000036"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

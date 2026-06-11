@@ -1,0 +1,15 @@
+{
+    "type": "urn:miot-spec:service:air-quality-sensor:00000806",
+    "description": "Air Quality Sensor",
+    "required-properties": [
+        "urn:miot-spec:property:air-quality:0000001D"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:on:00000002",
+        "urn:miot-spec:property:air-quality-index:00000015",
+        "urn:miot-spec:property:pm2.5-density:00000012",
+        "urn:miot-spec:property:pm10-density:00000018",
+        "urn:miot-spec:property:voc-density:00000019"
+    ]
+}

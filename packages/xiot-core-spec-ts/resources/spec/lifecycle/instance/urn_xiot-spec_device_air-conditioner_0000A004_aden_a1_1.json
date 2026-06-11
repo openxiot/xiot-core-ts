@@ -1,0 +1,406 @@
+{
+    "lifecycle": "preview",
+    "definition": {
+        "type": "urn:xiot-spec:device:air-conditioner:0000a004:aden:a1:1",
+        "description": {
+            "zh-CN": "a",
+            "zh-TW": "a",
+            "en-US": "a"
+        },
+        "services": [
+            {
+                "iid": 1,
+                "type": "urn:xiot-spec:service:device-information:00007801:aden:a1:1",
+                "description": {
+                    "zh-CN": "a",
+                    "zh-TW": "a",
+                    "en-US": "a"
+                },
+                "properties": [
+                    {
+                        "iid": 1,
+                        "type": "urn:xiot-spec:property:manufacturer:00000001:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 2,
+                        "type": "urn:xiot-spec:property:model:00000002:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 3,
+                        "type": "urn:xiot-spec:property:serial-number:00000003:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 4,
+                        "type": "urn:xiot-spec:property:name:00000004:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    },
+                    {
+                        "iid": 5,
+                        "type": "urn:xiot-spec:property:firmware-revision:00000005:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "string",
+                        "access": [
+                            "read"
+                        ]
+                    }
+                ]
+            },
+            {
+                "iid": 2,
+                "type": "urn:xiot-spec:service:air-conditioner:0000780f:aden:a1:1",
+                "description": {
+                    "zh-CN": "a",
+                    "zh-TW": "a",
+                    "en-US": "a"
+                },
+                "properties": [
+                    {
+                        "iid": 1,
+                        "type": "urn:xiot-spec:property:on:00000006:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    },
+                    {
+                        "iid": 2,
+                        "type": "urn:xiot-spec:property:mode:00000008:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "uint8",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ],
+                        "value-list": [
+                            {
+                                "value": 0,
+                                "description": "Auto"
+                            },
+                            {
+                                "value": 1,
+                                "description": "Cool"
+                            },
+                            {
+                                "value": 2,
+                                "description": "Dry"
+                            },
+                            {
+                                "value": 3,
+                                "description": "Heat"
+                            },
+                            {
+                                "value": 4,
+                                "description": "Fan"
+                            }
+                        ]
+                    },
+                    {
+                        "iid": 3,
+                        "type": "urn:xiot-spec:property:target-temperature:00000021:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "float",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ],
+                        "value-range": [
+                            16.0,
+                            31.0,
+                            1.0
+                        ],
+                        "unit": "celsius"
+                    },
+                    {
+                        "iid": 4,
+                        "type": "urn:xiot-spec:property:eco:00000024:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    },
+                    {
+                        "iid": 5,
+                        "type": "urn:xiot-spec:property:dryer:00000027:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    },
+                    {
+                        "iid": 6,
+                        "type": "urn:xiot-spec:property:heater:00000026:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    },
+                    {
+                        "iid": 7,
+                        "type": "urn:xiot-spec:property:sleep-mode:00000028:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    }
+                ]
+            },
+            {
+                "iid": 3,
+                "type": "urn:xiot-spec:service:fan-control:00007809:aden:a1:1",
+                "description": {
+                    "zh-CN": "a",
+                    "zh-TW": "a",
+                    "en-US": "a"
+                },
+                "properties": [
+                    {
+                        "iid": 1,
+                        "type": "urn:xiot-spec:property:fan-level:00000016:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "uint8",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ],
+                        "value-list": [
+                            {
+                                "value": 0,
+                                "description": "Auto"
+                            },
+                            {
+                                "value": 1,
+                                "description": "Quiet"
+                            },
+                            {
+                                "value": 2,
+                                "description": "Level1"
+                            },
+                            {
+                                "value": 3,
+                                "description": "Level2"
+                            },
+                            {
+                                "value": 4,
+                                "description": "Level3"
+                            },
+                            {
+                                "value": 5,
+                                "description": "Level4"
+                            },
+                            {
+                                "value": 6,
+                                "description": "Level5"
+                            },
+                            {
+                                "value": 7,
+                                "description": "Turbo"
+                            }
+                        ]
+                    },
+                    {
+                        "iid": 2,
+                        "type": "urn:xiot-spec:property:vertical-swing:00000018:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    },
+                    {
+                        "iid": 3,
+                        "type": "urn:xiot-spec:property:vertical-angle:0000001a:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "uint8",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ],
+                        "value-range": [
+                            20,
+                            100,
+                            20
+                        ],
+                        "unit": "percentage"
+                    }
+                ]
+            },
+            {
+                "iid": 4,
+                "type": "urn:xiot-spec:service:environment:0000780a:aden:a1:1",
+                "description": {
+                    "zh-CN": "a",
+                    "zh-TW": "a",
+                    "en-US": "a"
+                },
+                "properties": [
+                    {
+                        "iid": 1,
+                        "type": "urn:xiot-spec:property:temperature:00000020:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "float",
+                        "access": [
+                            "read",
+                            "notify"
+                        ],
+                        "value-range": [
+                            -50.0,
+                            50.0,
+                            1.0
+                        ],
+                        "unit": "celsius"
+                    },
+                    {
+                        "iid": 2,
+                        "type": "urn:xiot-spec:property:temperature:00000020:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "float",
+                        "access": [
+                            "read",
+                            "notify"
+                        ],
+                        "value-range": [
+                            -50.0,
+                            50.0,
+                            1.0
+                        ],
+                        "unit": "celsius"
+                    }
+                ]
+            },
+            {
+                "iid": 5,
+                "type": "urn:xiot-spec:service:indicator-light:00007803:aden:a1:1",
+                "description": {
+                    "zh-CN": "a",
+                    "zh-TW": "a",
+                    "en-US": "a"
+                },
+                "properties": [
+                    {
+                        "iid": 1,
+                        "type": "urn:xiot-spec:property:on:00000006:aden:a1:1",
+                        "description": {
+                            "zh-CN": "a",
+                            "zh-TW": "a",
+                            "en-US": "a"
+                        },
+                        "format": "bool",
+                        "access": [
+                            "read",
+                            "write",
+                            "notify"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

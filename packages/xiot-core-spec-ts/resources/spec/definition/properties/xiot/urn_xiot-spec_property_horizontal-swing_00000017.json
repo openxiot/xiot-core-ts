@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:horizontal-swing:00000017",
+  "description" : "Horizontal Swing",
+  "format" : "bool",
+  "access" : [ "read", "write", "notify" ]
+}

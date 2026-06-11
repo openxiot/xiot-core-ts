@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "target": "es6",
+    "types": ["node"]
+  },
+  "exclude": ["test.ts", "**/*.spec.ts"]
+}

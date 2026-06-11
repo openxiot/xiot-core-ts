@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:brightness:00000007",
+    "description": "Brightness",
+    "format": "uint8",
+    "access": ["read", "write", "notify"],
+    "value-range": [0, 100, 1],
+    "unit": "percentage"
+}

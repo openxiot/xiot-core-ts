@@ -1,0 +1,3 @@
+IF (aaa.1.1 == true) THEN
+    aaa.3.4 => true;
+ENDIF

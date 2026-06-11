@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:mute:0000003B",
+    "description": "Mute",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

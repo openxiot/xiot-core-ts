@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:relative-humidity:0000000F",
+    "description": "Relative Humidity",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-range": [0, 100, 1],
+    "unit": "percentage"
+}

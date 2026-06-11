@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:property:target-temperature:00000021",
+  "description" : "Target Temperature",
+  "format" : "float",
+  "access" : [ "read", "write", "notify" ],
+  "value-range" : [ 16.0, 32.0, 1.0 ],
+  "unit" : "celsius"
+}

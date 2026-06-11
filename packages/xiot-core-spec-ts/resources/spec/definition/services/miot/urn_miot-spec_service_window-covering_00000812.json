@@ -1,0 +1,12 @@
+{
+    "type": "urn:miot-spec:service:window-covering:00000812",
+    "description": "Window Covering",
+    "required-properties": [
+        "urn:miot-spec:property:current-position:0000002F",
+        "urn:miot-spec:property:target-position:00000030",
+        "urn:miot-spec:property:position-state:00000031"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

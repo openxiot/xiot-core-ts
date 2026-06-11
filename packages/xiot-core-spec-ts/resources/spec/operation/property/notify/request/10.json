@@ -1,0 +1,29 @@
+{
+    "properties": [
+        {
+            "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.1.1",
+            "value": {
+                "#2": 10,
+                "#3": 300,
+                "#4": true
+            }
+        },
+        {
+            "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.1.2",
+            "value": [
+                {
+                    "piid": 3,
+                    "value": 123
+                },
+                {
+                    "piid": 4,
+                    "value": "aaa"
+                },
+                {
+                    "piid": 5,
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

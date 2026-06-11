@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:speed-level:00000003",
+    "description": "Speed Level",
+    "format": "uint8",
+    "access": ["read", "write", "notify"],
+    "value-range": [1, 5, 1]
+}

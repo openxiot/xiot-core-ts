@@ -1,0 +1,17 @@
+{
+    "type": "urn:miot-spec:property:cube-motion:00000037",
+    "description": "Cube Motion",
+    "format": "uint8",
+    "access": ["notify"],
+    "value-list": [
+        {"value": 1, "description": "FLIP 90"},
+        {"value": 2, "description": "FLIP 180"},
+        {"value": 3, "description": "TRANSLATE"},
+        {"value": 4, "description": "TAPED TWICE"},
+        {"value": 5, "description": "SHAKE IN PLANE"},
+        {"value": 6, "description": "SHAKE FREE"},
+        {"value": 7, "description": "SWING"},
+        {"value": 8, "description": "ROTATE"},
+        {"value": 9, "description": "FREE FALL"}
+    ]
+}

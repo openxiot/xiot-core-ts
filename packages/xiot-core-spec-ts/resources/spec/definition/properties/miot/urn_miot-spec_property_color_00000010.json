@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:color:00000010",
+    "description": "Color",
+    "format": "uint32",
+    "access": ["read", "write", "notify"]
+}

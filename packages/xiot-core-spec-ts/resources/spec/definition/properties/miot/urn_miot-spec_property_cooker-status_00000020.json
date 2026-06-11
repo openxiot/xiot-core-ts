@@ -1,0 +1,11 @@
+{
+    "type": "urn:miot-spec:property:cooker-status:00000020",
+    "description": "Cooker Status",
+    "format": "uint8",
+    "access": ["read", "notify"],
+    "value-list": [
+        {"value": 1, "description": "IDLE"},
+        {"value": 2, "description": "RUNNING"},
+        {"value": 3, "description": "BUSY"}
+    ]
+}

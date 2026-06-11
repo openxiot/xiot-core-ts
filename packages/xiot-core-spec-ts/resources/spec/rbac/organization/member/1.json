@@ -1,0 +1,22 @@
+{
+ "members": [
+   {
+     "organizationId": "a",
+     "accountId": 11,
+     "status": "manager",
+     "role": 0
+   },
+   {
+     "organizationId": "b",
+     "accountId": 22,
+     "status": "generic",
+     "role": 2
+   },
+   {
+     "organizationId": "c",
+     "accountId": 33,
+     "status": "candidate",
+     "role": 0
+   }
+ ]
+}

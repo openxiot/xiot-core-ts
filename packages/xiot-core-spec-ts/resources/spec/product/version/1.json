@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "lifecycle": "development",
+      "createAt": 159582621,
+      "updateAt": 159582622,
+      "productId": "abc",
+      "version": 1,
+      "type": "urn:homekit-spec:device:window-covering:0000000e:knowin12dd4:v1:1",
+      "ltpk": "/bSFb2hqNzXMBleTuifl1ds9Ts0z7IAfv2h1Xhcbeew=",
+      "ltsk": "cOBbZtpM8s3NUqxmJIrIMkd9jsksbezJOqQ9HYZz2FU=",
+      "seed": "MC4wNjczNTcxNzkzMTg2NjM4"
+    }
+  ]
+}

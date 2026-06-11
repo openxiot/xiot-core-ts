@@ -1,0 +1,12 @@
+{
+  "id": "rule1",
+  "name": "手动场景",
+  "description": "",
+  "format": "rdl",
+  "content": "aaa.3.4 => true;",
+  "actuator": "aaa",
+  "createAt": 12345678,
+  "updateAt": 123456789,
+  "appId": "xxx",
+  "ownerId": "yyy"
+}

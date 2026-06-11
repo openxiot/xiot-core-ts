@@ -1,0 +1,6 @@
+{
+    "type": "urn:homekit-spec:property:current-time:0000009b",
+    "description": "Current Time",
+    "format": "string",
+    "access": ["read", "write"]
+}

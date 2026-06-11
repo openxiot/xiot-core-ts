@@ -1,0 +1,187 @@
+{
+  "type": "urn:miot-spec:device:sweeper:00000A0A:rock",
+  "description": "Xiaomi Sweeping Robot",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:identify:00000403",
+          "description": "Identify"
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:sweeping:0000080D",
+      "description": "Sweeping Service",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:status:00000023:rock-robot",
+          "description": "Sweeping Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "IDLE"
+            },
+            {
+              "value": 2,
+              "description": "SWEEPING"
+            },
+            {
+              "value": 3,
+              "description": "CHARGING"
+            },
+            {
+              "value": 4,
+              "description": "OTHERS"
+            }
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:speed-level:00000003:rock-robot",
+          "description": "Speed Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            100,
+            1
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:start-sweep:00000404",
+          "description": "Start Sweep"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:action:stop-sweeping:00000405",
+          "description": "Stop Sweeping"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:battery:00000809",
+      "description": "Battery service",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:battery-level:00000013",
+          "description": "Battery Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:charging-state:0000001F:rock",
+          "description": "Charging State",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "NOT_CHARGING"
+            },
+            {
+              "value": 1,
+              "description": "CHARGING"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:action:start-charge:00000406",
+          "description": "Start Charge"
+        }
+      ]
+    }
+  ]
+}

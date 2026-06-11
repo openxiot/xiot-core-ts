@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:temperature-humidity-sensor:00007814",
+  "description" : "Temperature Humidity Sensor",
+  "required-properties" : [ "urn:xiot-spec:property:temperature:00000020", "urn:xiot-spec:property:relative-humidity:0000000c" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:fault:00000009", "urn:xiot-spec:property:pm2.5-density:00000034", "urn:xiot-spec:property:atmospheric-pressure:00000036" ]
+}

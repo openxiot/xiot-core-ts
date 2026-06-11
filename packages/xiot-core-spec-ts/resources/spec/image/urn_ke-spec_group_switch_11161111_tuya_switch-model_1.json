@@ -1,0 +1,65 @@
+{
+  "did": "11161111",
+  "instance": {
+    "type": "urn:ke-spec:group:switch:11161111:tuya:switch-model:1",
+    "description": {
+      "en-US": "One Switch",
+      "zh-TW": "一键开关",
+      "zh-CN": "一键开关"
+    },
+    "services": [
+      {
+        "iid": 1,
+        "description": {
+          "en-US": "switch",
+          "zh-TW": "开关",
+          "zh-CN": "开关"
+        },
+        "type": "urn:ke-spec:service:switch:00000915:tuya:switch-model:1",
+        "properties": [
+          {
+            "unit": "seconds",
+            "access": [
+              "read",
+              "write",
+              "notify"
+            ],
+            "iid": 1,
+            "format": "bool",
+            "description": {
+              "en-US": "switch",
+              "zh-TW": "开关",
+              "zh-CN": "开关"
+            },
+            "type": "urn:ke-spec:property:switch-bool:4403f951:tuya:switch-model:1"
+          }
+        ]
+      },
+      {
+        "iid": 2,
+        "description": {
+          "en-US": "Device Infomation",
+          "zh-TW": "設備信息",
+          "zh-CN": "设备信息"
+        },
+        "type": "urn:ke-spec:service:device-information:00007801:tuya:switch-model:1",
+        "properties": [
+          {
+            "unit": "",
+            "access": [
+              "read"
+            ],
+            "iid": 1,
+            "format": "string",
+            "description": {
+              "en-US": "Manufacturer",
+              "zh-TW": "制造商",
+              "zh-CN": "制造商"
+            },
+            "type": "urn:ke-spec:property:manufacturer:00000005"
+          }
+        ]
+      }
+    ]
+  }
+}

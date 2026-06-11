@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-swing-airflow:00000027",
+    "description": "Air Condition Swing Airflow Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:bridge:00000813",
+    "description": "Bridge for sub devices",
+    "required-properties": [
+        "urn:miot-spec:property:discovering:00000032"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

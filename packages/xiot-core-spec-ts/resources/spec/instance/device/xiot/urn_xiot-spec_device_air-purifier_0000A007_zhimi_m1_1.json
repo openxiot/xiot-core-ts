@@ -1,0 +1,144 @@
+{
+  "type" : "urn:xiot-spec:device:air-purifier:0000a007:zhimi:m1:1",
+  "description" : "Air Purifier",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:zhimi:m1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:zhimi:m1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:zhimi:m1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:zhimi:m1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:name:00000004:zhimi:m1:1",
+      "description" : "Device Name",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:zhimi:m1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:air-purifier:00007811:zhimi:m1:1",
+    "description" : "Air Purifier",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:m1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:zhimi:m1:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      }, {
+        "value" : 1,
+        "description" : "Sleep"
+      }, {
+        "value" : 2,
+        "description" : "Favorite"
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:zhimi:m1:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:zhimi:m1:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:zhimi:m1:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 600.0, 1.0 ]
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:filter:0000780b:zhimi:m1:1",
+    "description" : "Filter",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:filter-life-level:0000001e:zhimi:m1:1",
+      "description" : "Filter Life Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:filter-left-time:0000001f:zhimi:m1:1",
+      "description" : "Filter Left Time",
+      "format" : "uint16",
+      "access" : [ "read" ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:reset-filter-life:00002803:zhimi:m1:1",
+      "description" : "Reset Filter Life"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:indicator-light:00007803:zhimi:m1:1",
+    "description" : "Indicator Light",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:on:00000006:zhimi:m1:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:alarm:00007804:zhimi:m1:1",
+    "description" : "Alarm",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:alarm:00000012:zhimi:m1:1",
+      "description" : "Alarm",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 7,
+    "type" : "urn:xiot-spec:service:physical-controls-locked:00007807:zhimi:m1:1",
+    "description" : "Physical Control Locked",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:physical-controls-locked:0000001d:zhimi:m1:1",
+      "description" : "Physical Control Locked",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  } ]
+}

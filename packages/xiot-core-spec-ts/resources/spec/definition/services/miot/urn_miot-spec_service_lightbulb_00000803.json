@@ -1,0 +1,14 @@
+{
+    "type": "urn:miot-spec:service:lightbulb:00000803",
+    "description": "Lightbulb",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:brightness:00000007",
+        "urn:miot-spec:property:lightbulb-mode:0000002B",
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:color:00000010",
+        "urn:miot-spec:property:color-temperature:00000011"
+    ]
+}

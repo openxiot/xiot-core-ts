@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:next-fan-speed-level:00000412",
+    "description": "Next Fan Speed Level"
+}

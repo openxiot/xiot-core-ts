@@ -1,0 +1,5 @@
+{
+  "type" : "urn:xiot-spec:service:environment:0000780a",
+  "description" : "Environment",
+  "optional-properties" : [ "urn:xiot-spec:property:relative-humidity:0000000c", "urn:xiot-spec:property:air-quality-index:0000001b", "urn:xiot-spec:property:air-quality:0000001c", "urn:xiot-spec:property:pm2.5-density:00000034", "urn:xiot-spec:property:pm10-density:00000035", "urn:xiot-spec:property:atmospheric-pressure:00000036", "urn:xiot-spec:property:temperature:00000020", "urn:xiot-spec:property:co2-density:0000004b", "urn:xiot-spec:property:tvoc-density:00000065" ]
+}

@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:toggle-swing:00000413",
+    "description": "Toggle Swing"
+}

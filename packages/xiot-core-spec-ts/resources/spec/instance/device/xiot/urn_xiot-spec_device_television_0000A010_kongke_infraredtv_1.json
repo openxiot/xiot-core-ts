@@ -1,0 +1,71 @@
+{
+  "type" : "urn:xiot-spec:device:television:0000a010:kongke:infraredtv:1",
+  "description" : "Television",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:kongke:infraredtv:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:kongke:infraredtv:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:kongke:infraredtv:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:kongke:infraredtv:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:kongke:infraredtv:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 6,
+    "type" : "urn:xiot-spec:service:ir-tv-control:0000781f:kongke:infraredtv:1",
+    "description" : "IR TV Control",
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:kongke:infraredtv:1",
+      "description" : "Channel Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:kongke:infraredtv:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:kongke:infraredtv:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:kongke:infraredtv:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:kongke:infraredtv:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:kongke:infraredtv:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:kongke:infraredtv:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:kongke:infraredtv:1",
+      "description" : "Volume Up"
+    } ]
+  } ]
+}

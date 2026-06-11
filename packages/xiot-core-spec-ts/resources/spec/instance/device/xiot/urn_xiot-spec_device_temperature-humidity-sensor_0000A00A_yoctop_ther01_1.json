@@ -1,0 +1,110 @@
+{
+  "type" : "urn:xiot-spec:device:temperature-humidity-sensor:0000a00a:yoctop:ther01:1",
+  "description" : "Temperature Humidity Sensor",
+  "services" : [ {
+    "iid" : 130,
+    "type" : "urn:xiot-spec:service:battery:00007805:yoctop:ther01:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 850,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:yoctop:ther01:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 338,
+      "type" : "urn:xiot-spec:property:charging-state:00000015:yoctop:ther01:1",
+      "description" : "Charging State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Charging"
+      }, {
+        "value" : 2,
+        "description" : "Not charging"
+      }, {
+        "value" : 3,
+        "description" : "Not chargeable"
+      } ]
+    } ],
+    "actions" : [ {
+      "iid" : 178,
+      "type" : "urn:xiot-spec:action:start-charge:00002802:yoctop:ther01:1",
+      "description" : "Start Charge"
+    } ],
+    "events" : [ {
+      "iid" : 337,
+      "type" : "urn:xiot-spec:event:low-battery:00005003:yoctop:ther01:1",
+      "description" : "Low Battery"
+    } ]
+  }, {
+    "iid" : 325,
+    "type" : "urn:xiot-spec:service:temperature-humidity-sensor:00007814:yoctop:ther01:1",
+    "description" : "Temperature Humidity Sensor",
+    "properties" : [ {
+      "iid" : 355,
+      "type" : "urn:xiot-spec:property:temperature:00000020:yoctop:ther01:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -40.0, 120.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 197,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:yoctop:ther01:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 185,
+      "type" : "urn:xiot-spec:property:fault:00000009:yoctop:ther01:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      }, {
+        "value" : 1,
+        "description" : "Low battery"
+      }, {
+        "value" : 2,
+        "description" : "Weak WiFi signal"
+      } ]
+    } ]
+  }, {
+    "iid" : 366,
+    "type" : "urn:xiot-spec:service:device-information:00007801:yoctop:ther01:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 229,
+      "type" : "urn:xiot-spec:property:model:00000002:yoctop:ther01:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 102,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:yoctop:ther01:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 295,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:yoctop:ther01:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 377,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:yoctop:ther01:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  } ]
+}

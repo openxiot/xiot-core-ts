@@ -1,0 +1,12 @@
+{
+  "type" : "urn:xiot-spec:action:post:00002810",
+  "description" : "Post",
+  "in" : [ {
+    "property" : "urn:xiot-spec:property:request:00000043",
+    "repeat" : [ 1, 1 ]
+  } ],
+  "out" : [ {
+    "property" : "urn:xiot-spec:property:response:00000044",
+    "repeat" : [ 1, 1 ]
+  } ]
+}

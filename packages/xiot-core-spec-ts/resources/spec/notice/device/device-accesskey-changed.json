@@ -1,0 +1,8 @@
+{
+    "type": "accesskey-changed",
+    "payload": {
+        "did": "didsss",
+        "key": "xxxxxxxxxxxxxxxxxxxxx",
+        "timestamp": 1640164172915
+    }
+}

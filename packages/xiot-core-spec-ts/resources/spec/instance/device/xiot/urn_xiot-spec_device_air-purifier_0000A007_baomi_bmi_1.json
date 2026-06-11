@@ -1,0 +1,187 @@
+{
+  "type": "urn:xiot-spec:device:air-purifier:0000a007:baomi:bmi:1",
+  "description": "Air Purifier",
+  "services": [
+    {
+      "iid": 137,
+      "type": "urn:xiot-spec:service:air-purifier:00007811:baomi:bmi:1",
+      "description": "Air Purifier",
+      "properties": [
+        {
+          "iid": 433,
+          "type": "urn:xiot-spec:property:mode:00000008:baomi:bmi:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Smart"
+            },
+            {
+              "value": 2,
+              "description": "Silent"
+            },
+            {
+              "value": 3,
+              "description": "Strong"
+            },
+            {
+              "value": 4,
+              "description": "None"
+            }
+          ]
+        },
+        {
+          "iid": 388,
+          "type": "urn:xiot-spec:property:fan-level:00000016:baomi:bmi:1",
+          "description": "Fan Level",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            1,
+            5,
+            1
+          ]
+        },
+        {
+          "iid": 327,
+          "type": "urn:xiot-spec:property:on:00000006:baomi:bmi:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 349,
+          "type": "urn:xiot-spec:property:fault:00000009:baomi:bmi:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 146,
+      "type": "urn:xiot-spec:service:device-information:00007801:baomi:bmi:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 885,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:baomi:bmi:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 310,
+          "type": "urn:xiot-spec:property:model:00000002:baomi:bmi:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 230,
+          "type": "urn:xiot-spec:property:serial-number:00000003:baomi:bmi:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 156,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:baomi:bmi:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 366,
+      "type": "urn:xiot-spec:service:filter:0000780b:baomi:bmi:1",
+      "description": "Filter"
+    },
+    {
+      "iid": 426,
+      "type": "urn:xiot-spec:service:environment:0000780a:baomi:bmi:1",
+      "description": "Environment",
+      "properties": [
+        {
+          "iid": 516,
+          "type": "urn:xiot-spec:property:pm2.5-density:00000034:baomi:bmi:1",
+          "description": "PM2.5 Density",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0.0,
+            1000.0,
+            1.0
+          ]
+        },
+        {
+          "iid": 340,
+          "type": "urn:xiot-spec:property:relative-humidity:0000000c:baomi:bmi:1",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        },
+        {
+          "iid": 262,
+          "type": "urn:xiot-spec:property:temperature:00000020:baomi:bmi:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        }
+      ]
+    }
+  ]
+}

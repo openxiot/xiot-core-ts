@@ -1,0 +1,95 @@
+{
+  "type": "urn:xiot-spec:device:curtain:0000a00c:uiot:curtain2:1",
+  "description": "Curtain",
+  "services": [
+    {
+      "iid": 263,
+      "type": "urn:xiot-spec:service:curtain:00007816:uiot:curtain2:1",
+      "description": "Curtain",
+      "properties": [
+        {
+          "iid": 649,
+          "type": "urn:xiot-spec:property:motor-control:00000038:uiot:curtain2:1",
+          "description": "Motor Control",
+          "format": "uint8",
+          "access": [
+            "write"
+          ],
+          "value-list": [
+            {
+              "value": 2,
+              "description": "Pause"
+            },
+            {
+              "value": 0,
+              "description": "Close"
+            },
+            {
+              "value": 1,
+              "description": "open"
+            }
+          ]
+        },
+        {
+          "iid": 298,
+          "type": "urn:xiot-spec:property:fault:00000009:uiot:curtain2:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 976,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:curtain2:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 147,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:curtain2:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 106,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:curtain2:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 186,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:curtain2:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 379,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:curtain2:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    }
+  ]
+}

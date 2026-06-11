@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:voltage:00000031",
+  "description" : "Voltage",
+  "format" : "uint16",
+  "access" : [ "read" ],
+  "value-range" : [ 0, 65535, 1 ]
+}

@@ -1,0 +1,11 @@
+{
+  "iq": {
+    "type": "query",
+    "method": "urn:xiot:remove-child",
+    "id": "5010",
+    "content": {
+      "did": "ppp",
+      "child": "aaa"
+    }
+  }
+}

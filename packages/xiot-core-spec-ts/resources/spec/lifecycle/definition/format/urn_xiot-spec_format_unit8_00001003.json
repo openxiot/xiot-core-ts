@@ -1,0 +1,11 @@
+{
+  "lifecycle": "development",
+  "definition": {
+    "type": "urn:xiot-spec:format:uint8:00001003",
+    "description": {
+      "zh-CN": "x",
+      "zh-TW": "x",
+      "en-US": "x"
+    }
+  }
+}

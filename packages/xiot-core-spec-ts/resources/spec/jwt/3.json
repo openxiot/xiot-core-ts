@@ -1,0 +1,7 @@
+{
+  "type": "es",
+  "es": {
+    "private-key": "this is a private key",
+    "public-key": "this is a public key"
+  }
+}

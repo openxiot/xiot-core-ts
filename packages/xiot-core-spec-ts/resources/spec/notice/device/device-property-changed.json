@@ -1,0 +1,10 @@
+{
+    "type": "property-changed",
+    "payload": {
+        "property": {
+            "pid": "47a5521d-4d28-4ad1-8126-03bd2910bcdc.1.3",
+            "value": "hello"
+        },
+        "timestamp": 1640164172915
+    }
+}

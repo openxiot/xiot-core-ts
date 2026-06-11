@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:device-list:0000003A",
+    "description": "Device List",
+    "format": "string",
+    "access": ["read"]
+}

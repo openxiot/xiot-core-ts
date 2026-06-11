@@ -1,0 +1,85 @@
+{
+  "type" : "urn:xiot-spec:device:stb:0000a011:uiot:stb1:1",
+  "description" : "Set Top Box",
+  "services" : [ {
+    "iid" : 116,
+    "type" : "urn:xiot-spec:service:device-information:00007801:uiot:stb1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 112,
+      "type" : "urn:xiot-spec:property:model:00000002:uiot:stb1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 213,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:uiot:stb1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 169,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:uiot:stb1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 362,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:uiot:stb1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 296,
+    "type" : "urn:xiot-spec:service:ir-stb-control:00007820:uiot:stb1:1",
+    "description" : "IR STB Control",
+    "properties" : [ {
+      "iid" : 281,
+      "type" : "urn:xiot-spec:property:channel-name:00000046:uiot:stb1:1",
+      "description" : "Channel Name",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 190,
+      "type" : "urn:xiot-spec:property:channel-number:00000045:uiot:stb1:1",
+      "description" : "Channel Number",
+      "format" : "uint16",
+      "access" : [ ],
+      "value-range" : [ 1, 999, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 272,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:uiot:stb1:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 673,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:uiot:stb1:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 884,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:uiot:stb1:1",
+      "description" : "Volume Up"
+    }, {
+      "iid" : 138,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:uiot:stb1:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 940,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:uiot:stb1:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 413,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:uiot:stb1:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 429,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:uiot:stb1:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 287,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:uiot:stb1:1",
+      "description" : "Channel Down"
+    } ]
+  } ]
+}

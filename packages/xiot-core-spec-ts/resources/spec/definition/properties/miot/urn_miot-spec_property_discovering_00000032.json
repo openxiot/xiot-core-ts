@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:discovering:00000032",
+    "description": "Discovering",
+    "format": "bool",
+    "access": ["read", "write"]
+}

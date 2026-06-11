@@ -1,0 +1,6 @@
+{
+    "type": "urn:miot-spec:property:swing:00000005",
+    "description": "Swing Mode Status",
+    "format": "bool",
+    "access": ["read", "write", "notify"]
+}

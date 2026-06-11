@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:air-fresh:00007822",
+  "description" : "Air Fresh",
+  "required-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:fault:00000009" ],
+  "optional-properties" : [ "urn:xiot-spec:property:mode:00000008", "urn:xiot-spec:property:status:00000007", "urn:xiot-spec:property:fan-level:00000016", "urn:xiot-spec:property:heater:00000026", "urn:xiot-spec:property:heat-level:00000047" ]
+}

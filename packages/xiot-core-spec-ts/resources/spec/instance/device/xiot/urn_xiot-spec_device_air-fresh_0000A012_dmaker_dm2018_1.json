@@ -1,0 +1,135 @@
+{
+  "type" : "urn:xiot-spec:device:air-fresh:0000a012:dmaker:dm2018:1",
+  "description" : "Fresh Air System",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:air-fresh:00007822:dmaker:dm2018:1",
+    "description" : "Air Fresh",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:fault:00000009:dmaker:dm2018:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:on:00000006:dmaker:dm2018:1",
+      "description" : "Switch Status",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:mode:00000008:dmaker:dm2018:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Sleep"
+      }, {
+        "value" : 2,
+        "description" : "Manual"
+      }, {
+        "value" : 3,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:fan-level:00000016:dmaker:dm2018:1",
+      "description" : "Fan Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Level1"
+      }, {
+        "value" : 2,
+        "description" : "Level2"
+      }, {
+        "value" : 3,
+        "description" : "Level3"
+      } ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:device-information:00007801:dmaker:dm2018:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:dmaker:dm2018:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:dmaker:dm2018:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:dmaker:dm2018:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:dmaker:dm2018:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:environment:0000780a:dmaker:dm2018:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:co2-density:0000004b:dmaker:dm2018:1",
+      "description" : "CO2 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 3000.0, 1.0 ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:dmaker:dm2018:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 1000.0, 1.0 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:dmaker:dm2018:1",
+      "description" : "Relative Humidity",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:temperature:00000020:dmaker:dm2018:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -30.0, 100.0, 1.0 ],
+      "unit" : "celsius"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:filter:0000780b:dmaker:dm2018:1",
+    "description" : "Filter",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:filter-life-level:0000001e:dmaker:dm2018:1",
+      "description" : "Filter Life Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    } ]
+  } ]
+}

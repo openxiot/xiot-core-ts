@@ -1,0 +1,102 @@
+{
+  "type" : "urn:xiot-spec:device:air-monitor:0000a008:cgllc:s1:1",
+  "description" : "Air Monitor",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:cgllc:s1:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:cgllc:s1:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:cgllc:s1:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:cgllc:s1:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:cgllc:s1:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:environment:0000780a:cgllc:s1:1",
+    "description" : "Environment",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:relative-humidity:0000000c:cgllc:s1:1",
+      "description" : "Relative Humidity",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 100.0, 0.1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:pm2.5-density:00000034:cgllc:s1:1",
+      "description" : "PM2.5 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0.0, 999.0, 0.1 ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:temperature:00000020:cgllc:s1:1",
+      "description" : "Temperature",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ -20.0, 50.0, 0.1 ],
+      "unit" : "celsius"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:co2-density:0000004b:cgllc:s1:1",
+      "description" : "CO2 Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 400.0, 9999.0, 1.0 ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:tvoc-density:00000065:cgllc:s1:1",
+      "description" : "TVOC Density",
+      "format" : "float",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 1.0, 2187.0, 1.0 ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:cgllc:s1:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:cgllc:s1:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:charging-state:00000015:cgllc:s1:1",
+      "description" : "Charging State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Charging"
+      }, {
+        "value" : 2,
+        "description" : "Not charging"
+      } ]
+    } ]
+  } ]
+}

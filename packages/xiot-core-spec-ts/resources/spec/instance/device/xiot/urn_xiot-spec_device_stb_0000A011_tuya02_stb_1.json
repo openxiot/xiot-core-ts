@@ -1,0 +1,227 @@
+{
+  "type" : "urn:xiot-spec:device:stb:0000a011:tuya02:stb:1",
+  "description" : "Set Top Box",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:tuya02:stb:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:tuya02:stb:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:tuya02:stb:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:tuya02:stb:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:tuya02:stb:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:ir-stb-control:00007820:tuya02:stb:1",
+    "description" : "IR STB Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:channel-name:00000046:tuya02:stb:1",
+      "description" : "Channel Name",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:channel-number:00000045:tuya02:stb:1",
+      "description" : "Channel Number",
+      "format" : "uint16",
+      "access" : [ ],
+      "value-range" : [ 1, 999, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:tuya02:stb:1",
+      "description" : "Channel Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:tuya02:stb:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:tuya02:stb:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:tuya02:stb:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:set-channel-name:00002818:tuya02:stb:1",
+      "description" : "Set Channel Name",
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:set-channel-number:00002817:tuya02:stb:1",
+      "description" : "Set Channel Number",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:tuya02:stb:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:tuya02:stb:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 9,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:tuya02:stb:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 10,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:tuya02:stb:1",
+      "description" : "Volume Up"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:ir-aircondition-control:00007824:tuya02:stb:1",
+    "description" : "IR Aircondition Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:ir-mode:0000004c:tuya02:stb:1",
+      "description" : "Mode for IR",
+      "format" : "uint8",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Auto"
+      }, {
+        "value" : 2,
+        "description" : "Heat"
+      }, {
+        "value" : 3,
+        "description" : "Cool"
+      }, {
+        "value" : 4,
+        "description" : "Dry"
+      }, {
+        "value" : 5,
+        "description" : "Fan"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:ir-temperature:0000004d:tuya02:stb:1",
+      "description" : "Temperature for IR",
+      "format" : "float",
+      "access" : [ "write" ],
+      "value-range" : [ 16.0, 30.0, 1.0 ],
+      "unit" : "celsius"
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:fan-speed-down:0000281c:tuya02:stb:1",
+      "description" : "Fan Speed Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:fan-speed-up:0000281b:tuya02:stb:1",
+      "description" : "Fan Speed Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:temperature-down:0000281e:tuya02:stb:1",
+      "description" : "Temperature Down"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:temperature-up:0000281d:tuya02:stb:1",
+      "description" : "Temperature Up"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:tuya02:stb:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:tuya02:stb:1",
+      "description" : "Turn On"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:ir-fan-control:00007823:tuya02:stb:1",
+    "description" : "IR Fan Control",
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:fan-speed-down:0000281c:tuya02:stb:1",
+      "description" : "Fan Speed Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:fan-speed-up:0000281b:tuya02:stb:1",
+      "description" : "Fan Speed Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:tuya02:stb:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:tuya02:stb:1",
+      "description" : "Turn On"
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:ir-tv-control:0000781f:tuya02:stb:1",
+    "description" : "IR TV Control",
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:channel-down:00002816:tuya02:stb:1",
+      "description" : "Channel Down"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:channel-up:00002815:tuya02:stb:1",
+      "description" : "Channel Up"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:mute-off:0000281a:tuya02:stb:1",
+      "description" : "Mute Off"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:mute-on:00002819:tuya02:stb:1",
+      "description" : "Mute On"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:tuya02:stb:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:tuya02:stb:1",
+      "description" : "Turn On"
+    }, {
+      "iid" : 7,
+      "type" : "urn:xiot-spec:action:volume-down:00002813:tuya02:stb:1",
+      "description" : "Volume Down"
+    }, {
+      "iid" : 8,
+      "type" : "urn:xiot-spec:action:volume-up:00002812:tuya02:stb:1",
+      "description" : "Volume Up"
+    } ]
+  } ]
+}

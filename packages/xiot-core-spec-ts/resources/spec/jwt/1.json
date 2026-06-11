@@ -1,0 +1,6 @@
+{
+  "type": "secrets",
+  "secrets": {
+    "key": "this is a test key"
+  }
+}

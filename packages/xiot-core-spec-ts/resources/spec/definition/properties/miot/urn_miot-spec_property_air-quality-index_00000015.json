@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:air-quality-index:00000015",
+    "description": "Air Quality Index",
+    "format": "uint16",
+    "access": ["read", "notify"],
+    "value-range": [0, 600, 1]
+}

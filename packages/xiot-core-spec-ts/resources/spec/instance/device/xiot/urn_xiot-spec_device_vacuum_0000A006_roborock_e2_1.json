@@ -1,0 +1,111 @@
+{
+  "type" : "urn:xiot-spec:device:vacuum:0000a006:roborock:e2:1",
+  "description" : "Robot Cleaner",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:roborock:e2:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:roborock:e2:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:model:00000002:roborock:e2:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:roborock:e2:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:name:00000004:roborock:e2:1",
+      "description" : "Device Name",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:roborock:e2:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:vacuum:00007810:roborock:e2:1",
+    "description" : "Robot Cleaner",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:status:00000007:roborock:e2:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Sweeping"
+      }, {
+        "value" : 3,
+        "description" : "Charging"
+      }, {
+        "value" : 4,
+        "description" : "Others"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:speed-level:00000023:roborock:e2:1",
+      "description" : "Speed Level",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-sweep:00002804:roborock:e2:1",
+      "description" : "Start Sweep"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:stop-sweeping:00002805:roborock:e2:1",
+      "description" : "Stop Sweeping"
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:battery:00007805:roborock:e2:1",
+    "description" : "Battery",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:battery-level:00000014:roborock:e2:1",
+      "description" : "Battery Level",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:charging-state:00000015:roborock:e2:1",
+      "description" : "Charging State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Charging"
+      }, {
+        "value" : 2,
+        "description" : "Not charging"
+      } ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:start-charge:00002802:roborock:e2:1",
+      "description" : "Start Charge"
+    } ]
+  } ]
+}

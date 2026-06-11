@@ -1,0 +1,277 @@
+{
+  "type": "urn:miot-spec:device:air-conditioner:00000A06:zhimi",
+  "description": "Zhimi Air Conditioner",
+  "services": [
+    {
+      "iid": 1,
+      "type": "urn:miot-spec:service:device-information:00000800",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:manufacturer:00000024",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:model:00000025",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:serial-number:00000026",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:name:00000001",
+          "description": "Device Name",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:firmware-revision:0000002D",
+          "description": "Latest Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 2,
+      "type": "urn:miot-spec:service:air-conditioner:00000805",
+      "description": "Air Conditioner",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:on:00000002",
+          "description": "Air Conditioner Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:air-conditioner-mode:00000008:zhimi",
+          "description": "Air Conditioner Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Cool"
+            },
+            {
+              "value": 2,
+              "description": "Dry"
+            },
+            {
+              "value": 3,
+              "description": "Heat"
+            },
+            {
+              "value": 4,
+              "description": "Fan"
+            }
+          ]
+        },
+        {
+          "iid": 3,
+          "type": "urn:miot-spec:property:air-conditioner-fan-speed:0000000B",
+          "description": "Aux Air Conditioner Fan Speed",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Auto"
+            },
+            {
+              "value": 2,
+              "description": "Low"
+            },
+            {
+              "value": 3,
+              "description": "Medium"
+            },
+            {
+              "value": 4,
+              "description": "High"
+            }
+          ]
+        },
+        {
+          "iid": 4,
+          "type": "urn:miot-spec:property:air-conditioner-target-temperature:00000009:zhimi",
+          "description": "Air Conditioner Target Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            16.0,
+            32.0,
+            0.1
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 5,
+          "type": "urn:miot-spec:property:air-conditioner-vertical-airflow:0000000D",
+          "description": "Air Condition Vertical Airflow Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 6,
+          "type": "urn:miot-spec:property:air-conditioner-horizontal-airflow:0000000E",
+          "description": "Air Condition Horizontal Airflow Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 7,
+          "type": "urn:miot-spec:property:vertical-swing-angle:0000002E:zhimi",
+          "description": "Vertical Swing Angle",
+          "format": "int32",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-range": [
+            20,
+            60,
+            20
+          ],
+          "unit": "arcdegrees"
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "type": "urn:miot-spec:service:temperature-humidity-sensor:00000811",
+      "description": "Indoor Temperature Humidity Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:temperature:0000000A",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -40.0,
+            125.0,
+            0.1
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:relative-humidity:0000000F",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "type": "urn:miot-spec:service:temperature-humidity-sensor:00000811",
+      "description": "Outdoor Temperature Humidity Sensor",
+      "properties": [
+        {
+          "iid": 1,
+          "type": "urn:miot-spec:property:temperature:0000000A",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -40.0,
+            125.0,
+            0.1
+          ],
+          "unit": "celsius"
+        },
+        {
+          "iid": 2,
+          "type": "urn:miot-spec:property:relative-humidity:0000000F",
+          "description": "Relative Humidity",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            0,
+            100,
+            1
+          ],
+          "unit": "percentage"
+        }
+      ]
+    }
+  ]
+}

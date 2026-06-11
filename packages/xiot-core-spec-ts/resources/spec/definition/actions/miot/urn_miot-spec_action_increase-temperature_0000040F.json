@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:action:increase-temperature:0000040F",
+    "description": "Increase temperature"
+}

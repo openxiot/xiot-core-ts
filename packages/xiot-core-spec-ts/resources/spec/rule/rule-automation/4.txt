@@ -1,0 +1,8 @@
+IF (@temperature < 30) THEN
+    aaa.3.4 => true;
+    SLEEP => 2000;
+    bbb.3.4 =>
+        #1 = 100, 200, 300,
+        #2 = "aaa", "bbb", "ccc",
+        #3 = true;
+ENDIF

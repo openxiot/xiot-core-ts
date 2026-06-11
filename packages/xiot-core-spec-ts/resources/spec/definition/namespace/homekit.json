@@ -1,0 +1,8 @@
+{
+    "namespace": "homekit-spec",
+    "description": {
+        "zh_CN": "可调亮度的灯泡",
+        "zh_TW": "可调亮度的灯泡",
+        "en_US": "brightness"
+    }
+}

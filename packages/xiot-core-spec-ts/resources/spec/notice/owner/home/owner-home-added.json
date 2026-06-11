@@ -1,0 +1,15 @@
+{
+  "type": "home-added",
+  "payload": {
+    "appId": "xxxx",
+    "ownerId": "xxxx",
+    "home": {
+      "id": "xx",
+      "name": "zzzz",
+      "rootId": "aaa",
+      "index": 0
+
+    },
+    "timestamp": 1640164172915
+  }
+}

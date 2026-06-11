@@ -1,0 +1,26 @@
+{
+    "type": "urn:miot-spec:service:air-conditioner:00000805",
+    "description": "Air Conditioner",
+    "required-properties": [
+        "urn:miot-spec:property:on:00000002"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001",
+        "urn:miot-spec:property:physical-controls-locked:00000004",
+        "urn:miot-spec:property:air-conditioner-fan-speed:0000000B",
+        "urn:miot-spec:property:air-conditioner-mode:00000008",
+        "urn:miot-spec:property:air-conditioner-target-temperature:00000009",
+        "urn:miot-spec:property:air-conditioner-sleep-mode:0000000C",
+        "urn:miot-spec:property:air-conditioner-horizontal-airflow:0000000E",
+        "urn:miot-spec:property:air-conditioner-vertical-airflow:0000000D",
+        "urn:miot-spec:property:air-conditioner-swing-airflow:00000027",
+        "urn:miot-spec:property:vertical-swing-angle:0000002E"
+    ],
+    "optional-actions": [
+        "urn:miot-spec:action:increase-temperature:0000040F",
+        "urn:miot-spec:action:decrease-temperature:00000410",
+        "urn:miot-spec:action:next-mode:00000411",
+        "urn:miot-spec:action:next-fan-speed-level:00000412",
+        "urn:miot-spec:action:toggle-swing:00000413"
+    ]
+}

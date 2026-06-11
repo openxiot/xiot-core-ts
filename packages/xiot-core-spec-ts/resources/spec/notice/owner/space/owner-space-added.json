@@ -1,0 +1,16 @@
+{
+  "type": "space-added",
+  "payload": {
+    "appId": "xxxx",
+    "ownerId": "xxxx",
+    "space": {
+      "id": "xx",
+      "name": "次卧",
+      "rootId": "aaa",
+      "parentId": "bbb",
+      "index": 0
+
+    },
+    "timestamp": 1640164172915
+  }
+}

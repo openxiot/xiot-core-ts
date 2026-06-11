@@ -1,0 +1,44 @@
+{
+    "type": "urn:miot-spec:property:air-conditioner-fan-speed:0000000B",
+    "description": "Air Conditioner Fan Speed",
+    "format": "uint8",
+    "access": [
+        "read",
+        "write",
+        "notify"
+    ],
+    "value-list": [
+        {
+            "value": 1,
+            "description": {
+                "en-US": "Auto",
+                "cn-ZH": "自动",
+                "cn-TW": "自動"
+            }
+        },
+        {
+            "value": 2,
+            "description": {
+                "en-US": "Low",
+                "cn-ZH": "低",
+                "cn-TW": "低"
+            }
+        },
+        {
+            "value": 3,
+            "description": {
+                "en-US": "Medium",
+                "cn-ZH": "中",
+                "cn-TW": "中"
+            }
+        },
+        {
+            "value": 4,
+            "description": {
+                "en-US": "High",
+                "cn-ZH": "高",
+                "cn-TW": "高"
+            }
+        }
+    ]
+}

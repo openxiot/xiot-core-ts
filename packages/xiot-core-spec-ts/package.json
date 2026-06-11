@@ -1,0 +1,48 @@
+{
+  "name": "@openxiot/xiot-core-spec-ts",
+  "version": "0.0.1",
+  "description": "XIOT Specification Codec",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -fr dist",
+    "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register test/**/*.spec.ts",
+    "lint": "tslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkcity/xiot-core-spec-ts.git"
+  },
+  "keywords": [
+    "xiot",
+    "spec"
+  ],
+  "author": "gkcity <178915185@gmail.com> (http://github.com/gkcity)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkcity/xiot-core-spec-ts/issues"
+  },
+  "homepage": "https://github.com/gkcity/xiot-core-spec-ts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^8.1.0",
+    "@types/lodash": "^4.14.178",
+    "@types/mocha": "^9.1.0",
+    "chai": "^4.3.6",
+    "fs-extra": "^10.0.0",
+    "mocha": "^9.2.1",
+    "ts-node": "^10.5.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "4.8.2",
+    "lodash": "^4.17.21"
+  },
+  "browser": {
+    "crypto": false
+  }
+}

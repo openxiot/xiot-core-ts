@@ -1,0 +1,106 @@
+{
+    "type": "urn:miot-spec:device:speaker:00000A14:yeelink-v0",
+    "description": "Speaker",
+    "services": [
+        {
+            "iid": 1,
+            "type": "urn:miot-spec:service:device-information:00000800",
+            "description": "Device Information",
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:miot-spec:property:manufacturer:00000024",
+                    "description": "Device Manufacturer",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:miot-spec:property:model:00000025",
+                    "description": "Device Model",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:miot-spec:property:serial-number:00000026",
+                    "description": "Device Serial Number",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 4,
+                    "type": "urn:miot-spec:property:name:00000001",
+                    "description": "Device Name",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 5,
+                    "type": "urn:miot-spec:property:firmware-revision:0000002D",
+                    "description": "Current Firmware Version",
+                    "format": "string",
+                    "access": ["read"]
+                },
+                {
+                    "iid": 6,
+                    "type": "urn:miot-spec:property:firmware-revision:0000002D",
+                    "description": "Latest Firmware Version",
+                    "format": "string",
+                    "access": ["read"]
+                }
+            ]
+        },
+        {
+            "iid": 2,
+            "type": "urn:miot-spec:service:speaker:0000080F",
+            "description": "Speaker",
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:miot-spec:property:volume:00000029",
+                    "description": "Volume",
+                    "format": "uint8",
+                    "access": ["read", "write", "notify"],
+                    "value-range": [0, 100, 1],
+                    "unit": "percentage"
+                },
+                {
+                    "iid": 2,
+                    "type": "urn:miot-spec:property:playing-state:0000002A",
+                    "description": "Playing State",
+                    "format": "uint8",
+                    "access": [
+                        "read",
+                        "notify"
+                    ],
+                    "value-list": [
+                        {"value": 1, "description": "PLAYING"},
+                        {"value": 2, "description": "PAUSED"}
+                    ]
+                },
+                {
+                    "iid": 3,
+                    "type": "urn:miot-spec:property:mute:0000003B",
+                    "description": "Speaker Mute",
+                    "format": "bool",
+                    "access": ["read", "write", "notify"]
+                }
+            ]
+        },
+        {
+            "iid": 3,
+            "type": "urn:miot-spec:service:microphone:0000081A",
+            "description": "Microphone",
+            "properties": [
+                {
+                    "iid": 1,
+                    "type": "urn:miot-spec:property:mute:0000003B",
+                    "description": "Microphone Mute",
+                    "format": "bool",
+                    "access": ["read", "write", "notify"]
+                }
+            ]
+        }
+    ]
+}

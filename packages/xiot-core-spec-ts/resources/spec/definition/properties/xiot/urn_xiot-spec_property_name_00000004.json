@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:name:00000004",
+  "description" : "Service Name",
+  "format" : "string",
+  "access" : [ "read", "write", "notify" ]
+}

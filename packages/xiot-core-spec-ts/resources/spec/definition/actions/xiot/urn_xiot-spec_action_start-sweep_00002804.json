@@ -1,0 +1,4 @@
+{
+  "type" : "urn:xiot-spec:action:start-sweep:00002804",
+  "description" : "Start Sweep"
+}

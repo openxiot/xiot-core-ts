@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:filter-used-flow:0000004a",
+  "description" : "Filter Used Flow",
+  "format" : "uint16",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0, 1000, 1 ]
+}

@@ -1,0 +1,5 @@
+{
+    "category": "xxx",
+    "type": "urn:homekit-spec:device:sensor:00000000",
+    "description": "Sensor"
+}

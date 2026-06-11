@@ -1,0 +1,8 @@
+{
+  "type" : "urn:xiot-spec:action:set-channel-name:00002818",
+  "description" : "Set Channel Name",
+  "in" : [ {
+    "property" : "urn:xiot-spec:property:channel-name:00000046",
+    "repeat" : [ 1, 1 ]
+  } ]
+}

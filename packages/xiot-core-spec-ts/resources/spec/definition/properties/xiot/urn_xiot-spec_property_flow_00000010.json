@@ -1,0 +1,10 @@
+{
+  "type" : "urn:xiot-spec:property:flow:00000010",
+  "description" : "Flow",
+  "format" : "uint8",
+  "access" : [ "read", "write", "notify" ],
+  "value-list" : [ {
+    "value" : 0,
+    "description" : "Auto"
+  } ]
+}

@@ -1,0 +1,4 @@
+IF (123.3.7 == {} || @temperature < 30) THEN
+    SLEEP => 2000;
+    aaa.3.4 => true;
+ENDIF

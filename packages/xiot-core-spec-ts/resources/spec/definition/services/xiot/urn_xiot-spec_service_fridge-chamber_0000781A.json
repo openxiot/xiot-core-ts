@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:service:fridge-chamber:0000781a",
+  "description" : "Fridge Chamber",
+  "required-properties" : [ "urn:xiot-spec:property:temperature:00000020", "urn:xiot-spec:property:target-temperature:00000021" ],
+  "optional-properties" : [ "urn:xiot-spec:property:on:00000006", "urn:xiot-spec:property:mode:00000008" ]
+}

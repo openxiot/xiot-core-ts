@@ -1,0 +1,10 @@
+{
+    "type": "urn:miot-spec:service:door:00000815",
+    "description": "door",
+    "required-properties": [
+        "urn:miot-spec:property:door-state:00000035"
+    ],
+    "optional-properties": [
+        "urn:miot-spec:property:name:00000001"
+    ]
+}

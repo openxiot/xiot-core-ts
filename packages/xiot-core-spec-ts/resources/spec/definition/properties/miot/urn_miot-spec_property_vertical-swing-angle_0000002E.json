@@ -1,0 +1,8 @@
+{
+    "type": "urn:miot-spec:property:vertical-swing-angle:0000002E",
+    "description": "Vertical Swing Angle",
+    "format": "int32",
+    "access": ["read", "write", "notify"],
+    "value-range": [-90, 90, 1],
+    "unit": "arcdegrees"
+}

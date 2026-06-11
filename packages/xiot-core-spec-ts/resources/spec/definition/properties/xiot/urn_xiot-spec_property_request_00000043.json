@@ -1,0 +1,6 @@
+{
+  "type" : "urn:xiot-spec:property:request:00000043",
+  "description" : "Request",
+  "format" : "string",
+  "access" : [ ]
+}

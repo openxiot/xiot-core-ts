@@ -1,0 +1,12 @@
+{
+    "did": "08:00:27:87:53:C5@25",
+    "summary": {
+        "type": "urn:homekit-spec:device:gateway:00000002:yingtuo:hhh:1",
+        "online": false,
+        "parentId": "fff",
+        "protocol": "btmesh"
+    },
+    "somewhere": {
+        "where": "local"
+    }
+}

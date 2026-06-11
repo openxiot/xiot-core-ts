@@ -1,0 +1,11 @@
+{
+    "type": "children-removed",
+    "payload": {
+        "did": "xxx",
+        "children": [
+            "08:00:27:87:53:C5@25",
+            "08:00:27:87:53:xx@26"
+        ],
+        "timestamp": 1640164172915
+    }
+}

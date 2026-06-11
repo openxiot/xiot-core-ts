@@ -1,0 +1,7 @@
+{
+  "type" : "urn:xiot-spec:property:co2-density:0000004b",
+  "description" : "CO2 Density",
+  "format" : "float",
+  "access" : [ "read", "notify" ],
+  "value-range" : [ 0.0, 1000.0, 1.0 ]
+}

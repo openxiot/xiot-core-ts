@@ -1,0 +1,4 @@
+{
+    "type": "urn:miot-spec:device:temperature-humidity-sensor:00000A0B",
+    "description": "Weather Monitor"
+}

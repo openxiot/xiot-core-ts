@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:property:surge-power:0000002C",
+    "description": "Surge Power",
+    "format": "float",
+    "access": ["read"],
+    "unit": "watt"
+}

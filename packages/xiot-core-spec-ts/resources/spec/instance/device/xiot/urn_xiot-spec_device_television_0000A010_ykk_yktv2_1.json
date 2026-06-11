@@ -1,0 +1,219 @@
+{
+  "type" : "urn:xiot-spec:device:television:0000a010:ykk:yktv2:1",
+  "description" : "Television",
+  "services" : [ {
+    "iid" : 1,
+    "type" : "urn:xiot-spec:service:device-information:00007801:ykk:yktv2:1",
+    "description" : "Device Information",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:firmware-revision:00000005:ykk:yktv2:1",
+      "description" : "Current Firmware Version",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:manufacturer:00000001:ykk:yktv2:1",
+      "description" : "Device Manufacturer",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:model:00000002:ykk:yktv2:1",
+      "description" : "Device Model",
+      "format" : "string",
+      "access" : [ "read" ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:serial-number:00000003:ykk:yktv2:1",
+      "description" : "Device Serial Number",
+      "format" : "string",
+      "access" : [ "read" ]
+    } ]
+  }, {
+    "iid" : 2,
+    "type" : "urn:xiot-spec:service:message-router:0000781e:ykk:yktv2:1",
+    "description" : "Message Router",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:request:00000043:ykk:yktv2:1",
+      "description" : "Request",
+      "format" : "string",
+      "access" : [ ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:response:00000044:ykk:yktv2:1",
+      "description" : "Response",
+      "format" : "string",
+      "access" : [ ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:post:00002810:ykk:yktv2:1",
+      "description" : "Post",
+      "in" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 1,
+        "repeat" : [ 1, 1 ]
+      } ]
+    } ]
+  }, {
+    "iid" : 3,
+    "type" : "urn:xiot-spec:service:play-control:0000781d:ykk:yktv2:1",
+    "description" : "Play Control",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:playing-state:00000041:ykk:yktv2:1",
+      "description" : "Playing State",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Playing"
+      } ]
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:seek-time:00000042:ykk:yktv2:1",
+      "description" : "Seek Time",
+      "format" : "int16",
+      "access" : [ ],
+      "value-range" : [ -30000, 30000, 10 ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:next:0000280f:ykk:yktv2:1",
+      "description" : "Next"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:pause:0000280c:ykk:yktv2:1",
+      "description" : "Pause"
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:action:play:0000280b:ykk:yktv2:1",
+      "description" : "Play"
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:action:previous:0000280e:ykk:yktv2:1",
+      "description" : "Previous"
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:action:seek:0000280a:ykk:yktv2:1",
+      "description" : "Seek",
+      "in" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ],
+      "out" : [ {
+        "piid" : 2,
+        "repeat" : [ 1, 1 ]
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:action:stop:0000280d:ykk:yktv2:1",
+      "description" : "Stop"
+    } ]
+  }, {
+    "iid" : 4,
+    "type" : "urn:xiot-spec:service:speaker:0000781c:ykk:yktv2:1",
+    "description" : "Speaker",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:volume:00000013:ykk:yktv2:1",
+      "description" : "Volume",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 0, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:mute:00000040:ykk:yktv2:1",
+      "description" : "Mute",
+      "format" : "bool",
+      "access" : [ "read", "write", "notify" ]
+    } ]
+  }, {
+    "iid" : 5,
+    "type" : "urn:xiot-spec:service:television:0000781b:ykk:yktv2:1",
+    "description" : "Television",
+    "properties" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:property:brightness:0000000d:ykk:yktv2:1",
+      "description" : "Brightness",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-range" : [ 1, 100, 1 ],
+      "unit" : "percentage"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:property:channel-control:0000003f:ykk:yktv2:1",
+      "description" : "Channel Control",
+      "format" : "uint16",
+      "access" : [ "write" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Channel up"
+      }, {
+        "value" : 2,
+        "description" : "Channel down"
+      } ]
+    }, {
+      "iid" : 3,
+      "type" : "urn:xiot-spec:property:fault:00000009:ykk:yktv2:1",
+      "description" : "Device Fault",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "No faults"
+      } ]
+    }, {
+      "iid" : 4,
+      "type" : "urn:xiot-spec:property:input-control:0000003e:ykk:yktv2:1",
+      "description" : "TV Input Control",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "HDMI 1"
+      }, {
+        "value" : 2,
+        "description" : "HDMI 2"
+      } ]
+    }, {
+      "iid" : 5,
+      "type" : "urn:xiot-spec:property:mode:00000008:ykk:yktv2:1",
+      "description" : "Mode",
+      "format" : "uint8",
+      "access" : [ "read", "write", "notify" ],
+      "value-list" : [ {
+        "value" : 0,
+        "description" : "Auto"
+      } ]
+    }, {
+      "iid" : 6,
+      "type" : "urn:xiot-spec:property:status:00000007:ykk:yktv2:1",
+      "description" : "Status",
+      "format" : "uint8",
+      "access" : [ "read", "notify" ],
+      "value-list" : [ {
+        "value" : 1,
+        "description" : "Idle"
+      }, {
+        "value" : 2,
+        "description" : "Busy"
+      } ]
+    } ],
+    "actions" : [ {
+      "iid" : 1,
+      "type" : "urn:xiot-spec:action:turn-off:00002809:ykk:yktv2:1",
+      "description" : "Turn Off"
+    }, {
+      "iid" : 2,
+      "type" : "urn:xiot-spec:action:turn-on:00002808:ykk:yktv2:1",
+      "description" : "Turn On"
+    } ]
+  } ]
+}

@@ -1,0 +1,20 @@
+{
+    "type": "urn:xiot-spec:service:ir-stb-control:00007820",
+    "description": "IR STB Control",
+    "optional-properties": [
+        "urn:xiot-spec:property:channel-name:00000046",
+        "urn:xiot-spec:property:channel-number:00000045"
+    ],
+    "optional-actions": [
+        "urn:xiot-spec:action:volume-up:00002812",
+        "urn:xiot-spec:action:volume-down:00002813",
+        "urn:xiot-spec:action:channel-up:00002815",
+        "urn:xiot-spec:action:channel-down:00002816",
+        "urn:xiot-spec:action:set-channel-number:00002817",
+        "urn:xiot-spec:action:set-channel-name:00002818",
+        "urn:xiot-spec:action:turn-on:00002808",
+        "urn:xiot-spec:action:turn-off:00002809",
+        "urn:xiot-spec:action:mute-on:00002819",
+        "urn:xiot-spec:action:mute-off:0000281a"
+    ]
+}

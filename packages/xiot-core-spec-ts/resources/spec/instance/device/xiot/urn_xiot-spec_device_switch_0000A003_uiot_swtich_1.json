@@ -1,0 +1,154 @@
+{
+  "type": "urn:xiot-spec:device:switch:0000a003:uiot:swtich:1",
+  "description": "Switch",
+  "services": [
+    {
+      "iid": 171,
+      "type": "urn:xiot-spec:service:device-information:00007801:uiot:swtich:1",
+      "description": "Device Information",
+      "properties": [
+        {
+          "iid": 305,
+          "type": "urn:xiot-spec:property:manufacturer:00000001:uiot:swtich:1",
+          "description": "Device Manufacturer",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 195,
+          "type": "urn:xiot-spec:property:firmware-revision:00000005:uiot:swtich:1",
+          "description": "Current Firmware Version",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 139,
+          "type": "urn:xiot-spec:property:model:00000002:uiot:swtich:1",
+          "description": "Device Model",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        },
+        {
+          "iid": 302,
+          "type": "urn:xiot-spec:property:serial-number:00000003:uiot:swtich:1",
+          "description": "Device Serial Number",
+          "format": "string",
+          "access": [
+            "read"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "iid": 264,
+          "type": "urn:xiot-spec:action:identify:00002801:uiot:swtich:1",
+          "description": "Identify"
+        }
+      ]
+    },
+    {
+      "iid": 328,
+      "type": "urn:xiot-spec:service:switch:0000780c:uiot:swtich:1",
+      "description": "Switch",
+      "properties": [
+        {
+          "iid": 887,
+          "type": "urn:xiot-spec:property:on:00000006:uiot:swtich:1",
+          "description": "Switch Status",
+          "format": "bool",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 264,
+          "type": "urn:xiot-spec:property:fault:00000009:uiot:swtich:1",
+          "description": "Device Fault",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "No faults"
+            }
+          ]
+        },
+        {
+          "iid": 105,
+          "type": "urn:xiot-spec:property:mode:00000008:uiot:swtich:1",
+          "description": "Mode",
+          "format": "uint8",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 0,
+              "description": "Auto"
+            }
+          ]
+        },
+        {
+          "iid": 429,
+          "type": "urn:xiot-spec:property:name:00000004:uiot:swtich:1",
+          "description": "Service Name",
+          "format": "string",
+          "access": [
+            "read",
+            "write",
+            "notify"
+          ]
+        },
+        {
+          "iid": 350,
+          "type": "urn:xiot-spec:property:status:00000007:uiot:swtich:1",
+          "description": "Status",
+          "format": "uint8",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-list": [
+            {
+              "value": 1,
+              "description": "Idle"
+            },
+            {
+              "value": 2,
+              "description": "Busy"
+            }
+          ]
+        },
+        {
+          "iid": 750,
+          "type": "urn:xiot-spec:property:temperature:00000020:uiot:swtich:1",
+          "description": "Temperature",
+          "format": "float",
+          "access": [
+            "read",
+            "notify"
+          ],
+          "value-range": [
+            -30.0,
+            100.0,
+            1.0
+          ],
+          "unit": "celsius"
+        }
+      ]
+    }
+  ]
+}

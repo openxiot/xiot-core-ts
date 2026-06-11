@@ -1,0 +1,208 @@
+{
+    "type": "urn:ke-spec:device:light:00000005:tuya:cdn:1",
+    "description": {
+        "en-US": "RGB Light",
+        "zh-TW": "RGB燈",
+        "zh-CN": "RGB灯"
+    },
+    "services": [
+        {
+            "iid": 1,
+            "description": {
+                "en-US": "Device Information",
+                "zh-TW": "設備信息",
+                "zh-CN": "设备信息"
+            },
+            "type": "urn:ke-spec:service:device-information:00000005:tuya:cdn:1",
+            "properties": [
+                {
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 1,
+                    "format": "string",
+                    "description": {
+                        "en-US": "Name",
+                        "zh-TW": "名稱",
+                        "zh-CN": "名称"
+                    },
+                    "type": "urn:ke-spec:property:name:00000034:tuya:cdn:1"
+                },
+                {
+                    "unit": "",
+                    "access": [
+                        "read"
+                    ],
+                    "iid": 3,
+                    "format": "string",
+                    "description": {
+                        "en-US": "Manufacturer",
+                        "zh-TW": "制造商",
+                        "zh-CN": "制造商"
+                    },
+                    "type": "urn:ke-spec:property:manufacturer:00000005:tuya:cdn:1"
+                }
+            ]
+        },
+        {
+            "iid": 2,
+            "description": {
+                "en-US": "Switch",
+                "zh-TW": "開關",
+                "zh-CN": "开关"
+            },
+            "type": "urn:ke-spec:service:switch:00000001:tuya:cdn:1",
+            "properties": [
+                {
+                    "unit": "",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 1,
+                    "format": "bool",
+                    "description": {
+                        "en-US": "on",
+                        "zh-TW": "開關",
+                        "zh-CN": "开关"
+                    },
+                    "type": "urn:ke-spec:property:on:00000001:tuya:cdn:1"
+                }
+            ]
+        },
+        {
+            "iid": 3,
+            "description": {
+                "en-US": "Color Control",
+                "zh-TW": "顏色控制",
+                "zh-CN": "颜色控制"
+            },
+            "type": "urn:ke-spec:service:color-control:00000010:tuya:cdn:1",
+            "properties": [
+                {
+                    "unit": "kelvins",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 1,
+                    "format": "int32",
+                    "description": {
+                        "en-US": "Brightness",
+                        "zh-TW": "亮度",
+                        "zh-CN": "亮度"
+                    },
+                    "value-range": [
+                        10,
+                        1000,
+                        1
+                    ],
+                    "type": "urn:ke-spec:property:brightness:00000006:tuya:cdn:1"
+                },
+                {
+                    "unit": "arcdegrees",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 2,
+                    "format": "float",
+                    "description": {
+                        "en-US": "Hue",
+                        "zh-TW": "色相",
+                        "zh-CN": "色相"
+                    },
+                    "value-range": [
+                        0,
+                        360,
+                        0.01
+                    ],
+                    "type": "urn:ke-spec:property:hsv-h:00000029:tuya:cdn:1"
+                },
+                {
+                    "access": [],
+                    "iid": 3,
+                    "format": "float",
+                    "description": {
+                        "en-US": "Saturation",
+                        "zh-TW": "飽和度",
+                        "zh-CN": "饱和度"
+                    },
+                    "value-range": [
+                        0,
+                        1,
+                        0.01
+                    ],
+                    "type": "urn:ke-spec:property:hsv-s:00000030:tuya:cdn:1"
+                },
+                {
+                    "access": [],
+                    "iid": 4,
+                    "format": "float",
+                    "description": {
+                        "en-US": "Lightness",
+                        "zh-TW": "明度",
+                        "zh-CN": "明度"
+                    },
+                    "value-range": [
+                        0,
+                        1,
+                        0.01
+                    ],
+                    "type": "urn:ke-spec:property:hsv-v:00000031:tuya:cdn:1"
+                },
+                {
+                    "unit": "",
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 5,
+                    "members": [
+                        2,
+                        3,
+                        4
+                    ],
+                    "format": "combination",
+                    "description": {
+                        "en-US": "HSV",
+                        "zh-TW": "HSV",
+                        "zh-CN": "HSV"
+                    },
+                    "type": "urn:ke-spec:property:hsv:00000032:tuya:cdn:1"
+                },
+                {
+                    "access": [
+                        "read",
+                        "write",
+                        "notify"
+                    ],
+                    "iid": 6,
+                    "format": "uint8",
+                    "description": {
+                        "en-US": "RGB Work Mode",
+                        "zh-TW": "RGB 工作模式",
+                        "zh-CN": "RGB 工作模式"
+                    },
+                    "type": "urn:ke-spec:property:rgb-work-mode:00000033:tuya:cdn:1",
+                    "value-list": [
+                        {
+                            "description": "白光模式",
+                            "value": 0
+                        },
+                        {
+                            "description": "彩光模式",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

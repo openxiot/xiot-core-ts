@@ -1,0 +1,7 @@
+{
+    "type": "urn:miot-spec:service:microphone:0000081A",
+    "description": "Microphone",
+    "required-properties": [
+        "urn:miot-spec:property:mute:0000003B"
+    ]
+}

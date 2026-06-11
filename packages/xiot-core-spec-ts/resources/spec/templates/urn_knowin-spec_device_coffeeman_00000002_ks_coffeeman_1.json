@@ -1,0 +1,121 @@
+{
+  "type": "urn:knowin-spec:device:coffeeman:00000002:ks:coffeeman:1",
+  "description": {
+    "en-US": "Coffee Machine",
+    "zh-TW": "咖啡機",
+    "zh-CN": "咖啡机"
+  },
+  "services": [
+    {
+      "x-required": false,
+      "iid": 1,
+      "type": "urn:knowin-spec:service:coffee:00000001",
+      "x-action-addable": false,
+      "x-event-addable": false,
+      "x-property-addable": false,
+      "description": {
+        "en-US": "Coffee",
+        "zh-TW": "咖啡機",
+        "zh-CN": "咖啡机"
+      },
+      "properties": [
+        {
+          "type": "urn:knowin-spec:property:content:00000001",
+          "description": {
+            "en-US": "Content",
+            "zh-TW": "內容",
+            "zh-CN": "内容"
+          },
+          "format": "string",
+          "access": [],
+          "x-required": true,
+          "iid": 1
+        },
+        {
+          "type": "urn:knowin-spec:property:context:00000002",
+          "description": {
+            "en-US": "Context",
+            "zh-TW": "上下文",
+            "zh-CN": "上下文"
+          },
+          "format": "string",
+          "access": [],
+          "x-required": true,
+          "iid": 2
+        }
+      ],
+      "actions": [
+        {
+          "x-required": true,
+          "iid": 1,
+          "type": "urn:knowin-spec:action:make:00000001",
+          "description": {
+            "en-US": "Make",
+            "zh-TW": "製作",
+            "zh-CN": "制作"
+          },
+          "in": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ],
+          "out": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "x-required": true,
+          "iid": 1,
+          "type": "urn:knowin-spec:event:notify:00000001",
+          "description": {
+            "en-US": "Notify",
+            "zh-TW": "通知",
+            "zh-CN": "通知"
+          },
+          "arguments": [
+            {
+              "piid": 1,
+              "repeat": [
+                1,
+                1
+              ]
+            },
+            {
+              "piid": 2,
+              "repeat": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

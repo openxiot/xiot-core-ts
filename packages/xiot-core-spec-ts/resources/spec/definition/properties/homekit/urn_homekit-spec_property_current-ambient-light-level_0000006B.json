@@ -1,0 +1,8 @@
+{
+    "type": "urn:homekit-spec:property:current-ambient-light-level:0000006b",
+    "description": "Current Ambient Light Level",
+    "format": "float",
+    "access": ["read", "notify"],
+    "value-range": [0.0, 100000.0, 1.0],
+    "unit": "lux"
+}
