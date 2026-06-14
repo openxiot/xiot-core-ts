@@ -3,7 +3,7 @@ import {DeviceType} from '../../typedef/definition/urn/DeviceType';
 import {DescriptionCodec} from '../definition/DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
 import {ServiceTemplateCodec} from './ServiceTemplateCodec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class DeviceTemplateCodec {
