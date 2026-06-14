@@ -1,6 +1,6 @@
 {
   "name": "@openxiot/xiot-core-xcp-ts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "XIOT XCP Core",
   "main": "dist/index.js",
   "module": "dist/index.js",

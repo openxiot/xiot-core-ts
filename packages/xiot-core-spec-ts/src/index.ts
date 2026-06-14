@@ -75,6 +75,7 @@ export * from './xiot/core/spec/typedef/key/AccessKey';
 export * from './xiot/core/spec/typedef/key/DeviceKey';
 export * from './xiot/core/spec/typedef/key/DeviceCert';
 export * from './xiot/core/spec/typedef/lifecycle/Lifecycle';
+export * from './xiot/core/spec/typedef/lifecycle/WithLifecycle';
 export * from './xiot/core/spec/typedef/lifecycle/ObjectWithLifecycle';
 export * from './xiot/core/spec/typedef/notice/device/impl/DeviceAccessKeyChanged';
 export * from './xiot/core/spec/typedef/notice/device/impl/DeviceChildrenAdded';
