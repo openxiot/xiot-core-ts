@@ -1,63 +1,65 @@
-import { ServiceType } from './urn/ServiceType';
-import { PropertyType } from './urn/PropertyType';
-import { ActionType } from './urn/ActionType';
-import { EventType } from './urn/EventType';
+import {ServiceType} from './urn/ServiceType';
+import {PropertyType} from './urn/PropertyType';
+import {ActionType} from './urn/ActionType';
+import {EventType} from './urn/EventType';
+import {WithLifecycle} from '../lifecycle/WithLifecycle';
 
-export class ServiceDefinition {
-  type: ServiceType;
+export class ServiceDefinition extends WithLifecycle {
+    type: ServiceType;
 
-  description: Map<string, string> = new Map<string, string>();
+    description: Map<string, string> = new Map<string, string>();
 
-  requiredProperties: PropertyType[] = [];
+    requiredProperties: PropertyType[] = [];
 
-  optionalProperties: PropertyType[] = [];
+    optionalProperties: PropertyType[] = [];
 
-  requiredActions: ActionType[] = [];
+    requiredActions: ActionType[] = [];
 
-  optionalActions: ActionType[] = [];
+    optionalActions: ActionType[] = [];
 
-  requiredEvents: EventType[] = [];
+    requiredEvents: EventType[] = [];
 
-  optionalEvents: EventType[] = [];
+    optionalEvents: EventType[] = [];
 
-  constructor(
-    type: ServiceType,
-    description: Map<string, string>,
-    requiredProperties: PropertyType[],
-    optionalProperties: PropertyType[],
-    requiredActions: ActionType[],
-    optionalActions: ActionType[],
-    requiredEvents: EventType[],
-    optionalEvents: EventType[]
-  ) {
-    this.type = type;
+    constructor(
+        type: ServiceType,
+        description: Map<string, string>,
+        requiredProperties: PropertyType[],
+        optionalProperties: PropertyType[],
+        requiredActions: ActionType[],
+        optionalActions: ActionType[],
+        requiredEvents: EventType[],
+        optionalEvents: EventType[]
+    ) {
+        super();
+        this.type = type;
 
-    if (description != null) {
-      this.description = description;
+        if (description != null) {
+            this.description = description;
+        }
+
+        if (requiredProperties != null) {
+            this.requiredProperties = requiredProperties;
+        }
+
+        if (optionalProperties != null) {
+            this.optionalProperties = optionalProperties;
+        }
+
+        if (requiredActions != null) {
+            this.requiredActions = requiredActions;
+        }
+
+        if (optionalActions != null) {
+            this.optionalActions = optionalActions;
+        }
+
+        if (requiredEvents != null) {
+            this.requiredEvents = requiredEvents;
+        }
+
+        if (optionalEvents != null) {
+            this.optionalEvents = optionalEvents;
+        }
     }
-
-    if (requiredProperties != null) {
-      this.requiredProperties = requiredProperties;
-    }
-
-    if (optionalProperties != null) {
-      this.optionalProperties = optionalProperties;
-    }
-
-    if (requiredActions != null) {
-      this.requiredActions = requiredActions;
-    }
-
-    if (optionalActions != null) {
-      this.optionalActions = optionalActions;
-    }
-
-    if (requiredEvents != null) {
-      this.requiredEvents = requiredEvents;
-    }
-
-    if (optionalEvents != null) {
-      this.optionalEvents = optionalEvents;
-    }
-  }
 }

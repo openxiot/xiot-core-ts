@@ -1,11 +1,8 @@
 import {DeviceType} from '../definition/urn/DeviceType';
 import {ServiceTemplate} from './ServiceTemplate';
+import {WithLifecycle} from '../lifecycle/WithLifecycle';
 
-
-/**
- * ouyang
- */
-export class DeviceTemplate {
+export class DeviceTemplate extends WithLifecycle{
   type: DeviceType;
 
   description: Map<string, string> = new Map<string, string>();
@@ -13,6 +10,7 @@ export class DeviceTemplate {
   services: Map<number, ServiceTemplate> = new Map<number, ServiceTemplate>();
 
   constructor(type: DeviceType, description: Map<string, string>, services: ServiceTemplate[]) {
+    super();
     this.type = type;
 
     if (description != null) {

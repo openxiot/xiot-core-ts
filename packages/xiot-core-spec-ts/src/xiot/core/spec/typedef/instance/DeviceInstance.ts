@@ -1,7 +1,8 @@
 import {Service} from './Service';
 import {Urn} from "../definition/urn/Urn";
+import {WithLifecycle} from '../lifecycle/WithLifecycle';
 
-export class DeviceInstance {
+export class DeviceInstance extends WithLifecycle {
 
     services: Map<number, Service> = new Map<number, Service>();
 
@@ -10,6 +11,7 @@ export class DeviceInstance {
         public description: Map<string, string>,
         services: Service[]
     ) {
+        super();
         services.forEach(x => {
             return this.services.set(x.iid, x);
         });
