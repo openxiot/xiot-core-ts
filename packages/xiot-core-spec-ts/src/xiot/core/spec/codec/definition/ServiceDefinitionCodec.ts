@@ -5,7 +5,7 @@ import {PropertyTypeCodec} from './type/PropertyTypeCodec';
 import {ActionTypeCodec} from './type/ActionTypeCodec';
 import {EventTypeCodec} from './type/EventTypeCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class ServiceDefinitionCodec {

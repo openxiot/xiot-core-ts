@@ -2,7 +2,7 @@ import {Spec} from '../../typedef/constant/Spec';
 import {UnitDefinition} from '../../typedef/definition/UnitDefinition';
 import {UnitType} from '../../typedef/definition/urn/UnitType';
 import {DescriptionCodec} from './DescriptionCodec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class UnitDefinitionCodec {
   static decodeArray(list: any[]): UnitDefinition[] {

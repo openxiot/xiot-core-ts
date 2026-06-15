@@ -3,7 +3,7 @@ import {EventType} from '../../typedef/definition/urn/EventType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class EventDefinitionCodec {
   static decodeArray(list: any[]): EventDefinition[] {

@@ -3,7 +3,7 @@ import {ActionType} from '../../typedef/definition/urn/ActionType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class ActionDefinitionCodec {

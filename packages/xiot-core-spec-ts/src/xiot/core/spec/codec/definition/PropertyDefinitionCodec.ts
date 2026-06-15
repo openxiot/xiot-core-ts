@@ -10,7 +10,7 @@ import {ValueRangeCodec} from './ValueRangeCodec';
 import {ValueList} from '../../typedef/definition/property/ValueList';
 import {ValueRange} from '../../typedef/definition/property/ValueRange';
 import {PropertyTypeCodec} from './type/PropertyTypeCodec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class PropertyDefinitionCodec {

@@ -2,7 +2,7 @@ import {FormatDefinition} from '../../typedef/definition/FormatDefinition';
 import {FormatType} from '../../typedef/definition/urn/FormatType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
+import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class FormatDefinitionCodec {
   static decodeArray(list: any[]): FormatDefinition[] {
