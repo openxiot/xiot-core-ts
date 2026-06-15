@@ -1,10 +1,7 @@
 import {NamespaceDefinition} from '../../typedef/definition/NamespaceDefinition';
 import {Spec} from '../../typedef/constant/Spec';
 import {DescriptionCodec} from './DescriptionCodec';
-import {
-  Visibility,
-  VisibilityFromString
-} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/visibility/Visibility";
+import {Visibility, VisibilityFromString} from "../../typedef/visibility/Visibility";
 
 export class NamespaceDefinitionCodec {
   static decodeArray(list: any[]): NamespaceDefinition[] {

@@ -1,4 +1,4 @@
-import {Visibility} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/visibility/Visibility";
+import {Visibility} from "../visibility/Visibility";
 
 export class NamespaceDefinition {
 
