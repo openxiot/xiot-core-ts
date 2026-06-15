@@ -15,18 +15,21 @@ export class NamespaceDefinitionCodec {
   }
 
   static decode(o: any): NamespaceDefinition {
+    const organization = o.organization || '';
     const visibility = o[Spec.VISIBILITY] || '';
     const namespace = o[Spec.NAMESPACE];
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
     const def = new NamespaceDefinition(namespace, description);
     def.visibility = VisibilityFromString(visibility);
+    def.organization = organization;
     return def;
   }
 
   static encode(def: NamespaceDefinition): any {
     let o: any = {
       namespace: def.namespace,
-      description: DescriptionCodec.encode(def.description)
+      description: DescriptionCodec.encode(def.description),
+      organization: def.organization
     };
 
     if (def.visibility === Visibility.UNDEFINED) {
