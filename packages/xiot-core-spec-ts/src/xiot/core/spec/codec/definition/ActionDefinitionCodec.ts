@@ -3,6 +3,7 @@ import {ActionType} from '../../typedef/definition/urn/ActionType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 
 export class ActionDefinitionCodec {
@@ -17,11 +18,14 @@ export class ActionDefinitionCodec {
   }
 
   static decode(o: any): ActionDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = new ActionType(o[Spec.TYPE]);
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
     const argumentsIn = ArgumentDefinitionCodec.decodeArray(o[Spec.IN]);
     const argumentsOut = ArgumentDefinitionCodec.decodeArray(o[Spec.OUT]);
-    return new ActionDefinition(type, description, argumentsIn, argumentsOut);
+    const def = new ActionDefinition(type, description, argumentsIn, argumentsOut);
+    def.lifecycle = lifecycle;
+    return def;
   }
 
   static encode(def: ActionDefinition): any {
@@ -36,6 +40,10 @@ export class ActionDefinitionCodec {
 
     if (def.out.length > 0) {
       o[Spec.OUT] = ArgumentDefinitionCodec.encodeArray(def.out);
+    }
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 
     return o;

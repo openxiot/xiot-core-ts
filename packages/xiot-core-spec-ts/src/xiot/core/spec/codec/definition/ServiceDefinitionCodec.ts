@@ -5,6 +5,7 @@ import {PropertyTypeCodec} from './type/PropertyTypeCodec';
 import {ActionTypeCodec} from './type/ActionTypeCodec';
 import {EventTypeCodec} from './type/EventTypeCodec';
 import {Spec} from '../../typedef/constant/Spec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 
 export class ServiceDefinitionCodec {
@@ -19,6 +20,7 @@ export class ServiceDefinitionCodec {
   }
 
   static decode(o: any): ServiceDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = new ServiceType(o[Spec.TYPE]);
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
     const requiredProperties = PropertyTypeCodec.decodeArray(o[Spec.REQUIRED_PROPERTIES]);
@@ -38,7 +40,7 @@ export class ServiceDefinitionCodec {
       type._event_addable = true;
     }
 
-    return new ServiceDefinition(
+    const def = new ServiceDefinition(
       type,
       description,
       requiredProperties,
@@ -48,6 +50,8 @@ export class ServiceDefinitionCodec {
       requiredEvents,
       optionalEvents
     );
+    def.lifecycle = lifecycle;
+    return def;
   }
 
   static encode(def: ServiceDefinition): any {
@@ -78,6 +82,10 @@ export class ServiceDefinitionCodec {
 
     if (def.optionalEvents.length > 0) {
       o[Spec.OPTIONAL_EVENTS] = EventTypeCodec.encodeArray(def.optionalEvents);
+    }
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 
     return o;

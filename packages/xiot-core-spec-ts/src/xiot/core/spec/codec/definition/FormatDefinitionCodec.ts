@@ -2,6 +2,7 @@ import {FormatDefinition} from '../../typedef/definition/FormatDefinition';
 import {FormatType} from '../../typedef/definition/urn/FormatType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 export class FormatDefinitionCodec {
   static decodeArray(list: any[]): FormatDefinition[] {
@@ -17,15 +18,24 @@ export class FormatDefinitionCodec {
   }
 
   static decode(o: any): FormatDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = FormatType.parse(o[Spec.TYPE] || '');
-    return new FormatDefinition(type, DescriptionCodec.decode(o[Spec.DESCRIPTION]));
+    const def = new FormatDefinition(type, DescriptionCodec.decode(o[Spec.DESCRIPTION]));
+    def.lifecycle = lifecycle;
+    return def;
   }
 
   static encode(def: FormatDefinition): any {
-    return {
+    const o: any = {
       type: def.type.toString(),
       description: DescriptionCodec.encode(def.description)
     };
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
+    }
+
+    return o;
   }
 
   static encodeArray(list: FormatDefinition[]): any[] {

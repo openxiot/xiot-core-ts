@@ -3,6 +3,7 @@ import {EventType} from '../../typedef/definition/urn/EventType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
 import {Spec} from '../../typedef/constant/Spec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 export class EventDefinitionCodec {
   static decodeArray(list: any[]): EventDefinition[] {
@@ -16,10 +17,13 @@ export class EventDefinitionCodec {
   }
 
   static decode(o: any): EventDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = new EventType(o[Spec.TYPE]);
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
     const list = ArgumentDefinitionCodec.decodeArray(o[Spec.ARGUMENTS]);
-    return new EventDefinition(type, description, list);
+    const def = new EventDefinition(type, description, list);
+    def.lifecycle = lifecycle;
+    return def;
   }
 
   static encode(def: EventDefinition): any {
@@ -30,6 +34,10 @@ export class EventDefinitionCodec {
 
     if (def.arguments.length > 0) {
       o[Spec.ARGUMENTS] = ArgumentDefinitionCodec.encodeArray(def.arguments);
+    }
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 
     return o;

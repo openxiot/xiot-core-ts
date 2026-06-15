@@ -2,6 +2,7 @@ import {Spec} from '../../typedef/constant/Spec';
 import {UnitDefinition} from '../../typedef/definition/UnitDefinition';
 import {UnitType} from '../../typedef/definition/urn/UnitType';
 import {DescriptionCodec} from './DescriptionCodec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 export class UnitDefinitionCodec {
   static decodeArray(list: any[]): UnitDefinition[] {
@@ -17,15 +18,24 @@ export class UnitDefinitionCodec {
   }
 
   static decode(o: any): UnitDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = UnitType.parse(o[Spec.TYPE] || '');
-    return new UnitDefinition(type, DescriptionCodec.decode(o[Spec.DESCRIPTION]));
+    const def = new UnitDefinition(type, DescriptionCodec.decode(o[Spec.DESCRIPTION]));
+    def.lifecycle = lifecycle;
+    return def;
   }
 
   static encode(def: UnitDefinition): any {
-    return {
+    const o: any = {
       type: def.type.toString(),
       description: DescriptionCodec.encode(def.description)
     };
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
+    }
+
+    return o;
   }
 
   static encodeArray(list: UnitDefinition[]): any[] {

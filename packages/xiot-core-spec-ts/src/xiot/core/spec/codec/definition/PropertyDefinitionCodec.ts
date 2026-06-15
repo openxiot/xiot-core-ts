@@ -10,6 +10,7 @@ import {ValueRangeCodec} from './ValueRangeCodec';
 import {ValueList} from '../../typedef/definition/property/ValueList';
 import {ValueRange} from '../../typedef/definition/property/ValueRange';
 import {PropertyTypeCodec} from './type/PropertyTypeCodec';
+import {LifeCycleFromString} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/lifecycle/Lifecycle";
 
 
 export class PropertyDefinitionCodec {
@@ -39,11 +40,13 @@ export class PropertyDefinitionCodec {
   }
 
   static decode(o: any): PropertyDefinition {
+    const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
     const type = new PropertyType(o[Spec.TYPE]);
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
 
     const def: PropertyDefinition = new PropertyDefinition(type, description);
 
+    def.lifecycle = lifecycle;
     def.format = DataFormatFromString(o[Spec.FORMAT]);
     def.access = Access.create(o[Spec.ACCESS]);
     def.unit = o[Spec.UNIT];
@@ -95,6 +98,10 @@ export class PropertyDefinitionCodec {
       } else {
         o[Spec.MEMBERS] = def.members;
       }
+    }
+
+    if (def.lifecycle !== undefined) {
+      o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 
     return o;
