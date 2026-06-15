@@ -191,6 +191,7 @@ export * from './xiot/core/spec/typedef/version/GenericVersion';
 export * from './xiot/core/spec/typedef/version/SemanticVersion';
 export * from './xiot/core/spec/typedef/somewhere/Somewhere';
 export * from './xiot/core/spec/typedef/somewhere/Where';
+export * from './xiot/core/spec/typedef/visibility/Visibility';
 export * from './xiot/core/spec/typedef/xid/ActionID';
 export * from './xiot/core/spec/typedef/xid/EventID';
 export * from './xiot/core/spec/typedef/xid/PropertyID';
