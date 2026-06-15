@@ -32,7 +32,7 @@ export class NamespaceDefinitionCodec {
       organization: def.organization
     };
 
-    if (def.visibility === Visibility.UNDEFINED) {
+    if (def.visibility !== Visibility.UNDEFINED) {
       o[Spec.VISIBILITY] = def.visibility;
     }
 
