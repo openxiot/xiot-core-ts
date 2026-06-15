@@ -1,7 +1,10 @@
+import {Visibility} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/typedef/visibility/Visibility";
+
 export class NamespaceDefinition {
 
   namespace = '';
   description: Map<string, string> = new Map<string, string>();
+  visibility: Visibility = Visibility.UNDEFINED;
 
   constructor(namespace: string, description: Map<string, string>) {
     this.namespace = namespace;

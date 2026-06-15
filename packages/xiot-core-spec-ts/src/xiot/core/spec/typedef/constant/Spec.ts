@@ -1,4 +1,7 @@
 export class Spec {
+
+  public static VISIBILITY = 'visibility';
+
   public static IID = 'iid';
 
   public static SIID = 'siid';

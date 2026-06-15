@@ -1,6 +1,6 @@
 {
   "name": "xiot-core-ts",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "private": true,
   "description": "Openxiot Core TypeScript",
   "author": "gkcity",
