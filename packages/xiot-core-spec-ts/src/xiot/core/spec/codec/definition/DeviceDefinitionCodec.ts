@@ -17,10 +17,9 @@ export class DeviceDefinitionCodec {
 
   static decode(o: any): DeviceDefinition {
     const lifecycle = LifeCycleFromString(o[Spec.LIFECYCLE]);
-    const category = o.category;
     const type = new DeviceType(o[Spec.TYPE]);
     const description = DescriptionCodec.decode(o[Spec.DESCRIPTION]);
-    const def = new DeviceDefinition(category, type, description);
+    const def = new DeviceDefinition(type, description);
     def.lifecycle = lifecycle;
     return def;
   }
@@ -30,10 +29,6 @@ export class DeviceDefinitionCodec {
       type: def.type.toString(),
       description: DescriptionCodec.encode(def.description)
     };
-
-    if (def.category != null) {
-      o.category = def.category;
-    }
 
     if (def.lifecycle !== undefined) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
