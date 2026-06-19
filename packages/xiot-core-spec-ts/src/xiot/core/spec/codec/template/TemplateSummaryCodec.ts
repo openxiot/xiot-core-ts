@@ -5,6 +5,15 @@ import {Spec} from '../../typedef/constant/Spec';
 import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class TemplateSummaryCodec {
+
+  static decodeArray(array: any[]): TemplateSummary[] {
+    return array
+        ? array.map(x => {
+          return TemplateSummaryCodec.decode(x);
+        })
+        : [];
+  }
+
   static decode(o: any): TemplateSummary {
     const lifecycle = LifeCycleFromString(o.lifecycle || '');
     const type = new DeviceType(o[Spec.TYPE]);
