@@ -185,6 +185,7 @@ export * from './xiot/core/spec/typedef/template/DeviceTemplate';
 export * from './xiot/core/spec/typedef/template/EventTemplate';
 export * from './xiot/core/spec/typedef/template/PropertyTemplate';
 export * from './xiot/core/spec/typedef/template/ServiceTemplate';
+export * from './xiot/core/spec/typedef/template/TemplateSummary';
 export * from './xiot/core/spec/typedef/utils/TemplateHelper';
 export * from './xiot/core/spec/typedef/utils/Stack';
 export * from './xiot/core/spec/typedef/version/GenericVersion';
@@ -298,6 +299,7 @@ export * from './xiot/core/spec/codec/template/DeviceTemplateCodec';
 export * from './xiot/core/spec/codec/template/ServiceTemplateCodec';
 export * from './xiot/core/spec/codec/template/EventTemplateCodec';
 export * from './xiot/core/spec/codec/template/PropertyTemplateCodec';
+export * from './xiot/core/spec/codec/template/TemplateSummaryCodec';
 
 export * from './xiot/core/support/codegen/codec/controller/ActionControllerCodec';
 export * from './xiot/core/support/codegen/codec/controller/DeviceControllerCodec';
