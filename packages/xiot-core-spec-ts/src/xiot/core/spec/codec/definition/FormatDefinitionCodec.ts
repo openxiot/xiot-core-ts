@@ -2,7 +2,7 @@ import {FormatDefinition} from '../../typedef/definition/FormatDefinition';
 import {FormatType} from '../../typedef/definition/urn/FormatType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class FormatDefinitionCodec {
   static decodeArray(list: any[]): FormatDefinition[] {
@@ -31,7 +31,7 @@ export class FormatDefinitionCodec {
       description: DescriptionCodec.encode(def.description)
     };
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

@@ -3,7 +3,7 @@ import {ActionType} from '../../typedef/definition/urn/ActionType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class ActionDefinitionCodec {
@@ -42,7 +42,7 @@ export class ActionDefinitionCodec {
       o[Spec.OUT] = ArgumentDefinitionCodec.encodeArray(def.out);
     }
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

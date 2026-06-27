@@ -1,5 +1,4 @@
 {
-    "category": "xxx",
     "type": "urn:homekit-spec:device:garage:00000000",
     "description": "Garage"
 }

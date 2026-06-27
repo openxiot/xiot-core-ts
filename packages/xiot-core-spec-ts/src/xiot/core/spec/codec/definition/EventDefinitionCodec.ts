@@ -3,7 +3,7 @@ import {EventType} from '../../typedef/definition/urn/EventType';
 import {DescriptionCodec} from './DescriptionCodec';
 import {ArgumentDefinitionCodec} from './ArgumentDefinitionCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class EventDefinitionCodec {
   static decodeArray(list: any[]): EventDefinition[] {
@@ -36,7 +36,7 @@ export class EventDefinitionCodec {
       o[Spec.ARGUMENTS] = ArgumentDefinitionCodec.encodeArray(def.arguments);
     }
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

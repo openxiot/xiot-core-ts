@@ -18,7 +18,6 @@
       ],
       "upgrade": ["Direct", "Gateway", "Ble"],
       "protocol": "wifi",
-      "naming": ["灯", "xx"],
       "lifecycle": "development",
       "creator": {"id": "xxx", "name": "xxx", "timestamp": 0},
       "updater": {"id": "xxx", "name": "xxx", "timestamp": 0}

@@ -2,7 +2,7 @@ import {TemplateSummary} from '../../typedef/template/TemplateSummary';
 import {DeviceType} from '../../typedef/definition/urn/DeviceType';
 import {DescriptionCodec} from '../definition/DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class TemplateSummaryCodec {
 
@@ -24,10 +24,15 @@ export class TemplateSummaryCodec {
   }
 
   static encode(device: TemplateSummary): any {
-    return {
-      lifecycle: device.lifecycle.toString(),
+    const o: any = {
       type: device.type.toString(),
       description: DescriptionCodec.encode(device.description)
     };
+
+    if (device.lifecycle !== LifeCycle.UNDEFINED) {
+      o.lifecycle = device.lifecycle.toString();
+    }
+
+    return o;
   }
 }

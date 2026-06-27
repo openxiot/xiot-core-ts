@@ -10,7 +10,7 @@ import {ValueRangeCodec} from './ValueRangeCodec';
 import {ValueList} from '../../typedef/definition/property/ValueList';
 import {ValueRange} from '../../typedef/definition/property/ValueRange';
 import {PropertyTypeCodec} from './type/PropertyTypeCodec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class PropertyDefinitionCodec {
@@ -100,7 +100,7 @@ export class PropertyDefinitionCodec {
       }
     }
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

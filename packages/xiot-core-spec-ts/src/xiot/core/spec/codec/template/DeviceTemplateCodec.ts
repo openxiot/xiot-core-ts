@@ -3,7 +3,7 @@ import {DeviceType} from '../../typedef/definition/urn/DeviceType';
 import {DescriptionCodec} from '../definition/DescriptionCodec';
 import {Spec} from '../../typedef/constant/Spec';
 import {ServiceTemplateCodec} from './ServiceTemplateCodec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class DeviceTemplateCodec {
   static decode(o: any): DeviceTemplate {
@@ -17,11 +17,16 @@ export class DeviceTemplateCodec {
   }
 
   static encode(device: DeviceTemplate): any {
-    return {
-      lifecycle: device.lifecycle.toString(),
+    const o: any = {
       type: device.type.toString(),
       description: DescriptionCodec.encode(device.description),
       services: ServiceTemplateCodec.encodeArray(device.services)
     };
+
+    if (device.lifecycle !== LifeCycle.UNDEFINED) {
+      o.lifecycle = device.lifecycle.toString();
+    }
+
+    return o;
   }
 }

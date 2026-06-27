@@ -2,7 +2,7 @@ import {Spec} from '../../typedef/constant/Spec';
 import {DeviceDefinition} from '../../typedef/definition/DeviceDefinition';
 import {DeviceType} from '../../typedef/definition/urn/DeviceType';
 import {DescriptionCodec} from './DescriptionCodec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class DeviceDefinitionCodec {
   static decodeArray(list: any[]): DeviceDefinition[] {
@@ -30,7 +30,7 @@ export class DeviceDefinitionCodec {
       description: DescriptionCodec.encode(def.description)
     };
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

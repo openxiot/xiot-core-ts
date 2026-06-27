@@ -5,7 +5,7 @@ import {PropertyTypeCodec} from './type/PropertyTypeCodec';
 import {ActionTypeCodec} from './type/ActionTypeCodec';
 import {EventTypeCodec} from './type/EventTypeCodec';
 import {Spec} from '../../typedef/constant/Spec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 
 export class ServiceDefinitionCodec {
@@ -84,7 +84,7 @@ export class ServiceDefinitionCodec {
       o[Spec.OPTIONAL_EVENTS] = EventTypeCodec.encodeArray(def.optionalEvents);
     }
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

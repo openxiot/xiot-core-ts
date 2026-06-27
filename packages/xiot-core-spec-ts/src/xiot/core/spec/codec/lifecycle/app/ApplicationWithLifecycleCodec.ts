@@ -6,10 +6,15 @@ import {LifeCycle, LifeCycleFromString} from '../../../typedef/lifecycle/Lifecyc
 
 export class ApplicationWithLifecycleCodec {
   static encode(obj: ObjectWithLifecycle<Application>) {
-    return {
-      lifecycle: obj.lifecycle.toString(),
+    const o: any = {
       application: ApplicationCodec.encode(obj.value)
     };
+
+    if (obj.lifecycle !== LifeCycle.UNDEFINED) {
+      o.lifecycle = obj.lifecycle.toString();
+    }
+
+    return o;
   }
 
   static encodeArray(resource: ObjectWithLifecycle<Application>[]) {

@@ -4,7 +4,7 @@ import {DescriptionCodec} from '../definition/DescriptionCodec';
 import {ServiceCodec} from './ServiceCodec';
 import {UrnType} from "../../typedef/definition/urn/UrnType";
 import {Urn} from "../../typedef/definition/urn/Urn";
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class DeviceInstanceCodec {
   static decode(o: any): DeviceInstance {
@@ -18,11 +18,16 @@ export class DeviceInstanceCodec {
   }
 
   static encode(device: DeviceInstance): any {
-    return {
-      lifecycle: device.lifecycle.toString(),
+    const o: any = {
       type: device.type.toString(),
       description: DescriptionCodec.encode(device.description),
       services: ServiceCodec.encodeArray(device.services)
     };
+
+    if (device.lifecycle !== LifeCycle.UNDEFINED) {
+      o.lifecycle = device.lifecycle.toString();
+    }
+
+    return o;
   }
 }

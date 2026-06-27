@@ -1,5 +1,4 @@
 {
-    "category": "xxx",
     "type": "urn:homekit-spec:device:window-covering:00000000",
     "description": "Window Covering"
 }

@@ -2,7 +2,7 @@ import {Spec} from '../../typedef/constant/Spec';
 import {UnitDefinition} from '../../typedef/definition/UnitDefinition';
 import {UnitType} from '../../typedef/definition/urn/UnitType';
 import {DescriptionCodec} from './DescriptionCodec';
-import {LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
+import {LifeCycle, LifeCycleFromString} from "../../typedef/lifecycle/Lifecycle";
 
 export class UnitDefinitionCodec {
   static decodeArray(list: any[]): UnitDefinition[] {
@@ -31,7 +31,7 @@ export class UnitDefinitionCodec {
       description: DescriptionCodec.encode(def.description)
     };
 
-    if (def.lifecycle !== undefined) {
+    if (def.lifecycle !== LifeCycle.UNDEFINED) {
       o[Spec.LIFECYCLE] = def.lifecycle.toString();
     }
 

@@ -31,7 +31,7 @@ export class ProductBasicCodec {
             template: x.template.toString(),
             icon: x.icon,
             name: LocalizedNameCodec.encode(x.name),
-            alias: LocalizedNameCodec.decodeArray(x.alias),
+            alias: LocalizedNameCodec.encodeArray(x.alias),
             upgrade: x.upgrade,
             protocol: x.protocol,
             lifecycle: x.lifecycle.toString(),
