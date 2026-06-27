@@ -3,7 +3,7 @@ import {DeviceType} from '../../../typedef/definition/urn/DeviceType';
 import {CreatorCodec} from "../../by/CreatorCodec";
 import {UpdaterCodec} from "../../by/UpdaterCodec";
 import {LifeCycleFromString} from "../../../typedef/lifecycle/Lifecycle";
-import {ProductNameCodec} from "../../product/basic/ProductNameCodec";
+import {LocalizedNameCodec} from "../../name/LocalizedNameCodec";
 
 export class ProductBasicCodec {
     static decode(x: any): ProductBasic {
@@ -13,7 +13,8 @@ export class ProductBasicCodec {
             x.model,
             DeviceType.parse(x.template),
             x.icon,
-            ProductNameCodec.decode(x.name),
+            LocalizedNameCodec.decode(x.name),
+            LocalizedNameCodec.decodeArray(x.alias),
             x.upgrade,
             x.protocol,
             LifeCycleFromString(x.lifecycle),
@@ -29,7 +30,8 @@ export class ProductBasicCodec {
             model: x.model,
             template: x.template.toString(),
             icon: x.icon,
-            name: ProductNameCodec.encode(x.name),
+            name: LocalizedNameCodec.encode(x.name),
+            alias: LocalizedNameCodec.decodeArray(x.alias),
             upgrade: x.upgrade,
             protocol: x.protocol,
             lifecycle: x.lifecycle.toString(),
