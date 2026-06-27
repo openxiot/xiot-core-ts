@@ -21,7 +21,10 @@ export class DescriptionCodec {
     }
 
     if (description.size === 1) {
-      return description.get(Spec.EN_US);
+      const enValue = description.get(Spec.EN_US);
+      if (enValue !== undefined) {
+        return enValue;
+      }
     }
 
     const o = Object.create(null);
