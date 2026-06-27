@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "organization": "openxiot",
+      "model": "j10",
+      "template": "urn:homekit-spec:device:lightbulb:00000005:ks:b1:1",
+      "icon": "http://xxx/1.png",
+      "name": {
+        "original": {
+          "en-US": "xxx",
+          "zh-CN": "zz"
+        },
+        "candidate": [
+          {
+            "en-US": "a",
+            "zh-CN": "b"
+          }
+        ]
+      },
+      "upgrade": ["Direct", "Gateway", "Ble"],
+      "protocol": "wifi",
+      "naming": ["灯", "xx"],
+      "lifecycle": "development",
+      "creator": {"id": "xxx", "name": "xxx", "timestamp": 0},
+      "updater": {"id": "xxx", "name": "xxx", "timestamp": 0}
+    }
+  ]
+}

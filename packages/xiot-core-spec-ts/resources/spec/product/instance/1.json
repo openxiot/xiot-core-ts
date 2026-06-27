@@ -1,0 +1,6 @@
+{
+  "lifecycle": "development",
+  "type": "urn:homekit-spec:device:lightbulb:00000005:ks:b1:1",
+  "creator": {"id": "xxx","name": "xxx","timestamp": 0},
+  "updater": {"id": "xxx","name": "xxx","timestamp": 0}
+}
