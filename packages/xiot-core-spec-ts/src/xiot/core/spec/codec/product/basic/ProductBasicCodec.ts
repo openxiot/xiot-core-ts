@@ -3,7 +3,7 @@ import {DeviceType} from '../../../typedef/definition/urn/DeviceType';
 import {CreatorCodec} from "../../by/CreatorCodec";
 import {UpdaterCodec} from "../../by/UpdaterCodec";
 import {LifeCycleFromString} from "../../../typedef/lifecycle/Lifecycle";
-import {ProductNameCodec} from "@openxiot/xiot-core-spec-ts/xiot/core/spec/codec/product/basic/ProductNameCodec";
+import {ProductNameCodec} from "../../product/basic/ProductNameCodec";
 
 export class ProductBasicCodec {
     static decode(x: any): ProductBasic {
