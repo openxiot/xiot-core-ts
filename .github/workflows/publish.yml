@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -18,11 +19,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
 
+      # OIDC trusted publishing requires npm >= 11.5.1, but Node 20 and 22 both
+      # bundle npm 10.x, so npm is upgraded explicitly below.
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
+          node-version: 22.14.0
+
+      - name: Upgrade npm for OIDC
+        run: npm install -g npm@^11.5.1
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -38,7 +43,8 @@ jobs:
       - name: Build packages
         run: pnpm build
 
+      # No NODE_AUTH_TOKEN on purpose: an empty one makes npm attempt token
+      # auth and fail with a bare E404 instead of falling back to OIDC.
       - name: Publish to npm
-        run: pnpm publish:spec
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: packages/xiot-core-spec-ts
+        run: npm publish --access public
