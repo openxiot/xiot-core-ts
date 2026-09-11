@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "template": "urn:jd-spec:device:light:00000000",
+      "lifecycle": "development",
+      "protocol": "wifi",
+      "creator": {
+        "name": "gkcity",
+        "id": "6a2cb0608891cedd2d1fe3d5",
+        "timestamp": 1782555516276
+      },
+      "upgrade": [],
+      "organization": "fox",
+      "icon": "https://ossstaging.blob.core.windows.net/files/fox/product/icon/fde8d41a-572c-40a5-aa60-007e1ac0bdfd.jpg",
+      "name": "",
+      "alias": [],
+      "model": "fff",
+      "id": "6a3fa37cea1601bf652c18a5",
+      "updater": {
+        "name": "",
+        "id": "",
+        "timestamp": 0
+      }
+    },
+    {
+      "template": "urn:jd-spec:device:light:00000000",
+      "lifecycle": "development",
+      "protocol": "wifi",
+      "creator": {
+        "name": "gkcity",
+        "id": "6a2cb0608891cedd2d1fe3d5",
+        "timestamp": 1782564818232
+      },
+      "upgrade": [],
+      "organization": "fox",
+      "icon": "",
+      "name": "",
+      "alias": [],
+      "model": "eee",
+      "id": "6a3fc7d2ea1601bf652c18a7",
+      "updater": {
+        "name": "",
+        "id": "",
+        "timestamp": 0
+      }
+    },
+    {
+      "template": "urn:jd-spec:device:fan:00000003",
+      "lifecycle": "development",
+      "protocol": "wifi",
+      "creator": {
+        "name": "gkcity",
+        "id": "6a2cb0608891cedd2d1fe3d5",
+        "timestamp": 1782565147664
+      },
+      "upgrade": [
+        "direct"
+      ],
+      "organization": "fox",
+      "icon": "",
+      "name": "",
+      "alias": [],
+      "model": "ttt",
+      "id": "6a3fc91bea1601bf652c18a9",
+      "updater": {
+        "name": "",
+        "id": "",
+        "timestamp": 0
+      }
+    }
+  ]
+}

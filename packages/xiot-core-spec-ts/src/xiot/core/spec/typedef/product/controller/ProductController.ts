@@ -4,7 +4,8 @@ import {Updater} from "../../by/Updater";
 import {GenericVersion} from "../../version/GenericVersion";
 import {Urn} from "../../definition/urn/Urn";
 
-export class ProductPanelWeb {
+// 产品控制页：格式为 html 或 zip
+export class ProductControllerWeb {
   constructor(
     public format: string,
     public url: string,
@@ -12,21 +13,13 @@ export class ProductPanelWeb {
   }
 }
 
-export class ProductPanelMiniApp {
+// 产品控制页
+export class ProductController {
   constructor(
-    public appId: string,
-  ) {
-  }
-}
-
-export class ProductPanel {
-  constructor(
-    public status: string,
     public lifecycle: LifeCycle = LifeCycle.DEVELOPMENT,
     public category: string,
     public type: string,
-    public web: ProductPanelWeb | null,
-    public miniapp: ProductPanelMiniApp | null,
+    public web: ProductControllerWeb | null,
     public version: GenericVersion,
     public instance: Urn,
     public creator: Creator | null = null,

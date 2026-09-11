@@ -1,4 +1,4 @@
-import {ProductPanel, ProductPanelMiniApp, ProductPanelWeb} from '../../../typedef/product/panel/ProductPanel';
+import {ProductController, ProductControllerWeb} from "../../../typedef/product/controller/ProductController";
 import {LifeCycle, LifeCycleFromString} from "../../../typedef/lifecycle/Lifecycle";
 import {GenericVersionCodec} from "../../version/GenericVersionCodec";
 import {CreatorCodec} from "../../by/CreatorCodec";
@@ -8,8 +8,8 @@ import {Urn} from "../../../typedef/definition/urn/Urn";
 import {UrnType} from "../../../typedef/definition/urn/UrnType";
 import {DeviceType} from "../../../typedef/definition/urn/DeviceType";
 
-class ProductPanelWebCodec {
-  static encode(x: ProductPanelWeb | null): any {
+class ProductControllerWebCodec {
+  static encode(x: ProductControllerWeb | null): any {
     if (x) {
       return {
         format: x.format,
@@ -20,52 +20,30 @@ class ProductPanelWebCodec {
     return null;
   }
 
-  static decode(o: any): ProductPanelWeb | null {
+  static decode(o: any): ProductControllerWeb | null {
     if (o) {
-      return new ProductPanelWeb(o.format || '', o.url || '');
+      return new ProductControllerWeb(o.format || '', o.url || '');
     } else {
       return null;
     }
   }
 }
 
-class ProductPanelMiniAppCodec {
-  static encode(x: ProductPanelMiniApp | null): any {
-    if (x) {
-      return {
-        appId: x.appId,
-      }
-    }
-
-    return null;
-  }
-
-  static decode(o: any): ProductPanelMiniApp | null {
-    if (o) {
-      return new ProductPanelMiniApp(o.appId || '');
-    } else {
-      return null;
-    }
-  }
-}
-
-export class ProductPanelCodec {
-  static encode(x: ProductPanel): any {
+export class ProductControllerCodec {
+  static encode(x: ProductController): any {
     let o: any = {
-      status: x.status,
       lifecycle: x.lifecycle.toString(),
       category: x.category,
-      type: x.type,
       version: GenericVersionCodec.encode(x.version),
       instance: x.instance.toString(),
     };
 
-    if (x.web) {
-      o.web = ProductPanelWebCodec.encode(x.web);
+    if (x.type) {
+      o.type = x.type;
     }
 
-    if (x.miniapp) {
-      o.miniapp = ProductPanelMiniAppCodec.encode(x.miniapp);
+    if (x.web) {
+      o.web = ProductControllerWebCodec.encode(x.web);
     }
 
     if (x.creator) {
@@ -79,15 +57,13 @@ export class ProductPanelCodec {
     return o;
   }
 
-  static decode(o: any): ProductPanel {
+  static decode(o: any): ProductController {
     if (o) {
-      return new ProductPanel(
-        o.status || '',
+      return new ProductController(
         LifeCycleFromString(o.lifecycle),
-        o.category || 'mobile',
-        o.type || 'web',
-        ProductPanelWebCodec.decode(o.web),
-        ProductPanelMiniAppCodec.decode(o.minapp),
+        o.category || '',
+        o.type || '',
+        ProductControllerWebCodec.decode(o.web),
         GenericVersionCodec.decode(o.version),
         DeviceType.parse(o.instance),
         CreatorCodec.decode(o.creator),
@@ -95,19 +71,17 @@ export class ProductPanelCodec {
       );
     }
 
-    return new ProductPanel(
-      '',
+    return new ProductController(
       LifeCycle.DEVELOPMENT,
       '?',
       '?',
-      null,
       null,
       new GenericVersion('', 0),
       Urn.create('', UrnType.DEVICE, '', '00000000')
     );
   }
 
-  static encodeArray(arr: ProductPanel[]): any[] {
+  static encodeArray(arr: ProductController[]): any[] {
     const list: any[] = [];
     if (arr?.length) {
       for (const o of arr) {
@@ -117,8 +91,8 @@ export class ProductPanelCodec {
     return list;
   }
 
-  static decodeArray(arr: any[]): ProductPanel[] {
-    const instances: ProductPanel[] = [];
+  static decodeArray(arr: any[]): ProductController[] {
+    const instances: ProductController[] = [];
     if (arr?.length) {
       for (const o of arr) {
         instances.push(this.decode(o));

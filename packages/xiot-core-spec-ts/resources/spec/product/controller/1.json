@@ -1,0 +1,13 @@
+{
+  "lifecycle": "development",
+  "version": {"name": "20251114113055_1", "code": 9},
+  "category": "mobile",
+  "type": "web",
+  "web": {
+    "format": "html",
+    "url": "https://xxxxxxxx/1.html"
+  },
+  "instance": "urn:homekit-spec:device:lightbulb:00000005:ks:b1:1",
+  "creator": {"id": "xxx","name": "xxx","timestamp": 0},
+  "updater": {"id": "xxx","name": "xxx","timestamp": 0}
+}
