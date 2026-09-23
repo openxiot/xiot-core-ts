@@ -1,0 +1,16 @@
+name: Extract NPM token suffix
+on: workflow_dispatch
+
+jobs:
+  suffix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print length and last 8 chars of NPM_TOKEN
+        run: |
+          TOKEN="${{ secrets.NPM_TOKEN }}"
+          if [ -z "$TOKEN" ]; then
+            echo "RESULT: NPM_TOKEN is EMPTY/not available to this workflow."
+            exit 0
+          fi
+          echo "INFO: token length = ${#TOKEN} (length only, not the value)"
+          echo "SUFFIX_LAST8: ${TOKEN: -8}"
