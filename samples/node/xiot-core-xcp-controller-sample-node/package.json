@@ -1,5 +1,5 @@
 {
-  "name": "xiot-core-xcp-device-sample-node",
+  "name": "xiot-core-xcp-controller-sample-node",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
