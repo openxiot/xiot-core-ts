@@ -1,0 +1,259 @@
+<title>Publish by Signature</title>
+<style>
+  :root{
+    /* ledger & seal — cool paper, cobalt identity, one gold stamp */
+    --bg:#eef1f5; --bg2:#e7ebf1; --surface:#ffffff; --surface2:#f5f7fa;
+    --ink:#15202e; --ink-soft:#3c4a5c; --muted:#64707f;
+    --line:#d5dce5; --line-strong:#b9c4cf;
+    --accent:#2456c4; --accent-ink:#1b3f9e; --accent-soft:#e4ecfc;
+    --gold:#a16a12; --gold-soft:#f4ebd2;
+    --good:#0e7a52; --good-soft:#e2f1ea;
+    --shadow:0 14px 40px -20px rgba(20,32,46,.25);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d141d; --bg2:#101a25; --surface:#161f2b; --surface2:#1b2634;
+      --ink:#e9edf3; --ink-soft:#c5cfda; --muted:#8c9aa8;
+      --line:#263342; --line-strong:#3b4a5b;
+      --accent:#6f9cff; --accent-ink:#a3bdff; --accent-soft:#1d2d4d;
+      --gold:#d8a95d; --gold-soft:#3c2f1a;
+      --good:#3dbd86; --good-soft:#16362b;
+      --shadow:0 16px 46px -22px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d141d; --bg2:#101a25; --surface:#161f2b; --surface2:#1b2634;
+    --ink:#e9edf3; --ink-soft:#c5cfda; --muted:#8c9aa8;
+    --line:#263342; --line-strong:#3b4a5b;
+    --accent:#6f9cff; --accent-ink:#a3bdff; --accent-soft:#1d2d4d;
+    --gold:#d8a95d; --gold-soft:#3c2f1a;
+    --good:#3dbd86; --good-soft:#16362b;
+    --shadow:0 16px 46px -22px rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:56px 28px 96px}
+  .eyebrow{font:600 12px/1 'Libre Franklin',sans-serif;letter-spacing:.20em;text-transform:uppercase;color:var(--accent)}
+  h1{font:800 clamp(2.1rem,5vw,3.2rem)/1.05 'Libre Franklin',sans-serif;letter-spacing:-.02em;margin:18px 0 0;text-wrap:balance}
+  .lede{font:400 italic 1.22rem/1.55 'Source Serif 4',Georgia,serif;color:var(--ink-soft);max-width:54ch;margin:22px 0 0}
+  .seal{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:8px 14px;border:1px solid var(--gold);border-radius:999px;background:var(--gold-soft);font:600 12.5px/1 'JetBrains Mono',monospace;color:var(--gold)}
+  .seal b{font-weight:600}
+  hr.rule{border:0;border-top:1px solid var(--line);margin:44px 0 0}
+  section{margin-top:52px}
+  h2{font:700 clamp(1.35rem,3vw,1.7rem)/1.15 'Libre Franklin',sans-serif;margin:0 0 6px;text-wrap:balance}
+  .lead{color:var(--ink-soft);max-width:58ch;margin:0 0 26px}
+  p{margin:0 0 14px;max-width:62ch}
+  .accent{color:var(--accent-ink);font-weight:500}
+  .figure{margin:28px 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+  .figure svg{display:block;width:100%;height:auto;padding:14px}
+  figcaption{font:400 .95rem/1.5 'Source Serif 4',Georgia,serif;color:var(--muted);padding:4px 18px 18px}
+  figcaption b{color:var(--ink-soft);font-weight:500}
+  code{font:500 .86em 'JetBrains Mono',ui-monospace,monospace;background:var(--surface2);border:1px solid var(--line);border-radius:5px;padding:.1em .38em;color:var(--ink)}
+  .steps{display:grid;gap:14px;margin-top:8px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+  .step .n{font:700 13px/1 'JetBrains Mono',monospace;color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;width:26px;height:26px;display:grid;place-items:center;margin-top:2px}
+  .step h3{font:700 16px/1.3 'Libre Franklin',sans-serif;margin:0 0 4px}
+  .step p{margin:0;color:var(--ink-soft);font-size:1rem}
+  .tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:14px}
+  table{border-collapse:collapse;width:100%;min-width:520px;background:var(--surface);font:500 14px/1.4 'Libre Franklin',sans-serif;font-variant-numeric:tabular-nums}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font:700 12px/1 'Libre Franklin',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--surface2)}
+  tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+  th.rowtag{white-space:nowrap;color:var(--ink-soft);font-weight:600}
+  td.old{color:var(--muted)}
+  td.new{color:var(--ink)}
+  .dots{display:flex;gap:14px;font-size:1.02rem;color:var(--muted);margin:2px 0}
+  .tick::marker{color:var(--good)}
+  ul.checks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  ul.checks li{position:relative;padding:14px 16px 14px 44px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+  ul.checks li::before{content:"";position:absolute;left:16px;top:16px;width:16px;height:16px;border-radius:4px;background:var(--good-soft);border:1.5px solid var(--good)}
+  ul.checks li.done::before{background:var(--good);background-image:radial-gradient(circle at 50% 50%,var(--surface) 0 1.5px,transparent 2px)}
+  ul.checks b{font:700 15px/1.3 'Libre Franklin',sans-serif}
+  ul.checks p{margin:3px 0 0;color:var(--ink-soft);font-size:.96rem}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:8px}
+  .gloss{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:16px 18px}
+  .gloss b{font:700 14px/1.3 'Libre Franklin',sans-serif;color:var(--accent-ink)}
+  .gloss p{margin:6px 0 0;font-size:.95rem;color:var(--ink-soft)}
+  .note{border-left:3px solid var(--gold);background:var(--gold-soft);padding:14px 16px;border-radius:8px;margin-top:26px;font-size:.98rem;color:var(--ink-soft)}
+  .note b{color:var(--gold);font-weight:600}
+  /* SVG 时序图 —— 用主题变量着色，明暗两套自动适配 */
+  .figure svg{display:block;width:100%;height:auto;padding:14px}
+  .actor{fill:var(--surface);stroke:var(--line-strong);stroke-width:1}
+  .actor-title{font:700 15px/1.1 'Libre Franklin',sans-serif;fill:var(--ink)}
+  .actor-sub{font:500 11px/1.2 'JetBrains Mono',monospace;fill:var(--muted)}
+  .lifeline{stroke:var(--line-strong);stroke-dasharray:4 5;stroke-width:1}
+  .msg{fill:none;stroke:var(--muted);stroke-width:1.6;marker-end:url(#ark);color:var(--muted)}
+  .msg.accent{stroke:var(--accent);color:var(--accent)}
+  .msg-label{font:500 11.5px/1.35 'Libre Franklin',sans-serif;fill:var(--ink-soft)}
+  .msg-label.accent{fill:var(--accent-ink)}
+  .msg-kw{font:500 11px/1.3 'JetBrains Mono',monospace;fill:var(--muted)}
+  .verify{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1}
+  .verify-title{font:700 12.5px/1.2 'Libre Franklin',sans-serif;fill:var(--accent-ink)}
+  .verify-sub{font:500 10.5px/1.4 'JetBrains Mono',monospace;fill:var(--ink-soft)}
+  .result{fill:var(--good-soft);stroke:var(--good);stroke-width:1}
+  .result-text{font:700 14px/1.2 'Libre Franklin',sans-serif;fill:var(--good)}
+  .stepnum{font:700 12px 'JetBrains Mono',monospace;fill:var(--accent-ink)}
+  @media (max-width:640px){.wrap{padding:40px 20px 72px}}
+</style>
+
+<main class="wrap">
+
+  <p class="eyebrow">OIDC Trusted Publishing · openxiot/xiot-core-ts</p>
+  <h1>信任，来自签名，不再来自令牌</h1>
+  <p class="lede">我们把发布要求的“长期钥匙”换成了“一纸携带身份、几秒作废的签名”。于是 secrets 里的 <code>NPM_TOKEN</code> 删了，<code>v0.2.0</code> 照样发布成功。</p>
+  <span class="seal"><b>✕</b> NPM_TOKEN 已删除 · 全链路无静态发布凭据</span>
+
+  <hr class="rule">
+
+  <section>
+    <h2>机制：一条签名链，五步走</h2>
+    <p class="lead">没有共享密钥。npm 信任的不是口令，而是「GitHub 担保了此刻确实在 openxiot/xiot-core-ts 里跑 publish.yml」这份可验证的身份声明。</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 1000 470" role="img"
+           aria-label="五步签名链：GitHub Actions 申请身份令牌，GitHub OIDC 签发签名 JWT，npm publish 携带令牌，npm 验签并对齐发布方配置后签发短时凭据完成发布并盖上 JSON provenance">
+        <defs>
+          <marker id="ark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <!-- actors -->
+        <g>
+          <rect class="actor" x="35"  y="16" width="190" height="64" rx="10"/>
+          <text class="actor-title" x="130" y="44" text-anchor="middle">publish.yml · runner</text>
+          <text class="actor-sub"  x="130" y="63" text-anchor="middle">openxiot/xiot-core-ts</text>
+
+          <rect class="actor" x="405" y="16" width="190" height="64" rx="10"/>
+          <text class="actor-title" x="500" y="44" text-anchor="middle">GitHub · OIDC issuer</text>
+          <text class="actor-sub"  x="500" y="63" text-anchor="middle">签发身份签名</text>
+
+          <rect class="actor" x="775" y="16" width="190" height="64" rx="10"/>
+          <text class="actor-title" x="870" y="44" text-anchor="middle">npm Registry</text>
+          <text class="actor-sub"  x="870" y="63" text-anchor="middle">验签 · 放行发布</text>
+        </g>
+
+        <!-- lifelines -->
+        <g class="lifeline">
+          <line x1="130" y1="96" x2="130" y2="396"/>
+          <line x1="500" y1="96" x2="500" y2="396"/>
+          <line x1="870" y1="96" x2="870" y2="396"/>
+        </g>
+
+        <!-- 1 request -->
+        <line class="msg" x1="225" y1="128" x2="405" y2="128"/>
+        <text class="stepnum" x="315" y="118" text-anchor="middle">1</text>
+        <text class="msg-label" x="315" y="116" text-anchor="middle">申请身份令牌</text>
+        <text class="msg-kw" x="315" y="132" text-anchor="middle">permissions: id-token: write</text>
+
+        <!-- 2 issue signed JWT -->
+        <line class="msg accent" x1="405" y1="186" x2="225" y2="186"/>
+        <text class="stepnum" x="315" y="176" text-anchor="middle">2</text>
+        <text class="msg-label accent" x="315" y="174" text-anchor="middle">签发签名 id_token (JWT)</text>
+        <text class="msg-kw" x="315" y="190" text-anchor="middle">repo · workflow · ref</text>
+
+        <!-- 3 npm publish carries token -->
+        <line class="msg" x1="225" y1="244" x2="775" y2="244"/>
+        <text class="stepnum" x="500" y="234" text-anchor="middle">3</text>
+        <text class="msg-label" x="500" y="232" text-anchor="middle">npm publish 携带 id_token</text>
+        <text class="msg-kw" x="500" y="248" text-anchor="middle">把它当作这一次的凭据</text>
+
+        <!-- verify -->
+        <g class="verify">
+          <rect x="775" y="282" width="190" height="64" rx="10"/>
+        </g>
+        <text class="verify-title" x="870" y="306" text-anchor="middle">4 · 验签 + 对齐配置</text>
+        <text class="verify-sub"  x="870" y="322" text-anchor="middle">GitHub 公钥 → 验 JWT 签名</text>
+        <text class="verify-sub"  x="870" y="336" text-anchor="middle">publish.yml · env ∅</text>
+
+        <!-- 5 short-lived credential -->
+        <line class="msg" x1="775" y1="380" x2="225" y2="380"/>
+        <text class="stepnum" x="500" y="370" text-anchor="middle">5</text>
+        <text class="msg-label" x="500" y="368" text-anchor="middle">仅此一次 · 几分钟过期</text>
+        <text class="msg-kw" x="500" y="384" text-anchor="middle">短时发布凭据，用完即废</text>
+
+        <!-- result band -->
+        <g class="result">
+          <rect x="120" y="414" width="760" height="44" rx="10"/>
+          <text class="result-text" x="500" y="441" text-anchor="middle">✓ @openxiot/xiot-core-spec-ts@0.2.0 · JSON provenance (SLSA v1) 已盖章</text>
+        </g>
+      </svg>
+      <figcaption>
+        <b>五步签名链。</b> 数字 = 真实顺序；<span class="accent" style="font-weight:600">钴蓝</span> = 身份/验签的关键时刻，
+        灰色 = 普通流转。2→4 之间没有共享密钥——npm 用 <b>GitHub 公开发布的公钥</b>验签，再对齐你在 npm 后台登记的发布方，
+        三者一致才放行。
+      </figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step"><span class="n">1</span><div>
+        <h3>Runner 申请一份身份</h3>
+        <p>workflow 里的 <code>permissions.id-token: write</code>，让构建服务器有权向 GitHub 的 OIDC 提供方申请一次性的身份令牌。</p>
+      </div></div>
+      <div class="step"><span class="n">2</span><div>
+        <h3>GitHub 盖上签名</h3>
+        <p>OIDC 提供方签发一个 <b>JSON Web Token（JWT）</b>，里面写着真实声明：仓库 <code>openxiot/xiot-core-ts</code>、工作流 <code>publish.yml</code>、ref <code>refs/tags/v0.2.0</code>。这份 JWT 用 GitHub 的私钥签名。</p>
+      </div></div>
+      <div class="step"><span class="n">3</span><div>
+        <h3>令牌跟着发布走</h3>
+        <p><code>npm publish</code> 把这份 id_token 当作本次请求的凭据，递交给 npm 注册表。</p>
+      </div></div>
+      <div class="step"><span class="n">4</span><div>
+        <h3>npm 验签，并对齐配置</h3>
+        <p>npm 用 <b>GitHub 的公开公钥</b>（无需任何共享秘密）验证签名有效；再把声明与你登记的 trusted publisher 逐一比对——组织 <code>openxiot</code>、仓库 <code>xiot-core-ts</code>、工作流 <code>publish.yml</code>、环境留空。</p>
+      </div></div>
+      <div class="step"><span class="n">5</span><div>
+        <h3>一次性凭据，盖完章的产物</h3>
+        <p>四格全对才放行：npm 给这次请求签发一个只有几分钟有效的短时凭据完成发布。产物自带一份 <b>签名 JSON provenance</b>（SLSA v1），可回溯到这台 workflow 与源码。</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>为什么删掉 NPM_TOKEN 反而能发</h2>
+    <p class="lead">信任来源被整个换掉了：从「互相保管一个口令」变成「可验证的签名身份」。</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>维度</th><th>旧 · NPM_TOKEN</th><th>新 · OIDC</th></tr></thead>
+        <tbody>
+          <tr><th class="rowtag">信任什么</th><td class="old">一个静态口令</td><td class="new">一份签名身份 + 你登记的发布方</td></tr>
+          <tr><th class="rowtag">凭据存哪</th><td class="old">打进仓库/组织 secrets，要保管</td><td class="new">不存，每次运行时临时签发</td></tr>
+          <tr><th class="rowtag">有效期</th><td class="old">长期（90 天得轮换）</td><td class="new">几分钟</td></tr>
+          <tr><th class="rowtag">泄露即风险面</th><td class="old">拿到就能冒充发版</td><td class="new">绑定仓库+workflow，转眼作废</td></tr>
+          <tr><th class="rowtag">本机依赖</th><td class="old">要有 token / 已登录</td><td class="new">无需任何本机凭据</td></tr>
+          <tr><th class="rowtag">对 CI 的意义</th><td class="old">一个需要保护的越权点</td><td class="new">身份本就属于你的 workflow，无从伪造</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>五道门，缺一不可</h2>
+    <p class="lead">这些都就位，签名链才成立。你们的仓库刚好全满足（并以 <code>v0.2.0</code> 实测通过）。</p>
+    <ul class="checks">
+      <li class="done"><b>workflow 声明 <code>id-token: write</code></b><p>让 runner 有权申请身份令牌。</p></li>
+      <li class="done"><b>npm ≥ 11.5.1</b><p>Node 20/22 自带的都是 npm 10，需显式升级；别用 <code>@latest</code>（npm 12 默认关 allowScripts）。</p></li>
+      <li class="done"><b>包 <code>repository.url</code> 与仓库精确一致</b><p>npm 用它对上源码出处。</p></li>
+      <li class="done"><b>trusted publisher 四格精确</b><p>工作流大写敏感写死 <code>publish.yml</code>；Environment 留空。</p></li>
+      <li class="done"><b>勾选 “Allow npm publish”</b><p>否则 OIDC 直发会 403，落入 staged 审批流程。</p></li>
+      <li class="done"><b>没有残留 <code>NODE_AUTH_TOKEN</code></b><p>留一个空/旧 token 会让 npm 走令牌认证、直接 404，而不是回退 OIDC。</p></li>
+    </ul>
+
+    <div class="note">
+      <b>OIDC 到底是什么？</b> OIDC（OpenID Connect）是一套「让第三方确认「你是你」」的标准协议。这里 <b>GitHub 是身份提供方（Issuer）</b>——担保「正在跑的就是那个仓库里那个 workflow」；<b>npm 是依赖方（Relying Party）</b>——验证这份担保。两者不需预先共享密钥，因为 npm 用 <b>GitHub 公开的签名公钥</b>验签。这就是「没有令牌也能发」的根基。
+    </div>
+  </section>
+
+  <section>
+    <h2>几个词</h2>
+    <div class="grid2">
+      <div class="gloss"><b>OIDC</b><p>OpenID Connect，让依赖方验证身份的标准协议（身份提供方 / 依赖方 两方）。</p></div>
+      <div class="gloss"><b>id_token / JWT</b><p>签名后的身份令牌，内含仓库、工作流、ref 等声明，由 GitHub 私钥签发。</p></div>
+      <div class="gloss"><b>Issuer</b><p>身份提供方——此处是 GitHub，签发并签名身份声明。</p></div>
+      <div class="gloss"><b>Relying party</b><p>依赖方——此处是 npm，验签并决定是否放行。</p></div>
+      <div class="gloss"><b>Trusted publisher</b><p>你在 npm 后台登记的那四格，决定这份签名令牌能否代表该包发布。</p></div>
+      <div class="gloss"><b>Provenance</b><p>随包发布的签名构建记录，可回溯源码、工作流与构建环境。</p></div>
+    </div>
+  </section>
+
+</main>
