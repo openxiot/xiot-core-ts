@@ -1,6 +1,6 @@
 {
   "name": "@openxiot/xiot-core-xcps-ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "XIOT XCPs Core",
   "main": "dist/index.js",
   "module": "dist/index.js",
